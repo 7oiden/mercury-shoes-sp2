@@ -4,7 +4,7 @@
   color: getColor(primary);
   padding: 0.6rem 2rem;
   border: none;
-  border-radius: 100px;
+  border-radius: 50px;
   font-family: $button-text;
   font-size: 1.5rem;
   transition: all 0.3s;
@@ -39,8 +39,8 @@
 
 .secondary-button {
   font-size: 1.25rem;
-  border: 3px solid getColor(accent);
-  background-color: transparent;
-  color: getColor(accent);
-  margin-top: 2rem;
+  width: 150px;
+  background-color: getColor(dark);
+  color: getColor(primary);
+  margin-top: 1rem;
 }

@@ -11,9 +11,16 @@ header {
 
   &__list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    font-size: 0.875rem;
 
     @extend .base-list;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+      font-size: 1rem;
+    }
   }
 
   &__item {
@@ -28,6 +35,7 @@ header {
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 999;
+  position: relative;
 
   @include dropShadow(6px, 6px);
 

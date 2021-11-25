@@ -187,3 +187,15 @@ svg {
   padding-bottom: 0.75rem;
   cursor: pointer;
 }
+
+label {
+  color: getColor(dark);
+}
+
+.admin__heading {
+  color: getColor(dark);
+  font-family: $primary-headings;
+  font-size: 1.75rem;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}

@@ -32,7 +32,9 @@
               /></a>
               <ul class="nav-list-links">
                 <li><a href="#" class="nav-link nav-link--active">Home</a></li>
-                <li><a href="products-overview.html" class="nav-link">Products</a></li>
+                <li>
+                  <a href="products-overview.html" class="nav-link">Products</a>
+                </li>
                 <li><a href="#" class="nav-link">About us</a></li>
               </ul>
             </div>
@@ -58,7 +60,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="admin">
                 <a href="" class="nav-icon"
                   ><svg viewBox="0 0 24 24">
                     <path
@@ -78,6 +80,7 @@
               </li>
             </ul>
           </div>
+
           <div class="dropdown">
             <ul class="dropdown-list">
               <li class="dropdown-item">
@@ -90,6 +93,33 @@
                 <a href="" class="dropdown-link">About us</a>
               </li>
             </ul>
+          </div>
+
+          <div class="admin__dropdown">
+            <div class="admin__container">
+              <p class="admin__heading">Admin login</p>
+              <form class="admin__form">
+                <div class="admin__input-wrapper">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="admin__input"
+                    id="username"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="admin__input-wrapper">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="admin__input"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <button class="button secondary-button">Sign in</button>
+              </form>
+            </div>
           </div>
         </nav>
       </header>
