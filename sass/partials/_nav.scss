@@ -1,0 +1,149 @@
+header {
+  margin: 0;
+  color: getColor(primary);
+}
+
+.banner {
+  background-color: getColor(secondary);
+  margin: 0;
+  text-align: center;
+  padding: 0.625rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @extend .base-list;
+  }
+
+  &__item {
+    list-style: none;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.nav {
+  background-color: #f0f0f0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 999;
+
+  @include dropShadow(6px, 6px);
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: getBreakpoint(large)) {
+      justify-content: flex-start;
+    }
+  }
+
+  &-logo img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+
+    @media (min-width: getBreakpoint(large)) {
+      margin-right: 3rem;
+    }
+  }
+
+  &-list-links {
+    @extend .base-list;
+    display: none;
+    font-family: $body-text;
+    font-size: 1.25rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      display: flex;
+    }
+  }
+
+  &-link {
+    margin-right: 2rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    color: getColor(secondary);
+    // background-color: pink;
+
+    &--active {
+      font-weight: bold;
+      color: getColor(dark);
+    }
+  }
+
+  &-link:hover {
+    border-bottom: 3px solid getColor(accent);
+    // background-color: pink;
+  }
+
+  &-list-icons {
+    display: flex;
+    justify-content: space-between;
+
+    @extend .base-list;
+  }
+
+  &-icon {
+    margin-left: 2rem;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  //   &-link {
+  //     display: block;
+  //   }
+}
+
+.dropdown {
+  display: none;
+  background-color: pink;
+  margin: 0;
+}
+
+.dropdown-toggle {
+  @media (min-width: getBreakpoint(large)) {
+    display: none;
+  }
+}
+
+.breadcrumbs {
+  margin-top: 25px;
+
+  &__item {
+    margin-right: 0.5rem;
+
+    & a {
+      display: inline-block;
+      cursor: pointer;
+      color: getColor(secondary);
+    }
+
+    & a:hover {
+      text-decoration: underline;
+    }
+
+    &--active {
+      color: getColor(dark);
+      font-weight: bold;
+    }
+  }
+}

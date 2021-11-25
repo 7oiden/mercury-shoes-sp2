@@ -1,0 +1,46 @@
+.button {
+  display: inline-block;
+  background-color: getColor(accent);
+  color: getColor(primary);
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 100px;
+  font-family: $button-text;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+    @include dropShadow(12px, 12px);
+  }
+}
+
+.newsletter__button {
+  width: 150px;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.buy-button {
+  width: 180px;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.checkout-button {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  float: right;
+}
+
+.secondary-button {
+  font-size: 1.25rem;
+  border: 3px solid getColor(accent);
+  background-color: transparent;
+  color: getColor(accent);
+  margin-top: 2rem;
+}

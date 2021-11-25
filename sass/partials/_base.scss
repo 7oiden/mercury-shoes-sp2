@@ -1,0 +1,286 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: $body-text;
+  background-color: getColor(background);
+  font-size: 1rem;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.base-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-content {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  background-color: #ffffffbf;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    background-color: transparent;
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+  }
+
+  &-container {
+    // background-color: pink;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.featured {
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: getBreakpoint(small)) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    flex-direction: row;
+    width: 95%;
+    justify-content: center;
+  }
+
+  &-container {
+    background-color: white;
+    color: black;
+    order: 2;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: getBreakpoint(large)) {
+      order: 1;
+      background: linear-gradient(getColor(secondary), getColor(dark)); 
+      color: white;
+      width: 50%;
+    }
+  }
+
+  &-text-block {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0 2.5rem 0;
+
+    @media (min-width: getBreakpoint(large)) {
+      position: absolute;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+    }
+  }
+
+  &-image-block {
+    order: 1;
+
+    @media (min-width: getBreakpoint(large)) {
+      order: 2;
+    }
+  }
+
+  &-image {
+    display: block;
+    width: 100%;
+  }
+
+  &-hr {
+  }
+}
+
+#basket {
+  position: relative;
+}
+
+#counter {
+  animation: shake-animation 5s ease;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  left: 27px;
+  background-color: getColor(accent);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  z-index: 9;
+  font-family: $button-text;
+  // display: none;
+
+  & div {
+    position: absolute;
+    line-height: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(5px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.basket {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: getBreakpoint(xlarge)) {
+      gap: 4rem;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    display: block;
+
+    @include content-border(5px);
+  }
+
+  &__item {
+    display: flex;
+    background-color: getColor(primary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__item:first-child {
+    margin-top: 0;
+  }
+
+  &__item:last-child {
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 0;
+  }
+
+  &__image {
+    width: 100%;
+    flex: 1;
+    border-radius: 5px;
+  }
+
+  &__content {
+    flex: 2;
+  }
+
+  &__table {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.summary {
+  flex: 1;
+  padding: 2rem;
+  background-color: getColor(primary);
+
+  @include content-border(5px);
+
+  @media (min-width: getBreakpoint(large)) {
+    max-height: 350px;
+  }
+
+  &__table {
+    text-align: left;
+    width: 100%;
+    font-size: 1.12rem;
+  }
+
+  &__button-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+// td,
+// th {
+//   background-color: pink;
+// }
+
+.align-right {
+  text-align: right;
+}
+
+td {
+  max-width: 100px;
+}

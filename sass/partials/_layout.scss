@@ -1,0 +1,108 @@
+.base-container {
+  width: getWidth(smallScreen);
+  margin: 0 auto;
+
+  @media (min-width: getBreakpoint(large)) {
+    width: getWidth(largeScreen);
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: getWidth(xlargeScreen);
+  }
+
+  @media (min-width: getBreakpoint(vxlarge)) {
+    width: getWidth(xxlargeScreen);
+  }
+}
+
+.product-details-container{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.basket-container {
+  width: 95%;
+  margin: 0 auto;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 85%;
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    width: 95%;
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: 85%;
+  }
+}
+
+.grid-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  //   background-color: lavender;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 632px;
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: 964px;
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: 1296px;
+  }
+}
+
+.featured__grid {
+  width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto;
+  justify-items: center;
+  gap: 32px;
+  //   background-color: pink;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 632px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: 1296px;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.products__grid {
+  width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto;
+  justify-items: center;
+  gap: 32px;
+  //   background-color: pink;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 632px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: 964px;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: 1296px;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto;
+  }
+}

@@ -1,0 +1,96 @@
+.product-details {
+  padding-top: 50px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: getBreakpoint(xxlarge)) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__content {
+    padding: 2rem;
+    flex: 1;
+    background-color: getColor(primary);
+
+    @media (min-width: getBreakpoint(xxlarge)) {
+      @include content-border(0px);
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+    }
+  }
+
+  &__block1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+
+  &__block2 {
+    flex: 1;
+  }
+
+  &__box-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__stock-wrapper {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+  }
+
+  &__box {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    background-color: getColor(background);
+    cursor: pointer;
+
+    @include content-border(5px);
+  }
+
+  &__color1 {
+    background-color: green;
+  }
+
+  &__color2 {
+    background-color: beige;
+  }
+
+  &__color3 {
+    background-color: black;
+  }
+
+  &__size {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
