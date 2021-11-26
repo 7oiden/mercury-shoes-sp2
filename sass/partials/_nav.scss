@@ -50,25 +50,24 @@ header {
     }
   }
 
-  &-container div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media (min-width: getBreakpoint(large)) {
-      justify-content: flex-start;
-    }
-  }
-
   &-logo img {
     width: 200px;
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    margin-bottom: 1rem;
 
     @media (min-width: getBreakpoint(large)) {
       margin-right: 3rem;
+      margin-bottom: 0;
     }
+  }
+
+  &-list-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start;
   }
 
   &-list-links {
@@ -105,11 +104,16 @@ header {
     justify-content: space-between;
 
     @extend .base-list;
+
+    @media (min-width: getBreakpoint(large)) {
+      justify-content: space-between;
+    }
   }
 
   &-icon {
     margin-left: 2rem;
     transition: opacity 0.3s;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.75;
@@ -121,17 +125,31 @@ header {
   //   }
 }
 
-.dropdown {
-  display: none;
-  background-color: pink;
-  margin: 0;
+.logo-wrapper {
+  display: flex;
+  align-items: center;
 }
 
-.dropdown-toggle {
-  @media (min-width: getBreakpoint(large)) {
-    display: none;
-  }
+.basket__icon {
+  margin-left: 0;
 }
+
+.icons-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+// .dropdown {
+//   display: none;
+//   background-color: pink;
+//   margin: 0;
+// }
+
+// .dropdown-toggle {
+//   @media (min-width: getBreakpoint(large)) {
+//     display: none;
+//   }
+// }
 
 .breadcrumbs {
   margin-top: 25px;
@@ -155,3 +173,21 @@ header {
     }
   }
 }
+
+
+
+#about {
+  display: none;
+}
+
+#admin-username {
+  display: block;
+  color: getColor(dark);
+  font-size: 1rem;
+  display: none;
+
+   @media (min-width: getBreakpoint(large)) {
+      display: inline;
+    }
+}
+

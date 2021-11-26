@@ -2,23 +2,11 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
   }
 
   &__input {
     width: 100%;
     max-width: 350px;
-    border-top: none;
-    border-right: none;
-    border-bottom: 4px solid getColor(accent);
-    border-left: none;
-    border-radius: 0;
-    padding: 0.75rem;
-    font-size: 1.125rem;
-
-    &:focus {
-      border-bottom: 4px solid transparent;
-    }
   }
 }
 
@@ -60,4 +48,21 @@
     width: 32px;
     cursor: pointer;
   }
+}
+
+.input {
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  background-color: getColor(primary);
+
+  @include content-border(5px);
+
+  &:focus {
+    outline: 2px solid lime;
+  }
+}
+
+.error-messages {
+  color: getColor(error);
+  display: none;
 }

@@ -94,12 +94,12 @@ svg {
   }
 }
 
-#stock-icon {
+.checkmark {
   width: 30px;
   height: 30px;
 
   path {
-    fill: green;
+    fill: getColor(success);
   }
 }
 
@@ -111,7 +111,11 @@ svg {
   margin: 0;
 }
 
-.newsletter-description {
+.newsletter__description {
+  font-size: 1.125rem;
+  font-family: $secondary-headings;
+  padding: 0.5rem 0 2rem 0;
+  margin: 0;
 }
 
 .news-header {

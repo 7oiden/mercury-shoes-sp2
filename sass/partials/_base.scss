@@ -95,7 +95,7 @@ a {
 
     @media (min-width: getBreakpoint(large)) {
       order: 1;
-      background: linear-gradient(getColor(secondary), getColor(dark)); 
+      background: linear-gradient(getColor(dark), getColor(secondary)); 
       color: white;
       width: 50%;
     }

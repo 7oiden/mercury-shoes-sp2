@@ -1,11 +1,25 @@
-const hamburgerIcon = document.querySelector(".dropdown-toggle");
-const dropdownMenu = document.querySelector(".dropdown");
+const hamburgerIcon = document.querySelector(".mobile-menu__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
 
-hamburgerIcon.onclick = function () {
-
-  if (dropdownMenu.style.display === "block") {
-    dropdownMenu.style.display = "none";
+function mobileToggler() {
+  if (mobileMenu.style.display === "block") {
+    mobileMenu.style.display = "none";
   } else {
-    dropdownMenu.style.display = "block";
+    mobileMenu.style.display = "block";
   }
-};
+}
+
+hamburgerIcon.addEventListener("click", mobileToggler);
+
+const adminIcon = document.querySelector(".admin__icon");
+const adminDropdown = document.querySelector(".admin__dropdown");
+
+function adminToggler() {
+  if (adminDropdown.style.display === "block") {
+    adminDropdown.style.display = "none";
+  } else {
+    adminDropdown.style.display = "block";
+  }
+}
+
+adminIcon.addEventListener("click", adminToggler);

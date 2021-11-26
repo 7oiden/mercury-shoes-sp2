@@ -21,16 +21,32 @@
   &__dropdown {
     position: absolute;
     width: 100%;
-    background: linear-gradient(#f0f0f0, #9198e5);
+    background: linear-gradient(#f0f0f0 0, #f0f0f0 75%, #00c3c1 100%);
     top: 132px;
     right: 0;
     gap: 1rem;
-    z-index: 999;
+    z-index: -1;
     padding-top: 2rem;
     padding-bottom: 6rem;
     border-radius: 0 0 0 5px;
+    perspective: 1000px;
+    display: none;
+    animation: animate-dropdown 400ms ease-in-out forwards;
+    transform-origin: top center;
 
     @include dropShadow(6px, 6px);
+
+    @keyframes animate-dropdown {
+      0% {
+        transform: scale(0);
+      }
+      80% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
     @media (min-width: getBreakpoint(large)) {
       width: 500px;
@@ -52,16 +68,5 @@
   &__input {
     width: 100%;
     max-width: 350px;
-    padding: 0.5rem 1rem;
-    font-size: 1.125rem;
-    outline: none;
-    background-color: getColor(primary);
-    border: 2px solid transparent;
-
-    @include content-border(5px);
-  }
-
-  &__input:focus {
-    border: 2px solid getColor(dark);
   }
 }
