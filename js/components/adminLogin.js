@@ -4,9 +4,6 @@ const passwordInput = document.querySelector("#password");
 const emailError = document.querySelector("#admin-email-error");
 const passwordError = document.querySelector("#admin-password-error");
 
-
-
-
 const loginSuccess = document.querySelector(".successful-login");
 const inputBox = document.querySelector(".input-box");
 const loginContainer = document.querySelector(".form-wrapper");
@@ -15,7 +12,7 @@ const profileContainer = document.querySelector(".profile");
 
 
 
-function validateLogin(event) {
+export default function validateLogin(event) {
   event.preventDefault();
 
   console.log("hi");

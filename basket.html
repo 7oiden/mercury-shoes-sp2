@@ -23,73 +23,145 @@
             <li class="banner__item">Free shipping</li>
             <li class="banner__item">Money back guarantee</li>
           </ul>
+          <span id="admin-username">Admin: signed in as 7oiden</span>
         </div>
         <nav class="nav">
-          <div class="nav-container base-container">
-            <div>
-              <a href="index.html" class="nav-logo"
-                ><img src="images/logo.png" alt=""
+          <div class="nav__container base-container">
+            <div class="nav__links-wrapper">
+              <a href="index.html" class="nav__logo"
+                ><img
+                  src="images/logo.png"
+                  alt="Mercury logo"
+                  class="nav__logo"
               /></a>
-              <ul class="nav-list-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="products-overview.html" class="nav-link">Products</a></li>
-                <li><a href="" class="nav-link">About us</a></li>
-              </ul>
+              <div>
+                <ul class="nav__links-list">
+                  <li>
+                    <a href="#" class="nav__link nav__link--active">Home</a>
+                  </li>
+                  <li>
+                    <a href="products-overview.html" class="nav__link"
+                      >Products</a
+                    >
+                  </li>
+                  <li id="about"><a href="#" class="nav__link">About us</a></li>
+                  <li><a href="#" class="nav__link">Add product</a></li>
+                  <li><a href="#" class="nav__link">Edit product</a></li>
+                </ul>
+              </div>
             </div>
-            <ul class="nav-list-icons">
+            <ul class="nav__icons-list">
               <li>
-                <a href="basket.html" class="nav-icon" id="basket">
+                <div class="nav__icon mobile-menu__toggle">
                   <svg viewBox="0 0 24 24">
                     <path
                       fill="currentColor"
-                      d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
-                    />
-                  </svg>
-                  <div id="counter"><div>1</div></div>
-                </a>
-              </li>
-              <li>
-                <a href="" class="nav-icon"
-                  ><svg viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="" class="nav-icon"
-                  ><svg viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z"
-                    /></svg
-                ></a>
-              </li>
-              <li>
-                <a href="" class="nav-icon dropdown-toggle"
-                  ><svg viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
-                    /></svg
-                ></a>
+                    />
+                  </svg>
+                </div>
+              </li>
+              <div class="nav__icons-wrapper">
+                <li>
+                  <a
+                    href="basket.html"
+                    class="nav__icon basket__icon"
+                    id="basket"
+                  >
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
+                      />
+                    </svg>
+                    <div id="counter"><div>1</div></div>
+                  </a>
+                </li>
+                <li>
+                  <div class="nav__icon profile__icon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"
+                      />
+                    </svg>
+                  </div>
+                </li>
+                <li class="admin">
+                  <div class="nav__icon admin__icon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z"
+                      />
+                    </svg>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+
+          <div class="mobile-menu">
+            <ul class="mobile-menu__list base-list">
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Home</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="products-overview.html" class="mobile-menu__link"
+                  >Products</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">About us</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Add product</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Edit product</a>
               </li>
             </ul>
           </div>
-          <div class="dropdown">
-            <ul class="dropdown-list">
-              <li class="dropdown-item">
-                <a href="" class="dropdown-link">Home</a>
-              </li>
-              <li class="dropdown-menu-item">
-                <a href="" class="dropdown-link">Products</a>
-              </li>
-              <li class="dropdown-menu-item">
-                <a href="" class="dropdown-link">About us</a>
-              </li>
-            </ul>
+
+          <div class="admin__dropdown">
+            <div class="admin__container">
+              <p class="admin__heading">Admin login</p>
+              <form class="admin__form">
+                <div class="admin__input-wrapper">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="input admin__input"
+                    id="username"
+                    placeholder="Username"
+                  />
+                  <div class="error-messages" id="admin-email-error">
+                    * Please enter a valid e-mail address
+                  </div>
+                </div>
+                <div class="admin__input-wrapper">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="input admin__input"
+                    id="password"
+                    placeholder="Password"
+                  />
+                  <div class="error-messages" id="admin-password-error">
+                    * Password and/or e-mail is incorrect
+                  </div>
+                </div>
+                <button
+                  id="sign-in"
+                  type="submit"
+                  name="submit"
+                  class="button secondary-button"
+                >
+                  Sign in
+                </button>
+              </form>
+            </div>
           </div>
         </nav>
       </header>
@@ -114,7 +186,7 @@
                   />
                 </div>
                 <div class="basket__content">
-                  <h3 class="basket__title">Nike shoe</h3>
+                  <h3 class="basket__title"><a class="basket__link">Nike shoe</a></h3>
                   <table class="basket__table">
                     <tr>
                       <th scope="row">Color:</th>
@@ -152,7 +224,7 @@
                   />
                 </div>
                 <div class="basket__content">
-                  <h3 class="basket__title">Nike shoe</h3>
+                  <h3 class="basket__title"><a class="basket__link">Nike shoe</a></h3>
                   <table class="basket__table">
                     <tr>
                       <th scope="row">Color:</th>
@@ -190,7 +262,7 @@
                   />
                 </div>
                 <div class="basket__content">
-                  <h3 class="basket__title">Nike shoe</h3>
+                  <h3 class="basket__title"><a class="basket__link">Nike shoe</a></h3>
                   <table class="basket__table">
                     <tr>
                       <th scope="row">Color:</th>
@@ -307,5 +379,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

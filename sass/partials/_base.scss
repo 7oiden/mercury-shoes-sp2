@@ -75,33 +75,31 @@ a {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: getBreakpoint(small)) {
-    width: 85%;
-    margin: 0 auto;
-  }
+  // @media (min-width: getBreakpoint(small)) {
+  //   width: 85%;
+  //   margin: 0 auto;
+  // }
 
   @media (min-width: getBreakpoint(large)) {
     flex-direction: row;
-    width: 95%;
     justify-content: center;
   }
 
-  &-container {
+  &__column1 {
     background-color: white;
     color: black;
     order: 2;
     position: relative;
-    width: 100%;
+    flex: 1;
 
     @media (min-width: getBreakpoint(large)) {
       order: 1;
-      background: linear-gradient(getColor(dark), getColor(secondary)); 
+      background: linear-gradient(getColor(dark), getColor(secondary));
       color: white;
-      width: 50%;
     }
   }
 
-  &-text-block {
+  &__text-wrapper {
     width: 90%;
     margin: 0 auto;
     padding: 1.5rem 0 2.5rem 0;
@@ -116,11 +114,12 @@ a {
     }
   }
 
-  &-image-block {
+  &__column2 {
     order: 1;
 
     @media (min-width: getBreakpoint(large)) {
       order: 2;
+      flex: 1;
     }
   }
 
@@ -129,7 +128,11 @@ a {
     width: 100%;
   }
 
-  &-hr {
+  &__red-line {
+    width: 270px;
+    height: 4px;
+    background-color: getColor(accent);
+    margin-right: 2rem;
   }
 }
 
@@ -228,6 +231,11 @@ a {
   &__item:last-child {
     border-radius: 0 0 5px 5px;
     margin-bottom: 0;
+  }
+
+  &__link {
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   &__image {

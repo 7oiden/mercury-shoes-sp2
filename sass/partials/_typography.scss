@@ -120,7 +120,7 @@ svg {
 
 .news-header {
   font-family: $primary-headings;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -129,7 +129,9 @@ svg {
 .news-text {
   font-family: $secondary-headings;
   font-size: 1.125rem;
-  padding-bottom: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
 }
 
 .main-red-line {
@@ -141,9 +143,10 @@ svg {
 
 .news-red-line {
   width: 150px;
-  height: 4px;
+  height: 3px;
   background-color: getColor(accent);
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 // product details
