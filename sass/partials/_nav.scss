@@ -39,7 +39,7 @@ header {
 
   @include dropShadow(6px, 6px);
 
-  &-container {
+  &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,7 +50,12 @@ header {
     }
   }
 
-  &-logo img {
+  &__links-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
     width: 200px;
     display: block;
     margin: 0 auto;
@@ -63,14 +68,14 @@ header {
     }
   }
 
-  &-list-links-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start !important;
-    justify-content: flex-start;
-  }
+  // &-list-links-wrapper {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-start !important;
+  //   justify-content: flex-start;
+  // }
 
-  &-list-links {
+  &__links-list {
     @extend .base-list;
     display: none;
     font-family: $body-text;
@@ -81,7 +86,7 @@ header {
     }
   }
 
-  &-link {
+  &__link {
     margin-right: 2rem;
     border-bottom: 3px solid transparent;
     transition: all 0.3s;
@@ -99,7 +104,12 @@ header {
     // background-color: pink;
   }
 
-  &-list-icons {
+  &__icons-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+  &__icons-list {
     display: flex;
     justify-content: space-between;
 
@@ -110,7 +120,7 @@ header {
     }
   }
 
-  &-icon {
+  &__icon {
     margin-left: 2rem;
     transition: opacity 0.3s;
     cursor: pointer;
@@ -125,19 +135,11 @@ header {
   //   }
 }
 
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-}
-
 .basket__icon {
   margin-left: 0;
 }
 
-.icons-wrapper {
-  display: flex;
-  align-items: center;
-}
+
 
 // .dropdown {
 //   display: none;
@@ -174,20 +176,7 @@ header {
   }
 }
 
-
-
 #about {
   display: none;
-}
-
-#admin-username {
-  display: block;
-  color: getColor(dark);
-  font-size: 1rem;
-  display: none;
-
-   @media (min-width: getBreakpoint(large)) {
-      display: inline;
-    }
 }
 

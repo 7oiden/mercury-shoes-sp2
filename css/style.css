@@ -46,7 +46,7 @@ a {
   color: black;
 }
 
-.base-list, .banner__list, .nav-list-links, .nav-list-icons, .footer__list {
+.base-list, .banner__list, .nav__links-list, .nav__icons-list, .footer__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -409,7 +409,7 @@ td {
   }
 }
 
-@media (min-width: null) {
+@media (min-width: 1400px) {
   .base-container {
     width: 70%;
   }
@@ -481,6 +481,16 @@ td {
         grid-template-rows: auto auto;
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .featured__grid {
+    width: 964px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
   }
 }
 
@@ -814,7 +824,7 @@ header {
           box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
 }
 
-.nav-container {
+.nav__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -828,7 +838,7 @@ header {
 }
 
 @media (min-width: 992px) {
-  .nav-container {
+  .nav__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -839,7 +849,16 @@ header {
   }
 }
 
-.nav-logo img {
+.nav__links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__logo {
   width: 200px;
   display: block;
   margin: 0 auto;
@@ -848,43 +867,27 @@ header {
 }
 
 @media (min-width: 992px) {
-  .nav-logo img {
+  .nav__logo {
     margin-right: 3rem;
     margin-bottom: 0;
   }
 }
 
-.nav-list-links-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start !important;
-      -ms-flex-align: start !important;
-          align-items: flex-start !important;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.nav-list-links {
+.nav__links-list {
   display: none;
   font-family: "ff-tisa-sans-web-pro", sans-serif;
   font-size: 1.25rem;
 }
 
 @media (min-width: 992px) {
-  .nav-list-links {
+  .nav__links-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.nav-link {
+.nav__link {
   margin-right: 2rem;
   border-bottom: 3px solid transparent;
   -webkit-transition: all 0.3s;
@@ -892,7 +895,7 @@ header {
   color: #323232;
 }
 
-.nav-link--active {
+.nav__link--active {
   font-weight: bold;
   color: #000000;
 }
@@ -901,7 +904,16 @@ header {
   border-bottom: 3px solid #ea564e;
 }
 
-.nav-list-icons {
+.nav__icons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__icons-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -911,44 +923,26 @@ header {
 }
 
 @media (min-width: 992px) {
-  .nav-list-icons {
+  .nav__icons-list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
 
-.nav-icon {
+.nav__icon {
   margin-left: 2rem;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   cursor: pointer;
 }
 
-.nav-icon:hover {
+.nav__icon:hover {
   opacity: 0.75;
-}
-
-.logo-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .basket__icon {
   margin-left: 0;
-}
-
-.icons-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .breadcrumbs {
@@ -976,19 +970,6 @@ header {
 
 #about {
   display: none;
-}
-
-#admin-username {
-  display: block;
-  color: #000000;
-  font-size: 1rem;
-  display: none;
-}
-
-@media (min-width: 992px) {
-  #admin-username {
-    display: inline;
-  }
 }
 
 .product-details {

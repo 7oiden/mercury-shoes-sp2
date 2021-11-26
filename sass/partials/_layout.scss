@@ -10,7 +10,7 @@
     width: getWidth(xlargeScreen);
   }
 
-  @media (min-width: getBreakpoint(vxlarge)) {
+  @media (min-width: getBreakpoint(xxlarge)) {
     width: getWidth(xxlargeScreen);
   }
 }
@@ -65,6 +65,12 @@
     width: 632px;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: 964px;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
