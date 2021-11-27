@@ -46,3 +46,14 @@
   color: getColor(primary);
   margin-top: 1rem;
 }
+
+.disabled {
+  background-color: grey;
+  pointer-events: none;
+  cursor: default;
+
+  &:hover {
+    scale: 1;
+    box-shadow: none;
+  }
+}

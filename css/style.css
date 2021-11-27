@@ -400,6 +400,39 @@ td {
   max-width: 100px;
 }
 
+.loader {
+  border: 10px solid #ffffff;
+  border-top: 10px solid #ea564e;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  -webkit-animation: spin 1s ease-in-out infinite;
+          animation: spin 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .base-container {
   width: 85%;
   margin: 0 auto;
@@ -648,6 +681,10 @@ strong {
   padding: 0;
 }
 
+.card-text {
+  font-weight: 300;
+}
+
 svg {
   width: 40px;
   height: 40px;
@@ -664,6 +701,15 @@ svg path {
 
 .checkmark path {
   fill: #3caea3;
+}
+
+.cross {
+  width: 30px;
+  height: 30px;
+}
+
+.cross path {
+  fill: #ed553b;
 }
 
 .newsletter__heading {
@@ -1080,7 +1126,7 @@ header {
       flex-wrap: wrap;
 }
 
-.product-details__stock-wrapper {
+.product-details__stock-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1130,6 +1176,7 @@ header {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
 }
@@ -1386,6 +1433,18 @@ header {
   margin-top: 1rem;
 }
 
+.disabled {
+  background-color: grey;
+  pointer-events: none;
+  cursor: default;
+}
+
+.disabled:hover {
+  scale: 1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .newsletter__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1622,5 +1681,30 @@ header {
   display: block;
   color: #000000;
   font-size: 1rem;
+}
+
+.alert {
+  display: inline-block;
+  border: 0.5rem solid #ffffff40;
+  border-radius: 5;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  color: #4e3b3e;
+  font-size: 1.125rem;
+}
+
+.error {
+  background-color: #ed553b;
+  color: white;
+}
+
+.success {
+  background-color: #3caea3;
+  color: white;
+}
+
+.warning {
+  background-color: #f6d55c;
 }
 /*# sourceMappingURL=style.css.map */

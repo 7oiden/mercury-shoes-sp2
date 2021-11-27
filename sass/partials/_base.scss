@@ -292,3 +292,21 @@ a {
 td {
   max-width: 100px;
 }
+
+.loader {
+  border: 10px solid getColor(primary);
+  border-top: 10px solid getColor(accent);
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

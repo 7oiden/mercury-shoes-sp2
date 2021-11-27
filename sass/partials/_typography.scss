@@ -85,6 +85,10 @@ strong {
   padding: 0;
 }
 
+.card-text {
+  font-weight: 300;
+}
+
 svg {
   width: 40px;
   height: 40px;
@@ -100,6 +104,15 @@ svg {
 
   path {
     fill: getColor(success);
+  }
+}
+
+.cross {
+  width: 30px;
+  height: 30px;
+
+  path {
+    fill: getColor(error);
   }
 }
 

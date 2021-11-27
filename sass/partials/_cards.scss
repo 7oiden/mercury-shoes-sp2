@@ -3,6 +3,7 @@
   width: 300px;
   cursor: pointer;
   transition: all 0.3s;
+  background-color: getColor(primary);
 
   @include content-border(5px);
 

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com"
+    /> -->
     <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
     <link
       rel="stylesheet"
@@ -21,7 +25,7 @@
           <ul class="banner__list">
             <li class="banner__item">-20% on first purchase</li>
             <li class="banner__item">Free shipping</li>
-            <li class="banner__item">Money back guarantee</li> 
+            <li class="banner__item">Money back guarantee</li>
           </ul>
           <span id="admin-username">Admin: signed in as 7oiden</span>
         </div>
@@ -29,9 +33,11 @@
           <div class="nav__container base-container">
             <div class="nav__links-wrapper">
               <a href="index.html" class="nav__logo"
-                ><img src="images/logo.png" alt="Mercury logo" class="nav__logo"
-                /></a
-              >
+                ><img
+                  src="images/logo.png"
+                  alt="Mercury logo"
+                  class="nav__logo"
+              /></a>
               <div>
                 <ul class="nav__links-list">
                   <li>
@@ -176,18 +182,14 @@
       </nav>
       <main>
         <section class="product-details product-details-container">
+          <div class="loader"></div>
           <div class="product-details__wrapper">
             <div class="product-details__image">
-              <img
-                src="images/product-1.jpg"
-                alt=""
-                class="product-details__image"
-              />
             </div>
             <div class="product-details__content">
               <div class="product-details__head">
-                <h1 class="product-details__title">Nike Shoe</h1>
-                <p class="product-details__price">$99.00</p>
+                <h1 class="product-details__title"></h1>
+                <p class="product-details__price"></p>
               </div>
               <hr />
               <div class="product-details__content-wrapper">
@@ -230,14 +232,14 @@
                     </div>
                   </div>
                   <div>
-                    <div class="product-details__stock-wrapper">
-                      <p class="product-details__label">In stock:</p>
-                      <svg class="checkmark" viewBox="0 0 24 24">
+                    <div class="product-details__stock-container">
+                      
+                      <!-- <svg class="checkmark" viewBox="0 0 24 24">
                         <path
                           fill="currentColor"
                           d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"
                         />
-                      </svg>
+                      </svg> -->
                     </div>
 
                     <a href="products-overview.html" class="button buy-button"
@@ -247,26 +249,14 @@
                 </div>
                 <div class="product-details__block2">
                   <h2 class="product-details__sub-heading">Product info:</h2>
-                  <p class="product-details__text">
-                    Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                    Ficaepe liatque porepera dolorporum que del et est et que et
-                    anis cum nos volorpor aut a doluptatem dolupta temqui aut
-                    demolup tibuscitem.
-                  </p>
-                  <p class="product-details__text">
-                    Ita quia cori dolore plicide pore con ni ommolorrum quae
-                    optatent quam dolorum facea sequam nam facipsum quo bearchi
-                    citiunt esendae vel minus sunt, nit eatqui num estiisi
-                    nctios por mi, que volore voluptas eum solo optatquam, aut
-                    fuga. Fuga. Hendit maxim hitatibus.
-                  </p>
+                  <p class="product-details__text"></p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-       <section class="newsletter">
+        <section class="newsletter">
           <div class="newsletter__container">
             <div class="newsletter__wrapper">
               <h5 class="newsletter__heading">
@@ -364,6 +354,7 @@
         </ul>
       </div>
     </footer>
-    <script src="js/index.js" type="module"></script>
+    <script src="js/productDetails.js" type="module"></script>
+    <!-- <script src="js/index.js" type="module"></script> -->
   </body>
 </html>
