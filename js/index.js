@@ -3,6 +3,10 @@ import { adminToggler } from "./components/dropdownTogglers.js";
 import { productsUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
+import renderAdminNav from "./ui/renderAdminNav.js";
+
+renderAdminNav();
+
 
 (async function fetchApi() {
   try {
@@ -12,8 +16,6 @@ import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
     console.log(json);
 
     renderFeaturedProducts(json);
-    
-
   } catch (error) {
     displayAlert(
       "alert error",

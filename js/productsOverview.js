@@ -1,3 +1,5 @@
+import { mobileToggler } from "./components/dropdownTogglers.js";
+import { adminToggler } from "./components/dropdownTogglers.js";
 import { productsUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderProducts } from "./ui/renderProducts.js";

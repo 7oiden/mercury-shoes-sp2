@@ -11,7 +11,7 @@ export function mobileToggler() {
 
 hamburgerIcon.addEventListener("click", mobileToggler);
 
-const adminIcon = document.querySelector(".admin__icon");
+const adminLoginIcon = document.querySelector("#login");
 const adminDropdown = document.querySelector(".admin__dropdown");
 
 export function adminToggler() {
@@ -22,4 +22,4 @@ export function adminToggler() {
   }
 }
 
-adminIcon.addEventListener("click", adminToggler);
+adminLoginIcon.addEventListener("click", adminToggler);

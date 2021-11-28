@@ -957,7 +957,7 @@ header {
   color: #000000;
 }
 
-.nav-link:hover {
+.nav__link:hover {
   border-bottom: 3px solid #ea564e;
 }
 
