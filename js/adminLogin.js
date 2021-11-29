@@ -1,16 +1,12 @@
 import { adminUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
-import { saveToken, saveUser, getUsername } from "./utils/storage.js";
+import { saveToken, saveUser } from "./utils/storage.js";
+import { alertContainer } from "./settings/constants.js";
 
-console.log("hi");
-
-const alertContainer = document.querySelector(".alert-container");
 
 const adminForm = document.querySelector(".admin__form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
-
-// const username = getUsername();
 
 adminForm.addEventListener("submit", submitAdminForm);
 

@@ -1025,10 +1025,6 @@ header {
   font-weight: bold;
 }
 
-#about {
-  display: none;
-}
-
 .product-details {
   padding-top: 50px;
 }
@@ -1427,7 +1423,7 @@ header {
 
 .secondary-button {
   font-size: 1.25rem;
-  width: 150px;
+  width: 180px;
   background-color: #000000;
   color: #ffffff;
   margin-top: 1rem;
@@ -1531,6 +1527,68 @@ header {
   display: none;
 }
 
+.admin__form, .add__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.admin__input-wrapper, .add__input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin__input, .add__input {
+  width: 100%;
+  max-width: 350px;
+}
+
+.add {
+  margin: 50px auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0f0f0), color-stop(50%, #f0f0f0), to(#00c3c1));
+  background: linear-gradient(#f0f0f0 0, #f0f0f0 50%, #00c3c1 100%);
+}
+
+@media (min-width: 768px) {
+  .add {
+    width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  .add {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .add {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .add {
+    width: 50%;
+  }
+}
+
+.add__container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .admin {
   position: relative;
 }
@@ -1563,7 +1621,7 @@ header {
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0f0f0), color-stop(75%, #f0f0f0), to(#00c3c1));
   background: linear-gradient(#f0f0f0 0, #f0f0f0 75%, #00c3c1 100%);
-  top: 132px;
+  top: 163px;
   right: 0;
   gap: 1rem;
   z-index: -1;
@@ -1613,35 +1671,10 @@ header {
 
 @media (min-width: 992px) {
   .admin__dropdown {
+    top: 132px;
     width: 600px;
     top: 85px;
   }
-}
-
-.admin__input-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.admin__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1rem;
-}
-
-.admin__input {
-  width: 100%;
-  max-width: 350px;
 }
 
 .mobile-menu {
@@ -1675,12 +1708,6 @@ header {
   .mobile-menu__toggle {
     display: none !important;
   }
-}
-
-#admin-mobile-username {
-  display: block;
-  color: #000000;
-  font-size: 1rem;
 }
 
 .alert {

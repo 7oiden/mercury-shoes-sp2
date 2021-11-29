@@ -6,11 +6,23 @@ export function renderProducts(products) {
   productsContainer.innerHTML = "";
 
   products.forEach((product) => {
-    const imgUrl = "http://localhost:9000" + product.image.url;
+    let imgUrl = product.image_url;
+
+    if (product.image) {
+      imgUrl = "http://localhost:9000" + product.image.url;
+    }
+
+    let altText = product.image_alt_text;
+
+    if (product.image) {
+      altText = product.image.alternativeText;
+    }
+
+    console.log(altText);
 
     productsContainer.innerHTML += `
         <a href="products-details.html?id=${product.id}" class="card">
-        <img src="${imgUrl}" alt="${product.image.alternativeText}" 
+        <img src="${imgUrl}" alt="${altText}" 
         class="card-image" />
         <div class="card-body">
         <h6 class="card-title">${product.title}</h6>

@@ -4,6 +4,9 @@ import { productsUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./ui/searchProducts.js";
+import createAdminNav from "./components/common/createAdminNav.js";
+
+createAdminNav();
 
 (async function fetchApi() {
   try {
@@ -18,7 +21,7 @@ import { searchProducts } from "./ui/searchProducts.js";
     displayAlert(
       "alert error",
       "An error has occured when trying to fetch the API",
-      ".featured__grid"
+      ".products__grid"
     );
   }
 })();

@@ -16,6 +16,14 @@
     font-size: 1.25rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+
+    // &:nth-child(4) {
+    //   padding: 0;
+    // }
+
+    // &:nth-child(5) {
+    //   padding: 0;
+    // }
   }
 
   &__toggle {
@@ -23,13 +31,6 @@
 
     @media (min-width: getBreakpoint(large)) {
       display: none !important;
-      
     }
   }
-}
-
-#admin-mobile-username {
-  display: block;
-  color: getColor(dark);
-  font-size: 1rem;
 }

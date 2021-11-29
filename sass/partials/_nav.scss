@@ -105,9 +105,9 @@ header {
   }
 
   &__icons-wrapper {
-  display: flex;
-  align-items: center;
-}
+    display: flex;
+    align-items: center;
+  }
 
   &__icons-list {
     display: flex;
@@ -138,8 +138,6 @@ header {
 .basket__icon {
   margin-left: 0;
 }
-
-
 
 // .dropdown {
 //   display: none;
@@ -176,7 +174,7 @@ header {
   }
 }
 
-#about {
-  display: none;
-}
+// #about {
+//   display: none;
+// }
 

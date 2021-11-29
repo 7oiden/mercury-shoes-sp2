@@ -11,6 +11,7 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="data:;base64,=" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Basket</title>
   </head>
@@ -23,7 +24,6 @@
             <li class="banner__item">Free shipping</li>
             <li class="banner__item">Money back guarantee</li>
           </ul>
-          <span id="admin-username">Admin: signed in as 7oiden</span>
         </div>
         <nav class="nav">
           <div class="nav__container base-container">
@@ -36,17 +36,7 @@
               /></a>
               <div>
                 <ul class="nav__links-list">
-                  <li>
-                    <a href="#" class="nav__link nav__link--active">Home</a>
-                  </li>
-                  <li>
-                    <a href="products-overview.html" class="nav__link"
-                      >Products</a
-                    >
-                  </li>
-                  <li id="about"><a href="#" class="nav__link">About us</a></li>
-                  <li><a href="#" class="nav__link">Add product</a></li>
-                  <li><a href="#" class="nav__link">Edit product</a></li>
+                  <!-- dynamic created -->
                 </ul>
               </div>
             </div>
@@ -77,18 +67,8 @@
                     <div id="counter"><div>1</div></div>
                   </a>
                 </li>
-                <li>
-                  <div class="nav__icon profile__icon">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        fill="currentColor"
-                        d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"
-                      />
-                    </svg>
-                  </div>
-                </li>
-                <li class="admin">
-                  <div class="nav__icon admin__icon">
+                <li class="admin-login">
+                  <div class="nav__icon" id="login">
                     <svg viewBox="0 0 24 24">
                       <path
                         fill="currentColor"
@@ -97,29 +77,14 @@
                     </svg>
                   </div>
                 </li>
+                <li class="admin-logout"></li>
               </div>
             </ul>
           </div>
 
           <div class="mobile-menu">
             <ul class="mobile-menu__list base-list">
-              <li class="mobile-menu__item">
-                <a href="#" class="mobile-menu__link">Home</a>
-              </li>
-              <li class="mobile-menu__item">
-                <a href="products-overview.html" class="mobile-menu__link"
-                  >Products</a
-                >
-              </li>
-              <li class="mobile-menu__item">
-                <a href="#" class="mobile-menu__link">About us</a>
-              </li>
-              <li class="mobile-menu__item">
-                <a href="#" class="mobile-menu__link">Add product</a>
-              </li>
-              <li class="mobile-menu__item">
-                <a href="#" class="mobile-menu__link">Edit product</a>
-              </li>
+              <!-- dynamic created -->
             </ul>
           </div>
 
@@ -152,12 +117,8 @@
                     * Password and/or e-mail is incorrect
                   </div>
                 </div>
-                <button
-                  id="sign-in"
-                  type="submit"
-                  name="submit"
-                  class="button secondary-button"
-                >
+                <div class="alert-container"></div>
+                <button id="sign-in" class="button secondary-button">
                   Sign in
                 </button>
               </form>
@@ -379,6 +340,7 @@
         </ul>
       </div>
     </footer>
+    <script src="js/adminLogin.js" type="module"></script>
     <script src="js/index.js" type="module"></script>
   </body>
 </html>

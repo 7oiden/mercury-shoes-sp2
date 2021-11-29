@@ -42,6 +42,11 @@ $widths: (
   largeScreen: 90%,
   xlargeScreen: 80%,
   xxlargeScreen: 80%,
+  formSmall: 100%,
+  formMedium: 85%,
+  formLarge: 70%,
+  formXLarge: 60%,
+  formXxLarge: 50%,
 );
 
 @function getWidth($width) {

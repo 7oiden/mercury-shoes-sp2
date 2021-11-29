@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="data:;base64,=" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Add Product</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="banner">
+          <ul class="banner__list">
+            <li class="banner__item">-20% on first purchase</li>
+            <li class="banner__item">Free shipping</li>
+            <li class="banner__item">Money back guarantee</li>
+          </ul>
+        </div>
+        <nav class="nav">
+          <div class="nav__container base-container">
+            <div class="nav__links-wrapper">
+              <a href="index.html" class="nav__logo"
+                ><img
+                  src="images/logo.png"
+                  alt="Mercury logo"
+                  class="nav__logo"
+              /></a>
+              <div>
+                <ul class="nav__links-list">
+                  <!-- dynamic created -->
+                </ul>
+              </div>
+            </div>
+            <ul class="nav__icons-list">
+              <li>
+                <div class="nav__icon mobile-menu__toggle">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
+                    />
+                  </svg>
+                </div>
+              </li>
+              <div class="nav__icons-wrapper">
+                <li>
+                  <a
+                    href="basket.html"
+                    class="nav__icon basket__icon"
+                    id="basket"
+                  >
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
+                      />
+                    </svg>
+                    <div id="counter"><div>1</div></div>
+                  </a>
+                </li>
+                <li class="admin-login">
+                  <div class="nav__icon" id="login">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z"
+                      />
+                    </svg>
+                  </div>
+                </li>
+                <li class="admin-logout"></li>
+              </div>
+            </ul>
+          </div>
+
+          <div class="mobile-menu">
+            <ul class="mobile-menu__list base-list">
+              <!-- dynamic created -->
+            </ul>
+          </div>
+
+          <div class="admin__dropdown">
+            <div class="admin__container">
+              <p class="admin__heading">Admin login</p>
+              <form class="admin__form">
+                <div class="admin__input-wrapper">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="input admin__input"
+                    id="username"
+                    placeholder="Username"
+                  />
+                  <div class="error-messages" id="admin-email-error">
+                    * Please enter a valid e-mail address
+                  </div>
+                </div>
+                <div class="admin__input-wrapper">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="input admin__input"
+                    id="password"
+                    placeholder="Password"
+                  />
+                  <div class="error-messages" id="admin-password-error">
+                    * Password and/or e-mail is incorrect
+                  </div>
+                </div>
+                <div class="alert-container"></div>
+                <button id="sign-in" class="button secondary-button">
+                  Sign in
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="add">
+          <div class="add__container base-container">
+            <h1>Add product</h1>
+            <form class="add__form">
+              <div class="add__input-wrapper">
+                <label for="username">Title</label>
+                <input
+                  type="text"
+                  class="input add__input"
+                  id="title"
+                  placeholder="Title"
+                />
+              </div>
+              <div class="add__input-wrapper">
+                <label for="price">Price</label>
+                <input
+                  type="number"
+                  name="price"
+                  class="input add__input"
+                  id="price"
+                  placeholder="Price"
+                />
+              </div>
+              <div class="add__input-wrapper">
+                <label for="short-description">Short description</label>
+                <textarea
+                  name="short-description"
+                  class="input add__input"
+                  id="short-description"
+                ></textarea>
+              </div>
+              <div class="add__input-wrapper">
+                <label for="description">Description</label>
+                <textarea
+                  name="description"
+                  class="input add__input"
+                  id="description"
+                ></textarea>
+              </div>
+              <div class="add__input-wrapper">
+                <label for="product-image">Image URL</label>
+                <input
+                  type="text"
+                  class="input add__input"
+                  id="product-image"
+                  placeholder="URL"
+                />
+              </div>
+              <div class="add__input-wrapper">
+                <label for="image-alt-text">Image alt-text</label>
+                <input
+                  type="text"
+                  class="input add__input"
+                  id="image-alt-text"
+                  placeholder=""
+                />
+              </div>
+              <!-- <div class="add__input-wrapper">
+                <label for="product-image">Image</label>
+                <input type="file" name="image" class="" id="product-image" />
+              </div> -->
+              <div class="add_input-wrapper">
+                <p>Featured product</p>
+                <input
+                  type="radio"
+                  id="featured-no"
+                  name="featured"
+                  value="false"
+                  checked="checked"
+                />
+                <label for="no">No</label>
+                <input
+                  type="radio"
+                  id="featured-yes"
+                  name="featured"
+                  value="true"
+                />
+                <label for="no">Yes</label>
+              </div>
+              <div class="add_input-wrapper">
+                <p>In stock</p>
+                <input
+                  type="radio"
+                  id="stock-no"
+                  name="stock"
+                  value="false"
+                  checked="checked"
+                />
+                <label for="no">No</label>
+                <input type="radio" id="stock-yes" name="stock" value="true" />
+                <label for="no">Yes</label>
+              </div>
+              <div class="addalert-container"></div>
+              <button class="button secondary-button">Add Product</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/addProduct.js" type="module"></script>
+    <!-- <script src="js/adminLogin.js" type="module"></script> -->
+  </body>
+</html>

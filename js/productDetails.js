@@ -1,5 +1,10 @@
 import { baseUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
+import { mobileToggler } from "./components/dropdownTogglers.js";
+import { adminToggler } from "./components/dropdownTogglers.js";
+import createAdminNav from "./components/common/createAdminNav.js";
+
+createAdminNav();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

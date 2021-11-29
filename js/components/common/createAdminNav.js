@@ -1,10 +1,12 @@
-import { getUsername } from ".././utils/storage.js";
-import logoutIcon from "../components/common/logoutIcon.js";
+import { getUsername } from "../../utils/storage.js";
+import logoutIcon from "./logoutIcon.js";
 
-export default function renderAdminNav() {
+export default function createAdminNav() {
   const { pathname } = document.location;
 
   const linksContainer = document.querySelector(".nav__links-list");
+  const mobileLinksContainer = document.querySelector(".mobile-menu__list");
+  
   const adminLogin = document.querySelector(".admin-login");
   const adminLogout = document.querySelector(".admin-logout");
   const bannerContainer = document.querySelector(".banner__list");
@@ -54,9 +56,20 @@ export default function renderAdminNav() {
   } nav__link">Products</a>
 </li>
 <li id="about"><a href="#" class="nav__link">About us</a></li>
-<li><a href="#" class="nav__link${addLink}</a></li>
-<li><a href="#" class="nav__link${editLink}</a></li>
+<li><a href="add-product.html" class="nav__link" ${addLink}</a></li>
+<li><a href="edit-product.html" class="nav__link" ${editLink}</a></li>
   `;
+
+  mobileLinksContainer.innerHTML = `<li class="mobile-menu__item">
+<a href="/" 
+  class= mobile-menu__link">Home</a>
+ </li>
+ <li class="mobile-menu__item">
+<a href="products-overview.html" class="mobile-menu__link">Products</a>
+</li>
+<li class="mobile-menu__item" id="about"><a href="#" class="mobile-menu__link">About us</a></li>
+<li class="mobile-menu__item"><a href="add-product.html" class="mobile-menu__link" ${addLink}</a></li>
+<li class="mobile-menu__item"><a href="edit-product.html" class="mobile-menu__link" ${editLink}</a></li>`;
 
   logoutIcon();
 }

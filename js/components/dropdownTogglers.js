@@ -19,6 +19,7 @@ export function adminToggler() {
     adminDropdown.style.display = "none";
   } else {
     adminDropdown.style.display = "block";
+    adminDropdown.style.zIndex = "9999";
   }
 }
 
