@@ -1,3 +1,7 @@
+import { getToken } from "../utils/storage.js";
+
+const token = getToken();
+
 const featuredContainer = document.querySelector(".featured__grid");
 
 export function renderFeaturedProducts(products) {
@@ -24,7 +28,17 @@ export function renderFeaturedProducts(products) {
       altText = product.image.alternativeText;
     }
 
+    
+    let editProd = "";
+
+    if (token) {
+      editProd = `<a href="edit-product.html?id=${product.id}" class="edit-icon">
+        Edit Product
+      </a>`;
+    }
+
     featuredContainer.innerHTML += `
+        <div class="card-outer">
         <a href="products-details.html?id=${product.id}" class="card">
         <img src="${imgUrl}" alt="${altText}" 
         class="card-image" />
@@ -33,6 +47,8 @@ export function renderFeaturedProducts(products) {
         <p class="card-price">$${product.price.toFixed(2)}</p>
         <p class="card-text">${product.short_description}</p>
         </div>
-        </a>`;
+        </a>
+        ${editProd}
+      </div>`;
   });
 }

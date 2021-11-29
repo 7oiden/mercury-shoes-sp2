@@ -31,10 +31,10 @@ export default function createAdminNav() {
       pathname === "/add.html" ? "active" : ""
     }">Add Product</a>`;
 
-    editLink = `
-    <a href="add.html" class="${
-      pathname === "/edit.html" ? "active" : ""
-    }">Edit Product</a>`;
+    // editLink = `
+    // <a href="add.html" class="${
+    //   pathname === "/edit.html" ? "active" : ""
+    // }">Edit Product</a>`;
 
     authUser = `
     <span>Signed in as: <em>${username}</em></span>`;
@@ -57,7 +57,6 @@ export default function createAdminNav() {
 </li>
 <li id="about"><a href="#" class="nav__link">About us</a></li>
 <li><a href="add-product.html" class="nav__link" ${addLink}</a></li>
-<li><a href="edit-product.html" class="nav__link" ${editLink}</a></li>
   `;
 
   mobileLinksContainer.innerHTML = `<li class="mobile-menu__item">
@@ -68,8 +67,7 @@ export default function createAdminNav() {
 <a href="products-overview.html" class="mobile-menu__link">Products</a>
 </li>
 <li class="mobile-menu__item" id="about"><a href="#" class="mobile-menu__link">About us</a></li>
-<li class="mobile-menu__item"><a href="add-product.html" class="mobile-menu__link" ${addLink}</a></li>
-<li class="mobile-menu__item"><a href="edit-product.html" class="mobile-menu__link" ${editLink}</a></li>`;
+<li class="mobile-menu__item"><a href="add-product.html" class="mobile-menu__link" ${addLink}</a></li>`;
 
   logoutIcon();
 }

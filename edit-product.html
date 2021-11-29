@@ -13,7 +13,7 @@
     />
     <link rel="icon" href="data:;base64,=" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Add Product</title>
+    <title>Edit Product</title>
   </head>
   <body>
     <div class="wrapper">
@@ -127,68 +127,69 @@
         </nav>
       </header>
       <main>
-        <section class="add">
-          <div class="add__container base-container">
-            <h1 class="add__heading">Add product</h1>
-            <form class="add__form">
-              <div class="add__input-wrapper">
+        <section class="edit">
+          <div class="edit__container base-container">
+            <h1 class="edit__heading">Edit product</h1>
+            <div class="loader"></div>
+            <form class="edit__form">
+              <div class="edit__input-wrapper">
                 <label for="username">Title</label>
                 <input
                   type="text"
-                  class="input add__input"
+                  class="input edit__input"
                   id="title"
                   placeholder="Title"
                 />
               </div>
-              <div class="add__input-wrapper">
+              <div class="edit__input-wrapper">
                 <label for="price">Price</label>
                 <input
                   type="number"
                   name="price"
-                  class="input add__input"
+                  class="input edit__input"
                   id="price"
                   placeholder="Price"
                 />
               </div>
-              <div class="add__input-wrapper">
+              <div class="edit__input-wrapper">
                 <label for="short-description">Short description</label>
                 <textarea
                   name="short-description"
-                  class="input add__input"
+                  class="input edit__input"
                   id="short-description"
                 ></textarea>
               </div>
-              <div class="add__input-wrapper">
+              <div class="edit__input-wrapper">
                 <label for="description">Description</label>
                 <textarea
                   name="description"
-                  class="input add__input"
+                  class="input edit__input"
                   id="description"
                 ></textarea>
               </div>
-              <div class="add__input-wrapper">
+              <div class="edit__input-wrapper">
                 <label for="product-image">Image URL</label>
                 <input
                   type="text"
-                  class="input add__input"
+                  class="input edit__input"
                   id="product-image"
                   placeholder="URL"
                 />
               </div>
-              <div class="add__input-wrapper">
+              <div class="edit__input-wrapper">
                 <label for="image-alt-text">Image alt-text</label>
                 <input
                   type="text"
-                  class="input add__input"
+                  class="input edit__input"
                   id="image-alt-text"
                   placeholder=""
                 />
               </div>
-              <!-- <div class="add__input-wrapper">
+              <!-- <div class="edit__input-wrapper">
                 <label for="product-image">Image</label>
                 <input type="file" name="image" class="" id="product-image" />
               </div> -->
-              <div class="add_input-wrapper">
+              <div class="edit_input-wrapper">
                 <p>Featured product</p>
                 <input
                   type="radio"
@@ -206,7 +207,7 @@
                 />
                 <label for="no">Yes</label>
               </div>
-              <div class="add_input-wrapper">
+              <div class="edit_input-wrapper">
                 <p>In stock</p>
                 <input
                   type="radio"
@@ -219,14 +220,15 @@
                 <input type="radio" id="stock-yes" name="stock" value="true" />
                 <label for="no">Yes</label>
               </div>
-              <div class="addalert-container"></div>
-              <button class="button secondary-button">Add Product</button>
+              <div class="editalert-container"></div>
+              <button class="button secondary-button">Update Product</button>
+              <div class="delete-container"></div>
             </form>
           </div>
         </section>
       </main>
     </div>
-    <script src="js/addProduct.js" type="module"></script>
+    <script src="js/editProduct.js" type="module"></script>
     <!-- <script src="js/adminLogin.js" type="module"></script> -->
   </body>
 </html>

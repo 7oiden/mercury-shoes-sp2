@@ -1,12 +1,12 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
-import { adminToggler } from "./components/dropdownTogglers.js";
+// import { adminToggler } from "./components/dropdownTogglers.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import displayAlert from "./components/common/displayAlert.js";
 // import { alertContainer } from "./settings/constants.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 
-const alertContainer = document.querySelector(".alert-container");
+const alertContainer = document.querySelector(".addalert-container");
 
 createAdminNav();
 
@@ -128,10 +128,10 @@ async function addProduct(
     }
 
     if (json.error) {
-      displayAlert("error", json.message, ".alert-container");
+      displayAlert("error", json.message, ".addalert-container");
     }
     console.log(json);
   } catch (error) {
-    displayAlert("error", "Something went wrong!", ".alert-container");
+    displayAlert("error", "Something went wrong!", ".addalert-container");
   }
 }

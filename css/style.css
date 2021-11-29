@@ -648,7 +648,7 @@ strong {
   font-weight: 400;
 }
 
-.products__heading {
+.products__heading, .add__heading, .edit__heading {
   font-family: "soleil", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
@@ -1169,10 +1169,10 @@ header {
 .card {
   display: block;
   width: 300px;
-  cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-color: #ffffff;
+  border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
 }
@@ -1180,7 +1180,11 @@ header {
 .card:hover {
   -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
-  scale: 1.1;
+  scale: 1.05;
+}
+
+.card__link {
+  cursor: pointer;
 }
 
 .card-image {
@@ -1193,6 +1197,7 @@ header {
   background-color: #ffffff;
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 0 0 5px 5px;
+  position: relative;
 }
 
 .card-wrapper {
@@ -1210,6 +1215,22 @@ header {
 .card-text {
   margin: 0;
   padding: 1rem 0 0 0;
+}
+
+.edit-icon {
+  margin-top: 0.5rem;
+  background-color: #323232;
+  color: #ffffff;
+  display: block;
+  padding: 0.5rem 1rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.edit-icon:hover {
+  background-color: #ea564e;
 }
 
 .newsletter {
@@ -1527,7 +1548,7 @@ header {
   display: none;
 }
 
-.admin__form, .add__form {
+.admin__form, .add__form, .edit__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1536,9 +1557,10 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  padding-top: 1rem;
 }
 
-.admin__input-wrapper, .add__input-wrapper {
+.admin__input-wrapper, .add__input-wrapper, .edit__input-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1548,12 +1570,12 @@ header {
           flex-direction: column;
 }
 
-.admin__input, .add__input {
+.admin__input, .add__input, .edit__input {
   width: 100%;
   max-width: 350px;
 }
 
-.add {
+.add, .edit {
   margin: 50px auto;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0f0f0), color-stop(50%, #f0f0f0), to(#00c3c1));
@@ -1561,30 +1583,30 @@ header {
 }
 
 @media (min-width: 768px) {
-  .add {
+  .add, .edit {
     width: 85%;
   }
 }
 
 @media (min-width: 992px) {
-  .add {
+  .add, .edit {
     width: 70%;
   }
 }
 
 @media (min-width: 1200px) {
-  .add {
+  .add, .edit {
     width: 60%;
   }
 }
 
 @media (min-width: 1400px) {
-  .add {
+  .add, .edit {
     width: 50%;
   }
 }
 
-.add__container {
+.add__container, .edit__container {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }

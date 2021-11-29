@@ -67,11 +67,12 @@
   display: none;
 }
 
-.admin, .add {
+.admin, .add, .edit {
   &__form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-top: 1rem;
   }
 
   &__input-wrapper {
@@ -85,7 +86,7 @@
   }
 }
 
-.add {
+.add, .edit {
   margin: 50px auto;
   width: getWidth(formSmall);
   background: linear-gradient(#f0f0f0 0, #f0f0f0 50%, #00c3c1 100%);
