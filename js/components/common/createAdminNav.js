@@ -15,7 +15,6 @@ export default function createAdminNav() {
 
   let authUser = "";
   let addLink = "";
-  let editLink = "";
 
   adminLogout.innerHTML = "";
 

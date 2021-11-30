@@ -45,7 +45,7 @@ const stockContainer = document.querySelector(
 const button = document.querySelector(".buy-button");
 
 function createHtml(details) {
-  const imgUrl = "http://localhost:9000" + details.image.url;
+  // const imgUrl = "http://localhost:9000" + details.image.url;
 
   let stockIcon = `<svg class="checkmark" viewBox="0 0 24 24">
                         <path
@@ -62,6 +62,18 @@ function createHtml(details) {
                   />
                 </svg>`;
   }
+
+  let imgUrl = details.image_url;
+
+  if (details.image) {
+    imgUrl = "http://localhost:9000" + details.image.url;
+  }
+
+  // let altText = product.image_alt_text;
+
+  // if (product.image) {
+  //   altText = product.image.alternativeText;
+  // }
 
   console.log(imgUrl);
   loader.style.display = "none";

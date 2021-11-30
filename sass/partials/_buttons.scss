@@ -45,6 +45,7 @@
   background-color: getColor(dark);
   color: getColor(primary);
   margin-top: 1rem;
+  border-radius: 5px;
 }
 
 .disabled {
@@ -56,4 +57,19 @@
     scale: 1;
     box-shadow: none;
   }
+}
+
+.update-button {
+  width: 220px;
+}
+
+.delete-button {
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
