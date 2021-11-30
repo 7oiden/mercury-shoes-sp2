@@ -82,11 +82,23 @@ function submitAddForm(event) {
     }
   }
 
+  function validateNumber(priceValue) {
+    const regEx = /^-?\d+\.?\d*$/;
+    const patternMatches = regEx.test(priceValue);
+    return patternMatches;
+  }
+
   function checkContactInput() {
     if (checkLength(title.value, 4)) {
       titleError.style.display = "none";
     } else {
       titleError.style.display = "block";
+    }
+
+    if (validateNumber(price.value)) {
+      priceError.style.display = "none";
+    } else {
+      priceError.style.display = "block";
     }
 
     if (checkLength(shortDescription.value, 9)) {
@@ -109,11 +121,11 @@ function submitAddForm(event) {
   }
 
   title.addEventListener("keyup", checkContactInput);
+  price.addEventListener("keyup", checkContactInput);
   shortDescription.addEventListener("keyup", checkContactInput);
   description.addEventListener("keyup", checkContactInput);
   imageAltText.addEventListener("keyup", checkContactInput);
- 
-  
+
   title.onfocus = function () {
     title.style.border = "1px solid #bdbdbd";
   };
@@ -137,11 +149,13 @@ function submitAddForm(event) {
     titleError.style.display = "block";
     title.style.border = "2px solid #ed553b";
   }
-  // if (checkLength(price.value, 2)) {
-  //   priceError.style.display = "none";
-  // } else {
-  //   priceError.style.display = "block";
-  // }
+  if (validateNumber(price.value)) {
+    priceError.style.display = "none";
+    price.style.border = "1px solid #bdbdbd";
+  } else {
+    priceError.style.display = "block";
+    price.style.border = "2px solid #ed553b";
+  }
   if (checkLength(shortDescription.value, 9)) {
     shortDescriptionError.style.display = "none";
     shortDescription.style.border = "1px solid #bdbdbd";
@@ -176,7 +190,8 @@ function submitAddForm(event) {
     checkLength(title.value, 4) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
-    checkLength(imageAltText.value, 9)
+    checkLength(imageAltText.value, 9) &&
+    validateNumber(price.value)
   ) {
     addProduct(
       titleValue,
@@ -188,6 +203,8 @@ function submitAddForm(event) {
       featuredValue,
       stockValue
     );
+  } else {
+    window.scrollTo(0, 200);
   }
 
   async function addProduct(
