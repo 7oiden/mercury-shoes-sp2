@@ -139,16 +139,19 @@
                   id="title"
                   placeholder="Title"
                 />
+                <div class="error-messages" id="add-title-error">*Must be at least 5 characters</div>
               </div>
               <div class="add__input-wrapper">
                 <label for="price">Price</label>
                 <input
-                  type="number"
+                  type="text"
                   name="price"
                   class="input add__input"
                   id="price"
                   placeholder="Price"
+                  step=".01"
                 />
+                <div class="error-messages" id="add-price-error"></div>
               </div>
               <div class="add__input-wrapper">
                 <label for="short-description">Short description</label>
@@ -157,6 +160,10 @@
                   class="input add__input"
                   id="short-description"
                 ></textarea>
+                <div
+                  class="error-messages"
+                  id="add-short-description-error"
+                >*Must be at least 10 characters</div>
               </div>
               <div class="add__input-wrapper">
                 <label for="description">Description</label>
@@ -165,6 +172,7 @@
                   class="input add__input"
                   id="description"
                 ></textarea>
+                <div class="error-messages" id="add-description-error">*Must be at least 15 characters</div>
               </div>
               <div class="add__input-wrapper">
                 <label for="product-image">Image URL</label>
@@ -174,6 +182,7 @@
                   id="product-image"
                   placeholder="URL"
                 />
+                <div class="error-messages" id="add-url-error"></div>
               </div>
               <div class="add__input-wrapper">
                 <label for="image-alt-text">Image alt-text</label>
@@ -183,6 +192,7 @@
                   id="image-alt-text"
                   placeholder=""
                 />
+                <div class="error-messages" id="add-alt-text-error">*Must be at least 10 characters</div>
               </div>
               <!-- <div class="add__input-wrapper">
                 <label for="product-image">Image</label>

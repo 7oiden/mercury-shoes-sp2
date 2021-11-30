@@ -1,11 +1,14 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
+import { validateNewsletterForm } from "./components/newsletter.js";
 import { productsUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 
+
 createAdminNav();
+
 
 
 (async function fetchApi() {

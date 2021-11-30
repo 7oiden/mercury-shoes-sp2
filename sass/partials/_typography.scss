@@ -52,7 +52,9 @@ strong {
   font-weight: 400;
 }
 
-.products__heading, .add__heading, .edit__heading {
+.products__heading,
+.add__heading,
+.edit__heading {
   font-family: $primary-headings;
   font-size: 2.5rem;
   font-weight: 400;
@@ -116,35 +118,39 @@ svg {
   }
 }
 
-.newsletter__heading {
-  font-family: $primary-headings;
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
+.newsletter {
+  &__heading {
+    font-family: $primary-headings;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    font-family: $secondary-headings;
+    padding: 0.5rem 0 2rem 0;
+    margin: 0;
+  }
 }
 
-.newsletter__description {
-  font-size: 1.125rem;
-  font-family: $secondary-headings;
-  padding: 0.5rem 0 2rem 0;
-  margin: 0;
-}
+.news {
+  &__header {
+    font-family: $primary-headings;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
 
-.news-header {
-  font-family: $primary-headings;
-  font-size: 1.75rem;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-.news-text {
-  font-family: $secondary-headings;
-  font-size: 1.125rem;
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 1rem;
+  &__text {
+    font-family: $secondary-headings;
+    font-size: 1.125rem;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
 }
 
 .main-red-line {
@@ -152,14 +158,6 @@ svg {
   height: 6px;
   background-color: getColor(accent);
   margin-right: 2rem;
-}
-
-.news-red-line {
-  width: 150px;
-  height: 3px;
-  background-color: getColor(accent);
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 // product details

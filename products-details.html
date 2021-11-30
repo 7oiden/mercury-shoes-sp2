@@ -138,15 +138,14 @@
         >
         <span class="breadcrumbs__item">/</span>
         <span class="breadcrumbs__item breadcrumbs__item--active"
-          ><a href="#">Nike shoe</a></span
+          ><a href="#" class="breadcrumbs__current">Nike shoe</a></span
         >
       </nav>
       <main>
         <section class="product-details product-details-container">
           <div class="loader"></div>
           <div class="product-details__wrapper">
-            <div class="product-details__image">
-            </div>
+            <div class="product-details__image"></div>
             <div class="product-details__content">
               <div class="product-details__head">
                 <h1 class="product-details__title"></h1>
@@ -194,7 +193,6 @@
                   </div>
                   <div>
                     <div class="product-details__stock-container">
-                      
                       <!-- <svg class="checkmark" viewBox="0 0 24 24">
                         <path
                           fill="currentColor"
@@ -227,26 +225,16 @@
                 Sign up to our newsletter to get updates delivered to your inbox
               </p>
               <form action="" class="newsletter__form">
-                <div>
+                <div class="newsletter__input-wrapper">
                   <input
                     type="text"
                     class="newsletter__input input"
                     placeholder="email address"
                   />
-                  <div class="newsletter__success">
-                    <!-- <svg
-                      viewBox="0 0 24 24"
-                      class="checkmark"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"
-                      />
-                    </svg> -->
-                  </div>
                   <div class="error-messages" id="newsletter-email-error">
                     * Please enter a valid e-mail address
                   </div>
+                  <div class="newsletter__success"></div>
                 </div>
 
                 <button class="newsletter__button button">Sign Up</button>
@@ -317,6 +305,5 @@
     </footer>
     <script src="js/adminLogin.js" type="module"></script>
     <script src="js/productDetails.js" type="module"></script>
-    <!-- <script src="js/index.js" type="module"></script> -->
   </body>
 </html>

@@ -1,12 +1,30 @@
+.input {
+  padding: 0.5rem 1rem;
+  font-family: $body-text;
+  font-size: 1.125rem;
+  background-color: getColor(primary);
+
+  @include content-border(5px);
+
+  &:focus {
+    outline: 2px solid lime;
+  }
+}
+
 .newsletter {
   &__form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+
+  &__input-wrapper {
+    max-width: 350px;
   }
 
   &__input {
+    margin: 0;
     width: 100%;
-    max-width: 350px;
   }
 }
 
@@ -50,24 +68,17 @@
   }
 }
 
-.input {
-  padding: 0.5rem 1rem;
-  font-size: 1.125rem;
-  background-color: getColor(primary);
-
-  @include content-border(5px);
-
-  &:focus {
-    outline: 2px solid lime;
-  }
-}
-
 .error-messages {
   color: getColor(error);
   display: none;
+  padding-top: 0.25rem;
 }
 
-.admin, .add, .edit {
+
+
+.admin,
+.add,
+.edit {
   &__form {
     display: flex;
     flex-direction: column;
@@ -86,7 +97,8 @@
   }
 }
 
-.add, .edit {
+.add,
+.edit {
   margin: 50px auto;
   width: getWidth(formSmall);
   background: linear-gradient(#f0f0f0 0, #f0f0f0 50%, #00c3c1 100%);
@@ -112,3 +124,19 @@
     padding-bottom: 3rem;
   }
 }
+
+textarea {
+  font-family: $body-text;
+}
+
+#short-description {
+  font-size: 1.125rem;
+  height: 100px;
+}
+
+#description {
+  font-size: 1.125rem;
+  height: 250px;
+}
+
+

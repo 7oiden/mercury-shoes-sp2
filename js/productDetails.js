@@ -2,6 +2,7 @@ import { baseUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
+import { validateNewsletterForm } from "./components/newsletter.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 
 createAdminNav();
@@ -34,6 +35,9 @@ console.log(detailUrl);
 })();
 
 const loader = document.querySelector(".loader");
+
+const breadcrumbCurrent = document.querySelector(".breadcrumbs__current");
+
 
 const imageContainer = document.querySelector(".product-details__image");
 const titleContainer = document.querySelector(".product-details__title");
@@ -77,6 +81,7 @@ function createHtml(details) {
 
   console.log(imgUrl);
   loader.style.display = "none";
+  breadcrumbCurrent.innerHTML = `${details.title}`;
   imageContainer.innerHTML = `<img src="${imgUrl}" class="product-details__image"/>`;
   titleContainer.innerHTML = `${details.title}`;
   priceContainer.innerHTML = `$${details.price.toFixed(2)}`;

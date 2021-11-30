@@ -205,25 +205,16 @@
                 Sign up to our newsletter to get updates delivered to your inbox
               </p>
               <form action="" class="newsletter__form">
-                <div>
+                <div class="newsletter__input-wrapper">
                   <input
                     type="text"
                     class="newsletter__input input"
                     placeholder="email address"
                   />
-                  <div class="newsletter__success">
-                    <!-- <svg
-                      viewBox="0 0 24 24"
-                      class="checkmark"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"
-                      />
-                    </svg> -->
-                  </div>
                   <div class="error-messages" id="newsletter-email-error">
                     * Please enter a valid e-mail address
+                  </div>
+                  <div class="newsletter__success">
                   </div>
                 </div>
 
@@ -236,9 +227,9 @@
         <section class="news base-container">
           <div class="news__column1">
             <div class="news__text-wrapper">
-              <h4 class="news-header">Introducing the new Nike Shoe</h4>
-              <div class="news-red-line"></div>
-              <p class="news-text">
+              <h4 class="news__header">Introducing the new Nike Shoe</h4>
+              <div class="news__red-line"></div>
+              <p class="news__text">
                 When you know what you want, waiting isn't an option
               </p>
               <a href="products-overview.html" class="button buy-button"
@@ -247,7 +238,7 @@
             </div>
           </div>
           <div class="news__column2">
-            <img src="images/product-news.jpg" alt="" class="news-image" />
+            <img src="images/product-news.jpg" alt="" class="news__image" />
           </div>
         </section>
       </main>
@@ -313,7 +304,5 @@
     </footer>
     <script src="js/adminLogin.js" type="module"></script>
     <script src="js/index.js" type="module"></script>
-    <!-- <script src="js/components/newsletter.js"></script>
-    <script src="js/components/dropdownMenuToggler.js"></script> -->
   </body>
 </html>
