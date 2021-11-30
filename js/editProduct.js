@@ -1,9 +1,10 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import { getToken } from "./utils/storage.js";
-import { productsUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
-import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
+import { baseUrl } from "./settings/api.js";
+
+const alertContainer = document.querySelector(".editalert-container");
 
 const token = getToken();
 
@@ -13,9 +14,11 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-// if (!id) {
-//   document.location.href = "/";
-// }
+if (!id) {
+  document.location.href = "/";
+}
+
+const productUrl = baseUrl + "products/" + id;
 
 const editForm = document.querySelector(".edit__form");
 const title = document.querySelector("#title");
@@ -25,6 +28,8 @@ const description = document.querySelector("#description");
 const productImage = document.querySelector("#product-image");
 const imageAltText = document.querySelector("#image-alt-text");
 const loader = document.querySelector(".loader");
+
+const idInput = document.querySelector("#id");
 
 if (!token) {
   setInterval(function () {
@@ -37,12 +42,10 @@ if (!token) {
     ".edit-form"
   );
 
-//   loader.style.display = "none";
+  loader.style.display = "none";
 } else {
   (async function () {
-
-    const productUrl = productsUrl + "/" + id;
-
+    
     try {
       const response = await fetch(productUrl);
       const details = await response.json();
@@ -55,7 +58,6 @@ if (!token) {
       price.value = details.price;
       shortDescription.value = details.short_description;
       description.value = details.description;
-      featured.value = details.featured;
       idInput.value = details.id;
 
       deleteButton(details.id);
@@ -67,92 +69,110 @@ if (!token) {
     }
   })();
 }
-//   editForm.addEventListener("submit", submitEditForm);
 
-//   function submitEditForm(event) {
-//     event.preventDefault();
+//////////////////////////////////////////
 
-//     alertContainer.innerHTML = "";
+editForm.addEventListener("submit", submitEditForm);
 
-//     const idValue = idInput.value;
-//     const titleInput = title.value.trim();
-//     const authorInput = author.value.trim();
-//     const summaryInput = summary.value.trim();
+function submitEditForm(event) {
+  event.preventDefault();
 
-//     if (
-//       titleInput.length === 0 ||
-//       authorInput.length === 0 ||
-//       summaryInput.length === 0
-//     ) {
-//       return displayAlert(
-//         "alert warning",
-//         "Please add tile, author and summary before updating",
-//         ".alert-container"
-//       );
-//     }
+  console.log("hi");
 
-//     updateArticle(idValue, titleInput, authorInput, summaryInput);
-//   }
+  alertContainer.innerHTML = "";
 
-//   async function updateArticle(id, title, author, summary) {
-//     //updates current article in favorites list
-//     const currentFavs = getExistingFavs();
+  const idValue = idInput.value;
+  const titleValue = title.value.trim();
+  const priceValue = parseFloat(price.value);
+  const shortDescriptionValue = shortDescription.value.trim();
+  const descriptionValue = description.value.trim();
+  const productImageValue = productImage.value.trim();
+  const imageAltTextValue = imageAltText.value.trim();
 
-//     const articleInStorage = currentFavs.find((fav) => {
-//       return fav.id === id;
-//     });
+  const featuredValue = document.querySelector(
+    'input[name="featured"]:checked'
+  ).value;
 
-//     if (articleInStorage) {
-//       const articleIndex = currentFavs.findIndex((fav) => {
-//         return fav.id === id;
-//       });
+  const stockValue = document.querySelector(
+    'input[name="stock"]:checked'
+  ).value;
 
-//       if (id) {
-//         currentFavs[articleIndex].id = id;
-//         currentFavs[articleIndex].title = title;
-//         currentFavs[articleIndex].author = author;
-//         currentFavs[articleIndex].summary = summary;
+  if (
+    titleValue.length === 0 ||
+    isNaN(priceValue) ||
+    shortDescriptionValue.length === 0 ||
+    descriptionValue.length === 0
+  ) {
+    return displayAlert(
+      "alert warning",
+      "Please add tile, author and summary before updating",
+      ".editalert-container"
+    );
+  }
 
-//         saveFavs(currentFavs);
-//       }
-//     }
+  updateProduct(
+    titleValue,
+    priceValue,
+    shortDescriptionValue,
+    descriptionValue,
+    productImageValue,
+    imageAltTextValue,
+    featuredValue,
+    stockValue,
+    idValue,
+  );
+}
 
-//     const editData = JSON.stringify({
-//       title: title,
-//       author: author,
-//       summary: summary,
-//     });
+async function updateProduct(title, price, short_description, description, image_url, image_alt_text, featured, stock, id) {
+   
+  const jsonData = {
+    title: title,
+    price: price,
+    short_description: short_description,
+    description: description,
+    image_url: image_url,
+    image_alt_text: image_alt_text,
+    featured: featured,
+    stock: stock,
+  };
 
-//     const options = {
-//       method: "PUT",
-//       body: editData,
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${token}`,
-//       },
-//     };
+  const editData = JSON.stringify(jsonData);
 
-//     try {
-//       const response = await fetch(productUrl, options);
-//       const json = await response.json();
+  const token = getToken();
 
-//       if (json.updated_at) {
-//         displayAlert(
-//           "success",
-//           "Article successfully updated",
-//           ".alert-container"
-//         );
+  console.log(editData);
 
-//         setTimeout(function () {
-//           alertContainer.innerHTML = "";
-//         }, 1500);
-//       }
+  const options = {
+    method: "PUT",
+    body: editData,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  };
 
-//       if (json.error) {
-//         displayAlert("error", json.message, ".alert-container");
-//       }
-//     } catch (error) {
-//       displayAlert("error", "Something went wrong!", ".alert-container");
-//     }
-//   }
-// }
+  const editUrl = baseUrl + "products/" + id;
+
+  try {
+    const response = await fetch(editUrl, options);
+    const json = await response.json();
+
+    if (json.updated_at) {
+      displayAlert(
+        "success",
+        "Product successfully updated",
+        ".editalert-container"
+      );
+
+      setTimeout(function () {
+        alertContainer.innerHTML = "";
+      }, 2000);
+    }
+
+    if (json.error) {
+      displayAlert("error", json.message, ".alert-container");
+    }
+  } catch (error) {
+    displayAlert("error", "Something went wrong!", ".alert-container");
+  }
+}

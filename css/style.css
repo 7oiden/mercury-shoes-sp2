@@ -1169,6 +1169,7 @@ header {
 .card {
   display: block;
   width: 300px;
+  min-height: 410px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-color: #ffffff;

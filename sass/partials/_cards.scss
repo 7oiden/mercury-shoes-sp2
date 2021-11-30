@@ -1,6 +1,7 @@
 .card {
   display: block;
   width: 300px;
+  min-height: 410px;
   transition: all 0.3s;
   background-color: getColor(primary);
   border-radius: 5px;

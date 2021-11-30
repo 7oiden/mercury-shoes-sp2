@@ -122,7 +122,7 @@ async function addProduct(
 
       setTimeout(function () {
         alertContainer.innerHTML = "";
-      }, 1500);
+      }, 2000);
 
       addForm.reset();
     }

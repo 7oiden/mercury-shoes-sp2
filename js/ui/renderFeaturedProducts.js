@@ -24,11 +24,10 @@ export function renderFeaturedProducts(products) {
 
     let altText = product.image_alt_text;
 
-    if (product.image.alternativeText) {
+    if (product.image) {
       altText = product.image.alternativeText;
     }
 
-    
     let editProd = "";
 
     if (token) {
@@ -38,7 +37,7 @@ export function renderFeaturedProducts(products) {
     }
 
     featuredContainer.innerHTML += `
-        <div class="card-outer">
+       <div>
         <a href="products-details.html?id=${product.id}" class="card">
         <img src="${imgUrl}" alt="${altText}" 
         class="card-image" />

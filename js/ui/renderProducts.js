@@ -22,9 +22,7 @@ export function renderProducts(products) {
       altText = product.image.alternativeText;
     }
 
-    console.log(altText);
-
-    let editProd = "card-outer";
+    let editProd = "";
 
     if (token) {
       editProd = `<a href="edit-product.html?id=${product.id}" class="edit-icon">

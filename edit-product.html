@@ -185,10 +185,10 @@
                   placeholder=""
                 />
               </div>
-              <!-- <div class="edit__input-wrapper">
+              <div class="edit__input-wrapper">
                 <label for="product-image">Image</label>
                 <input type="file" name="image" class="" id="product-image" />
-              </div> -->
+              </div>
               <div class="edit_input-wrapper">
                 <p>Featured product</p>
                 <input
@@ -204,6 +204,7 @@
                   id="featured-yes"
                   name="featured"
                   value="true"
+                  checked=""
                 />
                 <label for="no">Yes</label>
               </div>
@@ -217,9 +218,10 @@
                   checked="checked"
                 />
                 <label for="no">No</label>
-                <input type="radio" id="stock-yes" name="stock" value="true" />
+                <input type="radio" id="stock-yes" name="stock" value="true" checked="" />
                 <label for="no">Yes</label>
               </div>
+              <input id="id" type="hidden"/>
               <div class="editalert-container"></div>
               <button class="button secondary-button">Update Product</button>
               <div class="delete-container"></div>
