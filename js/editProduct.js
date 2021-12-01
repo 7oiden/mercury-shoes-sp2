@@ -7,7 +7,6 @@ import deleteButton from "./components/editProducts/deleteButton.js";
 
 const alertContainer = document.querySelector(".editalert-container");
 
-
 createAdminNav();
 
 const queryString = document.location.search;
@@ -31,6 +30,11 @@ const loader = document.querySelector(".loader");
 
 const idInput = document.querySelector("#id");
 
+const featuredNo = document.querySelector("#featured-no");
+const featuredYes = document.querySelector("#featured-yes");
+const stockNo = document.querySelector("#stock-no");
+const stockYes = document.querySelector("#stock-yes");
+
 const titleError = document.querySelector("#edit-title-error");
 const priceError = document.querySelector("#edit-price-error");
 const shortDescriptionError = document.querySelector(
@@ -40,7 +44,6 @@ const descriptionError = document.querySelector("#edit-description-error");
 const urlError = document.querySelector("#edit-url-error");
 const altTextError = document.querySelector("#edit-alt-text-error");
 
-const alert = document.querySelector(".editalert-container");
 
 (async function () {
   try {
@@ -49,7 +52,31 @@ const alert = document.querySelector(".editalert-container");
 
     console.log(details);
 
-    console.log(details.featured);
+    if (details.featured === true) {
+      featuredYes.checked = true;
+      featuredNo.checked = false;
+    } else {
+      featuredYes.checked = false;
+      featuredNo.checked = true;
+    }
+
+    if (details.stock === true) {
+      stockYes.checked = true;
+      stockNo.checked = false;
+    } else {
+      stockYes.checked = false;
+      stockNo.checked = true;
+    }
+/////
+    if (details.image) {
+      imageAltText.value = details.image.alternativeText;
+    } else {
+      imageAltText.value = details.image_alt_text;
+    }
+
+    if (!details.image) {
+      productImage.value = details.image_url
+    } 
 
     title.value = details.title;
     price.value = details.price;
@@ -295,7 +322,7 @@ function submitEditForm(event) {
         );
 
         setTimeout(function () {
-          location.href = "products-overview.html";
+          history.back();
         }, 1500);
       }
 
@@ -307,3 +334,4 @@ function submitEditForm(event) {
     }
   }
 }
+

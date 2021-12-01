@@ -7,8 +7,11 @@
   @include content-border(5px);
 
   &:focus {
-   
   }
+}
+
+input[type="radio"] {
+ cursor: pointer;
 }
 
 label {
@@ -101,7 +104,7 @@ label {
 .edit {
   margin: 75px auto;
   width: getWidth(formSmall);
-  background: white;
+  background-color: #DDEBE2;
 
   @include content-border(5px);
 
@@ -219,7 +222,8 @@ textarea {
   border-bottom: 1px solid getColor(border);
 }
 
-.add__radio-flex, .edit__radio-flex {
+.add__radio-flex,
+.edit__radio-flex {
   display: flex;
   align-items: center;
   gap: 1rem;

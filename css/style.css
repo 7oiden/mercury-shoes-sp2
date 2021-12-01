@@ -1257,34 +1257,9 @@ header {
 }
 
 .delete-button {
+  margin-top: 2rem;
   font-size: 1rem;
   border-radius: 5px;
-}
-
-.button-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 50px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-@media (min-width: 992px) {
-  .button-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
 }
 
 .input {
@@ -1294,6 +1269,10 @@ header {
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
+}
+
+input[type="radio"] {
+  cursor: pointer;
 }
 
 label {
@@ -1411,7 +1390,7 @@ label {
 .edit {
   margin: 75px auto;
   width: 100%;
-  background: white;
+  background-color: #DDEBE2;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
 }
@@ -1574,7 +1553,8 @@ textarea {
   border-bottom: 1px solid #bdbdbd;
 }
 
-.add__radio-flex, .edit__radio-flex {
+.add__radio-flex,
+.edit__radio-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1731,7 +1711,7 @@ textarea {
 
 .success {
   background-color: #00f6db;
-  color: white;
+  color: black;
 }
 
 .warning {

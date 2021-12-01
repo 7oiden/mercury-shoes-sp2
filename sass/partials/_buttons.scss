@@ -68,18 +68,7 @@
 }
 
 .delete-button {
+  margin-top: 2rem;
   font-size: 1rem;
   border-radius: 5px;
-}
-
-.button-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  justify-content: space-between;
-  align-items: baseline;
-
-  @media (min-width: getBreakpoint(large)) {
-    flex-direction: row;
-  }
 }

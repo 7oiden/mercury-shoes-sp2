@@ -8,7 +8,6 @@ import { baseUrl } from "./settings/api.js";
 
 const alertContainer = document.querySelector(".addalert-container");
 
- 
 createAdminNav();
 
 const addForm = document.querySelector(".add__form");
@@ -30,6 +29,8 @@ const altTextError = document.querySelector("#add-alt-text-error");
 
 const alert = document.querySelector(".addalert-container");
 
+document.getElementById("product-image").value = "via.placeholder.com/500x400";
+
 addForm.addEventListener("submit", submitAddForm);
 
 function submitAddForm(event) {
@@ -37,14 +38,14 @@ function submitAddForm(event) {
 
   alert.innerHTML = "";
 
-  // console.log(productImageValue);
-
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const shortDescriptionValue = shortDescription.value.trim();
   const descriptionValue = description.value.trim();
   const productImageValue = "https://" + productImage.value.trim();
   const imageAltTextValue = imageAltText.value.trim();
+
+  console.log(productImageValue);
 
   const featuredValue = document.querySelector(
     'input[name="featured"]:checked'
