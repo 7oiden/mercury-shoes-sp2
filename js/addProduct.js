@@ -8,6 +8,7 @@ import { baseUrl } from "./settings/api.js";
 
 const alertContainer = document.querySelector(".addalert-container");
 
+ 
 createAdminNav();
 
 const addForm = document.querySelector(".add__form");
@@ -29,11 +30,6 @@ const altTextError = document.querySelector("#add-alt-text-error");
 
 const alert = document.querySelector(".addalert-container");
 
-// title.addEventListener("keyup", checkAddInput);
-// shortDescription.addEventListener("keyup", checkAddInput);
-// description.addEventListener("keyup", checkAddInput);
-// imageAltText.addEventListener("keyup", checkAddInput);
-
 addForm.addEventListener("submit", submitAddForm);
 
 function submitAddForm(event) {
@@ -47,7 +43,7 @@ function submitAddForm(event) {
   const priceValue = parseFloat(price.value);
   const shortDescriptionValue = shortDescription.value.trim();
   const descriptionValue = description.value.trim();
-  const productImageValue = productImage.value.trim();
+  const productImageValue = "https://" + productImage.value.trim();
   const imageAltTextValue = imageAltText.value.trim();
 
   const featuredValue = document.querySelector(
@@ -58,22 +54,9 @@ function submitAddForm(event) {
     'input[name="stock"]:checked'
   ).value;
 
-  // if (
-  //   titleValue.length === 0 ||
-  //   isNaN(priceValue) ||
-  //   shortDescriptionValue.length === 0 ||
-  //   descriptionValue.length === 0 ||
-  //   productImageValue.length === 0 ||
-  //   imageAltTextValue.length === 0
-  // ) {
-  //   return displayAlert(
-  //     "warning",
-  //     "Please fill in all fields before proceeding",
-  //     ".addalert-container"
-  //   );
-  // }
+  console.log(productImageValue);
 
-  //// validation
+  // validation
   function checkLength(value, len) {
     if (value.trim().length > len) {
       return true;
@@ -88,7 +71,7 @@ function submitAddForm(event) {
     return patternMatches;
   }
 
-  function checkContactInput() {
+  function checkInput() {
     if (checkLength(title.value, 4)) {
       titleError.style.display = "none";
     } else {
@@ -113,6 +96,12 @@ function submitAddForm(event) {
       descriptionError.style.display = "block";
     }
 
+    if (checkLength(productImage.value, 4)) {
+      urlError.style.display = "none";
+    } else {
+      urlError.style.display = "block";
+    }
+
     if (checkLength(imageAltText.value, 9)) {
       altTextError.style.display = "none";
     } else {
@@ -120,14 +109,19 @@ function submitAddForm(event) {
     }
   }
 
-  title.addEventListener("keyup", checkContactInput);
-  price.addEventListener("keyup", checkContactInput);
-  shortDescription.addEventListener("keyup", checkContactInput);
-  description.addEventListener("keyup", checkContactInput);
-  imageAltText.addEventListener("keyup", checkContactInput);
+  title.addEventListener("keyup", checkInput);
+  price.addEventListener("keyup", checkInput);
+  shortDescription.addEventListener("keyup", checkInput);
+  description.addEventListener("keyup", checkInput);
+  productImage.addEventListener("keyup", checkInput);
+  imageAltText.addEventListener("keyup", checkInput);
 
   title.onfocus = function () {
     title.style.border = "1px solid #bdbdbd";
+  };
+
+  price.onfocus = function () {
+    price.style.border = "1px solid #bdbdbd";
   };
 
   shortDescription.onfocus = function () {
@@ -136,6 +130,10 @@ function submitAddForm(event) {
 
   description.onfocus = function () {
     description.style.border = "1px solid #bdbdbd";
+  };
+
+  productImage.onfocus = function () {
+    productImage.style.border = "1px solid #bdbdbd";
   };
 
   imageAltText.onfocus = function () {
@@ -172,15 +170,17 @@ function submitAddForm(event) {
     description.style.border = "2px solid #ed553b";
   }
 
-  // if (checkLength(productImage.value, 10)) {
-  //   urlError.style.display = "none";
-  // } else {
-  //   urlError.style.display = "block";
-  // }
+  if (checkLength(productImage.value, 4)) {
+    urlError.style.display = "none";
+    productImage.style.border = "1px solid #bdbdbd";
+  } else {
+    urlError.style.display = "block";
+    productImage.style.border = "2px solid #ed553b";
+  }
 
   if (checkLength(imageAltText.value, 9)) {
     altTextError.style.display = "none";
-    imageAltText.style.border = "2px solid transparent";
+    imageAltText.style.border = "1px solid #bdbdbd";
   } else {
     altTextError.style.display = "block";
     imageAltText.style.border = "2px solid #ed553b";
@@ -190,6 +190,7 @@ function submitAddForm(event) {
     checkLength(title.value, 4) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
+    checkLength(productImage.value, 4) &&
     checkLength(imageAltText.value, 9) &&
     validateNumber(price.value)
   ) {

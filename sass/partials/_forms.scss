@@ -7,8 +7,12 @@
   @include content-border(5px);
 
   &:focus {
-    outline: 2px solid lime;
+   
   }
+}
+
+label {
+  padding-bottom: 0.25rem;
 }
 
 .newsletter {
@@ -50,7 +54,7 @@
   }
 
   &__input {
-    width: 300px;
+    width: 100%;
     font-size: 1.125rem;
     padding: 0.5rem 1rem;
 
@@ -74,11 +78,7 @@
   padding-top: 0.25rem;
 }
 
-
-
-.admin,
-.add,
-.edit {
+.admin {
   &__form {
     display: flex;
     flex-direction: column;
@@ -99,9 +99,11 @@
 
 .add,
 .edit {
-  margin: 50px auto;
+  margin: 75px auto;
   width: getWidth(formSmall);
-  background: linear-gradient(#f0f0f0 0, #f0f0f0 50%, #00c3c1 100%);
+  background: white;
+
+  @include content-border(5px);
 
   @media (min-width: getBreakpoint(medium)) {
     width: getWidth(formMedium);
@@ -139,4 +141,94 @@ textarea {
   height: 250px;
 }
 
+.add__input-wrapper,
+.edit__input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
 
+  @media (min-width: getBreakpoint(small)) {
+    width: 90%;
+  }
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 80%;
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: 80%;
+  }
+}
+
+.add__radio-wrapper,
+.edit__radio-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: getBreakpoint(small)) {
+    width: 90%;
+  }
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 80%;
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: 80%;
+  }
+}
+
+.add__input,
+.edit__input {
+  width: 100%;
+}
+
+.add__input-prefix-wrapper,
+.edit__input-prefix-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.add__input-prefix,
+.edit__input-prefix {
+  font-size: 1.125rem;
+  background-color: getColor(secondary);
+  color: getColor(primary);
+  padding: 0.5rem 0.75rem;
+  border-left: 1px solid getColor(secondary);
+  border-top: 1px solid getColor(secondary);
+  border-bottom: 1px solid getColor(secondary);
+  border-radius: 5px 0 0 5px;
+}
+
+#product-image {
+  border-radius: 0 5px 5px 0;
+  border-right: 1px solid getColor(border);
+  border-top: 1px solid getColor(border);
+  border-bottom: 1px solid getColor(border);
+}
+
+#price {
+  width: 120px;
+  border-radius: 0 5px 5px 0;
+  border-right: 1px solid getColor(border);
+  border-top: 1px solid getColor(border);
+  border-bottom: 1px solid getColor(border);
+}
+
+.add__radio-flex, .edit__radio-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.yes {
+  padding-top: 7px;
+}
+
+.no {
+  padding-top: 7px;
+}

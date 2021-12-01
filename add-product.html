@@ -129,108 +129,140 @@
       <main>
         <section class="add">
           <div class="add__container base-container">
-            <h1 class="add__heading">Add product</h1>
+            <div class="add__input-wrapper">
+              <h1 class="add__heading">Add product</h1>
+            </div>
             <form class="add__form">
               <div class="add__input-wrapper">
-                <label for="username">Title</label>
+                <label for="username">Title (must be at least 5 characters)</label>
                 <input
                   type="text"
                   class="input add__input"
                   id="title"
                   placeholder="Title"
                 />
-                <div class="error-messages" id="add-title-error">*Must be at least 5 characters</div>
+                <div class="error-messages" id="add-title-error">
+                  *Must be at least 5 characters
+                </div>
               </div>
               <div class="add__input-wrapper">
                 <label for="price">Price</label>
-                <input
-                  type="text"
-                  name="price"
-                  class="input add__input"
-                  id="price"
-                  placeholder="Price"
-                  step=".01"
-                />
-                <div class="error-messages" id="add-price-error">*Must be a number</div>
+                <div class="add__input-prefix-wrapper">
+                  <div class="add__input-prefix">$</div>
+                  <input
+                    type="text"
+                    name="price"
+                    class="input add__input"
+                    id="price"
+                    placeholder="99.99"
+                    step=".01"
+                  />
+                </div>
+                <div class="error-messages" id="add-price-error">
+                  *Must be a number
+                </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="short-description">Short description</label>
+                <label for="short-description">Short description (must be at least 10 characters)</label>
                 <textarea
                   name="short-description"
                   class="input add__input"
                   id="short-description"
                 ></textarea>
-                <div
-                  class="error-messages"
-                  id="add-short-description-error"
-                >*Must be at least 10 characters</div>
+                <div class="error-messages" id="add-short-description-error">
+                  *Must be at least 10 characters
+                </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="description">Description</label>
+                <label for="description">Description (must be at least 15 characters)</label>
                 <textarea
                   name="description"
                   class="input add__input"
                   id="description"
                 ></textarea>
-                <div class="error-messages" id="add-description-error">*Must be at least 15 characters</div>
+                <div class="error-messages" id="add-description-error">
+                  *Must be at least 15 characters
+                </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="product-image">Image URL</label>
-                <input
-                  type="text"
-                  class="input add__input"
-                  id="product-image"
-                  placeholder="URL"
-                />
-                <div class="error-messages" id="add-url-error"></div>
+                <label for="product-image">Image URL (must be at least 5 characters)</label>
+                <div class="add__input-prefix-wrapper">
+                  <div class="add__input-prefix">https://</div>
+                  <input
+                    type="text"
+                    class="input add__input"
+                    id="product-image"
+                    placeholder="URL"
+                  />
+                </div>
+                <div class="error-messages" id="add-url-error">
+                  *Must be a least 5 characters
+                </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="image-alt-text">Image alt-text</label>
+                <label for="image-alt-text">Image alt-text (must be at least 10 characters)</label>
                 <input
                   type="text"
                   class="input add__input"
                   id="image-alt-text"
                   placeholder=""
                 />
-                <div class="error-messages" id="add-alt-text-error">*Must be at least 10 characters</div>
+                <div class="error-messages" id="add-alt-text-error">
+                  *Must be at least 10 characters
+                </div>
               </div>
               <!-- <div class="add__input-wrapper">
                 <label for="product-image">Image</label>
                 <input type="file" name="image" class="" id="product-image" />
               </div> -->
-              <div class="add_input-wrapper">
-                <p>Featured product</p>
-                <input
-                  type="radio"
-                  id="featured-no"
-                  name="featured"
-                  value="false"
-                  checked="checked"
-                />
-                <label for="no">No</label>
-                <input
-                  type="radio"
-                  id="featured-yes"
-                  name="featured"
-                  value="true"
-                />
-                <label for="no">Yes</label>
+              <div class="add__radio-wrapper">
+                <p class="add__radio-heading">Featured product:</p>
+                <div class="add__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    name="featured"
+                    value="false"
+                    checked="checked"
+                  />
+                  <label class="no" for="no">NO</label>
+                </div>
+                <div class="add__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    name="featured"
+                    value="true"
+                  />
+                  <label class="yes" for="no">YES</label>
+                </div>
               </div>
-              <div class="add_input-wrapper">
-                <p>In stock</p>
-                <input
-                  type="radio"
-                  id="stock-no"
-                  name="stock"
-                  value="false"
-                  checked="checked"
-                />
-                <label for="no">No</label>
-                <input type="radio" id="stock-yes" name="stock" value="true" />
-                <label for="no">Yes</label>
+              <div class="add__radio-wrapper">
+                <p class="add__radio-heading">In stock:</p>
+                <div class="add__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    name="stock"
+                    value="false"
+                    checked="checked"
+                  />
+                  <label class="no" for="no">NO</label>
+                </div>
+                <div class="add__radio-flex">
+                    <input
+                      style="height: 20px; width: 20px; vertical-align: middle"
+                      type="radio"
+                      name="stock"
+                      value="true"
+                    />
+                    <label class="yes" for="no">YES</label>
+                  </div>
               </div>
-              <div class="addalert-container"></div>
-              <button class="button secondary-button">Add Product</button>
+              <div class="add__input-wrapper">
+                <div class="addalert-container"></div>
+                <button class="button secondary-button">Add Product</button>
+              </div>
             </form>
           </div>
         </section>

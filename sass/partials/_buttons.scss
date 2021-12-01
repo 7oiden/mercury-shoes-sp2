@@ -46,6 +46,10 @@
   color: getColor(primary);
   margin-top: 1rem;
   border-radius: 5px;
+
+  &:hover {
+    background-color: getColor(accent);
+  }
 }
 
 .disabled {
@@ -70,6 +74,12 @@
 
 .button-wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   justify-content: space-between;
   align-items: baseline;
+
+  @media (min-width: getBreakpoint(large)) {
+    flex-direction: row;
+  }
 }

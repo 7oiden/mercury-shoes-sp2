@@ -12,8 +12,9 @@ $colors: (
   background: #fafafa,
   dark: #000000,
   error: #ed553b,
-  success: #00F6DB,
+  success: #00f6db,
   warning: #f6d55c,
+  border: #bdbdbd,
 );
 
 @function getColor($color) {

@@ -129,7 +129,9 @@
       <main>
         <section class="edit">
           <div class="edit__container base-container">
-            <h1 class="edit__heading">Edit product</h1>
+            <div class="edit__input-wrapper">
+              <h1 class="edit__heading">Edit product (must be at least 5 characters)</h1>
+            </div>
             <div class="loader"></div>
             <form class="edit__form">
               <div class="edit__input-wrapper">
@@ -140,100 +142,138 @@
                   id="title"
                   placeholder="Title"
                 />
+                <div class="error-messages" id="edit-title-error">
+                  *Must be at least 5 characters
+                </div>
               </div>
               <div class="edit__input-wrapper">
                 <label for="price">Price</label>
-                <input
-                  type="number"
-                  name="price"
-                  class="input edit__input"
-                  id="price"
-                  placeholder="Price"
-                />
+                <div class="edit__input-prefix-wrapper">
+                  <div class="edit__input-prefix">$</div>
+                  <input
+                    type="text"
+                    name="price"
+                    class="input edit__input"
+                    id="price"
+                    placeholder="99.99"
+                    step=".01"
+                  />
+                </div>
+                <div class="error-messages" id="edit-price-error">
+                  *Must be a number
+                </div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="short-description">Short description</label>
+                <label for="short-description">Short description (must be at least 10 characters)</label>
                 <textarea
                   name="short-description"
                   class="input edit__input"
                   id="short-description"
                 ></textarea>
+                <div class="error-messages" id="edit-short-description-error">
+                  *Must be at least 10 characters
+                </div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="description">Description</label>
+                <label for="description">Description (must be at least 15 characters)</label>
                 <textarea
                   name="description"
                   class="input edit__input"
                   id="description"
                 ></textarea>
+                <div class="error-messages" id="edit-description-error">
+                  *Must be at least 15 characters
+                </div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="product-image">Image URL</label>
-                <input
-                  type="text"
-                  class="input edit__input"
-                  id="product-image"
-                  placeholder="URL"
-                />
+                <label for="product-image">Image URL (must be at least 5 characters)</label>
+                <div class="edit__input-prefix-wrapper">
+                  <div class="edit__input-prefix">https://</div>
+                  <input
+                    type="text"
+                    class="input edit__input"
+                    id="product-image"
+                    placeholder="URL"
+                  />
+                </div>
+                <div class="error-messages" id="edit-url-error">
+                  *Must be a least 5 characters
+                </div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="image-alt-text">Image alt-text</label>
+                <label for="image-alt-text">Image alt-text (must be at least 10 characters)</label>
                 <input
                   type="text"
                   class="input edit__input"
                   id="image-alt-text"
                   placeholder=""
                 />
+                <div class="error-messages" id="edit-alt-text-error">
+                  *Must be at least 10 characters
+                </div>
               </div>
-              <div class="edit__input-wrapper">
+              <!-- <div class="edit__input-wrapper">
                 <label for="product-image">Image</label>
                 <input type="file" name="image" class="" id="product-image" />
+              </div> -->
+              <div class="edit__radio-wrapper">
+                <p class="edit__radio-heading">Featured product:</p>
+                <div class="edit__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    id="featured-no"
+                    name="featured"
+                    value="false"
+                    checked="checked"
+                  />
+                  <label class="no" for="no">NO</label>
+                </div>
+                <div class="edit__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    id="featured-yes"
+                    name="featured"
+                    value="true"
+                  />
+                  <label class="yes" for="no">YES</label>
+                </div>
               </div>
-              <div class="edit_input-wrapper">
-                <p>Featured product</p>
-                <input
-                  type="radio"
-                  id="featured-no"
-                  name="featured"
-                  value="false"
-                  checked="checked"
-                />
-                <label for="no">No</label>
-                <input
-                  type="radio"
-                  id="featured-yes"
-                  name="featured"
-                  value="true"
-                  checked=""
-                />
-                <label for="no">Yes</label>
+              <div class="edit__radio-wrapper">
+                <p class="edit__radio-heading">In stock:</p>
+                <div class="edit__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    id="stock-no"
+                    name="stock"
+                    value="false"
+                    checked="checked"
+                  />
+                  <label class="no" for="no">NO</label>
+                </div>
+                <div class="edit__radio-flex">
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    id="stock-yes"
+                    name="stock"
+                    value="true"
+                  />
+                  <label class="yes" for="no">YES</label>
+                </div>
               </div>
-              <div class="edit_input-wrapper">
-                <p>In stock</p>
-                <input
-                  type="radio"
-                  id="stock-no"
-                  name="stock"
-                  value="false"
-                  checked="checked"
-                />
-                <label for="no">No</label>
-                <input
-                  type="radio"
-                  id="stock-yes"
-                  name="stock"
-                  value="true"
-                  checked=""
-                />
-                <label for="no">Yes</label>
-              </div>
+
               <input id="id" type="hidden" />
-              <div class="editalert-container"></div>
-              <div class="button-wrapper">
-                <button class="button secondary-button update-button">
-                  Update Product
-                </button>
-                <div class="delete-container"></div>
+              <div class="edit__input-wrapper">
+                <div class="editalert-container"></div>
+                <div class="button-wrapper">
+                  <button class="button secondary-button update-button">
+                    Update Product
+                  </button>
+                  <div class="delete-container"></div>
+                </div>
               </div>
             </form>
           </div>
