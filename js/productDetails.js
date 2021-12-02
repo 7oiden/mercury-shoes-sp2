@@ -5,6 +5,8 @@ import { adminToggler } from "./components/dropdownTogglers.js";
 import { validateNewsletterForm } from "./components/newsletter.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 
+import { getExistingBasket, saveBasket} from "./utils/storage.js"
+
 createAdminNav();
 
 const queryString = document.location.search;
@@ -34,22 +36,27 @@ console.log(detailUrl);
   }
 })();
 
-const loader = document.querySelector(".loader");
 
 const breadcrumbCurrent = document.querySelector(".breadcrumbs__current");
+const detailsWrapper = document.querySelector(".product-details__wrapper");
 
 
-const imageContainer = document.querySelector(".product-details__image");
-const titleContainer = document.querySelector(".product-details__title");
-const priceContainer = document.querySelector(".product-details__price");
-const detailsContainer = document.querySelector(".product-details__text");
-const stockContainer = document.querySelector(
-  ".product-details__stock-container"
-);
-const button = document.querySelector(".buy-button");
 
 function createHtml(details) {
-  // const imgUrl = "http://localhost:9000" + details.image.url;
+
+  let imgUrl = details.image_url;
+
+  if (details.image) {
+    imgUrl = "http://localhost:9000" + details.image.url;
+  }
+
+  let altText = details.image_alt_text;
+
+  if (details.image) {
+    altText = details.image.alternativeText;
+  }
+
+  detailsWrapper.innerHTML = "";
 
   let stockIcon = `<svg class="checkmark" viewBox="0 0 24 24">
                         <path
@@ -67,11 +74,75 @@ function createHtml(details) {
                 </svg>`;
   }
 
-  let imgUrl = details.image_url;
+  
 
   if (details.image) {
     imgUrl = "http://localhost:9000" + details.image.url;
   }
+
+  breadcrumbCurrent.innerHTML = `${details.title}`;
+
+  detailsWrapper.innerHTML = `<div class="product-details__image">
+  <img src="${imgUrl}" alt="${altText}" class="product-details__image"/>
+  </div>
+  <div class="product-details__content">
+  <div class="product-details__head">
+  <h1 class="product-details__title">${details.title}</h1>
+  <p class="product-details__price">$${details.price.toFixed(2)}</p>
+  </div>
+  <hr />
+  <div class="product-details__content-wrapper">
+  <div class="product-details__block1">
+    <div>
+    <p class="product-details__label">Gender:</p>
+      </div>
+    <div>
+    <p class="product-details__label">Color:</p>
+    <div class="product-details__box-wrapper">
+    <div class="product-details__box product-details__color1"></div>
+    <div class="product-details__box product-details__color2"></div>
+    <div class="product-details__box product-details__color3"></div>
+    </div>
+    </div>
+    <div>
+    <p class="product-details__label">Size:</p>
+    <div class="product-details__box-wrapper">
+    <div class="product-details__box">
+    <div class="product-details__size">41</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">43</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">43</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">44</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">45</div>
+    </div>
+    </div>
+    </div>
+    <div>
+    <div class="product-details__stock-container">
+    <p class="product-details__label">In stock:</p><div>${stockIcon}</div>
+    </div>
+    <button class="button buy-button" 
+    data-id="${details.id}"
+    data-image="${details.image.url}"
+    data-title="${details.title}"
+    data-price="${details.price}">
+    Add to cart</button>
+    </div>
+    </div>
+    <div class="product-details__block2">
+    <h2 class="product-details__sub-heading">Product info:</h2>
+    <p class="product-details__text">${details.description}</p>
+    </div>
+    </div>
+    </div>
+  `;
 
   // let altText = product.image_alt_text;
 
@@ -79,18 +150,55 @@ function createHtml(details) {
   //   altText = product.image.alternativeText;
   // }
 
-  console.log(imgUrl);
-  loader.style.display = "none";
-  breadcrumbCurrent.innerHTML = `${details.title}`;
-  imageContainer.innerHTML = `<img src="${imgUrl}" class="product-details__image"/>`;
-  titleContainer.innerHTML = `${details.title}`;
-  priceContainer.innerHTML = `$${details.price.toFixed(2)}`;
-  detailsContainer.innerHTML = `${details.description}`;
-  stockContainer.innerHTML = `<p class="product-details__label">In stock:</p><div>${stockIcon}</div>`;
+  // console.log(imgUrl);
+  // loader.style.display = "none";
+  // breadcrumbCurrent.innerHTML = `${details.title}`;
+  // imageContainer.innerHTML = `<img src="${imgUrl}" class="product-details__image"/>`;
+  // titleContainer.innerHTML = `${details.title}`;
+  // priceContainer.innerHTML = `$${details.price.toFixed(2)}`;
+  // detailsContainer.innerHTML = `${details.description}`;
+  // stockContainer.innerHTML = `<p class="product-details__label">In stock:</p><div>${stockIcon}</div>`;
 
   console.log(details.stock);
 
+  const button = document.querySelector(".buy-button");
+
   if (!details.stock) {
     button.classList.add("disabled");
+  }
+
+button.addEventListener("click", handleBuyButton)
+
+
+function handleBuyButton() {
+    // this.classList.toggle("fas");
+    // this.classList.toggle("far");
+
+    const id = this.dataset.id;
+    const image = this.dataset.image;
+    const title = this.dataset.title;
+    const price = this.dataset.price;
+
+    const currentBasket = getExistingBasket();
+
+    const basketInStorage = currentBasket.find((item) => {
+      return item.id === id;
+    });
+
+    if (!basketInStorage) {
+      const basket = {
+        id: id,
+        image: image,
+        title: title,
+        price: price,
+      };
+      currentBasket.push(basket);
+      saveBasket(currentBasket);
+    } else {
+      const newBasket = currentBasket.filter((item) => {
+        return item.id !== id;
+      });
+      saveBasket(newBasket);
+    }
   }
 }

@@ -1,3 +1,18 @@
+//basket
+export function getExistingBasket() {
+  const items = localStorage.getItem("basket-items");
+
+  if (!items) {
+    return [];
+  } else {
+    return JSON.parse(items);
+  }
+}
+
+export function saveBasket(items) {
+  localStorage.setItem("basket-items", JSON.stringify(items));
+}
+
 //admin login
 const tokenKey = "token";
 const userKey = "user";
