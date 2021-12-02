@@ -1,8 +1,10 @@
 
+
 export default function clearBasket() {
   const clearButton = document.querySelector("#clear-basket");
   const basketHeading = document.querySelector(".basket__heading-container");
   const basketContainer = document.querySelector(".basket__list");
+  const counterWrapper = document.querySelector("#counter");
 
   clearButton.addEventListener("click", clearBasketList);
 
@@ -12,6 +14,7 @@ export default function clearBasket() {
       basketContainer.innerHTML = `<li class="basket-list-empty">Basket is empty...</li>`;
       clearButton.style.display = "none";
       basketHeading.innerHTML = `<h1 class="basket__heading">Basket</h1>`;
+      counterWrapper.style.display = "none"
     }
   }
 }

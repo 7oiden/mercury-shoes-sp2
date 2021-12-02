@@ -5,11 +5,11 @@ import { productsUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import createAdminNav from "./components/common/createAdminNav.js";
+import { basketCounter } from "./components/common/basketCounter.js"
 
+basketCounter();
 
 createAdminNav();
-
-
 
 (async function fetchApi() {
   try {

@@ -5,7 +5,10 @@ import { adminToggler } from "./components/dropdownTogglers.js";
 import { validateNewsletterForm } from "./components/newsletter.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 
-import { getExistingBasket, saveBasket} from "./utils/storage.js"
+import { getExistingBasket, saveBasket } from "./utils/storage.js";
+import { basketCounter } from "./components/common/basketCounter.js";
+
+basketCounter();
 
 createAdminNav();
 
@@ -36,14 +39,10 @@ console.log(detailUrl);
   }
 })();
 
-
 const breadcrumbCurrent = document.querySelector(".breadcrumbs__current");
 const detailsWrapper = document.querySelector(".product-details__wrapper");
 
-
-
 function createHtml(details) {
-
   let imgUrl = details.image_url;
 
   if (details.image) {
@@ -73,8 +72,6 @@ function createHtml(details) {
                   />
                 </svg>`;
   }
-
-  
 
   if (details.image) {
     imgUrl = "http://localhost:9000" + details.image.url;
@@ -133,7 +130,7 @@ function createHtml(details) {
     data-image="${details.image.url}"
     data-title="${details.title}"
     data-price="${details.price}">
-    Add to cart</button>
+    Add to basket</button>
     </div>
     </div>
     <div class="product-details__block2">
@@ -167,10 +164,9 @@ function createHtml(details) {
     button.classList.add("disabled");
   }
 
-button.addEventListener("click", handleBuyButton)
+  button.addEventListener("click", handleBuyButton);
 
-
-function handleBuyButton() {
+  function handleBuyButton() {
     // this.classList.toggle("fas");
     // this.classList.toggle("far");
 
@@ -180,6 +176,9 @@ function handleBuyButton() {
     const price = this.dataset.price;
 
     const currentBasket = getExistingBasket();
+
+    const counterContainer = document.querySelector("#test");
+    const counterWrapper = document.querySelector("#counter");
 
     const basketInStorage = currentBasket.find((item) => {
       return item.id === id;
@@ -192,13 +191,16 @@ function handleBuyButton() {
         title: title,
         price: price,
       };
+      counterWrapper.style.display = "block";
+      counterContainer.innerHTML = currentBasket.length + 1;
       currentBasket.push(basket);
       saveBasket(currentBasket);
-    } else {
-      const newBasket = currentBasket.filter((item) => {
-        return item.id !== id;
-      });
-      saveBasket(newBasket);
     }
+    // } else {
+    //   const newBasket = currentBasket.filter((item) => {
+    //     return item.id !== id;
+    //   });
+    //   saveBasket(newBasket);
+    // }
   }
 }

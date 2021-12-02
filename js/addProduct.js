@@ -5,6 +5,9 @@ import displayAlert from "./components/common/displayAlert.js";
 // import { alertContainer } from "./settings/constants.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
+import { basketCounter } from "./components/common/basketCounter.js";
+
+basketCounter();
 
 const alertContainer = document.querySelector(".addalert-container");
 

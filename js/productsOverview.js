@@ -6,6 +6,9 @@ import displayAlert from "./components/common/displayAlert.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./ui/searchProducts.js";
 import createAdminNav from "./components/common/createAdminNav.js";
+import { basketCounter } from "./components/common/basketCounter.js";
+
+basketCounter();
 
 createAdminNav();
 

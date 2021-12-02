@@ -2,6 +2,9 @@ import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import clearBasket from "./components/basket/clearBasket.js";
+import { basketCounter } from "./components/common/basketCounter.js";
+
+basketCounter();
 
 import { getExistingBasket } from "./utils/storage.js";
 
@@ -21,7 +24,7 @@ console.log(basket.length);
 let word = "item";
 
 if (itemCount > 1) {
-  word = "items"
+  word = "items";
 }
 
 basketHeading.innerHTML = `
@@ -37,18 +40,21 @@ if (itemCount === 0) {
 console.log(basket);
 
 basket.forEach((item) => {
+
+  console.log(item.id);
+
   basketContainer.innerHTML += `
       <li class="basket__item">
                   <div class="basket__image">
                     <img
-                      src="${item.image}"
+                      src="http://localhost:9000${item.image}"
                       alt=""
                       class="basket__image"
                     />
                   </div>
                   <div class="basket__content">
                     <h3 class="basket__title">
-                      <a class="basket__link">${item.title}</a>
+                      <a href="products-details.html?id=${item.id}" class="basket__link">${item.title}</a>
                     </h3>
                     <table class="basket__table">
                       <tr>
