@@ -47,27 +47,30 @@
   }
 
   &__icon-container {
-    height: 30px;
-    width: 30px;
+    height: 24px;
+    width: 24px;
     border-radius: 50%;
     border: 2px solid getColor(accent);
+    background-color: getColor(accent);
     position: relative;
   }
 
   &__icon {
     position: absolute;
+    width: 16px;
+    height: 16px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     path {
-    fill: getColor(accent);
+    fill: getColor(dark);
   }
   }
 }
 
 .edit-icon {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   background-color: getColor(secondary);
   color: getColor(primary);
   display: block;

@@ -126,7 +126,8 @@ function createHtml(details) {
     <p class="product-details__label">In stock:</p><div>${stockIcon}</div>
     </div>
     <div class="button-message"></div>
-    <button class="button buy-button" 
+    <button class="button primary-button"
+    id="buy-button" 
     data-id="${details.id}"
     data-image="${details.image.url}"
     data-title="${details.title}"
@@ -160,7 +161,7 @@ function createHtml(details) {
 
   console.log(details.stock);
 
-  const button = document.querySelector(".buy-button");
+  const button = document.querySelector("#buy-button");
   const messageContainer = document.querySelector(".button-message");
 
   messageContainer.innerHTML = "";

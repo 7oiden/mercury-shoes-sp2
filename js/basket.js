@@ -135,7 +135,7 @@ summaryContainer.innerHTML = `
                 </tr>
               </table>
               <div>
-                <a href="products-overview.html" class="button checkout-button"
+                <a href="index.html" class="button primary-button checkout-button"
                   >Checkout</a
                 >
               </div>`;

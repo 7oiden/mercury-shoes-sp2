@@ -1,9 +1,13 @@
 .main-image {
-  background-image: url("../images/mercury-main.jpg");
+  background-image: url("../images/mercury-main-mobile.jpg");
   background-size: cover;
-  height: 800px;
+  height: 900px;
   margin: 0;
   position: relative;
+
+  @media (min-width: getBreakpoint(large)) {
+      background-image: url("../images/mercury-main.jpg");
+    }
 }
 
 .products-banner {

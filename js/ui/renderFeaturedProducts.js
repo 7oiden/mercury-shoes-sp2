@@ -44,7 +44,7 @@ export function renderFeaturedProducts(products) {
         <div class="card__body">
         <div class="card__header-wrapper"> 
         <h6 class="card__title">${product.title}</h6>
-        <div class="card__icon-container"><svg class="card__icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+        <div class="card__icon-container"><svg class="card__icon" viewBox="0 0 24 24">
         <path fill="currentColor" d="M14.5,7.66L20.64,6.97L17,12L20.68,16.97L14.5,16.32L12.03,22L9.5,16.34L3.36,17.03L7,12L3.32,7.03L9.5,7.68L11.97,2L14.5,7.66Z" />
         </svg></div>
         </div>

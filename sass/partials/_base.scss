@@ -43,14 +43,18 @@ a {
 
 .main-content {
   position: absolute;
-  width: 100%;
+  display: block;
   top: 50px;
   background-color: #ffffffbf;
   padding-top: 2rem;
   padding-bottom: 2rem;
 
   @media (min-width: getBreakpoint(large)) {
-    background-color: transparent;
+    display: inline-block;
+    left: 50px;
+    border-radius: 0 0 25px 0;
+    padding: 50px;
+    // background-color: transparent;
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
@@ -63,10 +67,10 @@ a {
   }
 }
 
-.brand-wrapper {
-  display: flex;
-  align-items: center;
-}
+// .brand-wrapper {
+//   display: flex;
+//   align-items: center;
+// }
 
 .featured {
 }
@@ -153,7 +157,6 @@ a {
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  
 
   @media (min-width: getBreakpoint(xxlarge)) {
     flex-direction: row;

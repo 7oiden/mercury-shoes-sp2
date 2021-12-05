@@ -1,14 +1,22 @@
+button {
+  width: 200px;
+}
+
 .button {
   display: inline-block;
-  background-color: getColor(accent);
   color: getColor(primary);
-  padding: 0.6rem 2rem;
+  padding: 0.75rem 2rem;
   border: none;
   border-radius: 50px;
   font-family: $button-text;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.primary-button, .main-button {
+  background-color: getColor(accent);
 
   &:hover {
     scale: 1.1;
@@ -16,9 +24,28 @@
   }
 }
 
+.main-button {
+  font-size: 1.5rem;
+}
+
+.secondary-button {
+  font-size: 1.25rem;
+  background-color: getColor(dark);
+  color: getColor(primary);
+  border-radius: 5px;
+
+  &:hover {
+    background-color: getColor(accent);
+  }
+}
+
+.update-button {
+  width: 220px;
+}
+
 .newsletter__button {
   width: 150px;
-  text-align: center;
+
   font-size: 1.125rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -32,24 +59,8 @@
 }
 
 .checkout-button {
-  font-size: 1.25rem;
-  text-align: center;
-  margin: 0 auto;
   margin-top: 2rem;
   float: right;
-}
-
-.secondary-button {
-  font-size: 1.25rem;
-  width: 180px;
-  background-color: getColor(dark);
-  color: getColor(primary);
-  margin-top: 1rem;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: getColor(accent);
-  }
 }
 
 .disabled {
@@ -63,20 +74,21 @@
   }
 }
 
-.update-button {
-  width: 220px;
-}
-
 .delete-button {
   background-color: transparent;
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   border: 3px solid getColor(accent);
   border-radius: 5px;
-  color: getColor(accent)
+  color: getColor(accent);
+  padding: 0.5rem 0.75rem;
+
+  &:hover {
+    background-color: getColor(accent);
+    color: getColor(primary);
+  }
 }
 
 .button-message {
   margin-bottom: 1rem;
 }
-

@@ -54,7 +54,7 @@ a {
 
 .main-content {
   position: absolute;
-  width: 100%;
+  display: block;
   top: 50px;
   background-color: #ffffffbf;
   padding-top: 2rem;
@@ -63,22 +63,16 @@ a {
 
 @media (min-width: 992px) {
   .main-content {
-    background-color: transparent;
+    display: inline-block;
+    left: 50px;
+    border-radius: 0 0 25px 0;
+    padding: 50px;
   }
 }
 
 .main-content-container {
   margin: 0 auto;
   width: 90%;
-}
-
-.brand-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .loader {
@@ -405,7 +399,7 @@ strong {
 @media (min-width: 768px) {
   .main-heading {
     font-size: 6rem;
-    line-height: 0.8;
+    line-height: 1.2;
   }
 }
 
@@ -653,11 +647,17 @@ i {
 }
 
 .main-image {
-  background-image: url("../images/mercury-main.jpg");
+  background-image: url("../images/mercury-main-mobile.jpg");
   background-size: cover;
-  height: 800px;
+  height: 900px;
   margin: 0;
   position: relative;
+}
+
+@media (min-width: 992px) {
+  .main-image {
+    background-image: url("../images/mercury-main.jpg");
+  }
 }
 
 .products-banner {
@@ -1179,15 +1179,18 @@ header {
 }
 
 .card__icon-container {
-  height: 30px;
-  width: 30px;
+  height: 24px;
+  width: 24px;
   border-radius: 50%;
   border: 2px solid #ea564e;
+  background-color: #ea564e;
   position: relative;
 }
 
 .card__icon {
   position: absolute;
+  width: 16px;
+  height: 16px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1195,11 +1198,11 @@ header {
 }
 
 .card__icon path {
-  fill: #ea564e;
+  fill: #000000;
 }
 
 .edit-icon {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   background-color: #323232;
   color: #ffffff;
   display: block;
@@ -1482,29 +1485,55 @@ header {
   }
 }
 
+button {
+  width: 200px;
+}
+
 .button {
   display: inline-block;
-  background-color: #ea564e;
   color: #ffffff;
-  padding: 0.6rem 2rem;
+  padding: 0.75rem 2rem;
   border: none;
   border-radius: 50px;
   font-family: "proxima nova";
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
 }
 
-.button:hover {
+.primary-button, .main-button {
+  background-color: #ea564e;
+}
+
+.primary-button:hover, .main-button:hover {
   scale: 1.1;
   -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
 }
 
+.main-button {
+  font-size: 1.5rem;
+}
+
+.secondary-button {
+  font-size: 1.25rem;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.secondary-button:hover {
+  background-color: #ea564e;
+}
+
+.update-button {
+  width: 220px;
+}
+
 .newsletter__button {
   width: 150px;
-  text-align: center;
   font-size: 1.125rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1518,24 +1547,8 @@ header {
 }
 
 .checkout-button {
-  font-size: 1.25rem;
-  text-align: center;
-  margin: 0 auto;
   margin-top: 2rem;
   float: right;
-}
-
-.secondary-button {
-  font-size: 1.25rem;
-  width: 180px;
-  background-color: #000000;
-  color: #ffffff;
-  margin-top: 1rem;
-  border-radius: 5px;
-}
-
-.secondary-button:hover {
-  background-color: #ea564e;
 }
 
 .disabled {
@@ -1550,17 +1563,19 @@ header {
           box-shadow: none;
 }
 
-.update-button {
-  width: 220px;
-}
-
 .delete-button {
   background-color: transparent;
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   border: 3px solid #ea564e;
   border-radius: 5px;
   color: #ea564e;
+  padding: 0.5rem 0.75rem;
+}
+
+.delete-button:hover {
+  background-color: #ea564e;
+  color: #ffffff;
 }
 
 .button-message {
