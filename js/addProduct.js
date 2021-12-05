@@ -9,6 +9,8 @@ import { basketCounter } from "./components/common/basketCounter.js";
 
 basketCounter();
 
+
+
 const alertContainer = document.querySelector(".addalert-container");
 
 createAdminNav();

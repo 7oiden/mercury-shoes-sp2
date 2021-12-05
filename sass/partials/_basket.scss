@@ -17,10 +17,9 @@
   &__list {
     display: block;
 
-     @media (min-width: getBreakpoint(medium)) {
-
-     @include content-border(5px);
-  }
+    @media (min-width: getBreakpoint(medium)) {
+      @include content-border(5px);
+    }
   }
 
   &__item {
@@ -75,13 +74,14 @@
   @media (min-width: getBreakpoint(medium)) {
     max-height: 350px;
 
-     @include content-border(5px);
+    @include content-border(5px);
   }
 
   &__table {
     text-align: left;
     width: 100%;
     font-size: 1.12rem;
+    border-collapse: collapse;
   }
 
   &__button-wrapper {
@@ -113,4 +113,22 @@ td {
   padding: 1rem;
   background-color: getColor(primary);
   border-radius: 5px;
+}
+
+#order-total {
+  font-size: 1.25rem;
+  border-top: 1px solid black;
+}
+
+#order-total > td {
+  
+  padding-top: 0.5rem;
+}
+
+#shipping > td {
+  padding-bottom: 1rem;
+}
+
+#quantity {
+  width: 50px;
 }

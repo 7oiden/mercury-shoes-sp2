@@ -68,8 +68,15 @@
 }
 
 .delete-button {
+  background-color: transparent;
   margin-top: 2rem;
   font-size: 1rem;
+  border: 3px solid getColor(accent);
   border-radius: 5px;
+  color: getColor(accent)
+}
+
+.button-message {
+  margin-bottom: 1rem;
 }
 

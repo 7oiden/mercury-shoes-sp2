@@ -125,12 +125,14 @@ function createHtml(details) {
     <div class="product-details__stock-container">
     <p class="product-details__label">In stock:</p><div>${stockIcon}</div>
     </div>
+    <div class="button-message"></div>
     <button class="button buy-button" 
     data-id="${details.id}"
     data-image="${details.image.url}"
     data-title="${details.title}"
     data-price="${details.price}">
     Add to basket</button>
+    
     </div>
     </div>
     <div class="product-details__block2">
@@ -159,6 +161,10 @@ function createHtml(details) {
   console.log(details.stock);
 
   const button = document.querySelector(".buy-button");
+  const messageContainer = document.querySelector(".button-message");
+
+  messageContainer.innerHTML = "";
+  
 
   if (!details.stock) {
     button.classList.add("disabled");
@@ -195,6 +201,14 @@ function createHtml(details) {
       counterContainer.innerHTML = currentBasket.length + 1;
       currentBasket.push(basket);
       saveBasket(currentBasket);
+    } else {
+      messageContainer.innerHTML =
+        "Product already in basket. Quantity may be selected in basket.";
+
+      setTimeout(function () {
+        messageContainer.innerHTML = "";
+      }, 2000);
+      
     }
     // } else {
     //   const newBasket = currentBasket.filter((item) => {

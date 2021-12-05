@@ -17,28 +17,52 @@
     cursor: pointer;
   }
 
-  &-image {
+  &__image {
     display: block;
     width: 100%;
     border-radius: 5px 5px 0 0;
   }
 
-  &-body {
+  &__body {
     background-color: getColor(primary);
     padding: 1rem 1rem 2rem 1rem;
     border-radius: 0 0 5px 5px;
     position: relative;
   }
 
-  &-wrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
 
-  &-text {
+  &__text {
     margin: 0;
     padding: 1rem 0 0 0;
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon-container {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid getColor(accent);
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    path {
+    fill: getColor(accent);
+  }
   }
 }
 
@@ -57,9 +81,81 @@
   }
 }
 
-// #card-admin {
+.about__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  max-width: 700px;
 
-//   &:hover {
-//     opacity: 0.8;
-//   }
-// }
+  @media (min-width: getBreakpoint(medium)) {
+    flex-direction: row;
+
+    @include content-border(5px);
+  }
+
+  &-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-top: 3rem;
+  }
+
+  &-wrapper {
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.125rem;
+      padding-top: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    background-color: getColor(accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+
+    @media (min-width: getBreakpoint(medium)) {
+      left: 2rem;
+      top: 1rem;
+    }
+  }
+
+  &-quote {
+    margin: 0;
+    font-family: $secondary-headings;
+    font-style: italic;
+    max-width: 400px;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &-ceo {
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-weight: bold;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.about__card-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faq__item {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}

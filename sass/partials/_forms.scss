@@ -106,7 +106,6 @@ label {
   width: getWidth(formSmall);
   background-color: #DDEBE2;
 
-  @include content-border(5px);
 
   @media (min-width: getBreakpoint(medium)) {
     width: getWidth(formMedium);

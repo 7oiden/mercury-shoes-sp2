@@ -54,10 +54,25 @@ strong {
 
 .products__heading,
 .add__heading,
-.edit__heading {
+.edit__heading,
+.about__heading,
+.contact__heading,
+.faq__heading {
   font-family: $primary-headings;
   font-size: 2.5rem;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.about__sub-heading {
+  margin: 0;
+  font-family: $secondary-headings;
+}
+
+.contact__heading,
+.faq__heading {
+  font-size: 1.875rem;
   margin: 0;
   padding: 0;
 }
@@ -76,18 +91,18 @@ strong {
 
 .summary__heading {
   margin: 0;
-  padding: 0;
+padding-bottom: 1rem;
 }
 
-.card-title,
-.card-price {
+.card__title,
+.card__price {
   font-size: 1.125rem;
   font-family: $primary-headings;
   margin: 0;
   padding: 0;
 }
 
-.card-text {
+.card__text {
   font-weight: 300;
 }
 
@@ -229,4 +244,25 @@ label {
 
 #item-count {
   font-size: 1.5rem;
+}
+
+i {
+  color: getColor(primary){
+  }
+}
+
+.about-small-heading {
+  font-size: 1.125rem;
+  text-decoration: underline;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__paragraph {
+  margin: 0;
+
+  &--bold {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
 }

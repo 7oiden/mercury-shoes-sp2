@@ -7,8 +7,20 @@
 }
 
 .products-banner {
-  background-image: url("../images/products-banner.jpeg");
+  background-image: url("../images/products-banner.jpg");
   background-size: cover;
   background-position: bottom;
   height: 400px;
+}
+
+.about__image {
+  display: block;
+  width: 200px;
+  margin: 0;
+  border-radius: 5px;
+  
+  @media (min-width: getBreakpoint(medium)) {
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
 }
