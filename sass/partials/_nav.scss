@@ -55,19 +55,6 @@ header {
     align-items: center;
   }
 
-  &__logo {
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-    margin-bottom: 1rem;
-
-    @media (min-width: getBreakpoint(large)) {
-      margin-right: 3rem;
-      margin-bottom: 0;
-    }
-  }
-
   // &-list-links-wrapper {
   //   display: flex;
   //   flex-direction: column;
@@ -120,24 +107,12 @@ header {
     }
   }
 
-  &__icon {
-    margin-left: 2rem;
-    transition: opacity 0.3s;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-
   //   &-link {
   //     display: block;
   //   }
 }
 
-.basket__icon {
-  margin-left: 0;
-}
+
 
 // .dropdown {
 //   display: none;
@@ -151,28 +126,28 @@ header {
 //   }
 // }
 
-.breadcrumbs {
-  margin-top: 25px;
+// .breadcrumbs {
+//   margin-top: 25px;
 
-  &__item {
-    margin-right: 0.5rem;
+//   &__item {
+//     margin-right: 0.5rem;
 
-    & a {
-      display: inline-block;
-      cursor: pointer;
-      color: getColor(secondary);
-    }
+//     & a {
+//       display: inline-block;
+//       cursor: pointer;
+//       color: getColor(secondary);
+//     }
 
-    & a:hover {
-      text-decoration: underline;
-    }
+//     & a:hover {
+//       text-decoration: underline;
+//     }
 
-    &--active {
-      color: getColor(dark);
-      font-weight: bold;
-    }
-  }
-}
+//     &--active {
+//       color: getColor(dark);
+//       font-weight: bold;
+//     }
+//   }
+// }
 
 #basket {
   position: relative;

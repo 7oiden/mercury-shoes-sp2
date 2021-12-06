@@ -16,9 +16,9 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-if (!id) {
-  document.location.href = "/";
-}
+// if (!id) {
+//   document.location.href = "/";
+// }
 
 const productUrl = baseUrl + "products/" + id;
 
@@ -47,7 +47,6 @@ const descriptionError = document.querySelector("#edit-description-error");
 const urlError = document.querySelector("#edit-url-error");
 const altTextError = document.querySelector("#edit-alt-text-error");
 
-
 (async function () {
   try {
     const response = await fetch(productUrl);
@@ -70,7 +69,7 @@ const altTextError = document.querySelector("#edit-alt-text-error");
       stockYes.checked = false;
       stockNo.checked = true;
     }
-/////
+    /////
     if (details.image) {
       imageAltText.value = details.image.alternativeText;
     } else {
@@ -78,8 +77,8 @@ const altTextError = document.querySelector("#edit-alt-text-error");
     }
 
     if (!details.image) {
-      productImage.value = details.image_url
-    } 
+      productImage.value = details.image_url;
+    }
 
     title.value = details.title;
     price.value = details.price;
@@ -337,4 +336,3 @@ function submitEditForm(event) {
     }
   }
 }
-

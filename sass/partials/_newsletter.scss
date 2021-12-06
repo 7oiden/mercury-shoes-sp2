@@ -5,6 +5,11 @@
   margin-top: 50px;
   margin-bottom: 50px;
 
+  @media (min-width: getBreakpoint(large)) {
+    margin-top: 100px;
+  margin-bottom: 100px;
+  }
+
   &__container {
     background-color: #000000bf;
     padding-top: 2rem;
@@ -38,16 +43,5 @@
     @media (min-width: getBreakpoint(small)) {
       width: 70%;
     }
-  }
-
-  &__success {
-    font-size: 1.125rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: getColor(success);
-    transition: all 0.5s;
   }
 }

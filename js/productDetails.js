@@ -39,7 +39,7 @@ console.log(detailUrl);
   }
 })();
 
-const breadcrumbCurrent = document.querySelector(".breadcrumbs__current");
+// const breadcrumbCurrent = document.querySelector(".breadcrumbs__current");
 const detailsWrapper = document.querySelector(".product-details__wrapper");
 
 function createHtml(details) {
@@ -73,11 +73,42 @@ function createHtml(details) {
                 </svg>`;
   }
 
-  if (details.image) {
-    imgUrl = "http://localhost:9000" + details.image.url;
-  }
+  let genderContent = `
+          <label for="gender" class="product-details__label">Gender:</label>
+          <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+  `;
 
-  breadcrumbCurrent.innerHTML = `${details.title}`;
+  let colorContent = `
+  <div>
+    <input type="radio" id="white" name="white" value="white" />
+    <label for="white">White</label>
+  </div>
+ <div>
+    <input type="radio" id="white" name="white" value="white" />
+    <label for="white">White</label>
+  </div>
+  <div>
+    <input type="radio" id="white" name="white" value="white" />
+    <label for="white">White</label>
+  </div>
+
+  `;
+
+  let quantityContent = `
+          <label for="quantity" class="product-details__label">Quantity:</label>
+          <select id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          `;
+
+  // breadcrumbCurrent.innerHTML = `${details.title}`;
 
   detailsWrapper.innerHTML = `<div class="product-details__image">
   <img src="${imgUrl}" alt="${altText}" class="product-details__image"/>
@@ -90,17 +121,8 @@ function createHtml(details) {
   <hr />
   <div class="product-details__content-wrapper">
   <div class="product-details__block1">
-    <div>
-    <p class="product-details__label">Gender:</p>
-      </div>
-    <div>
-    <p class="product-details__label">Color:</p>
-    <div class="product-details__box-wrapper">
-    <div class="product-details__box product-details__color1"></div>
-    <div class="product-details__box product-details__color2"></div>
-    <div class="product-details__box product-details__color3"></div>
-    </div>
-    </div>
+    <form class="gender-container">${genderContent}</form>
+    <form class="color-container">${colorContent}</form>
     <div>
     <p class="product-details__label">Size:</p>
     <div class="product-details__box-wrapper">
@@ -126,14 +148,15 @@ function createHtml(details) {
     <p class="product-details__label">In stock:</p><div>${stockIcon}</div>
     </div>
     <div class="button-message"></div>
+    <form class="quantity-container">${quantityContent}</form>
     <button class="button primary-button"
     id="buy-button" 
     data-id="${details.id}"
-    data-image="${details.image.url}"
+    data-image="${imgUrl}"
     data-title="${details.title}"
-    data-price="${details.price}">
+    data-price="${details.price}"
+    data-quantity="">
     Add to basket</button>
-    
     </div>
     </div>
     <div class="product-details__block2">
@@ -144,28 +167,12 @@ function createHtml(details) {
     </div>
   `;
 
-  // let altText = product.image_alt_text;
-
-  // if (product.image) {
-  //   altText = product.image.alternativeText;
-  // }
-
-  // console.log(imgUrl);
-  // loader.style.display = "none";
-  // breadcrumbCurrent.innerHTML = `${details.title}`;
-  // imageContainer.innerHTML = `<img src="${imgUrl}" class="product-details__image"/>`;
-  // titleContainer.innerHTML = `${details.title}`;
-  // priceContainer.innerHTML = `$${details.price.toFixed(2)}`;
-  // detailsContainer.innerHTML = `${details.description}`;
-  // stockContainer.innerHTML = `<p class="product-details__label">In stock:</p><div>${stockIcon}</div>`;
-
   console.log(details.stock);
 
   const button = document.querySelector("#buy-button");
   const messageContainer = document.querySelector(".button-message");
 
   messageContainer.innerHTML = "";
-  
 
   if (!details.stock) {
     button.classList.add("disabled");
@@ -174,8 +181,19 @@ function createHtml(details) {
   button.addEventListener("click", handleBuyButton);
 
   function handleBuyButton() {
-    // this.classList.toggle("fas");
-    // this.classList.toggle("far");
+    let quantity = document.getElementById("quantity").value;
+    const selectQuantity = document.querySelector("#quantity");
+
+    selectQuantity.addEventListener("change", (event) => {
+      quantity = event.target.value;
+    });
+
+    let gender = document.getElementById("gender").value;
+    const selectGender = document.querySelector("#gender");
+
+    selectGender.addEventListener("change", (event) => {
+      quantity = event.target.value;
+    });
 
     const id = this.dataset.id;
     const image = this.dataset.image;
@@ -184,8 +202,8 @@ function createHtml(details) {
 
     const currentBasket = getExistingBasket();
 
-    const counterContainer = document.querySelector("#test");
-    const counterWrapper = document.querySelector("#counter");
+    // const counterContainer = document.querySelector("#test");
+    // const counterWrapper = document.querySelector("#counter");
 
     const basketInStorage = currentBasket.find((item) => {
       return item.id === id;
@@ -197,19 +215,21 @@ function createHtml(details) {
         image: image,
         title: title,
         price: price,
+        quantity: quantity,
+        gender: gender,
       };
-      counterWrapper.style.display = "block";
-      counterContainer.innerHTML = currentBasket.length + 1;
+      // counterWrapper.style.display = "block";
+      // counterContainer.innerHTML = currentBasket.length + 1;
       currentBasket.push(basket);
       saveBasket(currentBasket);
+      basketCounter();
+      location.reload(true);
     } else {
-      messageContainer.innerHTML =
-        "Product already in basket. Quantity may be selected in basket.";
+      messageContainer.innerHTML = "Product already in basket.";
 
       setTimeout(function () {
         messageContainer.innerHTML = "";
       }, 2000);
-      
     }
     // } else {
     //   const newBasket = currentBasket.filter((item) => {

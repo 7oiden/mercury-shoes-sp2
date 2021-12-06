@@ -3,10 +3,10 @@ hgroup {
   padding: 0;
 }
 
-strong {
-  text-transform: uppercase;
-  font-weight: bold;
-}
+// strong {
+//   text-transform: uppercase;
+//   font-weight: bold;
+// }
 
 .main-heading {
   font-family: $primary-headings;
@@ -48,8 +48,9 @@ strong {
 
 .featured__heading {
   font-family: $primary-headings;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 .products__heading,
@@ -57,30 +58,13 @@ strong {
 .edit__heading,
 .about__heading,
 .contact__heading,
-.faq__heading {
-  font-family: $primary-headings;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-.about__sub-heading {
-  margin: 0;
-  font-family: $secondary-headings;
-}
-
-.contact__heading,
-.faq__heading {
-  font-size: 1.875rem;
-  margin: 0;
-  padding: 0;
-}
-
+.faq__heading,
 .basket__heading {
   font-family: $primary-headings;
   font-size: 2.5rem;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 .basket__title {
@@ -91,7 +75,7 @@ strong {
 
 .summary__heading {
   margin: 0;
-padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .card__title,
@@ -104,6 +88,8 @@ padding-bottom: 1rem;
 
 .card__text {
   font-weight: 300;
+  margin: 0;
+  padding: 1rem 0 0 0;
 }
 
 svg {
@@ -247,10 +233,12 @@ label {
 }
 
 i {
-  color: getColor(primary){
+  color: getColor(primary) {
+
   }
 }
 
+//about page
 .about-small-heading {
   font-size: 1.125rem;
   text-decoration: underline;
@@ -266,3 +254,43 @@ i {
     margin-bottom: 0.5rem;
   }
 }
+
+.about__sub-heading {
+  margin: 0;
+  font-family: $secondary-headings;
+}
+
+.contact__heading,
+.faq__heading {
+  font-size: 1.875rem;
+  margin: 0;
+  padding: 0;
+}
+
+//icons
+.nav__icon {
+  margin-left: 2rem;
+  transition: opacity 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.basket__icon {
+  margin-left: 0;
+}
+
+.card__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    path {
+      fill: getColor(dark);
+    }
+  }

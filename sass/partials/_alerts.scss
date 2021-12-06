@@ -1,12 +1,23 @@
+ .newsletter__success {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: getColor(success);
+    transition: all 0.5s;
+  }
+
 .alert {
   display: inline-block;
-  border: 0.5rem solid #ffffff40;
-  border-radius: 5px;
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem 2rem;
-  color: #4e3b3e;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  color: black;
   font-size: 1.125rem;
+
+  @include content-border(5px)
 }
 
 .error {
@@ -40,3 +51,9 @@
 //   content: "\f071";
 //   padding-right: 0.75rem;
 // }
+
+.error-messages {
+  color: getColor(error);
+  display: none;
+  padding-top: 0.25rem;
+}

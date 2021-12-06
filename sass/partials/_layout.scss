@@ -15,8 +15,8 @@
   }
 }
 
-
-.product-details-container, .basket-container {
+.product-details-container,
+.basket-container {
   width: 95%;
   margin: 0 auto;
 
@@ -31,12 +31,20 @@
   @media (min-width: getBreakpoint(xlarge)) {
     width: 85%;
   }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: getWidth(xxlargeScreen);
+  }
 }
+
+.featured {
+  padding-top: 50px;
+}
+
 
 .grid-wrapper {
   width: 300px;
   margin: 0 auto;
-  //   background-color: lavender;
 
   @media (min-width: getBreakpoint(medium)) {
     width: 632px;
@@ -59,6 +67,8 @@
   grid-template-columns: auto;
   justify-items: center;
   gap: 32px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   //   background-color: pink;
 
   @media (min-width: getBreakpoint(medium)) {
@@ -106,5 +116,93 @@
     width: 1296px;
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto;
+  }
+}
+
+///about page
+.about,
+.faq,
+.contact,
+.location {
+  margin: 0 auto;
+  width: 90%;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 85%;
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+  }
+}
+
+.support-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: getColor(primary);
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: getWidth(formMedium);
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    width: getWidth(formLarge);
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: getWidth(formXLarge);
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: getWidth(formXxLarge);
+  }
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+
+.add,
+.edit {
+  margin: 0 auto;
+  width: getWidth(formSmall);
+  background-color: #dddddd;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: getWidth(formMedium);
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    width: getWidth(formLarge);
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: getWidth(formXLarge);
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: getWidth(formXxLarge);
+  }
+
+  &__container {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
   }
 }

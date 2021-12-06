@@ -43,11 +43,13 @@ if (itemCount === 0) {
 basket.forEach((item) => {
   // console.log(item.id);
 
+  const total = item.price * item.quantity;
+
   basketContainer.innerHTML += `
       <li class="basket__item">
                   <div class="basket__image">
                     <img
-                      src="http://localhost:9000${item.image}"
+                      src="${item.image}"
                       alt=""
                       class="basket__image"
                     />
@@ -57,6 +59,11 @@ basket.forEach((item) => {
                       <a href="products-details.html?id=${item.id}" class="basket__link">${item.title}</a>
                     </h3>
                     <table class="basket__table">
+                    <tr>
+                        <th scope="row">Gender:</th>
+                        <td>${item.gender}</td>
+                      </tr>
+                      <tr>
                       <tr>
                         <th scope="row">Color:</th>
                         <td>green</td>
@@ -69,12 +76,19 @@ basket.forEach((item) => {
                         <th scope="row">Price:</th>
                         <td>$${item.price}</td>
                       </tr>
+                      <tr>
+                        <th scope="row">Quantity:</th>
+                        <td>
+                        ${item.quantity}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Total:</th>
+                        <td>
+                        $${total}</td>
+                      </tr>
                     </table>
-                    <label>Quantity</label>
-                    <input type="number" class="quantity" id="quantity" value="1"/>
                   </div>
-
-                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24" id="remove-icon" data-item="${item}">
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24" id="remove-icon">
                     <path
                       fill="currentColor"
                       d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
@@ -82,8 +96,6 @@ basket.forEach((item) => {
                   </svg>
                 </li>`;
 });
-
-
 
 // quantity
 // const quantity = document.querySelectorAll(".quantity");
@@ -103,10 +115,7 @@ basket.forEach((item) => {
 let subTotal = 0;
 
 for (let i = 0; i < basket.length; i++) {
-  subTotal += Number(basket[i].price);
-  console.log(basket[i].price);
-
-  // console.log(subTotal);
+  subTotal += Number(basket[i].price * basket[i].quantity);
 }
 
 let orderTotal = 0;
@@ -119,28 +128,25 @@ if (subTotal >= 50 || subTotal === 0) {
 orderTotal = subTotal + shipping;
 
 summaryContainer.innerHTML = `
-<h2 class="summary__heading">Order summary</h2>
-              <table class="summary__table">
-                <tr>
-                  <th scope="row">Sub total:</th>
-                  <td class="align-right" id="test">$${subTotal}</td>
-                </tr>
-                <tr id="shipping">
-                  <th scope="row" >Shipping:</th>
-                  <td class="align-right">$${shipping}</td>
-                </tr>
-                <tr id="order-total">
-                  <th scope="row">Order total:</th>
-                  <td class="align-right">$${orderTotal}</td>
-                </tr>
-              </table>
-              <div>
-                <a href="index.html" class="button primary-button checkout-button"
-                  >Checkout</a
-                >
-              </div>`;
-
+  <h2 class="summary__heading">Order summary</h2>
+                <table class="summary__table">
+                  <tr>
+                    <th scope="row">Sub total:</th>
+                    <td class="align-right" id="test">$${subTotal}</td>
+                  </tr>
+                  <tr id="shipping">
+                    <th scope="row" >Shipping:</th>
+                    <td class="align-right">$${shipping}</td>
+                  </tr>
+                  <tr id="order-total">
+                    <th scope="row">Order total:</th>
+                    <td class="align-right">$${orderTotal}</td>
+                  </tr>
+                </table>
+                <div>
+                  <a href="index.html" class="button primary-button checkout-button"
+                    >Checkout</a
+                  >
+                </div>`;
 
 clearBasket();
-
-

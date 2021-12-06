@@ -1,20 +1,13 @@
 .product-details {
-  padding-top: 50px;
-
+ 
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
-    @media (min-width: getBreakpoint(xxlarge)) {
+    @media (min-width: getBreakpoint(large)) {
       flex-direction: row;
     }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-    flex: 1;
   }
 
   &__content {
@@ -22,8 +15,13 @@
     flex: 1;
     background-color: getColor(primary);
 
+    @media (min-width: getBreakpoint(large)) {
+  
+      @include content-border(5px);
+    }
+
     @media (min-width: getBreakpoint(xxlarge)) {
-      @include content-border(0px);
+      padding: 2rem 4rem;
     }
   }
 
@@ -64,8 +62,8 @@
   }
 
   &__box {
-    width: 45px;
-    height: 45px;
+    width: 32px;
+    height: 32px;
     position: relative;
     background-color: getColor(background);
     cursor: pointer;
@@ -93,4 +91,13 @@
     font-size: 1.25rem;
     line-height: 1;
   }
+}
+
+.quantity-container {
+  margin-bottom: 1rem;
+}
+
+.color-container {
+  display: flex;
+  flex-direction: column;
 }

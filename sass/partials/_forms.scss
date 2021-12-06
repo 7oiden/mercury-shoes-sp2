@@ -5,9 +5,6 @@
   background-color: getColor(primary);
 
   @include content-border(5px);
-
-  &:focus {
-  }
 }
 
 input[type="radio"] {
@@ -75,12 +72,6 @@ label {
   }
 }
 
-.error-messages {
-  color: getColor(error);
-  display: none;
-  padding-top: 0.25rem;
-}
-
 .admin {
   &__form {
     display: flex;
@@ -100,34 +91,7 @@ label {
   }
 }
 
-.add,
-.edit {
-  margin: 75px auto;
-  width: getWidth(formSmall);
-  background-color: #DDEBE2;
 
-
-  @media (min-width: getBreakpoint(medium)) {
-    width: getWidth(formMedium);
-  }
-
-  @media (min-width: getBreakpoint(large)) {
-    width: getWidth(formLarge);
-  }
-
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(formXLarge);
-  }
-
-  @media (min-width: getBreakpoint(xxlarge)) {
-    width: getWidth(formXxLarge);
-  }
-
-  &__container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
 
 textarea {
   font-family: $body-text;
@@ -235,3 +199,4 @@ textarea {
 .no {
   padding-top: 7px;
 }
+

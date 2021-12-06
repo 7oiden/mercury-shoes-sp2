@@ -92,3 +92,18 @@ button {
 .button-message {
   margin-bottom: 1rem;
 }
+
+.card__edit-button {
+  margin-top: 0.75rem;
+  background-color: getColor(secondary);
+  color: getColor(primary);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  text-align: center;
+
+  &:hover {
+    background-color: getColor(accent);
+  }
+}

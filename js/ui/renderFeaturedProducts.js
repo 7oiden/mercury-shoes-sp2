@@ -31,7 +31,7 @@ export function renderFeaturedProducts(products) {
     let editProd = "";
 
     if (token) {
-      editProd = `<a href="edit-product.html?id=${product.id}" class="edit-icon">
+      editProd = `<a href="edit-product.html?id=${product.id}" class="card__edit-button">
         Edit Product
       </a>`;
     }

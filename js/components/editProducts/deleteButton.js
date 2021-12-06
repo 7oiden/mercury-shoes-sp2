@@ -40,7 +40,7 @@ export default function deleteButton(id) {
           );
 
           setTimeout(function () {
-            location.href = "/";
+            history.back();
           }, 2000);
         }
 

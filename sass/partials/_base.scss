@@ -41,6 +41,25 @@ a {
   list-style: none;
 }
 
+main {
+  background: rgb(250, 250, 250);
+  background: radial-gradient(
+    circle,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(148, 223, 233, 0.5691410353203781) 100%
+  );
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  &.index {
+    padding-top: 0;
+  }
+
+  &.products-overview {
+    padding-top: 0;
+  }
+}
+
 .main-content {
   position: absolute;
   display: block;
@@ -67,14 +86,6 @@ a {
   }
 }
 
-// .brand-wrapper {
-//   display: flex;
-//   align-items: center;
-// }
-
-.featured {
-}
-
 .loader {
   border: 10px solid getColor(primary);
   border-top: 10px solid getColor(accent);
@@ -90,77 +101,5 @@ a {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-.about,
-.faq,
-.contact,
-.location {
-  margin: 0 auto;
-  width: 90%;
-
-  @media (min-width: getBreakpoint(medium)) {
-    width: 85%;
-  }
-
-  @media (min-width: getBreakpoint(large)) {
-    width: 80%;
-  }
-
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: 75%;
-  }
-
-  @media (min-width: getBreakpoint(xxlarge)) {
-    width: 70%;
-  }
-}
-
-.support-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: getColor(primary);
-
-  @media (min-width: getBreakpoint(large)) {
-    width: getWidth(largeScreen);
-  }
-
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(xlargeScreen);
-  }
-
-  @media (min-width: getBreakpoint(xxlarge)) {
-    width: getWidth(xxlargeScreen);
-  }
-}
-
-.location__map {
-  width: 300px;
-  height: 200px;
-  margin-top: 1rem;
-
-  @include content-border(5px);
-
-  @media (min-width: getBreakpoint(medium)) {
-    width: 375px;
-    height: 250px;
-  }
-}
-
-.contact-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: getBreakpoint(xxlarge)) {
-    flex-direction: row;
-    margin: 0 auto;
-    width: 70%;
   }
 }
