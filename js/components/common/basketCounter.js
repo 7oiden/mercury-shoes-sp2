@@ -8,7 +8,7 @@ export function basketCounter() {
 
   const basket = getExistingBasket();
 
-   console.log(basket);
+  //  console.log(basket);
 
   counterContainer.innerHTML = "";
 

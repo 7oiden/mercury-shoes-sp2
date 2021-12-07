@@ -135,7 +135,7 @@
             </div>
             <form class="add__form">
               <div class="add__input-wrapper">
-                <label for="username">Title (must be at least 5 characters)</label>
+                <label for="title">Title (must be at least 5 characters)</label>
                 <input
                   type="text"
                   class="input add__input"
@@ -161,6 +161,18 @@
                 </div>
                 <div class="error-messages" id="add-price-error">
                   *Must be a number
+                </div>
+              </div>
+              <div class="add__input-wrapper">
+                <label for="color">Color (must be at least 3 characters)</label>
+                <input
+                  type="text"
+                  class="input add__input"
+                  id="color"
+                  placeholder="Product color"
+                />
+                <div class="error-messages" id="add-color-error">
+                  *Must be at least 5 characters
                 </div>
               </div>
               <div class="add__input-wrapper">

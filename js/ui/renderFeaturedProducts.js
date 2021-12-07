@@ -5,7 +5,7 @@ const token = getToken();
 const featuredContainer = document.querySelector(".featured__grid");
 
 export function renderFeaturedProducts(products) {
-  console.log(products);
+  // console.log(products);
 
   featuredContainer.innerHTML = "";
 
@@ -15,19 +15,9 @@ export function renderFeaturedProducts(products) {
     }
   });
 
+
   featuredProducts.forEach((product) => {
-    let imgUrl = product.image_url;
-
-    if (product.image) {
-      imgUrl = "http://localhost:9000" + product.image.url;
-    }
-
-    let altText = product.image_alt_text;
-
-    if (product.image) {
-      altText = product.image.alternativeText;
-    }
-
+  
     let editProd = "";
 
     if (token) {
@@ -39,7 +29,7 @@ export function renderFeaturedProducts(products) {
     featuredContainer.innerHTML += `
        <div class="test">
         <a href="products-details.html?id=${product.id}" class="card">
-        <img src="${imgUrl}" alt="${altText}" 
+        <img src="${product.image_url}" alt="${product.image_alt_text}" 
         class="card__image" />
         <div class="card__body">
         <div class="card__header-wrapper"> 
@@ -56,3 +46,6 @@ export function renderFeaturedProducts(products) {
       </div>`;
   });
 }
+
+
+

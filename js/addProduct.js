@@ -9,8 +9,6 @@ import { basketCounter } from "./components/common/basketCounter.js";
 
 basketCounter();
 
-
-
 const alertContainer = document.querySelector(".addalert-container");
 
 createAdminNav();
@@ -18,6 +16,7 @@ createAdminNav();
 const addForm = document.querySelector(".add__form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
+const color = document.querySelector("#color");
 const shortDescription = document.querySelector("#short-description");
 const description = document.querySelector("#description");
 const productImage = document.querySelector("#product-image");
@@ -25,6 +24,7 @@ const imageAltText = document.querySelector("#image-alt-text");
 
 const titleError = document.querySelector("#add-title-error");
 const priceError = document.querySelector("#add-price-error");
+const colorError = document.querySelector("#add-color-error");
 const shortDescriptionError = document.querySelector(
   "#add-short-description-error"
 );
@@ -45,6 +45,7 @@ function submitAddForm(event) {
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
+  const colorValue = color.value.trim();
   const shortDescriptionValue = shortDescription.value.trim();
   const descriptionValue = description.value.trim();
   const productImageValue = "https://" + productImage.value.trim();
@@ -203,6 +204,7 @@ function submitAddForm(event) {
     addProduct(
       titleValue,
       priceValue,
+      colorValue,
       shortDescriptionValue,
       descriptionValue,
       productImageValue,
@@ -217,6 +219,7 @@ function submitAddForm(event) {
   async function addProduct(
     title,
     price,
+    color,
     short_description,
     description,
     image_url,
@@ -227,6 +230,7 @@ function submitAddForm(event) {
     const jsonData = {
       title: title,
       price: price,
+      color: color,
       short_description: short_description,
       description: description,
       image_url: image_url,

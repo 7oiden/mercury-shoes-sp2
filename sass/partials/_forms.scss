@@ -2,13 +2,17 @@
   padding: 0.5rem 1rem;
   font-family: $body-text;
   font-size: 1.125rem;
-  background-color: getColor(primary);
+  background-color: getColor(background);
 
   @include content-border(5px);
+
+  &:focus {
+    background-color: getColor(primary);
+  }
 }
 
 input[type="radio"] {
- cursor: pointer;
+  cursor: pointer;
 }
 
 label {
@@ -91,8 +95,6 @@ label {
   }
 }
 
-
-
 textarea {
   font-family: $body-text;
 }
@@ -112,18 +114,10 @@ textarea {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
 
   @media (min-width: getBreakpoint(small)) {
     width: 90%;
-  }
-
-  @media (min-width: getBreakpoint(medium)) {
-    width: 80%;
-  }
-
-  @media (min-width: getBreakpoint(xxlarge)) {
-    width: 80%;
   }
 }
 
@@ -136,14 +130,6 @@ textarea {
 
   @media (min-width: getBreakpoint(small)) {
     width: 90%;
-  }
-
-  @media (min-width: getBreakpoint(medium)) {
-    width: 80%;
-  }
-
-  @media (min-width: getBreakpoint(xxlarge)) {
-    width: 80%;
   }
 }
 
@@ -200,3 +186,73 @@ textarea {
   padding-top: 7px;
 }
 
+.form-control {
+  line-height: 1.1;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-2px);
+  display: grid;
+  place-content: center;
+
+  @include content-border(5px);
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: green;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border: 4px solid getColor(accent);
+  border-radius: 5px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+// input[type="radio"]:focus {
+//   outline: max(2px, 0.15em) solid currentColor;
+//   outline-offset: max(2px, 0.15em);
+// }
+
+.radio-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.color-box {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+
+  @include content-border(5px)
+}
+
+.color-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

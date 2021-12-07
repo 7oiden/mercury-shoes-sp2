@@ -17,7 +17,7 @@ createAdminNav();
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    console.log(json);
+    // console.log(json);
 
     renderProducts(json);
     searchProducts(json);

@@ -9,19 +9,7 @@ export function renderProducts(products) {
 
   productsContainer.innerHTML = "";
 
-  products.forEach((product) => {
-    let imgUrl = product.image_url;
-
-    if (product.image) {
-      imgUrl = "http://localhost:9000" + product.image.url;
-    }
-
-    let altText = product.image_alt_text;
-
-    if (product.image) {
-      altText = product.image.alternativeText;
-    }
-
+  products.forEach((product, index) => {
     let editProd = "";
 
     if (token) {
@@ -39,9 +27,9 @@ export function renderProducts(products) {
     }
 
     productsContainer.innerHTML += `
-      <div>
+      <div class="remove-card" id="product-cards">
         <a href="products-details.html?id=${product.id}" class="card">
-        <img src="${imgUrl}" alt="${altText}" 
+        <img src="${product.image_url}" alt="${product.image_alt_text}" 
         class="card__image" />
         <div class="card__body">
         <div class="card__header-wrapper"> 
@@ -55,4 +43,30 @@ export function renderProducts(products) {
         ${editProd}
       </div>`;
   });
+
+  const productCards = document.querySelectorAll("#product-cards");
+  const loadButton = document.querySelector("#load-button");
+
+  let num = 8;
+
+  for (let i = 0; i < productCards.length; i++) {
+    if (i < num) {
+      productCards[i].classList.remove("remove-card");
+    }
+  }
+
+  loadButton.onclick = function () {
+    num = num + 8;
+
+    for (let i = 0; i < productCards.length; i++) {
+      if (i < num) {
+        productCards[i].classList.remove("remove-card");
+      }
+
+      if (num >= productCards.length) {
+         loadButton.classList.add("disabled")
+         loadButton.innerHTML = "No more products"
+      }
+    }
+  };
 }

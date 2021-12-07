@@ -11,29 +11,27 @@ basketCounter();
 
 createAdminNav();
 
-(async function fetch() {
-  try {
-    const response = await fetch(homeUrl);
-    const result = await response.json();
+// (async function fetch() {
+//   try {
+//     const response = await fetch(homeUrl);
+//     const result = await response.json();
 
-    console.log(result);
-  } catch (error) {
-    displayAlert(
-      "alert error",
-      "An error has occured when trying to fetch the API",
-      ".featured__grid"
-    );
-  }
-})();
+//     console.log(result);
+//   } catch (error) {
+//     displayAlert(
+//       "alert error",
+//       "An error has occured when trying to fetch the API",
+//       ".featured__grid"
+//     );
+//   }
+// })();
 
 (async function fetchApi() {
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    console.log(json);
-
-    console.log(json[0].image.alternativeText);
+    // console.log(json);
 
     renderFeaturedProducts(json);
   } catch (error) {

@@ -43,17 +43,17 @@ console.log(detailUrl);
 const detailsWrapper = document.querySelector(".product-details__wrapper");
 
 function createHtml(details) {
-  let imgUrl = details.image_url;
+  // let imgUrl = details.image_url;
 
-  if (details.image) {
-    imgUrl = "http://localhost:9000" + details.image.url;
-  }
+  // if (details.image) {
+  //   imgUrl = "http://localhost:9000" + details.image.url;
+  // }
 
-  let altText = details.image_alt_text;
+  // let altText = details.image_alt_text;
 
-  if (details.image) {
-    altText = details.image.alternativeText;
-  }
+  // if (details.image) {
+  //   altText = details.image.alternativeText;
+  // }
 
   detailsWrapper.innerHTML = "";
 
@@ -73,29 +73,30 @@ function createHtml(details) {
                 </svg>`;
   }
 
-  let genderContent = `
-          <label for="gender" class="product-details__label">Gender:</label>
-          <select id="gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-  `;
+  // let genderContent = `
+  //         <label for="gender" class="product-details__label">Gender:</label>
+  //         <select id="gender">
+  //           <option value="Male">Male</option>
+  //           <option value="Female">Female</option>
+  //         </select>
+  // `;
 
-  let colorContent = `
-  <div>
-    <input type="radio" id="white" name="white" value="white" />
-    <label for="white">White</label>
-  </div>
- <div>
-    <input type="radio" id="white" name="white" value="white" />
-    <label for="white">White</label>
-  </div>
-  <div>
-    <input type="radio" id="white" name="white" value="white" />
-    <label for="white">White</label>
-  </div>
+  //   let colorContent = `
+  //   <p class="product-details__label">Color:</p>
+  //   <div class="radio-wrapper">
+  //     <input type="radio" id="black" name="color" value="white" />
+  //     <label for="white" class="form-control">Black</label>
+  //   </div>
+  //  <div class="radio-wrapper">
+  //     <input type="radio" id="white" name="color" value="white" />
+  //     <label for="white" class="form-control">White</label>
+  //   </div>
+  //   <div class="radio-wrapper">
+  //     <input type="radio" id="red" name="color" value="white" />
+  //     <label for="white" class="form-control">Red</label>
+  //   </div>
 
-  `;
+  //   `;
 
   let quantityContent = `
           <label for="quantity" class="product-details__label">Quantity:</label>
@@ -111,7 +112,9 @@ function createHtml(details) {
   // breadcrumbCurrent.innerHTML = `${details.title}`;
 
   detailsWrapper.innerHTML = `<div class="product-details__image">
-  <img src="${imgUrl}" alt="${altText}" class="product-details__image"/>
+  <img src="${details.image_url}" alt="${
+    details.image_alt_text
+  }" class="product-details__image"/>
   </div>
   <div class="product-details__content">
   <div class="product-details__head">
@@ -121,16 +124,36 @@ function createHtml(details) {
   <hr />
   <div class="product-details__content-wrapper">
   <div class="product-details__block1">
-    <form class="gender-container">${genderContent}</form>
-    <form class="color-container">${colorContent}</form>
+    <p class="product-details__label">Unisex</p>
+    <div>
+    <div class="color-wrapper">
+    <p class="product-details__label">Color:</p>
+    <p>${details.color}</p>
+    </div>
+    </div>
     <div>
     <p class="product-details__label">Size:</p>
     <div class="product-details__box-wrapper">
     <div class="product-details__box">
+    <div class="product-details__size">36</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">37</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">38</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">39</div>
+    </div>
+    <div class="product-details__box">
+    <div class="product-details__size">40</div>
+    </div>
+    <div class="product-details__box">
     <div class="product-details__size">41</div>
     </div>
     <div class="product-details__box">
-    <div class="product-details__size">43</div>
+    <div class="product-details__size">42</div>
     </div>
     <div class="product-details__box">
     <div class="product-details__size">43</div>
@@ -152,7 +175,8 @@ function createHtml(details) {
     <button class="button primary-button"
     id="buy-button" 
     data-id="${details.id}"
-    data-image="${imgUrl}"
+    data-image="${details.image_url}"
+    data-color="${details.color}"
     data-title="${details.title}"
     data-price="${details.price}"
     data-quantity="">
@@ -188,15 +212,16 @@ function createHtml(details) {
       quantity = event.target.value;
     });
 
-    let gender = document.getElementById("gender").value;
-    const selectGender = document.querySelector("#gender");
+    // let gender = document.getElementById("gender").value;
+    // const selectGender = document.querySelector("#gender");
 
-    selectGender.addEventListener("change", (event) => {
-      quantity = event.target.value;
-    });
+    // selectGender.addEventListener("change", (event) => {
+    //   gender = event.target.value;
+    // });
 
     const id = this.dataset.id;
     const image = this.dataset.image;
+    const color = this.dataset.color;
     const title = this.dataset.title;
     const price = this.dataset.price;
 
@@ -213,10 +238,10 @@ function createHtml(details) {
       const basket = {
         id: id,
         image: image,
+        color: color,
         title: title,
         price: price,
         quantity: quantity,
-        gender: gender,
       };
       // counterWrapper.style.display = "block";
       // counterContainer.innerHTML = currentBasket.length + 1;

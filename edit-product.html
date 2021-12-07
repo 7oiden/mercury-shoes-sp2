@@ -165,6 +165,18 @@
                 </div>
               </div>
               <div class="edit__input-wrapper">
+                <label for="username">Color (must be at least 3 characters)</label>
+                <input
+                  type="text"
+                  class="input edit__input"
+                  id="color"
+                  placeholder="Color"
+                />
+                <div class="error-messages" id="edit-color-error">
+                  *Must be at least 3 characters
+                </div>
+              </div>
+              <div class="edit__input-wrapper">
                 <label for="short-description">Short description (must be at least 10 characters)</label>
                 <textarea
                   name="short-description"
@@ -188,6 +200,13 @@
               </div>
               <div class="edit__input-wrapper">
                 <label for="product-image">Image URL (must be at least 5 characters)</label>
+                  <!-- <input
+                    type="text"
+                    class="input edit__input"
+                    id="product-image"
+                    placeholder=""
+                  /> -->
+           
                 <div class="edit__input-prefix-wrapper">
                   <div class="edit__input-prefix">https://</div>
                   <input

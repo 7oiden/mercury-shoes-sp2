@@ -61,12 +61,12 @@ basket.forEach((item) => {
                     <table class="basket__table">
                     <tr>
                         <th scope="row">Gender:</th>
-                        <td>${item.gender}</td>
+                        <td>Unisex</td>
                       </tr>
                       <tr>
                       <tr>
                         <th scope="row">Color:</th>
-                        <td>green</td>
+                        <td>${item.color}</td>
                       </tr>
                       <tr>
                         <th scope="row">Size:</th>

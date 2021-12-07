@@ -25,6 +25,8 @@ const productUrl = baseUrl + "products/" + id;
 const editForm = document.querySelector(".edit__form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
+const color = document.querySelector("#color");
+
 const shortDescription = document.querySelector("#short-description");
 const description = document.querySelector("#description");
 const productImage = document.querySelector("#product-image");
@@ -40,6 +42,7 @@ const stockYes = document.querySelector("#stock-yes");
 
 const titleError = document.querySelector("#edit-title-error");
 const priceError = document.querySelector("#edit-price-error");
+const colorError = document.querySelector("#edit-color-error");
 const shortDescriptionError = document.querySelector(
   "#edit-short-description-error"
 );
@@ -70,20 +73,21 @@ const altTextError = document.querySelector("#edit-alt-text-error");
       stockNo.checked = true;
     }
     /////
-    if (details.image) {
-      imageAltText.value = details.image.alternativeText;
-    } else {
-      imageAltText.value = details.image_alt_text;
-    }
+    // if (details.image) {
+    //   imageAltText.value = details.image.alternativeText;
+    // } else {
+    //   imageAltText.value = details.image_alt_text;
+    // }
 
-    if (!details.image) {
-      productImage.value = details.image_url;
-    }
-
+    const test = details.image_url;
+ 
     title.value = details.title;
     price.value = details.price;
+    color.value = details.color
     shortDescription.value = details.short_description;
     description.value = details.description;
+    productImage.value = test.substring("https://".length);
+    imageAltText.value = details.image_alt_text;
     idInput.value = details.id;
 
     deleteButton(details.id);
@@ -109,9 +113,10 @@ function submitEditForm(event) {
   const idValue = idInput.value;
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
+  const colorValue = color.value.trim();
   const shortDescriptionValue = shortDescription.value.trim();
   const descriptionValue = description.value.trim();
-  const productImageValue = productImage.value.trim();
+  const productImageValue = "https://" + productImage.value.trim();
   const imageAltTextValue = imageAltText.value.trim();
 
   const featuredValue = document.querySelector(
@@ -150,6 +155,12 @@ function submitEditForm(event) {
       priceError.style.display = "block";
     }
 
+    if (checkLength(color.value, 2)) {
+      colorError.style.display = "none";
+    } else {
+      colorError.style.display = "block";
+    }
+
     if (checkLength(shortDescription.value, 9)) {
       shortDescriptionError.style.display = "none";
     } else {
@@ -177,6 +188,7 @@ function submitEditForm(event) {
 
   title.addEventListener("keyup", checkInput);
   price.addEventListener("keyup", checkInput);
+  color.addEventListener("keyup", checkInput);
   shortDescription.addEventListener("keyup", checkInput);
   description.addEventListener("keyup", checkInput);
   productImage.addEventListener("keyup", checkInput);
@@ -188,6 +200,10 @@ function submitEditForm(event) {
 
   price.onfocus = function () {
     price.style.border = "1px solid #bdbdbd";
+  };
+
+  color.onfocus = function () {
+    color.style.border = "1px solid #bdbdbd";
   };
 
   shortDescription.onfocus = function () {
@@ -220,6 +236,13 @@ function submitEditForm(event) {
     priceError.style.display = "block";
     price.style.border = "2px solid #ed553b";
   }
+   if (checkLength(color.value, 2)) {
+     coloreError.style.display = "none";
+     color.style.border = "1px solid #bdbdbd";
+   } else {
+     colorError.style.display = "block";
+     color.style.border = "2px solid #ed553b";
+   }
   if (checkLength(shortDescription.value, 9)) {
     shortDescriptionError.style.display = "none";
     shortDescription.style.border = "1px solid #bdbdbd";
@@ -254,6 +277,7 @@ function submitEditForm(event) {
 
   if (
     checkLength(title.value, 4) &&
+    checkLength(color.value, 4) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
     validateNumber(price.value)
@@ -261,6 +285,7 @@ function submitEditForm(event) {
     updateProduct(
       titleValue,
       priceValue,
+      colorValue,
       shortDescriptionValue,
       descriptionValue,
       productImageValue,
@@ -276,6 +301,7 @@ function submitEditForm(event) {
   async function updateProduct(
     title,
     price,
+    color,
     short_description,
     description,
     image_url,
@@ -287,6 +313,7 @@ function submitEditForm(event) {
     const jsonData = {
       title: title,
       price: price,
+      color: color,
       short_description: short_description,
       description: description,
       image_url: image_url,
@@ -299,7 +326,7 @@ function submitEditForm(event) {
 
     const token = getToken();
 
-    console.log(editData);
+    // console.log(editData);
 
     const options = {
       method: "PUT",

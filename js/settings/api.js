@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:9000/";
+export const baseUrl = "https://mercury-shoes-heroku.herokuapp.com/";
 export const adminUrl = baseUrl + "auth/local";
 export const productsUrl = baseUrl + "products";
 export const homeUrl = baseUrl + "api/home";
