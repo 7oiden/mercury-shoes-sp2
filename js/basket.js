@@ -22,20 +22,14 @@ let itemCount = basket.length;
 
 // console.log(basket.length);
 
-let word = "item";
-
-if (itemCount > 1) {
-  word = "items";
-}
 
 basketHeading.innerHTML = `
-<h1 class="basket__heading">Basket <span id="item-count">(${itemCount} ${word})</span></h1>
+<h1 class="basket__heading">Basket</h1>
 `;
 
 if (itemCount === 0) {
   basketContainer.innerHTML = `<li class="basket-list-empty">Your basket is empty...</li>`;
   clearButton.style.display = "none";
-  basketHeading.innerHTML = `<h1 class="basket__heading">Basket</h1>`;
 }
 
 // console.log(basket);

@@ -35,29 +35,31 @@ console.log(detailUrl);
 
     createHtml(details);
   } catch (error) {
-    displayAlert("alert error", error, ".product-details-container");
+    displayAlert("alert error", error, ".details__container");
   }
 })();
 
+
+
 const detailsContainer = document.querySelector(".details__container");
 
-  const basket = getExistingBasket();
+const basket = getExistingBasket();
 
- detailsContainer.innerHTML = "";
+detailsContainer.innerHTML = "";
 
 function createHtml(details) {
-  
- ///new code
- let buttonClass = "on";
+  ///new code
+  let buttonClass = "on";
+  let buttonText = "Add to basket"
 
- const itemAlreadyInBasket = basket.find((item) => {
-   return parseInt(item.id) === details.id;
- });
+  const itemAlreadyInBasket = basket.find((item) => {
+    return parseInt(item.id) === details.id;
+  });
 
- if (itemAlreadyInBasket) {
-   buttonClass = "off";
- }
-
+  if (itemAlreadyInBasket) {
+    buttonClass = "off";
+    buttonText = "Remove from basket";
+  }
 
   let stockInfo = `<div class="in-stock"></div>`;
 
@@ -94,8 +96,6 @@ function createHtml(details) {
           </select>
           </div>
           `;
-
-  let buttonText = "Add to basket";
 
   // breadcrumbCurrent.innerHTML = `${details.title}`;
 
@@ -196,6 +196,17 @@ function createHtml(details) {
   function handleBuyButton() {
     this.classList.toggle("on");
     this.classList.toggle("off");
+
+    if (this.classList.contains("on")) {
+      this.innerHTML = "Add to basket";
+      console.log(this.classList);
+    }
+
+    if (this.classList.contains("off")) {
+      this.innerHTML = "Remove from basket";
+      console.log("hi");
+      console.log(this.classList);
+    }
     // button.innerHTML = "Remove from basket"
     let quantity = document.getElementById("quantity").value;
     const selectQuantity = document.querySelector("#quantity");
@@ -232,13 +243,8 @@ function createHtml(details) {
       // counterContainer.innerHTML = currentBasket.length + 1;
       currentBasket.push(basket);
       saveBasket(currentBasket);
-      messageContainer.innerHTML = "Product added to basket.";
-
-      setTimeout(function () {
-        messageContainer.innerHTML = "";
-      }, 3000);
       basketCounter();
-      
+
       // } else {
       //   messageContainer.innerHTML = "Product already in basket.";
 
@@ -247,14 +253,13 @@ function createHtml(details) {
       //   }, 2000);
       // }
     } else {
-        messageContainer.innerHTML = "Product removed from basket.";
+      messageContainer.innerHTML = "Product removed from basket.";
 
-        setTimeout(function () {
-          messageContainer.innerHTML = "";
-        }, 3000);
+      setTimeout(function () {
+        messageContainer.innerHTML = "";
+      }, 3000);
       const newBasket = currentBasket.filter((item) => {
         return item.id !== id;
-         
       });
       saveBasket(newBasket);
       basketCounter();
