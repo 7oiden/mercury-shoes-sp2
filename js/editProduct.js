@@ -237,7 +237,7 @@ function submitEditForm(event) {
     price.style.border = "2px solid #ed553b";
   }
    if (checkLength(color.value, 2)) {
-     coloreError.style.display = "none";
+     colorError.style.display = "none";
      color.style.border = "1px solid #bdbdbd";
    } else {
      colorError.style.display = "block";

@@ -81,7 +81,7 @@ basket.forEach((item) => {
                         <td>
                         ${item.quantity}</td>
                       </tr>
-                      <tr>
+                      <tr id="total">
                         <th scope="row">Total:</th>
                         <td>
                         $${total}</td>

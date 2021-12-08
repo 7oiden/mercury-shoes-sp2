@@ -161,35 +161,44 @@ svg {
   margin-right: 2rem;
 }
 
-// product details
-.product-details__title {
-  font-family: $primary-headings;
-  font-size: 1.75rem;
-  margin: 0;
-  padding: 0;
-}
+.details {
+  &__title {
+    font-family: $primary-headings;
+    font-size: 1.75rem;
+    margin: 0;
+    padding: 0;
+  }
 
-.product-details__price {
-  font-family: $primary-headings;
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
+  &__price {
+    font-family: $primary-headings;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
 
-.product-details__label {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 0 0 0.25rem 0;
-}
+  &__label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
 
-.product-details__sub-heading {
-  font-family: $primary-headings;
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-decoration: underline;
-  margin: 0;
-  padding: 0 0 0.25rem 0;
+  &__value {
+    margin: 0;
+  }
+
+  &__sub-heading {
+    font-family: $primary-headings;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0 0 0.25rem 0;
+  }
+
+  &__text {
+    margin-top: 0.5rem;
+  }
 }
 
 // footer
@@ -283,14 +292,28 @@ i {
 }
 
 .card__icon {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    path {
-      fill: getColor(dark);
-    }
+  path {
+    fill: getColor(dark);
   }
+}
+
+.out-of-stock {
+  background-color: getColor(error);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.in-stock {
+  background-color: getColor(success);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}

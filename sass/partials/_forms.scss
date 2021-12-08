@@ -19,6 +19,14 @@ label {
   padding-bottom: 0.25rem;
 }
 
+select {
+  background-color: getColor(background);
+  padding: 0.25rem;
+
+  @include content-border(5px)
+}
+
+
 .newsletter {
   &__form {
     display: flex;
@@ -256,3 +264,4 @@ input[type="radio"]:checked::before {
   align-items: center;
   gap: 1rem;
 }
+
