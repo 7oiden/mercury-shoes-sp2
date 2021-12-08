@@ -60,17 +60,6 @@ button {
   float: right;
 }
 
-.disabled {
-  background-color: grey;
-  pointer-events: none;
-  cursor: default;
-
-  &:hover {
-    scale: 1;
-    box-shadow: none;
-  }
-}
-
 .delete-button {
   background-color: transparent;
   margin-top: 2rem;
@@ -121,4 +110,20 @@ button {
 
 .off {
   background-color: getColor(dark);
+}
+
+.button-message {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.disabled {
+  background-color: grey;
+  pointer-events: none;
+  cursor: default;
+
+  &:hover {
+    scale: 1;
+    box-shadow: none;
+  }
 }

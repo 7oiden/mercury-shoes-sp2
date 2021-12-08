@@ -22,7 +22,7 @@ if (!id) {
 
 const detailUrl = baseUrl + "products/" + id;
 
-console.log(detailUrl);
+// console.log(detailUrl);
 
 (async function () {
   try {
@@ -31,7 +31,7 @@ console.log(detailUrl);
 
     console.log(details);
 
-    document.title = details.title;
+    document.title = `Mercury Shoes | ${details.title}`;
 
     createHtml(details);
   } catch (error) {
@@ -96,8 +96,6 @@ function createHtml(details) {
           </select>
           </div>
           `;
-
-  // breadcrumbCurrent.innerHTML = `${details.title}`;
 
   detailsContainer.innerHTML = `<div class="details__image">
   <img src="${details.image_url}" alt="${
@@ -180,7 +178,7 @@ function createHtml(details) {
     </div>
   `;
 
-  console.log(details.stock);
+  // console.log(details.stock);
 
   const button = document.querySelector("#buy-button");
   const messageContainer = document.querySelector(".button-message");
@@ -199,15 +197,15 @@ function createHtml(details) {
 
     if (this.classList.contains("on")) {
       this.innerHTML = "Add to basket";
-      console.log(this.classList);
+      // console.log(this.classList);
     }
 
     if (this.classList.contains("off")) {
       this.innerHTML = "Remove from basket";
       console.log("hi");
-      console.log(this.classList);
+      // console.log(this.classList);
     }
-    // button.innerHTML = "Remove from basket"
+  
     let quantity = document.getElementById("quantity").value;
     const selectQuantity = document.querySelector("#quantity");
 
@@ -223,8 +221,6 @@ function createHtml(details) {
 
     const currentBasket = getExistingBasket();
 
-    // const counterContainer = document.querySelector("#test");
-    // const counterWrapper = document.querySelector("#counter");
 
     const basketInStorage = currentBasket.find((item) => {
       return item.id === id;
@@ -244,20 +240,12 @@ function createHtml(details) {
       currentBasket.push(basket);
       saveBasket(currentBasket);
       basketCounter();
-
-      // } else {
-      //   messageContainer.innerHTML = "Product already in basket.";
-
-      //   setTimeout(function () {
-      //     messageContainer.innerHTML = "";
-      //   }, 2000);
-      // }
     } else {
       messageContainer.innerHTML = "Product removed from basket.";
 
       setTimeout(function () {
         messageContainer.innerHTML = "";
-      }, 3000);
+      }, 2000);
       const newBasket = currentBasket.filter((item) => {
         return item.id !== id;
       });

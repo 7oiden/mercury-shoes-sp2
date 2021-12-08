@@ -5,6 +5,7 @@ import displayAlert from "./components/common/displayAlert.js";
 import { baseUrl } from "./settings/api.js";
 import deleteButton from "./components/editProducts/deleteButton.js";
 import { basketCounter } from "./components/common/basketCounter.js";
+import { getExistingBasket, saveBasket } from "./utils/storage.js";
 
 basketCounter();
 
@@ -80,10 +81,10 @@ const altTextError = document.querySelector("#edit-alt-text-error");
     // }
 
     const test = details.image_url;
- 
+
     title.value = details.title;
     price.value = details.price;
-    color.value = details.color
+    color.value = details.color;
     shortDescription.value = details.short_description;
     description.value = details.description;
     productImage.value = test.substring("https://".length);
@@ -236,13 +237,13 @@ function submitEditForm(event) {
     priceError.style.display = "block";
     price.style.border = "2px solid #ed553b";
   }
-   if (checkLength(color.value, 2)) {
-     colorError.style.display = "none";
-     color.style.border = "1px solid #bdbdbd";
-   } else {
-     colorError.style.display = "block";
-     color.style.border = "2px solid #ed553b";
-   }
+  if (checkLength(color.value, 2)) {
+    colorError.style.display = "none";
+    color.style.border = "1px solid #bdbdbd";
+  } else {
+    colorError.style.display = "block";
+    color.style.border = "2px solid #ed553b";
+  }
   if (checkLength(shortDescription.value, 9)) {
     shortDescriptionError.style.display = "none";
     shortDescription.style.border = "1px solid #bdbdbd";
@@ -277,7 +278,7 @@ function submitEditForm(event) {
 
   if (
     checkLength(title.value, 4) &&
-    checkLength(color.value, 4) &&
+    checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
     validateNumber(price.value)
@@ -310,6 +311,32 @@ function submitEditForm(event) {
     stock,
     id
   ) {
+    //updates current product in basket list
+    const currentBasket = getExistingBasket();
+
+    const itemInStorage = currentBasket.find((item) => {
+      return item.id === id;
+    });
+
+    if (itemInStorage) {
+      const basketIndex = currentBasket.findIndex((fav) => {
+        return fav.id === id;
+      });
+
+      if (id) {
+        currentBasket[basketIndex].id = id;
+        currentBasket[basketIndex].title = title;
+        currentBasket[basketIndex].color = color;
+        currentBasket[basketIndex].short_description = short_description;
+        currentBasket[basketIndex].image_url = image_url;
+        currentBasket[basketIndex].image_alt_text = image_alt_text;
+        currentBasket[basketIndex].featured = featured;
+        currentBasket[basketIndex].stock = stock;
+
+        saveBasket(currentBasket);
+      }
+    }
+
     const jsonData = {
       title: title,
       price: price,

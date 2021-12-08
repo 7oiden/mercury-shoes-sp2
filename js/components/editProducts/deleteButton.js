@@ -1,6 +1,7 @@
 import { baseUrl } from "../../settings/api.js";
 import { getToken } from "../../utils/storage.js";
 import displayAlert from "../common/displayAlert.js";
+import { getExistingBasket, saveBasket } from "../../utils/storage.js";
 
 export default function deleteButton(id) {
   const deleteContainer = document.querySelector(".delete-container");
@@ -32,6 +33,14 @@ export default function deleteButton(id) {
         const json = await response.json();
 
         if (!json.error) {
+          //removes deleted article from favorites list
+          const currentBasket = getExistingBasket();
+
+          const newBasket = currentBasket.filter((item) => {
+            return parseInt(item.id) !== id;
+          });
+
+          saveBasket(newBasket);
 
           displayAlert(
             "success",

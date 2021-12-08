@@ -91,6 +91,12 @@ function submitAddForm(event) {
       priceError.style.display = "block";
     }
 
+    if (checkLength(color.value, 2)) {
+      colorError.style.display = "none";
+    } else {
+      colorError.style.display = "block";
+    }
+
     if (checkLength(shortDescription.value, 9)) {
       shortDescriptionError.style.display = "none";
     } else {
@@ -118,6 +124,7 @@ function submitAddForm(event) {
 
   title.addEventListener("keyup", checkInput);
   price.addEventListener("keyup", checkInput);
+  color.addEventListener("keyup", checkInput);
   shortDescription.addEventListener("keyup", checkInput);
   description.addEventListener("keyup", checkInput);
   productImage.addEventListener("keyup", checkInput);
@@ -129,6 +136,10 @@ function submitAddForm(event) {
 
   price.onfocus = function () {
     price.style.border = "1px solid #bdbdbd";
+  };
+
+  color.onfocus = function () {
+    shortDescription.style.border = "1px solid #bdbdbd";
   };
 
   shortDescription.onfocus = function () {
@@ -160,6 +171,13 @@ function submitAddForm(event) {
   } else {
     priceError.style.display = "block";
     price.style.border = "2px solid #ed553b";
+  }
+  if (checkLength(color.value, 2)) {
+    colorError.style.display = "none";
+    color.style.border = "1px solid #bdbdbd";
+  } else {
+    colorError.style.display = "block";
+    color.style.border = "2px solid #ed553b";
   }
   if (checkLength(shortDescription.value, 9)) {
     shortDescriptionError.style.display = "none";
@@ -195,6 +213,7 @@ function submitAddForm(event) {
 
   if (
     checkLength(title.value, 4) &&
+    checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
     checkLength(productImage.value, 4) &&
