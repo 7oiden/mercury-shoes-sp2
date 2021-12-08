@@ -1,5 +1,3 @@
-import { getExistingBasket } from "../../utils/storage.js";
-
 export function clearBasket() {
   const clearButton = document.querySelector("#clear-basket");
   const basketHeading = document.querySelector(".basket__heading-container");
@@ -15,8 +13,6 @@ export function clearBasket() {
       clearButton.style.display = "none";
       basketHeading.innerHTML = `<h1 class="basket__heading">Basket</h1>`;
       counterWrapper.style.display = "none";
-
-      location.reload();
     }
   }
 }
