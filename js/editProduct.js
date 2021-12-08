@@ -326,6 +326,7 @@ function submitEditForm(event) {
       if (id) {
         currentBasket[basketIndex].id = id;
         currentBasket[basketIndex].title = title;
+        currentBasket[basketIndex].price = price;
         currentBasket[basketIndex].color = color;
         currentBasket[basketIndex].short_description = short_description;
         currentBasket[basketIndex].image_url = image_url;

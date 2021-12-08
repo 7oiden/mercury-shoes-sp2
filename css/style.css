@@ -776,6 +776,10 @@ i {
   border: 1px solid #bdbdbd;
 }
 
+.remove-icon {
+  cursor: pointer;
+}
+
 .main-image {
   background-image: url("../images/mercury-main-mobile.jpg");
   background-size: cover;

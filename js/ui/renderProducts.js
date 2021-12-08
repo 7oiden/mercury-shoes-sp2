@@ -9,7 +9,7 @@ export function renderProducts(products) {
 
   productsContainer.innerHTML = "";
 
-  products.forEach((product, index) => {
+  products.forEach((product) => {
     let editProd = "";
 
     if (token) {
