@@ -308,7 +308,8 @@ i {
   background-color: getColor(error);
   width: 1rem;
   height: 1rem;
-  border-radius: 50%;
+  
+  @include content-border(50%);
 }
 
 .in-stock {
@@ -316,4 +317,6 @@ i {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+
+  @include content-border(50%);
 }

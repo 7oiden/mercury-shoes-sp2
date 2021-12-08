@@ -41,10 +41,23 @@ console.log(detailUrl);
 
 const detailsContainer = document.querySelector(".details__container");
 
+  const basket = getExistingBasket();
+
  detailsContainer.innerHTML = "";
 
 function createHtml(details) {
- 
+  
+ ///new code
+ let buttonClass = "on";
+
+ const itemAlreadyInBasket = basket.find((item) => {
+   return parseInt(item.id) === details.id;
+ });
+
+ if (itemAlreadyInBasket) {
+   buttonClass = "off";
+ }
+
 
   let stockInfo = `<div class="in-stock"></div>`;
 
@@ -147,7 +160,7 @@ function createHtml(details) {
     <div class="details__line-wrapper">
     <h3 class="details__label">In stock:</h3>${stockInfo}
     </div>
-    <button class="button primary-button"
+    <button class="button primary-button ${buttonClass}"
     id="buy-button" 
     data-id="${details.id}"
     data-image="${details.image_url}"
@@ -181,6 +194,8 @@ function createHtml(details) {
   button.addEventListener("click", handleBuyButton);
 
   function handleBuyButton() {
+    this.classList.toggle("on");
+    this.classList.toggle("off");
     // button.innerHTML = "Remove from basket"
     let quantity = document.getElementById("quantity").value;
     const selectQuantity = document.querySelector("#quantity");
@@ -218,6 +233,10 @@ function createHtml(details) {
       currentBasket.push(basket);
       saveBasket(currentBasket);
       messageContainer.innerHTML = "Product added to basket.";
+
+      setTimeout(function () {
+        messageContainer.innerHTML = "";
+      }, 3000);
       basketCounter();
       
       // } else {
@@ -232,7 +251,7 @@ function createHtml(details) {
 
         setTimeout(function () {
           messageContainer.innerHTML = "";
-        }, 2000);
+        }, 3000);
       const newBasket = currentBasket.filter((item) => {
         return item.id !== id;
          

@@ -110,3 +110,11 @@ button {
   margin: 3rem auto 0 auto;
   width: 260px;
 }
+
+.on {
+  background-color: getColor(accent);
+}
+
+.off {
+  background-color: getColor(dark);
+}
