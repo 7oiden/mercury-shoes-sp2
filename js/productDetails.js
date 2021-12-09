@@ -149,7 +149,7 @@ function createHtml(details) {
     <div class="details__button-wrapper">
     <div class="button-message"></div>
     <div class="details__stock-wrapper">
-    <h3 class="details__label">In stock:</h3>${stockInfo}
+    <h3 class="details__stock-label">In stock:</h3>${stockInfo}
     </div>
     <button class="button primary-button ${buttonClass}"
     id="buy-button" 

@@ -676,6 +676,12 @@ svg path {
   }
 }
 
+.details__stock-label {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
 .details__value {
   margin: 0;
 }
@@ -1062,6 +1068,7 @@ header {
   border-radius: 50%;
   z-index: 9;
   font-family: "proxima nova", sans-serif;
+  display: none;
 }
 
 #counter div {
