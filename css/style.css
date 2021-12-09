@@ -53,7 +53,9 @@ a {
 }
 
 main {
-  background-image: url("../images/texture.jpg");
+  background-image: url("../images/background_pattern.jpeg");
+  -webkit-backdrop-filter: opacity(0.1);
+          backdrop-filter: opacity(0.1);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,9 +74,10 @@ main.products-overview {
 
 .main-content {
   position: absolute;
+  width: 100%;
   display: block;
-  top: 50px;
-  background-color: #ffffffbf;
+  top: 75px;
+  background-color: #ffffffa6;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -82,15 +85,12 @@ main.products-overview {
 @media (min-width: 992px) {
   .main-content {
     display: inline-block;
-    left: 50px;
-    border-radius: 0 0 25px 0;
-    padding: 50px;
   }
 }
 
 .main-content-container {
+  width: 95%;
   margin: 0 auto;
-  width: 90%;
 }
 
 .loader {
@@ -335,7 +335,7 @@ hr {
   }
 }
 
-.support-wrapper {
+.about-wrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
@@ -352,26 +352,28 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .support-wrapper {
+  .about-wrapper {
     width: 85%;
   }
 }
 
 @media (min-width: 992px) {
-  .support-wrapper {
+  .about-wrapper {
     width: 70%;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
   }
 }
 
 @media (min-width: 1200px) {
-  .support-wrapper {
+  .about-wrapper {
     width: 60%;
   }
 }
 
 @media (min-width: 1400px) {
-  .support-wrapper {
-    width: 50%;
+  .about-wrapper {
+    width: 55%;
   }
 }
 
@@ -383,6 +385,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2rem;
 }
 
 @media (min-width: 1400px) {
@@ -407,6 +410,8 @@ hr {
   .add,
   .edit {
     width: 85%;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
   }
 }
 
@@ -427,7 +432,7 @@ hr {
 @media (min-width: 1400px) {
   .add,
   .edit {
-    width: 50%;
+    width: 55%;
   }
 }
 
@@ -478,21 +483,50 @@ hr {
 }
 
 hgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 992px) {
+  hgroup {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+strong {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .main-heading {
   font-family: "soleil", sans-serif;
   font-size: 3.75rem;
   text-transform: uppercase;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 768px) {
   .main-heading {
-    font-size: 6rem;
+    font-size: 5.5rem;
     line-height: 1.2;
   }
 }
@@ -500,6 +534,7 @@ hgroup {
 .main-heading__support {
   font-family: "ff-tisa-sans-web-pro", sans-serif;
   font-size: 1.5rem;
+  text-align: center;
   margin: 0;
   padding: 0;
   text-transform: lowercase;
@@ -509,7 +544,7 @@ hgroup {
 
 @media (min-width: 992px) {
   .main-heading__support {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -517,6 +552,7 @@ hgroup {
   font-family: "ff-tisa-web-pro", serif;
   font-size: 1.125rem;
   font-weight: 400;
+  text-align: center;
   padding-bottom: 1rem;
 }
 
@@ -634,7 +670,7 @@ svg path {
   width: 270px;
   height: 6px;
   background-color: #ea564e;
-  margin-right: 2rem;
+  margin: 0 auto;
 }
 
 .details__title {
@@ -768,6 +804,10 @@ i {
   font-size: 1.875rem;
   margin: 0;
   padding: 0;
+}
+
+.faq__list {
+  padding-left: 1rem;
 }
 
 .nav__icon {
@@ -1640,7 +1680,11 @@ button {
 }
 
 .main-button {
+  display: block;
+  width: 200px;
   font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .secondary-button {
@@ -2379,6 +2423,7 @@ td {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 50px;
 }
 
 @media (min-width: 992px) {

@@ -1,5 +1,6 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
+import adminLogin from "./components/common/adminLogin.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import { clearBasket } from "./components/basket/clearBasket.js";
 import { basketCounter } from "./components/common/basketCounter.js";
@@ -8,6 +9,7 @@ import { renderBasket } from "./ui/renderBasket.js";
 
 basketCounter();
 createAdminNav();
+adminLogin();
 
 const basket = getExistingBasket();
 
@@ -57,23 +59,6 @@ function handleClick() {
   basketCounter();
   location.reload();
 }
-
-
-
-// quantity
-// const quantity = document.querySelectorAll(".quantity");
-
-// quantity.forEach((element) => {
-
-//   let newQuantity = element.value;
-
-//   console.log(newQuantity);
-
-//   element.addEventListener("input", (event) => {
-//     newQuantity = event.target.value;
-
-//     console.log(newQuantity);
-//   });
 
 let subTotal = 0;
 

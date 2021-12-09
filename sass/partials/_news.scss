@@ -1,6 +1,7 @@
 .news {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 
   @media (min-width: getBreakpoint(large)) {
     flex-direction: row;

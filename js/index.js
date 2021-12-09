@@ -1,5 +1,6 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
+import adminLogin from "./components/common/adminLogin.js";
 import { validateNewsletterForm } from "./components/newsletter.js";
 import { productsUrl, homeUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
@@ -8,8 +9,8 @@ import createAdminNav from "./components/common/createAdminNav.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 
 basketCounter();
-
 createAdminNav();
+adminLogin();
 
 // (async function fetch() {
 //   try {
