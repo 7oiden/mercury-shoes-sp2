@@ -1699,13 +1699,12 @@ button {
 
 .edit-button {
   margin-top: 0.75rem;
-  background-color: #323232;
+  background-color: #ea564e;
   color: #ffffff;
   display: block;
   padding: 0.5rem 1rem;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  border: 3px solid #ea564e;
   border-radius: 5px;
   text-align: center;
   -webkit-box-ordinal-group: 2;
@@ -1715,7 +1714,7 @@ button {
 
 @media (min-width: 992px) {
   .edit-button:hover {
-    background-color: #ea564e;
+    background-color: #323232;
   }
 }
 
@@ -1761,6 +1760,7 @@ button {
 .button-message {
   margin-top: 1rem;
   font-size: 1.125rem;
+  font-style: italic;
 }
 
 .disabled {
@@ -1796,6 +1796,11 @@ input[type="radio"] {
 
 label {
   padding-bottom: 0.25rem;
+}
+
+.radio-label {
+  padding-bottom: 0;
+  padding-top: 5px;
 }
 
 select {
@@ -2177,7 +2182,6 @@ textarea {
   color: black;
   font-size: 1.125rem;
   border-radius: 5px;
-  border: 1px solid #bdbdbd;
 }
 
 .error {

@@ -16,8 +16,7 @@
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;
-
-  @include content-border(5px)
+  border-radius: 5px;
 }
 
 .error {
@@ -25,32 +24,14 @@
   color: white;
 }
 
-// .error::before {
-//   font-family: FontAwesome;
-//   content: "\f00d";
-//   padding-right: 0.75rem;
-// }
-
 .success {
   background-color: getColor(success);
   color: black;
 }
 
-// .success::before {
-//   font-family: FontAwesome;
-//   content: "\f058";
-//   padding-right: 0.75rem;
-// }
-
 .warning {
   background-color: getColor(warning);
 }
-
-// .warning::before {
-//   font-family: FontAwesome;
-//   content: "\f071";
-//   padding-right: 0.75rem;
-// }
 
 .error-messages {
   color: getColor(error);

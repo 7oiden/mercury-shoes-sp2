@@ -70,7 +70,7 @@ function createHtml(details) {
     buttonText = "Remove from basket";
   }
 
-  let gender = "Unisex"
+  let gender = "Unisex";
 
   let stockInfo = `<div class="in-stock"></div>`;
 
@@ -191,13 +191,11 @@ function createHtml(details) {
 
     if (this.classList.contains("on")) {
       this.innerHTML = "Add to basket";
-      // console.log(this.classList);
     }
 
     if (this.classList.contains("off")) {
       this.innerHTML = "Remove from basket";
       console.log("hi");
-      // console.log(this.classList);
     }
 
     let size = document.getElementById("size").value;
@@ -240,6 +238,10 @@ function createHtml(details) {
       currentBasket.push(basket);
       saveBasket(currentBasket);
       basketCounter();
+      messageContainer.innerHTML = "Product added to basket.";
+      setTimeout(function () {
+        messageContainer.innerHTML = "";
+      }, 2000);
     } else {
       messageContainer.innerHTML = "Product removed from basket.";
 

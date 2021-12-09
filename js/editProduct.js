@@ -100,8 +100,6 @@ const altTextError = document.querySelector("#edit-alt-text-error");
   }
 })();
 
-//////////////////////////////////////////
-
 editForm.addEventListener("submit", submitEditForm);
 
 function submitEditForm(event) {
@@ -174,7 +172,7 @@ function submitEditForm(event) {
       descriptionError.style.display = "block";
     }
 
-    if (checkLength(productImage.value, 4)) {
+    if (checkLength(productImage.value, 9)) {
       urlError.style.display = "none";
     } else {
       urlError.style.display = "block";
@@ -260,28 +258,30 @@ function submitEditForm(event) {
     description.style.border = "2px solid #ed553b";
   }
 
-  // if (checkLength(productImage.value, 4)) {
-  //   urlError.style.display = "none";
-  //   productImage.style.border = "1px solid #bdbdbd";
-  // } else {
-  //   urlError.style.display = "block";
-  //   productImage.style.border = "2px solid #ed553b";
-  // }
+  if (checkLength(productImage.value, 9)) {
+    urlError.style.display = "none";
+    productImage.style.border = "1px solid #bdbdbd";
+  } else {
+    urlError.style.display = "block";
+    productImage.style.border = "2px solid #ed553b";
+  }
 
-  // if (checkLength(imageAltText.value, 9)) {
-  //   altTextError.style.display = "none";
-  //   imageAltText.style.border = "2px solid transparent";
-  // } else {
-  //   altTextError.style.display = "block";
-  //   imageAltText.style.border = "2px solid #ed553b";
-  // }
+  if (checkLength(imageAltText.value, 9)) {
+    altTextError.style.display = "none";
+    imageAltText.style.border = "2px solid transparent";
+  } else {
+    altTextError.style.display = "block";
+    imageAltText.style.border = "2px solid #ed553b";
+  }
 
   if (
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
-    validateNumber(price.value)
+    validateNumber(price.value) &&
+    checkLength(imageAltText.value, 9) &&
+    checkLength(productImage.value, 9)
   ) {
     updateProduct(
       titleValue,

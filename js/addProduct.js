@@ -109,7 +109,7 @@ function submitAddForm(event) {
       descriptionError.style.display = "block";
     }
 
-    if (checkLength(productImage.value, 4)) {
+    if (checkLength(productImage.value, 9)) {
       urlError.style.display = "none";
     } else {
       urlError.style.display = "block";
@@ -195,7 +195,7 @@ function submitAddForm(event) {
     description.style.border = "2px solid #ed553b";
   }
 
-  if (checkLength(productImage.value, 4)) {
+  if (checkLength(productImage.value, 9)) {
     urlError.style.display = "none";
     productImage.style.border = "1px solid #bdbdbd";
   } else {
@@ -216,7 +216,7 @@ function submitAddForm(event) {
     checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
     checkLength(description.value, 14) &&
-    checkLength(productImage.value, 4) &&
+    checkLength(productImage.value, 9) &&
     checkLength(imageAltText.value, 9) &&
     validateNumber(price.value)
   ) {

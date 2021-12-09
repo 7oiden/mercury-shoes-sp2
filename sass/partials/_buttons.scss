@@ -19,6 +19,7 @@ button {
 .main-button {
   background-color: getColor(accent);
 
+  //hover state removed from small screen because else JS class toggle causes issues
   @media (min-width: getBreakpoint(large)) {
     &:hover {
       scale: 1.1;
@@ -88,19 +89,18 @@ button {
 
 .edit-button {
   margin-top: 0.75rem;
-  background-color: getColor(secondary);
+  background-color: getColor(accent);
   color: getColor(primary);
   display: block;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
-  border: 3px solid getColor(accent);
   border-radius: 5px;
   text-align: center;
   order: 1;
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {
-      background-color: getColor(accent);
+      background-color: getColor(secondary);
     }
   }
 }
@@ -145,6 +145,7 @@ button {
 .button-message {
   margin-top: 1rem;
   font-size: 1.125rem;
+  font-style: italic;
 }
 
 .disabled {

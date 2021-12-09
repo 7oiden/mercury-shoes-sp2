@@ -176,29 +176,37 @@
                 </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="short-description">Short description (must be at least 10 characters)</label>
+                <label for="short-description"
+                  >Short description (must be at least 10 characters)</label
+                >
                 <textarea
                   name="short-description"
                   class="input add__input"
                   id="short-description"
+                  placeholder="Write short description here..."
                 ></textarea>
                 <div class="error-messages" id="add-short-description-error">
                   *Must be at least 10 characters
                 </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="description">Description (must be at least 15 characters)</label>
+                <label for="description"
+                  >Description (must be at least 15 characters)</label
+                >
                 <textarea
                   name="description"
                   class="input add__input"
                   id="description"
+                  placeholder="Write full description here..."
                 ></textarea>
                 <div class="error-messages" id="add-description-error">
                   *Must be at least 15 characters
                 </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="product-image">Image URL (must be at least 5 characters)</label>
+                <label for="product-image"
+                  >Image URL (must be at least 10 characters)</label
+                >
                 <div class="add__input-prefix-wrapper">
                   <div class="add__input-prefix">https://</div>
                   <input
@@ -207,47 +215,50 @@
                     id="product-image"
                     placeholder="URL"
                   />
+                  <div class="error-messages" id="add-url-error">
+                  *Must be a least 10 characters
+                </div>
                 </div>
                 <div class="error-messages" id="add-url-error">
                   *Must be a least 5 characters
                 </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="image-alt-text">Image alt-text (must be at least 10 characters)</label>
+                <label for="image-alt-text"
+                  >Image alt-text (must be at least 10 characters)</label
+                >
                 <input
                   type="text"
                   class="input add__input"
                   id="image-alt-text"
-                  placeholder=""
+                  placeholder="Image alt text"
                 />
                 <div class="error-messages" id="add-alt-text-error">
                   *Must be at least 10 characters
                 </div>
               </div>
-              <!-- <div class="add__input-wrapper">
-                <label for="product-image">Image</label>
-                <input type="file" name="image" class="" id="product-image" />
-              </div> -->
               <div class="add__radio-wrapper">
                 <p class="add__radio-heading">Featured product:</p>
                 <div class="add__radio-flex">
                   <input
+                    id="featured-no"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
                     name="featured"
                     value="false"
                     checked="checked"
                   />
-                  <label class="no" for="no">NO</label>
+                  <label class="radio-label" for="featured-no">NO</label>
                 </div>
                 <div class="add__radio-flex">
                   <input
+                    id="fetured-yes"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
                     name="featured"
                     value="true"
                   />
-                  <label class="yes" for="no">YES</label>
+                  <label class="radio-label" for="featured-yes">YES</label>
                 </div>
               </div>
               <div class="add__radio-wrapper">
@@ -260,17 +271,17 @@
                     value="false"
                     checked="checked"
                   />
-                  <label class="no" for="no">NO</label>
+                  <label class="radio-label" for="no">NO</label>
                 </div>
                 <div class="add__radio-flex">
-                    <input
-                      style="height: 20px; width: 20px; vertical-align: middle"
-                      type="radio"
-                      name="stock"
-                      value="true"
-                    />
-                    <label class="yes" for="no">YES</label>
-                  </div>
+                  <input
+                    style="height: 20px; width: 20px; vertical-align: middle"
+                    type="radio"
+                    name="stock"
+                    value="true"
+                  />
+                  <label class="radio-label" for="no">YES</label>
+                </div>
               </div>
               <div class="add__input-wrapper">
                 <div class="addalert-container"></div>
