@@ -19,9 +19,11 @@ button {
 .main-button {
   background-color: getColor(accent);
 
-  &:hover {
-    scale: 1.1;
-    @include dropShadow(12px, 12px);
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      scale: 1.1;
+      @include dropShadow(12px, 12px);
+    }
   }
 }
 
@@ -33,10 +35,13 @@ button {
   font-size: 1.25rem;
   background-color: getColor(dark);
   color: getColor(primary);
+
   border-radius: 5px;
 
-  &:hover {
-    background-color: getColor(accent);
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      background-color: getColor(accent);
+    }
   }
 }
 
@@ -69,9 +74,11 @@ button {
   color: getColor(accent);
   padding: 0.5rem 0.75rem;
 
-  &:hover {
-    background-color: getColor(accent);
-    color: getColor(primary);
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      background-color: getColor(accent);
+      color: getColor(primary);
+    }
   }
 }
 
@@ -81,17 +88,20 @@ button {
 
 .edit-button {
   margin-top: 0.75rem;
-  background-color: getColor(dark);
+  background-color: getColor(secondary);
   color: getColor(primary);
   display: block;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
+  border: 3px solid getColor(accent);
   border-radius: 5px;
   text-align: center;
   order: 1;
 
-  &:hover {
-    background-color: getColor(accent);
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      background-color: getColor(accent);
+    }
   }
 }
 
@@ -124,9 +134,11 @@ button {
   border: 3px solid getColor(accent);
   color: getColor(accent);
 
-  &:hover {
-    background-color: getColor(accent);
-    color: getColor(primary);
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      background-color: getColor(accent);
+      color: getColor(primary);
+    }
   }
 }
 
@@ -140,8 +152,10 @@ button {
   pointer-events: none;
   cursor: default;
 
-  &:hover {
-    scale: 1;
-    box-shadow: none;
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      scale: 1;
+      box-shadow: none;
+    }
   }
 }

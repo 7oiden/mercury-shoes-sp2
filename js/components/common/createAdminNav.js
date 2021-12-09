@@ -6,9 +6,11 @@ export default function createAdminNav() {
 
   const linksContainer = document.querySelector(".nav__links-list");
   const mobileLinksContainer = document.querySelector(".mobile-menu__list");
-  
+
   const adminLogin = document.querySelector(".admin-login");
   const adminLogout = document.querySelector(".admin-logout");
+  const banner = document.querySelector(".banner");
+
   const bannerContainer = document.querySelector(".banner__list");
 
   const username = getUsername();
@@ -30,16 +32,13 @@ export default function createAdminNav() {
       pathname === "/add.html" ? "active" : ""
     }">Add Product</a>`;
 
-    // editLink = `
-    // <a href="add.html" class="${
-    //   pathname === "/edit.html" ? "active" : ""
-    // }">Edit Product</a>`;
-
     authUser = `
     <span>Signed in as: <em>${username}</em></span>`;
 
     bannerContainer.innerHTML = `
   <li>${authUser}</li>`;
+
+    banner.style.backgroundColor = "#ea564e";
   }
 
   linksContainer.innerHTML = `

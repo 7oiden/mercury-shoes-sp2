@@ -1630,11 +1630,13 @@ button {
   background-color: #ea564e;
 }
 
-.primary-button:hover,
-.main-button:hover {
-  scale: 1.1;
-  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+@media (min-width: 992px) {
+  .primary-button:hover,
+  .main-button:hover {
+    scale: 1.1;
+    -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .main-button {
@@ -1648,8 +1650,10 @@ button {
   border-radius: 5px;
 }
 
-.secondary-button:hover {
-  background-color: #ea564e;
+@media (min-width: 992px) {
+  .secondary-button:hover {
+    background-color: #ea564e;
+  }
 }
 
 .update-button {
@@ -1682,9 +1686,11 @@ button {
   padding: 0.5rem 0.75rem;
 }
 
-.delete-button:hover {
-  background-color: #ea564e;
-  color: #ffffff;
+@media (min-width: 992px) {
+  .delete-button:hover {
+    background-color: #ea564e;
+    color: #ffffff;
+  }
 }
 
 .button-message {
@@ -1693,12 +1699,13 @@ button {
 
 .edit-button {
   margin-top: 0.75rem;
-  background-color: #000000;
+  background-color: #323232;
   color: #ffffff;
   display: block;
   padding: 0.5rem 1rem;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  border: 3px solid #ea564e;
   border-radius: 5px;
   text-align: center;
   -webkit-box-ordinal-group: 2;
@@ -1706,8 +1713,10 @@ button {
           order: 1;
 }
 
-.edit-button:hover {
-  background-color: #ea564e;
+@media (min-width: 992px) {
+  .edit-button:hover {
+    background-color: #ea564e;
+  }
 }
 
 .details__edit-button {
@@ -1742,9 +1751,11 @@ button {
   color: #ea564e;
 }
 
-.off:hover {
-  background-color: #ea564e;
-  color: #ffffff;
+@media (min-width: 992px) {
+  .off:hover {
+    background-color: #ea564e;
+    color: #ffffff;
+  }
 }
 
 .button-message {
@@ -1758,10 +1769,12 @@ button {
   cursor: default;
 }
 
-.disabled:hover {
-  scale: 1;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+@media (min-width: 992px) {
+  .disabled:hover {
+    scale: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .input {
