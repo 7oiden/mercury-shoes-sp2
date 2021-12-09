@@ -1,8 +1,9 @@
+import { getExistingBasket, saveBasket } from "../utils/storage.js";
+
 const basketContainer = document.querySelector(".basket__list");
 
 export function renderBasket(basket) {
   basket.forEach((item) => {
-   
     const total = item.price * item.quantity;
 
     basketContainer.innerHTML += `
@@ -55,5 +56,7 @@ export function renderBasket(basket) {
                     />
                   </svg>
                 </li>`;
+
+    
   });
 }

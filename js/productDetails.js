@@ -7,6 +7,9 @@ import createAdminNav from "./components/common/createAdminNav.js";
 
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
 import { basketCounter } from "./components/common/basketCounter.js";
+import { getToken } from "./utils/storage.js";
+
+const token = getToken();
 
 basketCounter();
 
@@ -39,8 +42,6 @@ const detailUrl = baseUrl + "products/" + id;
   }
 })();
 
-
-
 const detailsContainer = document.querySelector(".details__container");
 
 const basket = getExistingBasket();
@@ -48,9 +49,17 @@ const basket = getExistingBasket();
 detailsContainer.innerHTML = "";
 
 function createHtml(details) {
-  ///new code
+  let editProd = "";
+
+  if (token) {
+    editProd = `<a href="edit-product.html?id=${details.id}" class="details__edit-button edit-button">
+        Edit Product
+      </a>`;
+  }
+
+  ///toggles button class
   let buttonClass = "on";
-  let buttonText = "Add to basket"
+  let buttonText = "Add to basket";
 
   const itemAlreadyInBasket = basket.find((item) => {
     return parseInt(item.id) === details.id;
@@ -67,22 +76,22 @@ function createHtml(details) {
     stockInfo = `<div class="out-of-stock"></div>`;
   }
 
-  //   let colorContent = `
-  //   <p class="product-details__label">Color:</p>
-  //   <div class="radio-wrapper">
-  //     <input type="radio" id="black" name="color" value="white" />
-  //     <label for="white" class="form-control">Black</label>
-  //   </div>
-  //  <div class="radio-wrapper">
-  //     <input type="radio" id="white" name="color" value="white" />
-  //     <label for="white" class="form-control">White</label>
-  //   </div>
-  //   <div class="radio-wrapper">
-  //     <input type="radio" id="red" name="color" value="white" />
-  //     <label for="white" class="form-control">Red</label>
-  //   </div>
-
-  //   `;
+ 
+    let sizeContent = `
+    <h3 class="product-details__label">Size:</h3>
+    <div class="radio-wrapper">
+      <input type="radio" id="size36" name="size" value="36" />
+      <label for="white" class="form-control">Black</label>
+    </div>
+   <div class="radio-wrapper">
+      <input type="radio" id="size37" name="size" value="37" />
+      <label for="white" class="form-control">37</label>
+    </div>
+    <div class="radio-wrapper">
+      <input type="radio" id="size38" name="size" value="38" />
+      <label for="white" class="form-control">38</label>
+    </div>
+    `;
 
   let quantityContent = `
   <div class="details__line-wrapper">
@@ -104,7 +113,10 @@ function createHtml(details) {
   </div>
   <div class="details__card">
   <div class="details__head">
+  <div class="details__title-wrapper">
   <h1 class="details__title">${details.title}</h1>
+  ${editProd}
+  </div>
   <p class="details__price">$${details.price.toFixed(2)}</p>
   </div>
   <hr />
@@ -165,6 +177,7 @@ function createHtml(details) {
     data-color="${details.color}"
     data-title="${details.title}"
     data-price="${details.price}"
+    data-stock="${details.stock}"
     data-quantity="">
     ${buttonText}</button>
     <div class="button-message"></div>
@@ -189,9 +202,19 @@ function createHtml(details) {
     button.classList.add("disabled");
   }
 
+  if (!details.stock && buttonText === "Remove from basket") {
+    button.classList.remove("disabled");
+  }
+
   button.addEventListener("click", handleBuyButton);
 
+ 
+
   function handleBuyButton() {
+ if (!details.stock) {
+   button.classList.add("disabled");
+ }
+
     this.classList.toggle("on");
     this.classList.toggle("off");
 
@@ -205,7 +228,7 @@ function createHtml(details) {
       console.log("hi");
       // console.log(this.classList);
     }
-  
+
     let quantity = document.getElementById("quantity").value;
     const selectQuantity = document.querySelector("#quantity");
 
@@ -220,7 +243,6 @@ function createHtml(details) {
     const price = this.dataset.price;
 
     const currentBasket = getExistingBasket();
-
 
     const basketInStorage = currentBasket.find((item) => {
       return item.id === id;

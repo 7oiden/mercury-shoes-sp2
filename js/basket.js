@@ -58,6 +58,8 @@ function handleClick() {
   location.reload();
 }
 
+
+
 // quantity
 // const quantity = document.querySelectorAll(".quantity");
 

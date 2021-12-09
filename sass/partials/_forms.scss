@@ -19,12 +19,12 @@ label {
   padding-bottom: 0.25rem;
 }
 
-select {
-  background-color: getColor(background);
-  padding: 0.25rem;
+// select {
+//   background-color: getColor(background);
+//   padding: 0.25rem;
 
-  @include content-border(5px)
-}
+//   @include content-border(5px)
+// }
 
 
 .newsletter {
@@ -184,47 +184,37 @@ textarea {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.yes {
-  padding-top: 7px;
-}
+// .yes {
+//   padding-top: 7px;
+// }
 
-.no {
-  padding-top: 7px;
-}
-
-.form-control {
-  line-height: 1.1;
-}
+// .no {
+//   padding-top: 7px;
+// }
 
 input[type="radio"] {
   appearance: none;
   background-color: #fff;
   margin: 0;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   transform: translateY(-2px);
   display: grid;
   place-content: center;
+  border: 2px solid getColor(dark);
+  border-radius: 50%;
 
-  @include content-border(5px);
-}
-
-#black {
-  background-color: black;
-}
-
-#red {
-  background-color: green;
 }
 
 input[type="radio"]::before {
   content: "";
-  width: 26px;
-  height: 26px;
-  border: 4px solid getColor(accent);
-  border-radius: 5px;
+  width: 8px;
+  height: 8px;
+  background: getColor(accent);
+  border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
 
@@ -234,9 +224,9 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 }
 
-.form-control + .form-control {
-  margin-top: 1em;
-}
+// .form-control + .form-control {
+//   margin-top: 1em;
+// }
 
 // input[type="radio"]:focus {
 //   outline: max(2px, 0.15em) solid currentColor;

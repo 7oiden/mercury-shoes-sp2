@@ -15,7 +15,8 @@ button {
   cursor: pointer;
 }
 
-.primary-button, .main-button {
+.primary-button,
+.main-button {
   background-color: getColor(accent);
 
   &:hover {
@@ -79,18 +80,29 @@ button {
   margin-bottom: 1rem;
 }
 
-.card__edit-button {
+.edit-button {
   margin-top: 0.75rem;
-  background-color: getColor(secondary);
+  background-color: getColor(dark);
   color: getColor(primary);
   display: block;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
   border-radius: 5px;
   text-align: center;
+  order: 1;
 
   &:hover {
     background-color: getColor(accent);
+  }
+}
+
+.details__edit-button {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  max-width: 150px;
+
+  @media (min-width: getBreakpoint(small)) {
+    margin: 0;
   }
 }
 
@@ -109,7 +121,14 @@ button {
 }
 
 .off {
-  background-color: getColor(dark);
+  background-color: transparent;
+  border: 3px solid getColor(accent);
+  color: getColor(accent);
+
+  &:hover {
+    background-color: getColor(accent);
+    color: getColor(primary);
+  }
 }
 
 .button-message {

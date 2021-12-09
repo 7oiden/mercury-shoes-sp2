@@ -17,32 +17,7 @@ export function clearBasket() {
   }
 }
 
-// export function removeItem() {
-//   const removeIcon = document.querySelectorAll(".remove-
-//   icon");
 
-//   removeIcon.forEach(icon => {
-//     icon.addEventListener("click", removeFromBasket)
-//   });
-// }
-
-// export function removeItem() {
-//   const basket = getExistingBasket();
-
-//   for (let i = 0; i < basket.length; i++) {
-//     console.log(basket[i].id);
-//   }
-
-//   const removeIcon = document.querySelectorAll("#remove-icon");
-
-//   removeIcon.forEach((item) => {
-//     item.addEventListener("click", remove);
-//   });
-
-//   function remove() {
-//     console.log("hi");
-//   }
-// }
 
 
 
