@@ -15,7 +15,19 @@
   }
 }
 
-.details-container,
+.details-container {
+  width: 95%;
+  margin: 0 auto;
+
+  @media (min-width: getBreakpoint(large)) {
+    width: 95%;
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: 90%;
+  }
+}
+
 .basket-container {
   width: 95%;
   margin: 0 auto;

@@ -186,6 +186,11 @@ svg {
     font-weight: 600;
     margin: 0;
     padding: 0;
+    width: 100px;
+
+    @media (min-width: getBreakpoint(large)) {
+      width: auto;
+    }
   }
 
   &__value {

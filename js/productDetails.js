@@ -70,28 +70,31 @@ function createHtml(details) {
     buttonText = "Remove from basket";
   }
 
+  let gender = "Unisex"
+
   let stockInfo = `<div class="in-stock"></div>`;
 
   if (!details.stock) {
     stockInfo = `<div class="out-of-stock"></div>`;
   }
 
- 
-    let sizeContent = `
-    <h3 class="product-details__label">Size:</h3>
-    <div class="radio-wrapper">
-      <input type="radio" id="size36" name="size" value="36" />
-      <label for="white" class="form-control">Black</label>
-    </div>
-   <div class="radio-wrapper">
-      <input type="radio" id="size37" name="size" value="37" />
-      <label for="white" class="form-control">37</label>
-    </div>
-    <div class="radio-wrapper">
-      <input type="radio" id="size38" name="size" value="38" />
-      <label for="white" class="form-control">38</label>
-    </div>
-    `;
+  let sizeContent = `
+    <div class="details__line-wrapper">
+          <label for="size" class="details__label">Size:</label>
+          <select id="size">
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="44">45</option>
+          </select>
+          </div>
+          `;
 
   let quantityContent = `
   <div class="details__line-wrapper">
@@ -120,54 +123,32 @@ function createHtml(details) {
   <p class="details__price">$${details.price.toFixed(2)}</p>
   </div>
   <hr />
-  <div class="details__card-wrapper">
+  <div class="details__block-wrapper">
   <div class="details__block1">
+  <div class="details__value-wrapper">
     <div class="details__line-wrapper">
     <h3 class="details__label">Gender:</h3>
-    <p class="details__value">Unisex</p>
+    <p class="details__value">${gender}</p>
     </div>
     <div class="details__line-wrapper">
     <h3 class="details__label">Color:</h3>
     <p class="details__value">${details.color}</p>
     </div>
     <div>
-    <h3 class="details__label">Size:</h3>
-    <div class="details__size-box-wrapper">
-    <div class="details__size-box">
-    <div class="details__size">36</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">37</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">38</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">39</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">40</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">41</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">42</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">43</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">44</div>
-    </div>
-    <div class="details__size-box">
-    <div class="details__size">45</div>
-    </div>
-    </div>
+    <form class="quantity-container">${sizeContent}</form>
     </div>
     <form class="quantity-container">${quantityContent}</form>
+    </div>
+    </div>
+    <div class="details__block2">
+    <h2 class="details__sub-heading">Product info:</h2>
+    <p class="details__text">${details.description}</p>
+    </div>
+    </div>
+    <hr />
     <div class="details__button-wrapper">
-    <div class="details__line-wrapper">
+    <div class="button-message"></div>
+    <div class="details__stock-wrapper">
     <h3 class="details__label">In stock:</h3>${stockInfo}
     </div>
     <button class="button primary-button ${buttonClass}"
@@ -180,13 +161,6 @@ function createHtml(details) {
     data-stock="${details.stock}"
     data-quantity="">
     ${buttonText}</button>
-    <div class="button-message"></div>
-    </div>
-    </div>
-    <div class="details__block2">
-    <h2 class="details__sub-heading">Product info:</h2>
-    <p class="details__text">${details.description}</p>
-    </div>
     </div>
     </div>
   `;
@@ -208,13 +182,10 @@ function createHtml(details) {
 
   button.addEventListener("click", handleBuyButton);
 
- 
-
   function handleBuyButton() {
- if (!details.stock) {
-   button.classList.add("disabled");
- }
-
+    if (!details.stock) {
+      button.classList.add("disabled");
+    }
     this.classList.toggle("on");
     this.classList.toggle("off");
 
@@ -228,6 +199,13 @@ function createHtml(details) {
       console.log("hi");
       // console.log(this.classList);
     }
+
+    let size = document.getElementById("size").value;
+    const selectSize = document.querySelector("#size");
+
+    selectSize.addEventListener("change", (event) => {
+      size = event.target.value;
+    });
 
     let quantity = document.getElementById("quantity").value;
     const selectQuantity = document.querySelector("#quantity");
@@ -255,10 +233,10 @@ function createHtml(details) {
         color: color,
         title: title,
         price: price,
+        size: size,
         quantity: quantity,
       };
-      // counterWrapper.style.display = "block";
-      // counterContainer.innerHTML = currentBasket.length + 1;
+
       currentBasket.push(basket);
       saveBasket(currentBasket);
       basketCounter();
@@ -276,3 +254,34 @@ function createHtml(details) {
     }
   }
 }
+
+// <div class="details__size-box">
+// <div class="details__size">36</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">37</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">38</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">39</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">40</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">41</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">42</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">43</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">44</div>
+// </div>
+// <div class="details__size-box">
+// <div class="details__size">45</div>
+// </div>

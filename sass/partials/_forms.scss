@@ -19,12 +19,18 @@ label {
   padding-bottom: 0.25rem;
 }
 
-// select {
-//   background-color: getColor(background);
-//   padding: 0.25rem;
+select {
+  background-color: getColor(background);
+  margin-top: 0.35rem;
+  padding: 0.25rem;
+  font-size: 1rem;
 
-//   @include content-border(5px)
-// }
+  @include content-border(5px)
+}
+
+#quantity, #size {
+  width: 4rem;
+}
 
 
 .newsletter {
@@ -195,34 +201,34 @@ textarea {
 //   padding-top: 7px;
 // }
 
-input[type="radio"] {
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-  width: 32px;
-  height: 32px;
-  transform: translateY(-2px);
-  display: grid;
-  place-content: center;
-  border: 2px solid getColor(dark);
-  border-radius: 50%;
+// input[type="radio"] {
+//   appearance: none;
+//   background-color: #fff;
+//   margin: 0;
+//   width: 32px;
+//   height: 32px;
+//   transform: translateY(-2px);
+//   display: grid;
+//   place-content: center;
+//   border: 2px solid getColor(dark);
+//   border-radius: 50%;
 
-}
+// }
 
-input[type="radio"]::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: getColor(accent);
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
+// input[type="radio"]::before {
+//   content: "";
+//   width: 8px;
+//   height: 8px;
+//   background: getColor(accent);
+//   border-radius: 50%;
+//   transform: scale(0);
+//   transition: 120ms transform ease-in-out;
 
-}
+// }
 
-input[type="radio"]:checked::before {
-  transform: scale(1);
-}
+// input[type="radio"]:checked::before {
+//   transform: scale(1);
+// }
 
 // .form-control + .form-control {
 //   margin-top: 1em;
@@ -241,17 +247,4 @@ input[type="radio"]:checked::before {
   margin-bottom: 0.5rem;
 }
 
-.color-box {
-  width: 32px;
-  height: 32px;
-  background-color: black;
-
-  @include content-border(5px)
-}
-
-.color-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 

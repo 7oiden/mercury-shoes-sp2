@@ -103,7 +103,10 @@ main {
   }
 }
 
-
 .remove-card {
   display: none;
+}
+
+hr {
+  color: getColor(border)
 }

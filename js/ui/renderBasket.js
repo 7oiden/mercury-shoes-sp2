@@ -31,7 +31,7 @@ export function renderBasket(basket) {
                       </tr>
                       <tr>
                         <th scope="row">Size:</th>
-                        <td>42</td>
+                        <td>${item.size}</td>
                       </tr>
                       <tr>
                         <th scope="row">Price:</th>
