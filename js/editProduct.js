@@ -41,6 +41,7 @@ const featuredYes = document.querySelector("#featured-yes");
 const stockNo = document.querySelector("#stock-no");
 const stockYes = document.querySelector("#stock-yes");
 
+const formError = document.querySelector("#edit-form-error");
 const titleError = document.querySelector("#edit-title-error");
 const priceError = document.querySelector("#edit-price-error");
 const colorError = document.querySelector("#edit-color-error");
@@ -297,6 +298,12 @@ function submitEditForm(event) {
     );
   } else {
     window.scrollTo(0, 200);
+
+    displayAlert(
+      "error",
+      "Please attend to input errors before proceeding",
+      ".edit-form-error"
+    );
   }
 
   async function updateProduct(

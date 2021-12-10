@@ -64,7 +64,7 @@ main {
   position: absolute;
   width: 100%;
   display: block;
-  top: 75px;
+  top: 100px;
   background-color: #ffffffa6;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -85,7 +85,7 @@ main {
 }
 
 .loader {
-  border: 10px solid getColor(primary);
+  border: 10px solid getColor(secondary);
   border-top: 10px solid getColor(accent);
   margin: 0 auto;
   border-radius: 50%;

@@ -136,6 +136,9 @@
             <div class="loader"></div>
             <form class="edit__form" name="edit">
               <div class="edit__input-wrapper">
+                <div class="edit-form-error"></div>
+              </div>
+              <div class="edit__input-wrapper">
                 <label for="username"
                   >Title (must be at least 5 characters)</label
                 >
@@ -167,14 +170,14 @@
                 </div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="username"
+                <label for="color"
                   >Color (must be at least 3 characters)</label
                 >
                 <input
                   type="text"
                   class="input edit__input"
                   id="color"
-                  placeholder="Color"
+                  placeholder="Product color"
                 />
                 <div class="error-messages" id="edit-color-error">
                   *Must be at least 3 characters
@@ -188,6 +191,7 @@
                   name="short-description"
                   class="input edit__input"
                   id="short-description"
+                  placeholder="Write short description here..."
                 ></textarea>
                 <div class="error-messages" id="edit-short-description-error">
                   *Must be at least 10 characters
@@ -201,6 +205,7 @@
                   name="description"
                   class="input edit__input"
                   id="description"
+                  placeholder="Write full description here..."
                 ></textarea>
                 <div class="error-messages" id="edit-description-error">
                   *Must be at least 15 characters
@@ -231,7 +236,7 @@
                   type="text"
                   class="input edit__input"
                   id="image-alt-text"
-                  placeholder=""
+                 placeholder="Image alt text"
                 />
                 <div class="error-messages" id="edit-alt-text-error">
                   *Must be at least 10 characters

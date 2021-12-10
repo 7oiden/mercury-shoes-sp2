@@ -76,7 +76,7 @@ main.products-overview {
   position: absolute;
   width: 100%;
   display: block;
-  top: 75px;
+  top: 100px;
   background-color: #ffffffa6;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -94,7 +94,7 @@ main.products-overview {
 }
 
 .loader {
-  border: 10px solid #ffffff;
+  border: 10px solid #323232;
   border-top: 10px solid #ea564e;
   margin: 0 auto;
   border-radius: 50%;
@@ -914,7 +914,7 @@ i {
   display: block;
   margin: 0 auto;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 @media (min-width: 992px) {
@@ -963,10 +963,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -987,6 +983,16 @@ header {
   list-style: none;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.banner__item--inactive {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .banner__item--inactive {
+    display: block;
+  }
 }
 
 .nav {
@@ -1248,7 +1254,6 @@ header {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  border: 2px solid #ea564e;
   background-color: #ea564e;
   position: relative;
 }
@@ -2220,8 +2225,6 @@ textarea {
 
 .alert {
   display: inline-block;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;

@@ -233,6 +233,12 @@ function submitAddForm(event) {
     );
   } else {
     window.scrollTo(0, 200);
+
+     displayAlert(
+       "error",
+       "Please attend to input errors before proceeding",
+       ".add-form-error"
+     );
   }
 
   async function addProduct(
