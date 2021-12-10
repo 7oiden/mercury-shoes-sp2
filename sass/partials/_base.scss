@@ -43,7 +43,6 @@ a {
 
 main {
   background-image: url("../images/background_pattern.jpeg");
-  backdrop-filter: opacity(0.1);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,30 +56,6 @@ main {
 
   &.products-overview {
     padding-top: 0;
-  }
-}
-
-.main-content {
-  position: absolute;
-  width: 100%;
-  display: block;
-  top: 100px;
-  background-color: #ffffffa6;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-
-  @media (min-width: getBreakpoint(large)) {
-    display: inline-block;
-    // background-color: transparent;
-  }
-
-  @media (min-width: getBreakpoint(xlarge)) {
-  }
-
-  &-container {
-    // background-color: pink;
-    width: 95%;
-    margin: 0 auto;
   }
 }
 

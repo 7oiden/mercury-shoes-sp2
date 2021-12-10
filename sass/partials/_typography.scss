@@ -3,8 +3,9 @@ hgroup {
   flex-direction: column;
   margin: 0;
   padding: 0;
+  align-items: center;
 
-   @media (min-width: getBreakpoint(large)) {
+  @media (min-width: getBreakpoint(large)) {
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
@@ -17,46 +18,47 @@ strong {
   font-style: normal;
 }
 
-.main-heading {
-  font-family: $primary-headings;
-  font-size: 3.75rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-
-  @media (min-width: getBreakpoint(medium)) {
-    font-size: 5.5rem;
-    line-height: 1.2;
-  }
-
-  &__support {
-    font-family: $body-text;
-    font-size: 1.5rem;
+.hero {
+  &__heading {
+    font-family: $primary-headings;
+    font-size: 3.75rem;
+    text-transform: uppercase;
     text-align: center;
     margin: 0;
     padding: 0;
-    text-transform: lowercase;
-    font-style: oblique;
-    font-weight: 300;
 
-    @media (min-width: getBreakpoint(large)) {
-      font-size: 1.75rem;
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 5.5rem;
+      line-height: 1.2;
     }
   }
-
-  &__secondary {
-    font-family: $secondary-headings;
-    font-size: 1.125rem;
-    font-weight: 400;
-    text-align: center;
-    padding-bottom: 1rem;
-
-    @media (min-width: getBreakpoint(large)) {
+    &__heading-support {
+      font-family: $body-text;
       font-size: 1.5rem;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      text-transform: lowercase;
+      font-style: oblique;
+      font-weight: 300;
+
+      @media (min-width: getBreakpoint(large)) {
+        font-size: 1.75rem;
+      }
+    }
+
+    &__tagline {
+      font-family: $secondary-headings;
+      font-size: 1.125rem;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 1rem;
+
+      @media (min-width: getBreakpoint(large)) {
+        font-size: 1.5rem;
+      }
     }
   }
-}
 
 .featured__heading {
   font-family: $primary-headings;
@@ -164,13 +166,6 @@ svg {
     padding-top: 0;
     padding-bottom: 1rem;
   }
-}
-
-.main-red-line {
-  width: 270px;
-  height: 6px;
-  background-color: getColor(accent);
-  margin: 0 auto;
 }
 
 .details {
@@ -306,7 +301,6 @@ i {
 
 .faq__list {
   padding-left: 1rem;
-
 }
 
 //icons

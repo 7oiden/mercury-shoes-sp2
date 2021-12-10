@@ -16,7 +16,7 @@ button {
 }
 
 .primary-button,
-.main-button {
+.hero__button {
   background-color: getColor(accent);
 
   //hover state removed from small screen because else JS class toggle causes issues
@@ -28,7 +28,7 @@ button {
   }
 }
 
-.main-button {
+.hero__button {
   display: block;
   width: 200px;
   font-size: 1.5rem;

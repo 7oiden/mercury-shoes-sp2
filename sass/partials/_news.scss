@@ -8,7 +8,7 @@
     justify-content: center;
   }
 
-  &__column1 {
+  &__block1 {
     background-color: white;
     color: black;
     order: 2;
@@ -23,13 +23,11 @@
         rgba(88, 79, 79, 1) 0%,
         rgba(0, 0, 0, 1) 100%
       );
-      // background-color: black;
-      // background-image: url("../images/test.jpeg");
       color: white;
     }
   }
 
-  &__column2 {
+  &__block2 {
     order: 1;
 
     @media (min-width: getBreakpoint(large)) {

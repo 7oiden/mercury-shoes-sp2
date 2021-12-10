@@ -1,12 +1,10 @@
-.main-image {
-  background-image: url("../images/mercury-main-mobile.jpg");
-  background-size: cover;
+.hero__container {
   height: 900px;
   margin: 0;
   position: relative;
 
   @media (min-width: getBreakpoint(large)) {
-    background-image: url("../images/mercury-main.jpg");
+   
   }
 }
 
@@ -42,13 +40,14 @@
 }
 
 .nav__logo {
-  width: 200px;
+  width: 150px;
   display: block;
   margin: 0 auto;
   cursor: pointer;
   margin-bottom: 0.25rem;
 
   @media (min-width: getBreakpoint(large)) {
+    width: 200px;
     margin-right: 3rem;
     margin-bottom: 0;
   }

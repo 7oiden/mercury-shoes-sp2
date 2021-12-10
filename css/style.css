@@ -54,8 +54,6 @@ a {
 
 main {
   background-image: url("../images/background_pattern.jpeg");
-  -webkit-backdrop-filter: opacity(0.1);
-          backdrop-filter: opacity(0.1);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,27 +68,6 @@ main.index {
 
 main.products-overview {
   padding-top: 0;
-}
-
-.main-content {
-  position: absolute;
-  width: 100%;
-  display: block;
-  top: 100px;
-  background-color: #ffffffa6;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 992px) {
-  .main-content {
-    display: inline-block;
-  }
-}
-
-.main-content-container {
-  width: 95%;
-  margin: 0 auto;
 }
 
 .loader {
@@ -492,6 +469,9 @@ hgroup {
           flex-direction: column;
   margin: 0;
   padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 992px) {
@@ -515,7 +495,7 @@ strong {
   font-style: normal;
 }
 
-.main-heading {
+.hero__heading {
   font-family: "soleil", sans-serif;
   font-size: 3.75rem;
   text-transform: uppercase;
@@ -525,13 +505,13 @@ strong {
 }
 
 @media (min-width: 768px) {
-  .main-heading {
+  .hero__heading {
     font-size: 5.5rem;
     line-height: 1.2;
   }
 }
 
-.main-heading__support {
+.hero__heading-support {
   font-family: "ff-tisa-sans-web-pro", sans-serif;
   font-size: 1.5rem;
   text-align: center;
@@ -543,12 +523,12 @@ strong {
 }
 
 @media (min-width: 992px) {
-  .main-heading__support {
+  .hero__heading-support {
     font-size: 1.75rem;
   }
 }
 
-.main-heading__secondary {
+.hero__tagline {
   font-family: "ff-tisa-web-pro", serif;
   font-size: 1.125rem;
   font-weight: 400;
@@ -557,7 +537,7 @@ strong {
 }
 
 @media (min-width: 992px) {
-  .main-heading__secondary {
+  .hero__tagline {
     font-size: 1.5rem;
   }
 }
@@ -664,13 +644,6 @@ svg path {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 1rem;
-}
-
-.main-red-line {
-  width: 270px;
-  height: 6px;
-  background-color: #ea564e;
-  margin: 0 auto;
 }
 
 .details__title {
@@ -860,18 +833,10 @@ i {
   cursor: pointer;
 }
 
-.main-image {
-  background-image: url("../images/mercury-main-mobile.jpg");
-  background-size: cover;
+.hero__container {
   height: 900px;
   margin: 0;
   position: relative;
-}
-
-@media (min-width: 992px) {
-  .main-image {
-    background-image: url("../images/mercury-main.jpg");
-  }
 }
 
 .products-banner {
@@ -910,7 +875,7 @@ i {
 }
 
 .nav__logo {
-  width: 200px;
+  width: 150px;
   display: block;
   margin: 0 auto;
   cursor: pointer;
@@ -919,6 +884,7 @@ i {
 
 @media (min-width: 992px) {
   .nav__logo {
+    width: 200px;
     margin-right: 3rem;
     margin-bottom: 0;
   }
@@ -1194,6 +1160,35 @@ header {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
+}
+
+.hero__content {
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 25px;
+  background-color: #ffffffa6;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .hero__content {
+    display: inline-block;
+    top: 100px;
+  }
+}
+
+.hero__content__content-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.hero__red-line {
+  width: 270px;
+  height: 6px;
+  background-color: #ea564e;
+  margin: 0 auto;
 }
 
 .card {
@@ -1671,20 +1666,20 @@ button {
 }
 
 .primary-button,
-.main-button {
+.hero__button {
   background-color: #ea564e;
 }
 
 @media (min-width: 992px) {
   .primary-button:hover,
-  .main-button:hover {
+  .hero__button:hover {
     scale: 1.1;
     -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
             box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
   }
 }
 
-.main-button {
+.hero__button {
   display: block;
   width: 200px;
   font-size: 1.5rem;
@@ -2441,7 +2436,7 @@ td {
   }
 }
 
-.news__column1 {
+.news__block1 {
   background-color: white;
   color: black;
   -webkit-box-ordinal-group: 3;
@@ -2454,7 +2449,7 @@ td {
 }
 
 @media (min-width: 992px) {
-  .news__column1 {
+  .news__block1 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -2464,14 +2459,14 @@ td {
   }
 }
 
-.news__column2 {
+.news__block2 {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
 @media (min-width: 992px) {
-  .news__column2 {
+  .news__block2 {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
