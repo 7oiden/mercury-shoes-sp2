@@ -13,6 +13,7 @@ $colors: (
   success: #00f6db,
   warning: #f6d55c,
   border: #bdbdbd,
+  admin: #385242,
 );
 
 @function getColor($color) {
@@ -34,9 +35,9 @@ $breakpoints: (
 //sets container widths
 $widths: (
   paddingSmallScreen: 7.5%,
-  paddingLargeScreen: 5%,
-  paddingXLargeScreen: 10%,
-  paddingXxLargeScreen: 15%,
+  // paddingLargeScreen: 5%,
+  // paddingXLargeScreen: 10%,
+  // paddingXxLargeScreen: 15%,
   smallScreen: 85%,
   largeScreen: 90%,
   xlargeScreen: 80%,

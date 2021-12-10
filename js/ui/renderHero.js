@@ -1,7 +1,12 @@
 const heroContainer = document.querySelector(".hero__container");
 
+const loader = document.querySelector(".loader");
+
+
 export function renderHero(hero) {
   console.log(hero);
+
+  loader.style.display = "none";
 
   const heroImage = hero.hero_url;
   const heroImageSmall = hero.hero_small_url;

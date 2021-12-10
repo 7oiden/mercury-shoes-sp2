@@ -1,15 +1,17 @@
 import { getExistingBasket } from "../../utils/storage.js";
 
 export function basketCounter() {
-  const counterContainer = document.querySelector("#test");
-  const counterWrapper = document.querySelector("#counter");
+  const counterNumber = document.querySelector("#counter-number");
+  const counterContainer = document.querySelector("#counter-container");
+
+  const htmlSelector = document.querySelectorAll("html");
 
   const basket = getExistingBasket();
 
   //  console.log(basket);
 
-  counterContainer.innerHTML = "";
-  counterWrapper.style.display = "none";
+  counterNumber.innerHTML = "";
+  counterContainer.style.display = "none";
 
   if (basket.length > 0) {
     let counter = 0;
@@ -17,7 +19,17 @@ export function basketCounter() {
     for (let i = 0; i < basket.length; i++) {
       counter += Number(basket[i].quantity);
     }
-    counterWrapper.style.display = "block";
-    counterContainer.innerHTML = counter;
+    counterContainer.style.display = "block";
+    counterNumber.innerHTML = counter;
+
+    console.log(htmlSelector[0].className);
+
+    if (htmlSelector[0].className === "details-page") {
+      
+      counterContainer.classList.add("animation");
+      setTimeout(function () {
+        counterContainer.classList.remove("animation");
+      }, 1500);
+    }
   }
 }

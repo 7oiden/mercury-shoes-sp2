@@ -32,33 +32,35 @@ strong {
       line-height: 1.2;
     }
   }
-    &__heading-support {
-      font-family: $body-text;
-      font-size: 1.5rem;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      text-transform: lowercase;
-      font-style: oblique;
-      font-weight: 300;
 
-      @media (min-width: getBreakpoint(large)) {
-        font-size: 1.75rem;
-      }
-    }
+  &__heading-secondary {
+    font-family: $body-text;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: lowercase;
+    font-style: oblique;
+    font-weight: 300;
 
-    &__tagline {
-      font-family: $secondary-headings;
-      font-size: 1.125rem;
-      font-weight: 400;
-      text-align: center;
-      padding-bottom: 1rem;
-
-      @media (min-width: getBreakpoint(large)) {
-        font-size: 1.5rem;
-      }
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.75rem;
     }
   }
+
+  &__tagline {
+    font-family: $secondary-headings;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.5rem;
+    }
+  }
+}
 
 .featured__heading {
   font-family: $primary-headings;
@@ -79,6 +81,10 @@ strong {
   font-weight: 400;
   margin: 0;
   padding: 0;
+}
+
+.about__sub-heading {
+  font-size: 1.375rem;
 }
 
 .basket__title {
@@ -105,7 +111,6 @@ strong {
   margin: 0;
   padding: 1rem 0 0 0;
 }
-
 
 // .checkmark {
 //   width: 30px;
@@ -208,11 +213,17 @@ strong {
     font-weight: 600;
     text-decoration: underline;
     margin: 0;
-    padding: 0 0 0.25rem 0;
+    padding: 0 0 0.5rem 0;
   }
 
   &__text {
-    margin-top: 0.5rem;
+    margin-top: 0;
+    padding: 0;
+    display: none;
+
+    @media (min-width: getBreakpoint(large)) {
+      display: block;
+    }
   }
 }
 
@@ -294,4 +305,3 @@ i {
 .faq__list {
   padding-left: 1rem;
 }
-

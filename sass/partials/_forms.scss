@@ -80,6 +80,7 @@ select {
     width: 100%;
     font-size: 1.125rem;
     padding: 0.5rem 1rem;
+    background-color: getColor(primary);
 
     @include content-border(5px);
   }

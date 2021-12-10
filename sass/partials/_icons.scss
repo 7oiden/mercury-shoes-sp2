@@ -86,3 +86,12 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#plus-icon {
+  width: 2rem;
+  height: 2rem;
+
+  @media (min-width: getBreakpoint(large)) {
+      visibility: hidden;
+    }
+}

@@ -1,5 +1,5 @@
 .hero {
-  &__content {
+  &__transparent-wrapper {
     position: absolute;
     width: 100%;
     display: block;
@@ -15,17 +15,10 @@
 
     @media (min-width: getBreakpoint(xlarge)) {
     }
-
-    &__content-container {
-      // background-color: pink;
-      width: 95%;
-      margin: 0 auto;
-    }
   }
 
   &__red-line {
-    width: 270px;
-    height: 6px;
+    height: 5px;
     background-color: getColor(accent);
     margin: 0 auto;
   }

@@ -21,7 +21,8 @@
   &__dropdown {
     position: absolute;
     width: 100%;
-    background: linear-gradient(#f0f0f0 0, #f0f0f0 75%, #00c3c1 100%);
+    background-color: #f0f0f0;
+    // background: linear-gradient(#f0f0f0 0, #f0f0f0 50%, #ea564e 100%);
     top: 163px;
     right: 0;
     gap: 1rem;

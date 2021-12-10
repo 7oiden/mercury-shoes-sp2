@@ -47,8 +47,6 @@ const detailsContainer = document.querySelector(".details__container");
 
 const basket = getExistingBasket();
 
-detailsContainer.innerHTML = "";
-
 function createHtml(details) {
   let editProd = "";
 
@@ -58,11 +56,17 @@ function createHtml(details) {
       </a>`;
   }
 
+  const plusIcon = `<svg viewBox="0 0 24 24" id="plus-icon">
+    <path fill="currentColor" d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M11,7H13V11H17V13H13V17H11V13H7V11H11V7Z" />
+</svg>`;
+
   ///toggles button class
   let buttonClass = "on";
   let buttonText = "Add to basket";
 
   const itemAlreadyInBasket = basket.find((item) => {
+    detailsContainer.innerHTML = "";
+
     return parseInt(item.id) === details.id;
   });
 
@@ -142,7 +146,9 @@ function createHtml(details) {
     </div>
     </div>
     <div class="details__block2">
-    <h2 class="details__sub-heading">Product info:</h2>
+    <div class="details__heading-wrapper">
+    <h2 class="details__sub-heading">Product info:</h2>${plusIcon}
+    </div>
     <p class="details__text">${details.description}</p>
     </div>
     </div>
@@ -165,6 +171,27 @@ function createHtml(details) {
     </div>
     </div>
   `;
+
+  //product description toggler
+  const plusIconSelector = document.querySelector("#plus-icon");
+  const descriptionParagraph = document.querySelector(".details__text");
+
+  plusIconSelector.addEventListener("click", paragraphToggler);
+
+  function paragraphToggler() {
+    if (descriptionParagraph.style.display === "block") {
+      descriptionParagraph.style.display = "none";
+    } else {
+      descriptionParagraph.style.display = "block";
+    }
+  }
+
+  //prevents text from getting lost when rezising window
+  window.onresize = function () {
+    if (window.innerWidth >= 992) {
+      descriptionParagraph.style.display = "block";
+    } 
+  };
 
   // console.log(details.stock);
 
@@ -242,13 +269,13 @@ function createHtml(details) {
       messageContainer.innerHTML = "Product added to basket.";
       setTimeout(function () {
         messageContainer.innerHTML = "";
-      }, 2000);
+      }, 1500);
     } else {
       messageContainer.innerHTML = "Product removed from basket.";
 
       setTimeout(function () {
         messageContainer.innerHTML = "";
-      }, 2000);
+      }, 1500);
       const newBasket = currentBasket.filter((item) => {
         return item.id !== id;
       });
@@ -257,34 +284,3 @@ function createHtml(details) {
     }
   }
 }
-
-// <div class="details__size-box">
-// <div class="details__size">36</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">37</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">38</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">39</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">40</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">41</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">42</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">43</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">44</div>
-// </div>
-// <div class="details__size-box">
-// <div class="details__size">45</div>
-// </div>

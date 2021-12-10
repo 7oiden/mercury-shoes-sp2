@@ -42,7 +42,7 @@ a {
 }
 
 main {
-  background-image: url("../images/background_pattern.jpeg");
+  background-image: url("../images/background_pattern_grey.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,6 +66,7 @@ main {
   border-radius: 50%;
   width: 65px;
   height: 65px;
+  margin-top: 1rem;
   animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin {

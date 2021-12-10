@@ -17,15 +17,10 @@ const basketContainer = document.querySelector(".basket__list");
 const summaryContainer = document.querySelector(".summary");
 
 const clearButton = document.querySelector("#clear-basket");
-const basketHeading = document.querySelector(".basket__heading-container");
 
 let itemCount = basket.length;
 
 // console.log(basket.length);
-
-basketHeading.innerHTML = `
-<h1 class="basket__heading">Basket</h1>
-`;
 
 if (itemCount === 0) {
   basketContainer.innerHTML = `<li class="basket-list-empty">Your basket is empty...</li>`;
