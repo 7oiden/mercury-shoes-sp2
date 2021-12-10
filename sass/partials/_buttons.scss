@@ -40,7 +40,7 @@ button {
   font-size: 1.25rem;
   background-color: getColor(dark);
   color: getColor(primary);
-
+  margin-top: 1rem;
   border-radius: 5px;
 
   @media (min-width: getBreakpoint(large)) {
@@ -52,6 +52,7 @@ button {
 
 .update-button {
   width: 220px;
+  margin-top: 1rem;
 }
 
 .newsletter__button {

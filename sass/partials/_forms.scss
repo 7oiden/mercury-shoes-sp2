@@ -84,15 +84,7 @@ select {
     @include content-border(5px);
   }
 
-  &__icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0.5rem;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-  }
+  
 }
 
 .admin {

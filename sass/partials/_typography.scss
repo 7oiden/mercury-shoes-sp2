@@ -106,23 +106,15 @@ strong {
   padding: 1rem 0 0 0;
 }
 
-svg {
-  width: 40px;
-  height: 40px;
 
-  path {
-    fill: black;
-  }
-}
+// .checkmark {
+//   width: 30px;
+//   height: 30px;
 
-.checkmark {
-  width: 30px;
-  height: 30px;
-
-  path {
-    fill: getColor(success);
-  }
-}
+//   path {
+//     fill: getColor(success);
+//   }
+// }
 
 .cross {
   width: 30px;
@@ -303,51 +295,3 @@ i {
   padding-left: 1rem;
 }
 
-//icons
-.nav__icon {
-  margin-left: 2rem;
-  transition: opacity 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.75;
-  }
-}
-
-.basket__icon {
-  margin-left: 0;
-}
-
-.card__icon {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  path {
-    fill: getColor(dark);
-  }
-}
-
-.out-of-stock {
-  background-color: getColor(error);
-  width: 1rem;
-  height: 1rem;
-
-  @include content-border(50%);
-}
-
-.in-stock {
-  background-color: getColor(success);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-
-  @include content-border(50%);
-}
-
-.remove-icon {
-  cursor: pointer;
-}

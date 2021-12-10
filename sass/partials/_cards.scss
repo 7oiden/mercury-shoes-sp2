@@ -78,21 +78,6 @@
     }
   }
 
-  &-icon {
-    position: absolute;
-    background-color: getColor(accent);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    left: 0;
-    top: 0;
-
-    @media (min-width: getBreakpoint(medium)) {
-      left: 2rem;
-      top: 1rem;
-    }
-  }
-
   &-quote {
     margin: 0;
     font-family: $secondary-headings;
@@ -104,7 +89,7 @@
     }
   }
 
-  &-ceo {
+  &-name {
     margin: 0 auto;
     padding-top: 1rem;
     font-weight: bold;
@@ -115,17 +100,7 @@
   }
 }
 
-.about__card-icon svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.faq__item {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
 
 .details {
   &__card {

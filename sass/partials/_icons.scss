@@ -1,0 +1,88 @@
+svg {
+  width: 40px;
+  height: 40px;
+
+  path {
+    fill: black;
+  }
+}
+
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5rem;
+  height: 32px;
+  width: 32px;
+}
+
+.nav__icon {
+  margin-left: 2rem;
+  transition: opacity 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.basket__icon {
+  margin-left: 0;
+}
+
+.card__icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  path {
+    fill: getColor(dark);
+  }
+}
+
+.out-of-stock {
+  background-color: getColor(error);
+  width: 1rem;
+  height: 1rem;
+
+  @include content-border(50%);
+}
+
+.in-stock {
+  background-color: getColor(success);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+
+  @include content-border(50%);
+}
+
+.remove-icon {
+  cursor: pointer;
+}
+
+ .about__card-icon {
+    position: absolute;
+    background-color: getColor(accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+
+    @media (min-width: getBreakpoint(medium)) {
+      left: 2rem;
+      top: 1rem;
+    }
+  }
+
+  .about__card-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

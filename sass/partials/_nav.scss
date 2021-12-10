@@ -62,13 +62,6 @@ header {
     align-items: center;
   }
 
-  // &-list-links-wrapper {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: flex-start !important;
-  //   justify-content: flex-start;
-  // }
-
   &__links-list {
     @extend .base-list;
     display: none;
@@ -113,46 +106,9 @@ header {
       justify-content: space-between;
     }
   }
-
-  //   &-link {
-  //     display: block;
-  //   }
 }
 
-// .dropdown {
-//   display: none;
-//   background-color: pink;
-//   margin: 0;
-// }
 
-// .dropdown-toggle {
-//   @media (min-width: getBreakpoint(large)) {
-//     display: none;
-//   }
-// }
-
-// .breadcrumbs {
-//   margin-top: 25px;
-
-//   &__item {
-//     margin-right: 0.5rem;
-
-//     & a {
-//       display: inline-block;
-//       cursor: pointer;
-//       color: getColor(secondary);
-//     }
-
-//     & a:hover {
-//       text-decoration: underline;
-//     }
-
-//     &--active {
-//       color: getColor(dark);
-//       font-weight: bold;
-//     }
-//   }
-// }
 
 #basket {
   position: relative;

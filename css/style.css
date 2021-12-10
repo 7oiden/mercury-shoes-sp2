@@ -111,6 +111,11 @@ hr {
   color: #bdbdbd;
 }
 
+.faq__item {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .base-container {
   width: 85%;
   margin: 0 auto;
@@ -588,24 +593,6 @@ strong {
   padding: 1rem 0 0 0;
 }
 
-svg {
-  width: 40px;
-  height: 40px;
-}
-
-svg path {
-  fill: black;
-}
-
-.checkmark {
-  width: 30px;
-  height: 30px;
-}
-
-.checkmark path {
-  fill: #00f6db;
-}
-
 .cross {
   width: 30px;
   height: 30px;
@@ -783,6 +770,25 @@ i {
   padding-left: 1rem;
 }
 
+svg {
+  width: 40px;
+  height: 40px;
+}
+
+svg path {
+  fill: black;
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0.5rem;
+  height: 32px;
+  width: 32px;
+}
+
 .nav__icon {
   margin-left: 2rem;
   -webkit-transition: opacity 0.3s;
@@ -831,6 +837,31 @@ i {
 
 .remove-icon {
   cursor: pointer;
+}
+
+.about__card-icon {
+  position: absolute;
+  background-color: #ea564e;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .about__card-icon {
+    left: 2rem;
+    top: 1rem;
+  }
+}
+
+.about__card-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hero__container {
@@ -911,6 +942,11 @@ i {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.news__image {
+  display: block;
+  width: 100%;
 }
 
 header {
@@ -1299,23 +1335,6 @@ header {
   }
 }
 
-.about__card-icon {
-  position: absolute;
-  background-color: #ea564e;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  left: 0;
-  top: 0;
-}
-
-@media (min-width: 768px) {
-  .about__card-icon {
-    left: 2rem;
-    top: 1rem;
-  }
-}
-
 .about__card-quote {
   margin: 0;
   font-family: "ff-tisa-web-pro", serif;
@@ -1329,29 +1348,16 @@ header {
   }
 }
 
-.about__card-ceo {
+.about__card-name {
   margin: 0 auto;
   padding-top: 1rem;
   font-weight: bold;
 }
 
 @media (min-width: 992px) {
-  .about__card-ceo {
+  .about__card-name {
     font-size: 1.125rem;
   }
-}
-
-.about__card-icon svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.faq__item {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 .details__card {
@@ -1691,6 +1697,7 @@ button {
   font-size: 1.25rem;
   background-color: #000000;
   color: #ffffff;
+  margin-top: 1rem;
   border-radius: 5px;
 }
 
@@ -1702,6 +1709,7 @@ button {
 
 .update-button {
   width: 220px;
+  margin-top: 1rem;
 }
 
 .newsletter__button {
@@ -1921,17 +1929,6 @@ select {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
-}
-
-.search__icon {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0.5rem;
-  height: 32px;
-  width: 32px;
-  cursor: pointer;
 }
 
 .admin__form {
@@ -2492,11 +2489,6 @@ td {
             transform: translate(-50%, -50%);
     padding: 0;
   }
-}
-
-.news__image {
-  display: block;
-  width: 100%;
 }
 
 .news__red-line {
