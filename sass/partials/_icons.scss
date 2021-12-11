@@ -62,6 +62,9 @@ svg {
 
 .remove-icon {
   cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .about__card-icon {
@@ -89,6 +92,7 @@ svg {
 #plus-icon {
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 
   @media (min-width: getBreakpoint(large)) {
     visibility: hidden;

@@ -95,9 +95,13 @@ strong {
 }
 
 .basket__title {
-  font-size: 1.125rem;
-  margin: 0;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
   padding: 0;
+
+  @media (min-width: getBreakpoint(small)) {
+      font-size: 1.125rem;
+    }
 }
 
 .summary__heading {

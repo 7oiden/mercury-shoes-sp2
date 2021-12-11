@@ -75,7 +75,7 @@ function submitAddForm(event) {
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
-    checkMaxLength(shortDescription.value, 101) &&
+    checkMaxLength(shortDescription.value, 131) &&
     checkLength(description.value, 14) &&
     // checkLength(productImage.value, 9) &&
     checkLength(imageAltText.value, 9) &&

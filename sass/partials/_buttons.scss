@@ -95,8 +95,7 @@ button {
 .edit-button {
   display: block;
   margin-top: 0.75rem;
-  background-color: transparent;
-  border: 3px solid getColor(accent);
+  background-color: getColor(secondary);
   color: getColor(accent);
   display: block;
   padding: 0.5rem 1rem;
@@ -130,25 +129,27 @@ button {
 }
 
 #buy-button {
-  width: 220px;
+  width: 250px;
 }
 
-.on {
+.add-to-basket {
   background-color: getColor(accent);
 }
 
-.off {
+.remove-from-basket {
   background-color: transparent;
   border: 3px solid getColor(accent);
-  border-radius: 5px;
   color: getColor(accent);
   font-size: 1.125rem;
   padding: 0.5rem 1rem;
+  
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {
+      scale: 1;
       background-color: getColor(accent);
       color: getColor(primary);
+      box-shadow: none;
     }
   }
 }

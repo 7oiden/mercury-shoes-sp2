@@ -94,7 +94,7 @@ const stockYes = document.querySelector("#stock-yes");
     imageAltText.value = details.image_alt_text;
     idInput.value = details.id;
 
-    if (details.id !== 17) {
+    if (!details.main_product) {
       deleteButton(details.id);
     } else {
       displayAlert(
@@ -153,7 +153,7 @@ function submitEditForm(event) {
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
-    checkMaxLength(shortDescription.value, 101) &&
+    checkMaxLength(shortDescription.value, 131) &&
     checkLength(description.value, 14) &&
     validateNumber(price.value) &&
     checkLength(imageAltText.value, 9)

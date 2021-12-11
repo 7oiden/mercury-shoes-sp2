@@ -48,7 +48,7 @@ export function validateEditForm() {
     }
 
     //check this
-    if (checkMaxLength(shortDescription.value, 101)) {
+    if (checkMaxLength(shortDescription.value, 131)) {
       shortDescriptionError2.style.display = "none";
       shortDescriptionError.style.display = "none";
     } else {
@@ -139,7 +139,7 @@ export function validateEditForm() {
     shortDescriptionError.style.display = "block";
     shortDescription.style.border = "2px solid #ed553b";
   }
-  if (checkMaxLength(shortDescription.value, 101)) {
+  if (checkMaxLength(shortDescription.value, 131)) {
       shortDescriptionError2.style.display = "none";
       shortDescription.style.border = "1px solid #bdbdbd";
     } else {

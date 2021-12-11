@@ -582,9 +582,15 @@ strong {
 }
 
 .basket__title {
-  font-size: 1.125rem;
-  margin: 0;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
   padding: 0;
+}
+
+@media (min-width: 576px) {
+  .basket__title {
+    font-size: 1.125rem;
+  }
 }
 
 .summary__heading {
@@ -867,6 +873,9 @@ svg path {
 
 .remove-icon {
   cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .about__card-icon {
@@ -897,6 +906,7 @@ svg path {
 #plus-icon {
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -1394,7 +1404,7 @@ header {
 }
 
 .details__card {
-  padding: 2rem;
+  padding: 2rem 2rem 3rem 2rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1410,7 +1420,7 @@ header {
 
 @media (min-width: 1400px) {
   .details__card {
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 3rem 3rem;
   }
 }
 
@@ -1798,8 +1808,7 @@ button {
 .edit-button {
   display: block;
   margin-top: 0.75rem;
-  background-color: transparent;
-  border: 3px solid #ea564e;
+  background-color: #323232;
   color: #ea564e;
   display: block;
   padding: 0.5rem 1rem;
@@ -1838,26 +1847,28 @@ button {
 }
 
 #buy-button {
-  width: 220px;
+  width: 250px;
 }
 
-.on {
+.add-to-basket {
   background-color: #ea564e;
 }
 
-.off {
+.remove-from-basket {
   background-color: transparent;
   border: 3px solid #ea564e;
-  border-radius: 5px;
   color: #ea564e;
   font-size: 1.125rem;
   padding: 0.5rem 1rem;
 }
 
 @media (min-width: 992px) {
-  .off:hover {
+  .remove-from-basket:hover {
+    scale: 1;
     background-color: #ea564e;
     color: #ffffff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
@@ -2342,21 +2353,28 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   background-color: #ffffff;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  gap: 2rem;
   padding: 1rem;
   border-radius: 5px 5px 0 0;
 }
 
-.basket__item:first-child {
-  margin-top: 0;
+@media (min-width: 768px) {
+  .basket__item {
+    gap: 2rem;
+  }
 }
 
 .basket__item:last-child {
   border-radius: 0 0 5px 5px;
   margin-bottom: 0;
+}
+
+.basket__item:first-child {
+  margin-top: 0;
+  border-radius: 5px;
 }
 
 .basket__link {
@@ -2372,7 +2390,13 @@ textarea {
 
 .basket__table {
   width: 100%;
-  max-width: 400px;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 576px) {
+  .basket__table {
+    font-size: 1rem;
+  }
 }
 
 .basket__emtpy {
@@ -2421,8 +2445,14 @@ textarea {
   text-align: right;
 }
 
-td {
-  max-width: 100px;
+th {
+  width: 100px;
+}
+
+@media (min-width: 576px) {
+  th {
+    width: 150px;
+  }
 }
 
 .basket__inner-wrapper {
