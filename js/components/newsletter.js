@@ -23,8 +23,6 @@ export function validateNewsletterForm(event) {
       newsletterSuccess.innerHTML = "";
     }, 3000);
     };
-
-    
 }
 
 newsletterInput.onfocus = function () {

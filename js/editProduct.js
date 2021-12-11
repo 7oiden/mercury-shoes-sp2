@@ -19,6 +19,10 @@ if (!token) {
   location.href = "/";
 }
 
+// const newsButton = document.querySelector("#news-test");
+
+// console.log(newsButton.getAttribute("data-test"));
+
 basketCounter();
 
 const alertContainer = document.querySelector(".editalert-container");
@@ -54,6 +58,8 @@ const featuredYes = document.querySelector("#featured-yes");
 const stockNo = document.querySelector("#stock-no");
 const stockYes = document.querySelector("#stock-yes");
 
+
+
 (async function () {
   try {
     const response = await fetch(productUrl);
@@ -77,20 +83,27 @@ const stockYes = document.querySelector("#stock-yes");
       stockNo.checked = true;
     }
 
-    
-
-    const test = details.image_url;
+    const imgUrl = details.image_url;
 
     title.value = details.title;
     price.value = details.price;
     color.value = details.color;
     shortDescription.value = details.short_description;
     description.value = details.description;
-    productImage.value = test.substring("https://".length);
+    productImage.value = imgUrl.substring("https://".length);
     imageAltText.value = details.image_alt_text;
     idInput.value = details.id;
 
-    deleteButton(details.id);
+    if (details.id !== 17) {
+      deleteButton(details.id);
+    } else {
+      displayAlert(
+        "warning",
+        "This product is linked to the new section on the home-page and can not be deleted.",
+        ".editalert-container"
+      );
+    }
+ 
   } catch (error) {
     displayAlert("error", error, ".alert-container");
     //console.log(error);

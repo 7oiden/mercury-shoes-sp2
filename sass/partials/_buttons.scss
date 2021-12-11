@@ -130,7 +130,7 @@ button {
 }
 
 #buy-button {
-  width: 270px;
+  width: 220px;
 }
 
 .on {
@@ -140,7 +140,10 @@ button {
 .off {
   background-color: transparent;
   border: 3px solid getColor(accent);
+  border-radius: 5px;
   color: getColor(accent);
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {

@@ -9,11 +9,10 @@ import createAdminNav from "./components/common/createAdminNav.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { renderHero } from "./ui/renderHero.js";
 
+
 basketCounter();
 createAdminNav();
 adminLogin();
-
-
 
 (async function fetchApi() {
   try {
@@ -47,3 +46,8 @@ adminLogin();
     );
   }
 })();
+
+
+
+
+

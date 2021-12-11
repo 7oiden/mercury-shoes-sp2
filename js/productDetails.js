@@ -37,7 +37,7 @@ const detailUrl = baseUrl + "products/" + id;
 
     document.title = `Mercury Shoes | ${details.title}`;
 
-    createHtml(details);
+    renderDetails(details);
   } catch (error) {
     displayAlert("alert error", error, ".details__container");
   }
@@ -47,7 +47,7 @@ const detailsContainer = document.querySelector(".details__container");
 
 const basket = getExistingBasket();
 
-function createHtml(details) {
+function renderDetails(details) {
   let editProd = "";
 
   if (token) {
