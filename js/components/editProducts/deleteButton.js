@@ -16,6 +16,7 @@ export default function deleteButton(id) {
     );
 
     if (performDelete) {
+
       const url = baseUrl + "products/" + id;
 
       const token = getToken();
@@ -33,7 +34,7 @@ export default function deleteButton(id) {
         const json = await response.json();
 
         if (!json.error) {
-          //removes deleted article from favorites list
+          //removes deleted article from basket
           const currentBasket = getExistingBasket();
 
           const newBasket = currentBasket.filter((item) => {
@@ -49,7 +50,7 @@ export default function deleteButton(id) {
           );
 
           setTimeout(function () {
-            history.back();
+            document.location.href = "products-overview.html";
           }, 2000);
         }
 

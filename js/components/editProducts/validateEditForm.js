@@ -1,11 +1,11 @@
-import { checkLength, validateNumber } from "../../utils/validators.js";
+import { checkLength, checkMaxLength, validateNumber } from "../../utils/validators.js";
 
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const color = document.querySelector("#color");
 const shortDescription = document.querySelector("#short-description");
 const description = document.querySelector("#description");
-const productImage = document.querySelector("#product-image");
+// const productImage = document.querySelector("#product-image");
 const imageAltText = document.querySelector("#image-alt-text");
 
 const titleError = document.querySelector("#edit-title-error");
@@ -14,12 +14,14 @@ const colorError = document.querySelector("#edit-color-error");
 const shortDescriptionError = document.querySelector(
   "#edit-short-description-error"
 );
+const shortDescriptionError2 = document.querySelector(
+  "#edit-short-description-error2"
+);
 const descriptionError = document.querySelector("#edit-description-error");
-const urlError = document.querySelector("#edit-url-error");
+// const urlError = document.querySelector("#edit-url-error");
 const altTextError = document.querySelector("#edit-alt-text-error");
 
 export function validateEditForm() {
-  
   function checkInput() {
     if (checkLength(title.value, 4)) {
       titleError.style.display = "none";
@@ -45,17 +47,26 @@ export function validateEditForm() {
       shortDescriptionError.style.display = "block";
     }
 
+    //check this
+    if (checkMaxLength(shortDescription.value, 101)) {
+      shortDescriptionError2.style.display = "none";
+      shortDescriptionError.style.display = "none";
+    } else {
+      shortDescriptionError2.style.display = "block";
+      shortDescriptionError.style.display = "none";
+    }
+
     if (checkLength(description.value, 14)) {
       descriptionError.style.display = "none";
     } else {
       descriptionError.style.display = "block";
     }
 
-    if (checkLength(productImage.value, 9)) {
-      urlError.style.display = "none";
-    } else {
-      urlError.style.display = "block";
-    }
+    // if (checkLength(productImage.value, 9)) {
+    //   urlError.style.display = "none";
+    // } else {
+    //   urlError.style.display = "block";
+    // }
 
     if (checkLength(imageAltText.value, 9)) {
       altTextError.style.display = "none";
@@ -69,7 +80,7 @@ export function validateEditForm() {
   color.addEventListener("keyup", checkInput);
   shortDescription.addEventListener("keyup", checkInput);
   description.addEventListener("keyup", checkInput);
-  productImage.addEventListener("keyup", checkInput);
+  // productImage.addEventListener("keyup", checkInput);
   imageAltText.addEventListener("keyup", checkInput);
 
   title.onfocus = function () {
@@ -92,9 +103,9 @@ export function validateEditForm() {
     description.style.border = "1px solid #bdbdbd";
   };
 
-  productImage.onfocus = function () {
-    productImage.style.border = "1px solid #bdbdbd";
-  };
+  // productImage.onfocus = function () {
+  //   productImage.style.border = "1px solid #bdbdbd";
+  // };
 
   imageAltText.onfocus = function () {
     imageAltText.style.border = "1px solid #bdbdbd";
@@ -128,7 +139,13 @@ export function validateEditForm() {
     shortDescriptionError.style.display = "block";
     shortDescription.style.border = "2px solid #ed553b";
   }
-
+  if (checkMaxLength(shortDescription.value, 101)) {
+      shortDescriptionError2.style.display = "none";
+      shortDescription.style.border = "1px solid #bdbdbd";
+    } else {
+      shortDescriptionError2.style.display = "block";
+      shortDescription.style.border = "2px solid #ed553b";
+    }
   if (checkLength(description.value, 14)) {
     descriptionError.style.display = "none";
     description.style.border = "1px solid #bdbdbd";
@@ -137,13 +154,13 @@ export function validateEditForm() {
     description.style.border = "2px solid #ed553b";
   }
 
-  if (checkLength(productImage.value, 9)) {
-    urlError.style.display = "none";
-    productImage.style.border = "1px solid #bdbdbd";
-  } else {
-    urlError.style.display = "block";
-    productImage.style.border = "2px solid #ed553b";
-  }
+  // if (checkLength(productImage.value, 9)) {
+  //   urlError.style.display = "none";
+  //   productImage.style.border = "1px solid #bdbdbd";
+  // } else {
+  //   urlError.style.display = "block";
+  //   productImage.style.border = "2px solid #ed553b";
+  // }
 
   if (checkLength(imageAltText.value, 9)) {
     altTextError.style.display = "none";

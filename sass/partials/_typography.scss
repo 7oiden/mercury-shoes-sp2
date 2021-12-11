@@ -83,6 +83,13 @@ strong {
   padding: 0;
 }
 
+.edit__info-text, .add__info-text {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
 .about__sub-heading {
   font-size: 1.375rem;
 }
@@ -109,8 +116,16 @@ strong {
 .card__text {
   font-weight: 300;
   margin: 0;
-  padding: 1rem 0 0 0;
+  padding: 0.5rem 0 0 0;
 }
+
+.card__icon-container {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: getColor(border);
+    position: relative;
+  }
 
 // .checkmark {
 //   width: 30px;
@@ -172,6 +187,7 @@ strong {
     margin: 0;
     padding: 0;
     order: 2;
+    margin-right: 0.5rem;
 
     @media (min-width: getBreakpoint(small)) {
       order: 1;

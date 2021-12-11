@@ -5,7 +5,7 @@ import displayAlert from "./components/common/displayAlert.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { checkLength, validateNumber } from "./utils/validators.js";
+import { checkLength, checkMaxLength, validateNumber } from "./utils/validators.js";
 import { validateAddForm } from "./components/editProducts/validateAddForm.js";
 
 const token = getToken();
@@ -48,7 +48,7 @@ function submitAddForm(event) {
   const colorValue = color.value.trim();
   const shortDescriptionValue = shortDescription.value.trim();
   const descriptionValue = description.value.trim();
-  const productImageValue = "https://" + productImage.value.trim();
+  let productImageValue = "https://" + productImage.value.trim();
   const imageAltTextValue = imageAltText.value.trim();
 
   console.log(productImageValue);
@@ -66,12 +66,18 @@ function submitAddForm(event) {
   // validation
   validateAddForm();
 
+  //automatically adds placeholder image if the input field has been left empty
+  if (productImage.value === "") {
+    productImageValue = "https://via.placeholder.com/500x400";
+  }
+
   if (
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
+    checkMaxLength(shortDescription.value, 101) &&
     checkLength(description.value, 14) &&
-    checkLength(productImage.value, 9) &&
+    // checkLength(productImage.value, 9) &&
     checkLength(imageAltText.value, 9) &&
     validateNumber(price.value)
   ) {
@@ -90,7 +96,7 @@ function submitAddForm(event) {
     window.scrollTo(0, 200);
 
     displayAlert(
-      "error",
+      "warning",
       "Please attend to input errors before proceeding",
       ".add-form-error"
     );
@@ -120,8 +126,6 @@ function submitAddForm(event) {
     };
 
     const addData = JSON.stringify(jsonData);
-
-    // const token = getToken();
 
     const options = {
       method: "POST",

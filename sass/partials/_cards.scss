@@ -1,11 +1,13 @@
 .card {
   display: block;
   width: 300px;
-  min-height: 410px;
+  height: 440px;
   transition: all 0.3s;
   background-color: getColor(primary);
   border-radius: 5px;
-
+  padding-bottom: 1rem;
+  overflow: hidden;
+  
   @include content-border(5px);
 
   &:hover {
@@ -37,14 +39,6 @@
   &__header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  &__icon-container {
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background-color: getColor(accent);
-    position: relative;
   }
 }
 
@@ -187,3 +181,12 @@
     }
   }
 }
+
+// #product-cards {
+//   height: 410px;
+// }
+
+// .test {
+//   height: 100px;
+//    overflow: hidden;
+// }

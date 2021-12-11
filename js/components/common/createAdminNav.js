@@ -38,7 +38,7 @@ export default function createAdminNav() {
     bannerContainer.innerHTML = `
   <li>${authUser}</li>`;
 
-    banner.style.backgroundColor = "#385242";
+    banner.style.backgroundColor = "#ea564e";
   }
 
   linksContainer.innerHTML = `

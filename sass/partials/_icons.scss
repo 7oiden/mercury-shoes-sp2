@@ -7,7 +7,6 @@ svg {
   }
 }
 
-
 .search__icon {
   position: absolute;
   top: 50%;
@@ -65,22 +64,22 @@ svg {
   cursor: pointer;
 }
 
- .about__card-icon {
-    position: absolute;
-    background-color: getColor(accent);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    left: 0;
-    top: 0;
+.about__card-icon {
+  position: absolute;
+  background-color: getColor(accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
 
-    @media (min-width: getBreakpoint(medium)) {
-      left: 2rem;
-      top: 1rem;
-    }
+  @media (min-width: getBreakpoint(medium)) {
+    left: 2rem;
+    top: 1rem;
   }
+}
 
-  .about__card-icon svg {
+.about__card-icon svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,6 +91,6 @@ svg {
   height: 2rem;
 
   @media (min-width: getBreakpoint(large)) {
-      visibility: hidden;
-    }
+    visibility: hidden;
+  }
 }

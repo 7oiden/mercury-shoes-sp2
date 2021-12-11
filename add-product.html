@@ -180,7 +180,7 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="short-description"
-                  >Short description (must be at least 10 characters)</label
+                  >Short description (must be between 10 and 100 characters)</label
                 >
                 <textarea
                   name="short-description"
@@ -190,6 +190,9 @@
                 ></textarea>
                 <div class="error-messages" id="add-short-description-error">
                   *Must be at least 10 characters
+                </div>
+                <div class="error-messages" id="add-short-description-error2">
+                  *Can not be longer than 100 characters
                 </div>
               </div>
               <div class="add__input-wrapper">
@@ -207,8 +210,14 @@
                 </div>
               </div>
               <div class="add__input-wrapper">
+                <p class="add__info-text">
+                  Product image must have a 5:4 aspect ratio to be shown
+                  correctly:
+                </p>
+              </div>
+              <div class="add__input-wrapper">
                 <label for="product-image"
-                  >Image URL (must be at least 10 characters)</label
+                  >Image URL (if left empty a placeholder image will be inserted)</label
                 >
                 <div class="add__input-prefix-wrapper">
                   <div class="add__input-prefix">https://</div>
@@ -216,11 +225,11 @@
                     type="text"
                     class="input add__input"
                     id="product-image"
-                    placeholder="URL"
+                    placeholder="url"
                   />
-                  <div class="error-messages" id="add-url-error">
+                  <!-- <div class="error-messages" id="add-url-error">
                   *Must be a least 10 characters
-                </div>
+                </div> -->
                 </div>
                 <div class="error-messages" id="add-url-error">
                   *Must be a least 5 characters

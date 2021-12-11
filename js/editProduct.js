@@ -7,7 +7,11 @@ import deleteButton from "./components/editProducts/deleteButton.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
 import { validateEditForm } from "./components/editProducts/validateEditForm.js";
-import { checkLength, validateNumber } from "./utils/validators.js";
+import {
+  checkLength,
+  checkMaxLength,
+  validateNumber,
+} from "./utils/validators.js";
 
 const token = getToken();
 
@@ -73,6 +77,8 @@ const stockYes = document.querySelector("#stock-yes");
       stockNo.checked = true;
     }
 
+    
+
     const test = details.image_url;
 
     title.value = details.title;
@@ -96,6 +102,13 @@ const stockYes = document.querySelector("#stock-yes");
 editForm.addEventListener("submit", submitEditForm);
 
 function submitEditForm(event) {
+
+  //automatically adds placeholder image if the input field has been left empty
+  if (productImage.value === "") {
+    document.getElementById("product-image").value =
+      "via.placeholder.com/500x400";
+  }
+
   event.preventDefault();
 
   console.log("hi");
@@ -127,10 +140,10 @@ function submitEditForm(event) {
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
     checkLength(shortDescription.value, 9) &&
+    checkMaxLength(shortDescription.value, 101) &&
     checkLength(description.value, 14) &&
     validateNumber(price.value) &&
-    checkLength(imageAltText.value, 9) &&
-    checkLength(productImage.value, 9)
+    checkLength(imageAltText.value, 9)
   ) {
     updateProduct(
       titleValue,
@@ -148,7 +161,7 @@ function submitEditForm(event) {
     window.scrollTo(0, 200);
 
     displayAlert(
-      "error",
+      "warning",
       "Please attend to input errors before proceeding",
       ".edit-form-error"
     );
@@ -234,7 +247,7 @@ function submitEditForm(event) {
         );
 
         setTimeout(function () {
-          history.back();
+          document.location.href = "products-overview.html";
         }, 1500);
       }
 
