@@ -48,7 +48,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 
   &.index {
     padding-top: 0;
@@ -97,4 +97,8 @@ hr {
     background-color: getColor(accent);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  .basket-main {
+    height: 100%;
   }

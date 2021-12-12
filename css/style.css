@@ -59,7 +59,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 main.index {
@@ -109,7 +109,7 @@ main.products-overview {
 }
 
 hr {
-  color: #bdbdbd;
+  color: #D9D9D9;
 }
 
 .faq__item {
@@ -123,6 +123,10 @@ hr {
   background-color: #ea564e;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.basket-main {
+  height: 100%;
 }
 
 .base-container, .nav__container, .footer__container, .news {
@@ -239,7 +243,7 @@ hr {
 
 .basket {
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 @media (min-width: 768px) {
@@ -460,7 +464,7 @@ hr {
   .about-wrapper {
     width: 70%;
     border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #D9D9D9;
   }
 }
 
@@ -510,7 +514,7 @@ hr {
   .edit {
     width: 85%;
     border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #D9D9D9;
   }
 }
 
@@ -539,6 +543,40 @@ hr {
 .edit__container {
   padding-top: 1rem;
   padding-bottom: 3rem;
+}
+
+.add__container,
+.edit__container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .add__container,
+  .edit__container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  .add__container,
+  .edit__container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .add__container,
+  .edit__container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .add__container,
+  .edit__container {
+    width: 70%;
+  }
 }
 
 .details__container {
@@ -763,7 +801,7 @@ strong {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background-color: #bdbdbd;
+  background-color: #D9D9D9;
   position: relative;
 }
 
@@ -996,17 +1034,13 @@ svg path {
   background-color: #ed553b;
   width: 1rem;
   height: 1rem;
-  border-radius: 50%;
-  border: 1px solid #bdbdbd;
 }
 
 .in-stock {
-  background-color: #00f6db;
+  background-color: #159E4A;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid #bdbdbd;
 }
 
 .remove-icon {
@@ -1116,7 +1150,7 @@ svg path {
   height: 200px;
   margin-top: 1rem;
   border-radius: 5px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #D9D9D9;
 }
 
 @media (min-width: 768px) {
@@ -1400,7 +1434,7 @@ header {
   padding-bottom: 1rem;
   overflow: hidden;
   border-radius: 5px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #D9D9D9;
 }
 
 .card:hover {
@@ -1465,7 +1499,7 @@ header {
         -ms-flex-direction: row;
             flex-direction: row;
     border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #D9D9D9;
   }
 }
 
@@ -1527,7 +1561,7 @@ header {
 @media (min-width: 992px) {
   .details__card {
     border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #D9D9D9;
   }
 }
 
@@ -1866,8 +1900,8 @@ button {
 .edit-button {
   display: block;
   margin-top: 0.75rem;
-  background-color: #323232;
-  color: #ea564e;
+  background-color: #249E98;
+  color: #ffffff;
   display: block;
   padding: 0.5rem 1rem;
   -webkit-transition: background-color 0.3s;
@@ -1956,7 +1990,7 @@ button {
   font-size: 1.125rem;
   background-color: #fafafa;
   border-radius: 5px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #D9D9D9;
 }
 
 .input:focus {
@@ -1982,7 +2016,7 @@ select {
   padding: 0.25rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #D9D9D9;
 }
 
 #quantity, #size {
@@ -2050,7 +2084,7 @@ select {
   padding: 0.5rem 1rem;
   background-color: #ffffff;
   border-radius: 5px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #D9D9D9;
 }
 
 .admin__form {
@@ -2096,7 +2130,6 @@ textarea {
 
 .add__input-wrapper,
 .edit__input-wrapper {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2105,13 +2138,6 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 1.5rem auto;
-}
-
-@media (min-width: 576px) {
-  .add__input-wrapper,
-  .edit__input-wrapper {
-    width: 90%;
-  }
 }
 
 .add__radio-wrapper,
@@ -2163,17 +2189,17 @@ textarea {
 
 #product-image {
   border-radius: 0 5px 5px 0;
-  border-right: 1px solid #bdbdbd;
-  border-top: 1px solid #bdbdbd;
-  border-bottom: 1px solid #bdbdbd;
+  border-right: 1px solid #D9D9D9;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
 }
 
 #price {
   width: 120px;
   border-radius: 0 5px 5px 0;
-  border-right: 1px solid #bdbdbd;
-  border-top: 1px solid #bdbdbd;
-  border-bottom: 1px solid #bdbdbd;
+  border-right: 1px solid #D9D9D9;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
 }
 
 .add__radio-flex,
@@ -2236,7 +2262,7 @@ textarea {
   gap: 1rem;
   z-index: -1;
   padding-top: 2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   border-radius: 0 0 0 5px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
@@ -2331,7 +2357,7 @@ textarea {
   gap: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #00f6db;
+  color: #159E4A;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -2351,12 +2377,12 @@ textarea {
 }
 
 .success {
-  background-color: #00f6db;
-  color: black;
+  background-color: #159E4A;
+  color: white;
 }
 
 .warning {
-  background-color: #f6d55c;
+  background-color: #EBD365;
 }
 
 .error-messages {
@@ -2387,7 +2413,7 @@ textarea {
 @media (min-width: 768px) {
   .basket__list {
     border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #D9D9D9;
   }
 }
 
@@ -2475,7 +2501,7 @@ textarea {
   .summary {
     max-height: 350px;
     border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #D9D9D9;
   }
 }
 

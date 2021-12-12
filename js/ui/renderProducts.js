@@ -27,7 +27,7 @@ export function renderProducts(products) {
     }
 
     productsContainer.innerHTML += `
-      <div class="remove-card" id="product-cards">
+      <div class="remove-card card__container">
         <a href="products-details.html?id=${product.id}" class="card">
         <div class="card__image-container">
         <img src="${product.image_url}" alt="${product.image_alt_text}" 
@@ -48,7 +48,7 @@ export function renderProducts(products) {
       </div>`;
   });
 
-  const productCards = document.querySelectorAll("#product-cards");
+  const productCards = document.querySelectorAll(".card__container");
   const loadButton = document.querySelector("#load-button");
 
   let num = 8;

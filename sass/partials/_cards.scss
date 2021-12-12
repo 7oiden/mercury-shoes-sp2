@@ -1,7 +1,7 @@
 .card {
   display: block;
-  width: 300px;
-  height: 440px;
+  width: $card-width;
+  height: $card-height;
   transition: all 0.3s;
   background-color: getColor(primary);
   border-radius: 5px;
@@ -167,9 +167,6 @@
     align-items: center;
   }
 
-  &__button-wrapper {
-  }
-
   &__title-wrapper {
     display: flex;
     flex-direction: column;
@@ -182,11 +179,5 @@
   }
 }
 
-// #product-cards {
-//   height: 410px;
-// }
 
-// .test {
-//   height: 100px;
-//    overflow: hidden;
-// }
+

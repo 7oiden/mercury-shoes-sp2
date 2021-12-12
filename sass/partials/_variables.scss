@@ -10,10 +10,10 @@ $colors: (
   background: #fafafa,
   dark: #000000,
   error: #ed553b,
-  success: #00f6db,
-  warning: #f6d55c,
-  border: #bdbdbd,
-  admin: #ea564e,
+  success: #159E4A,
+  warning: #EBD365,
+  border: #D9D9D9,
+  admin: #249E98,
 );
 
 @function getColor($color) {
@@ -32,18 +32,24 @@ $breakpoints: (
   @return map-get($breakpoints, $breakpoint);
 }
 
+$card-width: 300px;
+$card-height: 440px;
+
 //sets container widths
+//base is used on nav, footer and news wrapper
+//container is used on about, add and edit wrapper
+//form is used on form wrapper
 $widths: (
   paddingSmallScreen: 7.5%,
   baseSmallScreen: 85%,
   baseLargeScreen: 90%,
   baseXlargeScreen: 80%,
   baseXxlargeScreen: 80%,
-  formSmall: 100%,
-  formMedium: 85%,
-  formLarge: 70%,
-  formXLarge: 60%,
-  formXxLarge: 50%,
+  containerSmall: 100%,
+  containerMedium: 85%,
+  containerLarge: 70%,
+  containerXLarge: 60%,
+  containerXxLarge: 50%,
   basketSmall: 95%,
   basketMedium: 80%,
   basketLarge: 95%,
@@ -59,15 +65,22 @@ $widths: (
   newsletterLarge: 70%,
   newsletterXLarge: 50%,
   newsletterXxLarge: 40%,
+  formSmall: 95%,
+  formMedium: 85%,
+  formLarge: 80%,
+  formXLarge: 75%,
+  formXxLarge: 70%,
 );
 
 @function getWidth($width) {
   @return map-get($widths, $width);
 }
 
+
+
 @mixin content-border($radius) {
   border-radius: $radius;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #D9D9D9;
 }
 
 @mixin dropShadow($offsetY, $blur) {

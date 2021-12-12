@@ -95,8 +95,8 @@ button {
 .edit-button {
   display: block;
   margin-top: 0.75rem;
-  background-color: getColor(secondary);
-  color: getColor(accent);
+  background-color: getColor(admin);
+  color: getColor(primary);
   display: block;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;

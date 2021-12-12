@@ -70,7 +70,7 @@
 
 .basket {
   width: getWidth(basketSmall);
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 
   @media (min-width: getBreakpoint(medium)) {
     width: getWidth(basketMedium);
@@ -221,21 +221,21 @@
   background-color: getColor(primary);
 
   @media (min-width: getBreakpoint(medium)) {
-    width: getWidth(formMedium);
+    width: getWidth(containerMedium);
   }
 
   @media (min-width: getBreakpoint(large)) {
-    width: getWidth(formLarge);
+    width: getWidth(containerLarge);
 
     @include content-border(5px);
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(formXLarge);
+    width: getWidth(containerXLarge);
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
-    width: getWidth(formXxLarge);
+    width: getWidth(containerXxLarge);
   }
 }
 
@@ -254,12 +254,38 @@
 .add,
 .edit {
   margin: 0 auto;
-  width: getWidth(formSmall);
+  width: getWidth(containerSmall);
   background-color: getColor(primary);
 
   @media (min-width: getBreakpoint(medium)) {
-    width: getWidth(formMedium);
+    width: getWidth(containerMedium);
     @include content-border(5px);
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    width: getWidth(containerLarge);
+  }
+
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: getWidth(containerXLarge);
+  }
+
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: getWidth(containerXxLarge);
+  }
+
+  &__container {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.add__container, .edit__container {
+  width: getWidth(formSmall);
+  margin: 0 auto;
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: getWidth(formMedium);
   }
 
   @media (min-width: getBreakpoint(large)) {
@@ -272,11 +298,6 @@
 
   @media (min-width: getBreakpoint(xxlarge)) {
     width: getWidth(formXxLarge);
-  }
-
-  &__container {
-    padding-top: 1rem;
-    padding-bottom: 3rem;
   }
 }
 
@@ -308,23 +329,23 @@
 
 .newsletter__container {
   background-color: #000000bf;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
-    @media (min-width: getBreakpoint(medium)) {
-      width: getWidth(newsletterMedium);
-      margin: 0 auto;
-    }
+  @media (min-width: getBreakpoint(medium)) {
+    width: getWidth(newsletterMedium);
+    margin: 0 auto;
+  }
 
-    @media (min-width: getBreakpoint(large)) {
-      width: getWidth(newsletterLarge);
-    }
+  @media (min-width: getBreakpoint(large)) {
+    width: getWidth(newsletterLarge);
+  }
 
-    @media (min-width: getBreakpoint(xlarge)) {
-      width: getWidth(newsletterXLarge);
-    }
+  @media (min-width: getBreakpoint(xlarge)) {
+    width: getWidth(newsletterXLarge);
+  }
 
-    @media (min-width: getBreakpoint(xxlarge)) {
-      width: getWidth(newsletterXxLarge);
-    }
+  @media (min-width: getBreakpoint(xxlarge)) {
+    width: getWidth(newsletterXxLarge);
+  }
 }
