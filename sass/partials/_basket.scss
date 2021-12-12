@@ -1,23 +1,7 @@
 .basket {
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
-
-    @media (min-width: getBreakpoint(large)) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    @media (min-width: getBreakpoint(xlarge)) {
-      gap: 4rem;
-    }
-  }
-
   &__list {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     @media (min-width: getBreakpoint(medium)) {
       @include content-border(5px);
@@ -32,8 +16,9 @@
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px 5px 0 0;
+    gap: 1rem;
 
-    @media (min-width: getBreakpoint(medium)) {
+    @media (min-width: getBreakpoint(small)) {
       gap: 2rem;
     }
   }
@@ -65,49 +50,49 @@
       font-size: 1rem;
     }
   }
-  &__emtpy {
-    background-color: white;
+
+  &__table-heading {
+    width: 100px;
+
+    @media (min-width: getBreakpoint(small)) {
+      width: 150px;
+    }
   }
-}
-
-.summary {
-  flex: 1;
-  padding: 2rem;
-  background-color: getColor(primary);
-
-  @media (min-width: getBreakpoint(medium)) {
-    max-height: 350px;
-
-    @include content-border(5px);
+    &__emtpy {
+      background-color: white;
+    }
   }
 
-  &__table {
-    text-align: left;
-    width: 100%;
-    font-size: 1.12rem;
-    border-collapse: collapse;
+  .summary {
+    flex: 1;
+    padding: 2rem;
+    background-color: getColor(primary);
+
+    @media (min-width: getBreakpoint(medium)) {
+      max-height: 350px;
+
+      @include content-border(5px);
+    }
+
+    &__table {
+      text-align: left;
+      width: 100%;
+      font-size: 1.12rem;
+      border-collapse: collapse;
+    }
+
+    &__button-wrapper {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
-  &__button-wrapper {
-    margin-top: 2rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .align-right {
+    text-align: right;
   }
-}
-
-.align-right {
-  text-align: right;
-}
-
-th {
-  width: 100px;
-
-   @media (min-width: getBreakpoint(small)) {
-    width: 150px;
-  }
-}
 
 .basket__inner-wrapper {
   display: flex;

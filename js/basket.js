@@ -7,53 +7,19 @@ import { basketCounter } from "./components/common/basketCounter.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
 import { renderBasket } from "./ui/renderBasket.js";
 
+
 basketCounter();
 createAdminNav();
 adminLogin();
 
 const basket = getExistingBasket();
 
-const basketContainer = document.querySelector(".basket__list");
-const summaryContainer = document.querySelector(".summary");
-
-const clearButton = document.querySelector("#clear-basket");
-
-let itemCount = basket.length;
-
-// console.log(basket.length);
-
-if (itemCount === 0) {
-  basketContainer.innerHTML = `<li class="basket-list-empty">Your basket is empty...</li>`;
-  clearButton.style.display = "none";
-}
-
 renderBasket(basket);
 
 ///removes item form basket
-const removeIcon = document.querySelectorAll(".remove-icon");
+// removeItem();
 
-removeIcon.forEach((icons) => {
-  icons.addEventListener("click", handleClick);
-});
-
-function handleClick() {
-  const currentBasket = getExistingBasket();
-  const id = this.dataset.id;
-
-  console.log(id);
-
-  console.log(currentBasket);
-
-  const newBasket = currentBasket.filter((item) => {
-    // console.log(item);
-    return item.id !== id;
-  });
-
-  console.log(newBasket);
-  saveBasket(newBasket);
-  basketCounter();
-  location.reload();
-}
+const summaryContainer = document.querySelector(".summary");
 
 let subTotal = 0;
 

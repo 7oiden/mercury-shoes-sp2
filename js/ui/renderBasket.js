@@ -1,9 +1,24 @@
 import { getExistingBasket, saveBasket } from "../utils/storage.js";
+import { basketCounter } from "../components/common/basketCounter.js";
 
 const basketContainer = document.querySelector(".basket__list");
+const clearButton = document.querySelector("#clear-basket");
 
-export function renderBasket(basket) {
-  basket.forEach((item) => {
+let currentBasket = getExistingBasket();
+
+renderBasket(currentBasket);
+
+export function renderBasket() {
+  basketContainer.innerHTML = "";
+
+  const itemCount = currentBasket.length;
+
+  if (itemCount === 0) {
+    basketContainer.innerHTML = `<li class="basket-list-empty">Your basket is empty...</li>`;
+    clearButton.style.display = "none";
+  }
+
+  currentBasket.forEach((item) => {
     const total = item.price * item.quantity;
 
     basketContainer.innerHTML += `
@@ -21,29 +36,29 @@ export function renderBasket(basket) {
                     </h3>
                     <table class="basket__table">
                     <tr>
-                        <th scope="row">Gender:</th>
+                        <th scope="row" class="basket__table-heading">Gender:</th>
                         <td>Unisex</td>
                       </tr>
                       <tr>
                       <tr>
-                        <th scope="row">Color:</th>
+                        <th scope="row" class="basket__table-heading">Color:</th>
                         <td>${item.color}</td>
                       </tr>
                       <tr>
-                        <th scope="row">Size:</th>
+                        <th scope="row" class="basket__table-heading">Size:</th>
                         <td>${item.size}</td>
                       </tr>
                       <tr>
-                        <th scope="row">Price:</th>
+                        <th scope="row" class="basket__table-heading">Price:</th>
                         <td>$${item.price}</td>
                       </tr>
                       <tr>
-                        <th scope="row">Quantity:</th>
+                        <th scope="row" class="basket__table-heading">Quantity:</th>
                         <td>
                         ${item.quantity}</td>
                       </tr>
                       <tr id="total">
-                        <th scope="row">Total:</th>
+                        <th scope="row" class="basket__table-heading">Total:</th>
                         <td>
                         $${total}</td>
                       </tr>
@@ -56,7 +71,31 @@ export function renderBasket(basket) {
                     />
                   </svg>
                 </li>`;
-
-    
   });
+  const removeIcon = document.querySelectorAll(".remove-icon");
+
+  removeIcon.forEach((icons) => {
+    icons.addEventListener("click", handleClick);
+  });
+}
+
+function handleClick() {
+  const id = this.dataset.id;
+
+  console.log(id);
+
+  console.log(currentBasket);
+
+  const newBasket = currentBasket.filter((item) => {
+    if (item.id !== id) {
+      return true;
+    }
+  });
+
+  currentBasket = newBasket;
+
+  console.log(newBasket);
+  saveBasket(newBasket);
+  renderBasket();
+  basketCounter();
 }

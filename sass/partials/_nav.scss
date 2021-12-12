@@ -46,16 +46,7 @@ header {
 
   @include dropShadow(6px, 6px);
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @media (min-width: getBreakpoint(large)) {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
+  
 
   &__links-wrapper {
     display: flex;

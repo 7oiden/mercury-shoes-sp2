@@ -7,30 +7,11 @@
 
   @media (min-width: getBreakpoint(large)) {
     margin-top: 100px;
-  margin-bottom: 100px;
+    margin-bottom: 100px;
   }
 
   &__container {
-    background-color: #000000bf;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-    @media (min-width: getBreakpoint(medium)) {
-      width: 85%;
-      margin: 0 auto;
-    }
-
-    @media (min-width: getBreakpoint(large)) {
-      width: 70%;
-    }
-
-    @media (min-width: getBreakpoint(xlarge)) {
-      width: 50%;
-    }
-
-    @media (min-width: getBreakpoint(xxlarge)) {
-      width: 40%;
-    }
+    
   }
 
   &__wrapper {

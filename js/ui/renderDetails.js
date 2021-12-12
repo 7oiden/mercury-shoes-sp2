@@ -138,6 +138,7 @@ export default function renderDetails(details) {
 
   const button = document.querySelector("#buy-button");
   const messageContainer = document.querySelector(".button-message");
+  const counterContainer = document.querySelector("#counter-container");
 
   messageContainer.innerHTML = "";
 
@@ -152,6 +153,7 @@ export default function renderDetails(details) {
   button.addEventListener("click", handleBuyButton);
 
   function handleBuyButton() {
+    
     if (!details.stock) {
       button.classList.add("disabled");
     }
@@ -203,7 +205,11 @@ export default function renderDetails(details) {
         size: size,
         quantity: quantity,
       };
-
+      //runs basket counter animation when product is added
+      counterContainer.classList.add("animation");
+        setTimeout(function () {
+          counterContainer.classList.remove("animation");
+        }, 1500);
       currentBasket.push(basket);
       saveBasket(currentBasket);
       basketCounter();

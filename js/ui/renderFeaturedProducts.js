@@ -16,13 +16,13 @@ export function renderFeaturedProducts(products) {
   });
 
   featuredProducts.forEach((product) => {
-    let editProd = "";
+    // let editProd = "";
 
-    if (token) {
-      editProd = `<a href="edit-product.html?id=${product.id}" class="edit-button">
-        Edit Product
-      </a>`;
-    }
+    // if (token) {
+    //   editProd = `<a href="edit-product.html?id=${product.id}" class="edit-button">
+    //     Edit Product
+    //   </a>`;
+    // }
 
     featuredContainer.innerHTML += `
        <div class="test">
@@ -42,7 +42,6 @@ export function renderFeaturedProducts(products) {
         <p class="card__text">${product.short_description}</p>
         </div>
         </a>
-        ${editProd}
       </div>`;
   });
 }

@@ -2,17 +2,7 @@
   background-color: black;
   color: getColor(background);
 
-  &__container {
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    justify-content: space-between;
-
-    @media (min-width: getBreakpoint(large)) {
-      flex-direction: row;
-    }
-  }
+ 
 
   &__list {
     @extend .base-list;

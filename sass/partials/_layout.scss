@@ -1,17 +1,57 @@
 .base-container {
-  width: getWidth(smallScreen);
+  width: getWidth(baseSmallScreen);
   margin: 0 auto;
 
   @media (min-width: getBreakpoint(large)) {
-    width: getWidth(largeScreen);
+    width: getWidth(baseLargeScreen);
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(xlargeScreen);
+    width: getWidth(baseXlargeScreen);
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
-    width: getWidth(xxlargeScreen);
+    width: getWidth(baseXxlargeScreen);
+  }
+}
+
+.nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @extend .base-container;
+
+  @media (min-width: getBreakpoint(large)) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.footer__container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: space-between;
+
+  @extend .base-container;
+
+  @media (min-width: getBreakpoint(large)) {
+    flex-direction: row;
+  }
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  @extend .base-container;
+
+  @media (min-width: getBreakpoint(large)) {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -28,24 +68,44 @@
   }
 }
 
-.basket-container {
-  width: 95%;
+.basket {
+  width: getWidth(basketSmall);
   margin: 0 auto;
 
   @media (min-width: getBreakpoint(medium)) {
-    width: 85%;
+    width: getWidth(basketMedium);
   }
 
   @media (min-width: getBreakpoint(large)) {
-    width: 95%;
+    width: getWidth(basketLarge);
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
-    width: 85%;
+    width: getWidth(basketXLarge);
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
-    width: getWidth(xxlargeScreen);
+    width: getWidth(basketXxLarge);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: getBreakpoint(xlarge)) {
+      gap: 4rem;
+    }
+
+    @media (min-width: getBreakpoint(xxlarge)) {
+      gap: 6rem;
+    }
   }
 }
 
@@ -54,24 +114,24 @@
 }
 
 .grid-wrapper {
-  width: 300px;
+  width: getWidth(gridSmall);
   margin: 0 auto;
 
   @media (min-width: getBreakpoint(medium)) {
-    width: 632px;
+    width: getWidth(gridMedium);
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
-    width: 964px;
+    width: getWidth(gridXLarge);
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
-    width: 1296px;
+    width: getWidth(gridXxLarge);
   }
 }
 
 .featured__grid {
-  width: 300px;
+  width: getWidth(gridSmall);
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto auto auto auto;
@@ -83,26 +143,26 @@
   //   background-color: pink;
 
   @media (min-width: getBreakpoint(medium)) {
-    width: 632px;
+    width: getWidth(gridMedium);
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
-    width: 964px;
+    width: getWidth(gridXLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto;
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
-    width: 1296px;
+    width: getWidth(gridXxLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto;
   }
 }
 
 .products__grid {
-  width: 300px;
+  width: getWidth(gridSmall);
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto auto auto auto;
@@ -112,19 +172,19 @@
   //   background-color: pink;
 
   @media (min-width: getBreakpoint(medium)) {
-    width: 632px;
+    width: getWidth(gridMedium);
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
-    width: 964px;
+    width: getWidth(gridXLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto;
   }
 
   @media (min-width: getBreakpoint(xxlarge)) {
-    width: 1296px;
+    width: getWidth(gridXxLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto;
   }
@@ -169,7 +229,7 @@
   @media (min-width: getBreakpoint(large)) {
     width: getWidth(formLarge);
 
-    @include content-border(5px)
+    @include content-border(5px);
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
@@ -206,7 +266,6 @@
 
   @media (min-width: getBreakpoint(large)) {
     width: getWidth(formLarge);
-    
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
@@ -227,7 +286,6 @@
   &__container {
     display: flex;
     flex-direction: column;
-    
 
     @media (min-width: getBreakpoint(large)) {
       flex-direction: row;
@@ -236,16 +294,39 @@
       gap: 2rem;
     }
 
-     @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xlarge)) {
       width: 90%;
     }
 
-     @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xlarge)) {
       width: 85%;
     }
 
-     @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xlarge)) {
       width: 80%;
     }
   }
+}
+
+.newsletter__container {
+  background-color: #000000bf;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: getBreakpoint(medium)) {
+      width: getWidth(newsletterMedium);
+      margin: 0 auto;
+    }
+
+    @media (min-width: getBreakpoint(large)) {
+      width: getWidth(newsletterLarge);
+    }
+
+    @media (min-width: getBreakpoint(xlarge)) {
+      width: getWidth(newsletterXLarge);
+    }
+
+    @media (min-width: getBreakpoint(xxlarge)) {
+      width: getWidth(newsletterXxLarge);
+    }
 }
