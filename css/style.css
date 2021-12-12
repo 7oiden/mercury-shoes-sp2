@@ -46,7 +46,7 @@ a {
   color: black;
 }
 
-.base-list, .banner__list, .nav__links-list, .nav__icons-list, .footer__list {
+.base-list, .banner__list, .nav__links-list, .nav__icons-list, .footer__list, .mobile-menu__list, .basket__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -114,6 +114,14 @@ hr {
 
 .faq__item {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.red-line {
+  width: 150px;
+  height: 4px;
+  background-color: #ea564e;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -757,15 +765,6 @@ strong {
   border-radius: 50%;
   background-color: #bdbdbd;
   position: relative;
-}
-
-.cross {
-  width: 30px;
-  height: 30px;
-}
-
-.cross path {
-  fill: #ed553b;
 }
 
 .newsletter__heading {
@@ -2366,6 +2365,20 @@ textarea {
   padding-top: 0.25rem;
 }
 
+.basket__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .basket__list {
   display: block;
   margin-bottom: 1rem;
@@ -2376,6 +2389,13 @@ textarea {
     border-radius: 5px;
     border: 1px solid #bdbdbd;
   }
+}
+
+.basket__list-empty {
+  font-size: 1.25rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
 .basket__item {
@@ -2466,6 +2486,10 @@ textarea {
   border-collapse: collapse;
 }
 
+.summary__table-data {
+  text-align: right;
+}
+
 .summary__button-wrapper {
   margin-top: 2rem;
   width: 100%;
@@ -2479,31 +2503,6 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.basket__inner-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.basket-list-empty {
-  font-size: 1.25rem;
-  padding: 1rem;
-  background-color: #ffffff;
-  border-radius: 5px;
 }
 
 #order-total {
@@ -2602,13 +2601,5 @@ textarea {
             transform: translate(-50%, -50%);
     padding: 0;
   }
-}
-
-.news__red-line {
-  width: 150px;
-  height: 4px;
-  background-color: #ea564e;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */

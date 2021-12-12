@@ -131,24 +131,6 @@ strong {
     position: relative;
   }
 
-// .checkmark {
-//   width: 30px;
-//   height: 30px;
-
-//   path {
-//     fill: getColor(success);
-//   }
-// }
-
-.cross {
-  width: 30px;
-  height: 30px;
-
-  path {
-    fill: getColor(error);
-  }
-}
-
 .newsletter {
   &__heading {
     font-family: $primary-headings;

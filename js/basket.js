@@ -4,7 +4,7 @@ import adminLogin from "./components/common/adminLogin.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import { clearBasket } from "./components/basket/clearBasket.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { getExistingBasket, saveBasket } from "./utils/storage.js";
+import { getExistingBasket } from "./utils/storage.js";
 import { renderBasket } from "./ui/renderBasket.js";
 
 
@@ -15,9 +15,6 @@ adminLogin();
 const basket = getExistingBasket();
 
 renderBasket(basket);
-
-///removes item form basket
-// removeItem();
 
 const summaryContainer = document.querySelector(".summary");
 
@@ -41,15 +38,15 @@ summaryContainer.innerHTML = `
                 <table class="summary__table">
                   <tr>
                     <th scope="row">Sub total:</th>
-                    <td class="align-right" id="test">$${subTotal}</td>
+                    <td class="summary__table-data">$${subTotal}</td>
                   </tr>
                   <tr id="shipping">
                     <th scope="row" >Shipping:</th>
-                    <td class="align-right">$${shipping}</td>
+                    <td class="summary__table-data">$${shipping}</td>
                   </tr>
                   <tr id="order-total">
                     <th scope="row">Order total:</th>
-                    <td class="align-right">$${orderTotal}</td>
+                    <td class="summary__table-data">$${orderTotal}</td>
                   </tr>
                 </table>
                 <div>

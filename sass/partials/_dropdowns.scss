@@ -68,6 +68,8 @@
   &__list {
     margin-top: 1rem;
     margin-left: getWidth(paddingSmallScreen);
+
+    @extend .base-list
   }
 
   &__item {

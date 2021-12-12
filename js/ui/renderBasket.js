@@ -14,7 +14,7 @@ export function renderBasket() {
   const itemCount = currentBasket.length;
 
   if (itemCount === 0) {
-    basketContainer.innerHTML = `<li class="basket-list-empty">Your basket is empty...</li>`;
+    basketContainer.innerHTML = `<li class="basket__list-empty">Your basket is empty...</li>`;
     clearButton.style.display = "none";
   }
 
