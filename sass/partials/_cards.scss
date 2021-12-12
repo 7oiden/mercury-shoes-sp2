@@ -96,11 +96,20 @@
 
 .details {
   &__card {
-    padding: 2rem 2rem 3rem 2rem;
+    padding: 2rem 5% 3rem 5%;
     flex: 1;
     background-color: getColor(primary);
 
+    @media (min-width: getBreakpoint(small)) {
+      padding: 2rem 7.5% 3rem 7.5%;
+    }
+
+     @media (min-width: getBreakpoint(medium)) {
+      padding: 2rem 12.5% 3rem 12.5%;
+    }
+
     @media (min-width: getBreakpoint(large)) {
+      padding: 2rem 2rem 3rem 2rem;
       @include content-border(5px);
     }
 
@@ -148,7 +157,7 @@
   &__heading-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
 
   &__line-wrapper {

@@ -18,9 +18,11 @@ export default function renderDetails(details) {
       </a>`;
   }
 
-  const plusIcon = `<svg viewBox="0 0 24 24" id="plus-icon">
-    <path fill="currentColor" d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M11,7H13V11H17V13H13V17H11V13H7V11H11V7Z" />
-</svg>`;
+  //   const plusIcon = `<svg viewBox="0 0 24 24" id="plus-icon">
+  //     <path fill="currentColor" d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M11,7H13V11H17V13H13V17H11V13H7V11H11V7Z" />
+  // </svg>`;
+
+  let iconClass = "fa-plus";
 
   ///toggles button class
   let buttonClass = "add-to-basket";
@@ -109,7 +111,8 @@ export default function renderDetails(details) {
     </div>
     <div class="details__block2">
     <div class="details__heading-wrapper">
-    <h2 class="details__sub-heading">Product info:</h2>${plusIcon}
+    <h2 class="details__sub-heading">Product info:</h2>
+    <i class="fas ${iconClass} fa-minus"></i>
     </div>
     <p class="details__text">${details.description}</p>
     </div>
@@ -135,6 +138,30 @@ export default function renderDetails(details) {
   `;
 
   descriptionToggler();
+  // const iconSelector = document.querySelector(".fas");
+  // const descriptionParagraph = document.querySelector(".details__text");
+
+  // if (descriptionParagraph.style.display === "block") {
+  // }
+
+  // iconSelector.addEventListener("click", paragraphToggler);
+
+  // function paragraphToggler() {
+  //   if (descriptionParagraph.style.display === "block") {
+  //     descriptionParagraph.style.display = "none";
+  //     iconSelector.classList.toggle("fa-plus");
+  //   } else {
+  //     descriptionParagraph.style.display = "block";
+  //     iconSelector.classList.toggle("fa-plus");
+  //   }
+  // }
+
+  // //prevents text from getting lost when rezising window
+  // window.onresize = function () {
+  //   if (window.innerWidth >= 992) {
+  //     descriptionParagraph.style.display = "block";
+  //   }
+  // };
 
   const button = document.querySelector("#buy-button");
   const messageContainer = document.querySelector(".button-message");
@@ -153,7 +180,6 @@ export default function renderDetails(details) {
   button.addEventListener("click", handleBuyButton);
 
   function handleBuyButton() {
-    
     if (!details.stock) {
       button.classList.add("disabled");
     }
@@ -207,9 +233,9 @@ export default function renderDetails(details) {
       };
       //runs basket counter animation when product is added
       counterContainer.classList.add("animation");
-        setTimeout(function () {
-          counterContainer.classList.remove("animation");
-        }, 1500);
+      setTimeout(function () {
+        counterContainer.classList.remove("animation");
+      }, 1500);
       currentBasket.push(basket);
       saveBasket(currentBasket);
       basketCounter();

@@ -1,14 +1,19 @@
 export default function descriptionToggler() {
-  const plusIconSelector = document.querySelector("#plus-icon");
+  const iconSelector = document.querySelector(".fas");
   const descriptionParagraph = document.querySelector(".details__text");
 
-  plusIconSelector.addEventListener("click", paragraphToggler);
+  if (descriptionParagraph.style.display === "block") {
+  }
+
+  iconSelector.addEventListener("click", paragraphToggler);
 
   function paragraphToggler() {
     if (descriptionParagraph.style.display === "block") {
       descriptionParagraph.style.display = "none";
+      iconSelector.classList.toggle("fa-plus");
     } else {
       descriptionParagraph.style.display = "block";
+      iconSelector.classList.toggle("fa-plus");
     }
   }
 

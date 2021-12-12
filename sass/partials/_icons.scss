@@ -85,12 +85,24 @@ svg {
   transform: translate(-50%, -50%);
 }
 
-#plus-icon {
-  width: 2rem;
-  height: 2rem;
+.fa-plus, .fa-minus {
+  color: black;
+  font-size: 1.125rem;
+  padding-bottom: 0.5rem;
   cursor: pointer;
+  margin-right: 1rem;
 
   @media (min-width: getBreakpoint(large)) {
     visibility: hidden;
   }
 }
+
+// #plus-icon {
+//   width: 2rem;
+//   height: 2rem;
+//   cursor: pointer;
+
+//   @media (min-width: getBreakpoint(large)) {
+//     visibility: hidden;
+//   }
+// }
