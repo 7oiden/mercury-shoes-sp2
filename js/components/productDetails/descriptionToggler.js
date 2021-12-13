@@ -10,10 +10,10 @@ export default function descriptionToggler() {
   function paragraphToggler() {
     if (descriptionParagraph.style.display === "block") {
       descriptionParagraph.style.display = "none";
-      iconSelector.classList.toggle("fa-plus");
+      iconSelector.classList.add("fa-plus");
     } else {
       descriptionParagraph.style.display = "block";
-      iconSelector.classList.toggle("fa-plus");
+      iconSelector.classList.remove("fa-plus");
     }
   }
 
@@ -21,6 +21,9 @@ export default function descriptionToggler() {
   window.onresize = function () {
     if (window.innerWidth >= 992) {
       descriptionParagraph.style.display = "block";
+    } else if (window.innerWidth < 992) {
+      descriptionParagraph.style.display = "none";
+      iconSelector.classList.add("fa-plus");
     }
   };
 }

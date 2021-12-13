@@ -66,7 +66,9 @@
                         d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
                       />
                     </svg>
-                    <div id="counter-container"><div id="counter-number">1</div></div>
+                    <div id="counter-container">
+                      <div id="counter-number">1</div>
+                    </div>
                   </a>
                 </li>
                 <li class="admin-login">
@@ -136,11 +138,13 @@
               <h1 class="products__heading">Products overview</h1>
               <div class="red-line"></div>
             </div>
-            <form action="" class="search__form">
+            <form class="search__form">
+              <label for="search-input" class="search__label">Search products</label>
               <input
                 type="text"
-                placeholder="Search products"
+                placeholder="Start typing..."
                 class="input search__input"
+                id="search-input"
               />
               <svg viewBox="0 0 24 24" class="search__icon">
                 <path
@@ -158,21 +162,26 @@
             Load more products
           </button>
         </section>
+
         <section class="newsletter">
           <div class="newsletter__container">
             <div class="newsletter__wrapper">
-              <h5 class="newsletter__heading">
+              <p class="newsletter__heading">
                 Be the first to know about new arrivals
-              </h5>
+              </p>
               <p class="newsletter__description">
                 Sign up to our newsletter to get updates delivered to your inbox
               </p>
               <form action="" class="newsletter__form">
                 <div class="newsletter__input-wrapper">
+                  <label for="newsletter-email" class="newsletter__label"
+                    >Email</label
+                  >
                   <input
                     type="text"
                     class="newsletter__input input"
                     placeholder="email address"
+                    id="newsletter-email"
                   />
                   <div class="error-messages" id="newsletter-email-error">
                     * Please enter a valid e-mail address
@@ -207,9 +216,11 @@
           <p class="footer__header">Support:</p>
           <ul class="footer__list">
             <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
-            <li><a href="about.html#faq" class="footer__link">Returns</a></li>
             <li>
-              <a href="about.html#faq" class="footer__link">Size Chart</a>
+              <a href="about.html#returns" class="footer__link">Returns</a>
+            </li>
+            <li>
+              <a href="about.html#sizes" class="footer__link">Sizes</a>
             </li>
           </ul>
         </div>

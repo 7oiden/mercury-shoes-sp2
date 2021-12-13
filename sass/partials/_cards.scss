@@ -4,15 +4,24 @@
   height: $card-height;
   transition: all 0.3s;
   background-color: getColor(primary);
-  border-radius: 5px;
   padding-bottom: 1rem;
   overflow: hidden;
-  
-  @include content-border(5px);
+  border-radius: 5px;
 
-  &:hover {
-    @include dropShadow(12px, 12px);
-    scale: 1.05;
+  // &:hover {
+  //   @include dropShadow(12px, 12px);
+  //   scale: 1.05;
+  // }
+
+  &__container {
+    transition: all 0.3s;
+
+    @include content-border(5px);
+
+    &:hover {
+      @include dropShadow(12px, 12px);
+      scale: 1.05;
+    }
   }
 
   &__link {
@@ -39,6 +48,11 @@
   &__header-wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  &--admin {
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
   }
 }
 
@@ -104,7 +118,7 @@
       padding: 2rem 7.5% 3rem 7.5%;
     }
 
-     @media (min-width: getBreakpoint(medium)) {
+    @media (min-width: getBreakpoint(medium)) {
       padding: 2rem 12.5% 3rem 12.5%;
     }
 
@@ -187,6 +201,3 @@
     }
   }
 }
-
-
-

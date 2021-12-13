@@ -11,11 +11,13 @@ export function renderProducts(products) {
 
   products.forEach((product) => {
     let editProd = "";
+    let adminClass = "";
 
     if (token) {
       editProd = `<a href="edit-product.html?id=${product.id}" class="edit-button">
         Edit Product
       </a>`;
+      adminClass = "card--admin"
     }
 
     let featuredIcon = "";
@@ -28,14 +30,14 @@ export function renderProducts(products) {
 
     productsContainer.innerHTML += `
       <div class="remove-card card__container">
-        <a href="products-details.html?id=${product.id}" class="card">
+        <a href="products-details.html?id=${product.id}" class="card ${adminClass}">
         <div class="card__image-container">
         <img src="${product.image_url}" alt="${product.image_alt_text}" 
         class="card__image" />
         </div>
         <div class="card__body">
         <div class="card__header-wrapper"> 
-        <h6 class="card__title">${product.title}</h6>
+        <h2 class="card__title">${product.title}</h2>
         ${featuredIcon}
         </div>
         <p class="card__price">$${product.price.toFixed(2)}</p>

@@ -22,7 +22,9 @@
           <ul class="banner__list">
             <li class="banner__item">Free returns</li>
             <li class="banner__item">Free shipping over $50</li>
-            <li class="banner__item banner__item--inactive">Money back guarantee</li>
+            <li class="banner__item banner__item--inactive">
+              Money back guarantee
+            </li>
           </ul>
         </div>
         <nav class="nav">
@@ -64,7 +66,9 @@
                         d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
                       />
                     </svg>
-                    <div id="counter-container"><div id="counter-number">1</div></div>
+                    <div id="counter-container">
+                      <div id="counter-number">1</div>
+                    </div>
                   </a>
                 </li>
                 <li class="admin-login">
@@ -167,7 +171,10 @@
                 </div>
               </div>
               <div class="add__input-wrapper">
-                <label for="color">Color/s (multiple colors must be separated by a backslash)</label>
+                <label for="color"
+                  >Color/s (multiple colors must be separated by a
+                  backslash)</label
+                >
                 <input
                   type="text"
                   class="input add__input"
@@ -180,7 +187,8 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="short-description"
-                  >Short description (must be between 9 and 131 characters)</label
+                  >Short description (must be between 9 and 131
+                  characters)</label
                 >
                 <textarea
                   name="short-description"
@@ -217,7 +225,8 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="product-image"
-                  >Image URL (if left empty a placeholder image will be inserted)</label
+                  >Image URL (if left empty a placeholder image will be
+                  inserted)</label
                 >
                 <div class="add__input-prefix-wrapper">
                   <div class="add__input-prefix">https://</div>
@@ -264,7 +273,7 @@
                 </div>
                 <div class="add__radio-flex">
                   <input
-                    id="fetured-yes"
+                    id="featured-yes"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
                     name="featured"
@@ -277,27 +286,29 @@
                 <p class="add__radio-heading">In stock:</p>
                 <div class="add__radio-flex">
                   <input
+                    id="stock-no"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
                     name="stock"
                     value="false"
                     checked="checked"
                   />
-                  <label class="radio-label" for="no">NO</label>
+                  <label class="radio-label" for="stock-no">NO</label>
                 </div>
                 <div class="add__radio-flex">
                   <input
+                    id="stock-yes"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
                     name="stock"
                     value="true"
                   />
-                  <label class="radio-label" for="no">YES</label>
+                  <label class="radio-label" for="stock-yes">YES</label>
                 </div>
               </div>
               <div class="add__input-wrapper">
                 <div class="addalert-container"></div>
-                <button class="button secondary-button">Add Product</button>
+                <button class="button secondary-button  add-button">Add Product</button>
               </div>
             </form>
           </div>

@@ -1,19 +1,19 @@
-$primary-headings: "soleil", sans-serif;
-$secondary-headings: "ff-tisa-web-pro", serif;
-$body-text: "ff-tisa-sans-web-pro", sans-serif;
-$button-text: "proxima nova", sans-serif;
+$primary-headings: "soleil", tahoma, sans-serif;
+$secondary-headings: "ff-tisa-web-pro", georgia, serif;
+$body-text: "ff-tisa-sans-web-pro", arial, sans-serif;
+$button-text: "proxima nova", verdana, sans-serif;
 
 $colors: (
   primary: #ffffff,
   secondary: #323232,
-  accent: #ea564e,
+  accent: #ED4E32,
   background: #fafafa,
   dark: #000000,
   error: #ed553b,
   success: #159E4A,
-  warning: #EBD365,
+  warning: #eecd39,
   border: #D9D9D9,
-  admin: #249E98,
+  admin: #094A54,
 );
 
 @function getColor($color) {
@@ -35,26 +35,28 @@ $breakpoints: (
 $card-width: 300px;
 $card-height: 440px;
 
-//sets container widths
-//base is used on nav, footer and news wrapper
-//container is used on about, add and edit wrapper
-//form is used on form wrapper
+
 $widths: (
+  //sets padding on mobile dropdown
   paddingSmallScreen: 7.5%,
+  //sets wrapper width of nav, footer and news
   baseSmallScreen: 85%,
   baseLargeScreen: 90%,
   baseXlargeScreen: 80%,
   baseXxlargeScreen: 80%,
+  //sets wrapper width of about-, add- and edit-page
   containerSmall: 100%,
   containerMedium: 85%,
   containerLarge: 70%,
-  containerXLarge: 60%,
-  containerXxLarge: 50%,
+  containerXLarge: 65%,
+  containerXxLarge: 55%,
+  //sets wrapper width of basket
   basketSmall: 95%,
   basketMedium: 80%,
   basketLarge: 95%,
   basketXLarge: 85%,
   basketXxLarge: 75%,
+  //sets wrapper width of product card grid
   gridSmall: 300px,
   gridMedium: 632px,
   gridLarge: 632px,
@@ -65,8 +67,10 @@ $widths: (
   newsletterLarge: 70%,
   newsletterXLarge: 50%,
   newsletterXxLarge: 40%,
-  formSmall: 95%,
-  formMedium: 85%,
+  //sets input container width
+  formDefault: 95%,
+  formSmall: 85%,
+  formMedium: 80%,
   formLarge: 80%,
   formXLarge: 75%,
   formXxLarge: 70%,

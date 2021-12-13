@@ -27,7 +27,9 @@
           <ul class="banner__list">
             <li class="banner__item">Free returns</li>
             <li class="banner__item">Free shipping over $50</li>
-            <li class="banner__item banner__item--inactive">Money back guarantee</li>
+            <li class="banner__item banner__item--inactive">
+              Money back guarantee
+            </li>
           </ul>
         </div>
         <nav class="nav">
@@ -69,7 +71,9 @@
                         d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
                       />
                     </svg>
-                    <div id="counter-container"><div id="counter-number">1</div></div>
+                    <div id="counter-container">
+                      <div id="counter-number">1</div>
+                    </div>
                   </a>
                 </li>
                 <li class="admin-login">
@@ -135,11 +139,13 @@
       <main>
         <div class="about-wrapper">
           <section class="about">
-            <h1 class="about__heading" id="about">About Us</h1>
-            <div class="red-line"></div>
-            <h3 class="about__sub-heading">
-              Proud provider of high quality running shoes since 1988
-            </h3>
+            <hgroup class="about__heading-group">
+              <h1 class="about__heading" id="about">About Us</h1>
+              <div class="red-line"></div>
+              <h2 class="about__sub-heading">
+                Proud provider of high quality running shoes since 1988
+              </h2>
+            </hgroup>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -159,7 +165,7 @@
               <div class="about__image">
                 <img
                   src="images\profile-ceo.jpg"
-                  alt="Profil picture of Mercury CEO Charles Hudson"
+                  alt="Profile picture of Mercury CEO Charles Hudson."
                   class="about__image"
                 />
               </div>
@@ -184,7 +190,7 @@
             </div>
           </section>
           <section class="faq">
-            <h2 class="faq__heading" id="faq">FAQ</h2>
+            <h3 class="faq__heading" id="faq">FAQ</h3>
             <div class="red-line"></div>
             <ol class="faq__list">
               <li class="faq__item">
@@ -219,9 +225,29 @@
               </li>
             </ol>
           </section>
+          <section class="returns">
+            <h3 class="returns__heading" id="returns">Returns</h3>
+            <div class="red-line"></div>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </section>
+          <section class="sizes">
+            <h3 class="sizes__heading" id="sizes">Sizes and fit</h3>
+            <div class="red-line"></div>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </section>
           <div class="contact-wrapper">
             <section class="contact">
-              <h2 class="contact__heading" id="contact">Contact</h2>
+              <h3 class="contact__heading" id="contact">Contact</h3>
               <div class="red-line"></div>
               <h4 class="about-small-heading">Email</h4>
               <p class="contact__paragraph--bold">For support or feedback:</p>
@@ -256,18 +282,22 @@
         <section class="newsletter">
           <div class="newsletter__container">
             <div class="newsletter__wrapper">
-              <h5 class="newsletter__heading">
+              <p class="newsletter__heading">
                 Be the first to know about new arrivals
-              </h5>
+              </p>
               <p class="newsletter__description">
                 Sign up to our newsletter to get updates delivered to your inbox
               </p>
               <form action="" class="newsletter__form">
                 <div class="newsletter__input-wrapper">
+                  <label for="newsletter-email" class="newsletter__label"
+                    >Email</label
+                  >
                   <input
                     type="text"
                     class="newsletter__input input"
                     placeholder="email address"
+                    id="newsletter-email"
                   />
                   <div class="error-messages" id="newsletter-email-error">
                     * Please enter a valid e-mail address
@@ -303,9 +333,9 @@
           <p class="footer__header">Support:</p>
           <ul class="footer__list">
             <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
-            <li><a href="about.html#faq" class="footer__link">Returns</a></li>
+            <li><a href="about.html#returns" class="footer__link">Returns</a></li>
             <li>
-              <a href="about.html#faq" class="footer__link">Size Chart</a>
+              <a href="about.html#sizes" class="footer__link">Sizes</a>
             </li>
           </ul>
         </div>

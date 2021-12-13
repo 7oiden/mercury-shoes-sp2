@@ -191,6 +191,8 @@
 
 .about,
 .faq,
+.returns,
+.sizes,
 .contact,
 .location {
   margin: 0 auto;
@@ -280,9 +282,14 @@
   }
 }
 
-.add__container, .edit__container {
-  width: getWidth(formSmall);
+.add__container,
+.edit__container {
   margin: 0 auto;
+  width: getWidth(formDefault);
+
+  @media (min-width: getBreakpoint(small)) {
+    width: getWidth(formSmall);
+  }
 
   @media (min-width: getBreakpoint(medium)) {
     width: getWidth(formMedium);

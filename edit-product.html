@@ -143,9 +143,7 @@
                 <div class="edit-form-error"></div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="username"
-                  >Title (must be at least 5 characters)</label
-                >
+                <label for="title">Title (must be at least 5 characters)</label>
                 <input
                   type="text"
                   class="input edit__input"
@@ -261,19 +259,19 @@
                 <p class="edit__radio-heading">Featured product:</p>
                 <div class="edit__radio-flex">
                   <input
+                    id="featured-no"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
-                    id="featured-no"
                     name="featured"
                     value="false"
                   />
-                  <label class="radio-label" for="no-featured-no">NO</label>
+                  <label class="radio-label" for="featured-no">NO</label>
                 </div>
                 <div class="edit__radio-flex">
                   <input
+                    id="featured-yes"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
-                    id="featured-yes"
                     name="featured"
                     value="true"
                   />
@@ -284,23 +282,23 @@
                 <p class="edit__radio-heading">In stock:</p>
                 <div class="edit__radio-flex">
                   <input
+                    id="stock-no"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
-                    id="stock-no"
                     name="stock"
                     value="false"
                   />
-                  <label class="radio-label" for="no">NO</label>
+                  <label class="radio-label" for="stock-no">NO</label>
                 </div>
                 <div class="edit__radio-flex">
                   <input
+                    id="stock-yes"
                     style="height: 20px; width: 20px; vertical-align: middle"
                     type="radio"
-                    id="stock-yes"
                     name="stock"
                     value="true"
                   />
-                  <label class="radio-label" for="no">YES</label>
+                  <label class="radio-label" for="stock-yes">YES</label>
                 </div>
               </div>
 

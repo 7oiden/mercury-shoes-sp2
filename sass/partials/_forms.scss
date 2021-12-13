@@ -16,6 +16,16 @@ input[type="radio"] {
 }
 
 label {
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+}
+
+// .search__label {
+//   text-transform: uppercase;
+// }
+
+.newsletter__label {
+  color: getColor(primary);
   padding-bottom: 0.25rem;
 }
 
