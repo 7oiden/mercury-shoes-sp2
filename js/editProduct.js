@@ -152,8 +152,8 @@ function submitEditForm(event) {
   if (
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
-    checkLength(shortDescription.value, 14) &&
-    checkMaxLength(description.value, 131) &&
+    checkLength(shortDescription.value, 9) &&
+    checkMaxLength(shortDescription.value, 131) &&
     checkLength(description.value, 14) &&
     validateNumber(price.value) &&
     checkLength(imageAltText.value, 9)

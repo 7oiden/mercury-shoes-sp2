@@ -17,7 +17,7 @@ export function renderProducts(products) {
       editProd = `<a href="edit-product.html?id=${product.id}" class="edit-button">
         Edit Product
       </a>`;
-      adminClass = "card--admin"
+      adminClass = "card--admin";
     }
 
     let featuredIcon = "";
@@ -30,7 +30,9 @@ export function renderProducts(products) {
 
     productsContainer.innerHTML += `
       <div class="remove-card card__container">
-        <a href="products-details.html?id=${product.id}" class="card ${adminClass}">
+        <a href="products-details.html?id=${
+          product.id
+        }" class="card ${adminClass}">
         <div class="card__image-container">
         <img src="${product.image_url}" alt="${product.image_alt_text}" 
         class="card__image" />
@@ -47,9 +49,10 @@ export function renderProducts(products) {
         </div>
         </a>
         ${editProd}
-      </div>`;
+      </div>`; 
   });
 
+  // load more button (will only show up when array length is at least 9)
   const productCards = document.querySelectorAll(".card__container");
   const loadButton = document.querySelector("#load-button");
 
@@ -58,7 +61,11 @@ export function renderProducts(products) {
   for (let i = 0; i < productCards.length; i++) {
     if (i < num) {
       productCards[i].classList.remove("remove-card");
-    }
+    } 
+  }
+
+  if (products.length <= 8) {
+    loadButton.style.display = "none"
   }
 
   loadButton.onclick = function () {
@@ -67,11 +74,11 @@ export function renderProducts(products) {
     for (let i = 0; i < productCards.length; i++) {
       if (i < num) {
         productCards[i].classList.remove("remove-card");
-      }
+      } 
 
       if (num >= productCards.length) {
-         loadButton.classList.add("disabled")
-         loadButton.innerHTML = "No more products"
+        loadButton.classList.add("disabled");
+        loadButton.innerHTML = "No more products";
       }
     }
   };

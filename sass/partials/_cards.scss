@@ -149,18 +149,22 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-bottom: 1rem;
   }
 
   &__block2 {
     flex: 3;
+    margin-top: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      margin-top: 0;
+    }
   }
 
   &__value-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   &__value {

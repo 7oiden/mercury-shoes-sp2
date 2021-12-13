@@ -83,7 +83,7 @@ main {
 }
 
 hr {
-  color: getColor(border)
+  color: getColor(border);
 }
 
 .faq__item {
@@ -92,17 +92,24 @@ hr {
 }
 
 .red-line {
-    width: 150px;
-    height: 3px;
-    background-color: getColor(accent);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  width: 150px;
+  height: 3px;
+  background-color: getColor(accent);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 
-    @media (min-width: getBreakpoint(large)) {
+  @media (min-width: getBreakpoint(large)) {
     height: 4px;
   }
-  }
+}
 
-  .basket-main {
-    height: 100%;
-  }
+.basket-main {
+  height: 100%;
+}
+
+#section-frame {
+  border: 3px solid getColor(admin);
+  border-radius: 5px;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}

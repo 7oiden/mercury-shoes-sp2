@@ -135,6 +135,13 @@ hr {
   height: 100%;
 }
 
+#section-frame {
+  border: 3px solid #094A54;
+  border-radius: 5px;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+
 .base-container, .nav__container, .footer__container, .news {
   width: 85%;
   margin: 0 auto;
@@ -761,14 +768,14 @@ strong {
 
 .featured__heading {
   font-family: "soleil", tahoma, sans-serif;
-  font-size: getFontSizes(mainSubHeadingSmall);
+  font-size: 1.875rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 @media (min-width: 992px) {
   .featured__heading {
-    font-size: getFontSizes(mainSubHeadingLarge);
+    font-size: 2.25rem;
   }
 }
 
@@ -804,7 +811,6 @@ strong {
   font-size: 1.125rem;
   margin: 0;
   padding: 0.25rem 0;
-  font-style: italic;
 }
 
 .basket__title {
@@ -1092,7 +1098,7 @@ label {
 .add__list-heading,
 .edit__list-heading {
   margin: 0;
-  padding: 1rem 0 0 0;
+  padding: 0;
   font-size: 1.25rem;
   border-radius: 5px;
   font-weight: bold;
@@ -1753,13 +1759,19 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-bottom: 1rem;
 }
 
 .details__block2 {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+  margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  .details__block2 {
+    margin-top: 0;
+  }
 }
 
 .details__value-wrapper {
@@ -1771,7 +1783,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .details__value {
@@ -2083,7 +2095,7 @@ button {
 
 #load-button {
   display: block;
-  margin: 3rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   width: 260px;
 }
 
@@ -2145,6 +2157,10 @@ button {
 
 .input:focus {
   background-color: #ffffff;
+}
+
+.add__input, .edit__input {
+  font-size: 1rem;
 }
 
 input[type="radio"] {
@@ -2272,6 +2288,7 @@ select {
 
 textarea {
   font-family: "ff-tisa-sans-web-pro", arial, sans-serif;
+  font-size: 1rem !important;
 }
 
 #short-description {
@@ -2284,8 +2301,7 @@ textarea {
   height: 250px;
 }
 
-.add__input,
-.edit__input {
+.add__input, .edit__input {
   width: 100%;
 }
 

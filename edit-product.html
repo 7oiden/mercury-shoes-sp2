@@ -188,8 +188,7 @@
               </div>
               <div class="edit__input-wrapper">
                 <label for="short-description"
-                  >Short description (must be between 9 and 131
-                  characters)</label
+                  >Short description (must be at least 10 characters and no more than 130 characters)</label
                 >
                 <textarea
                   name="short-description"
@@ -198,13 +197,15 @@
                   placeholder="Write short description here..."
                 ></textarea>
                 <div class="error-messages" id="edit-short-description-error">
-                  *Must be at least 15 characters
+                  *Must be at least 10 characters
+                </div>
+                <div class="error-messages" id="edit-short-description-error2">
+                  *Can not be longer than 130 characters
                 </div>
               </div>
               <div class="edit__input-wrapper">
                 <label for="description"
-                  >Description (must be between 9 and 131
-                  characters)</label
+                  >Description (must be at least 15 characters)</label
                 >
                 <textarea
                   name="description"
@@ -215,11 +216,9 @@
                 <div class="error-messages" id="edit-description-error">
                   *Must be at least 15 characters
                 </div>
-                <div class="error-messages" id="edit-description-error2">
-                  *Can not be longer than 130 characters
-                </div>
+                
               </div>
-              <div class="add__input-wrapper">
+              <div class="add__input-wrapper" id="section-frame">
                 <p class="add__list-heading">Product images:</p>
                 <ul class="add__list">
                   <li class="add__list-text">

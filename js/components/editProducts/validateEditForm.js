@@ -14,8 +14,8 @@ const colorError = document.querySelector("#edit-color-error");
 const shortDescriptionError = document.querySelector(
   "#edit-short-description-error"
 );
-const descriptionError2 = document.querySelector(
-  "#edit-description-error2"
+const shortDescriptionError2 = document.querySelector(
+  "#edit-short-description-error2"
 );
 const descriptionError = document.querySelector("#edit-description-error");
 // const urlError = document.querySelector("#edit-url-error");
@@ -48,15 +48,13 @@ export function validateEditForm() {
     }
 
     //check this
-    if (checkMaxLength(description.value, 131)) {
-      descriptionError2.style.display = "none";
-      descriptionError.style.display = "none";
+    if (checkMaxLength(shortDescription.value, 131)) {
+      shortDescriptionError2.style.display = "none";
     } else {
-      descriptionError2.style.display = "block";
-      descriptionError.style.display = "none";
+      shortDescriptionError2.style.display = "block";
     }
 
-    if (checkLength(description.value, 15)) {
+    if (checkLength(description.value, 14)) {
       descriptionError.style.display = "none";
     } else {
       descriptionError.style.display = "block";
@@ -139,14 +137,14 @@ export function validateEditForm() {
     shortDescriptionError.style.display = "block";
     shortDescription.style.border = "2px solid #ed553b";
   }
-  if (checkMaxLength(shortDescription.value, 14)) {
+  if (checkMaxLength(shortDescription.value, 131)) {
       shortDescriptionError2.style.display = "none";
       shortDescription.style.border = "1px solid #bdbdbd";
     } else {
       shortDescriptionError2.style.display = "block";
       shortDescription.style.border = "2px solid #ed553b";
     }
-  if (checkLength(description.value, 131)) {
+  if (checkLength(description.value, 14)) {
     descriptionError.style.display = "none";
     description.style.border = "1px solid #bdbdbd";
   } else {

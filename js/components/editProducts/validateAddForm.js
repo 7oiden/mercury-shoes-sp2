@@ -14,8 +14,8 @@ const colorError = document.querySelector("#add-color-error");
 const shortDescriptionError = document.querySelector(
   "#add-short-description-error"
 );
-const descriptionError2 = document.querySelector(
-  "#add-description-error2"
+const shortDescriptionError2 = document.querySelector(
+  "#add-short-description-error2"
 );
 const descriptionError = document.querySelector("#add-description-error");
 // const urlError = document.querySelector("#add-url-error");
@@ -49,12 +49,10 @@ export function validateAddForm() {
       }
 
       //check this
-      if (checkMaxLength(description.value, 131)) {
-        descriptionError2.style.display = "none";
-        descriptionError.style.display = "none";
+      if (checkMaxLength(shortDescription.value, 131)) {
+        shortDescriptionError2.style.display = "none";
       } else {
-        descriptionError2.style.display = "block";
-        descriptionError.style.display = "none";
+        shortDescriptionError2.style.display = "block";
       }
 
       if (checkLength(description.value, 14)) {
@@ -141,15 +139,15 @@ export function validateAddForm() {
       shortDescription.style.border = "2px solid #ed553b";
     }
 
-    if (checkMaxLength(description.value, 14)) {
-      descriptionError2.style.display = "none";
-      description.style.border = "1px solid #bdbdbd";
+    if (checkMaxLength(shortDescription.value, 131)) {
+      shortDescriptionError2.style.display = "none";
+      shortDescription.style.border = "1px solid #bdbdbd";
     } else {
-      descriptionError2.style.display = "block";
-      description.style.border = "2px solid #ed553b";
+      shortDescriptionError2.style.display = "block";
+      shortDescription.style.border = "2px solid #ed553b";
     }
 
-    if (checkLength(description.value, 131)) {
+    if (checkLength(description.value, 15)) {
       descriptionError.style.display = "none";
       description.style.border = "1px solid #bdbdbd";
     } else {

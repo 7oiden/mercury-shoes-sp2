@@ -34,7 +34,7 @@ const imageAltText = document.querySelector("#image-alt-text");
 
 const alert = document.querySelector(".addalert-container");
 
-document.getElementById("product-image").value = placeholderUrl;
+document.getElementById("product-image").value = placeholderUrl.substring("https://".length);
 
 addForm.addEventListener("submit", submitAddForm);
 
@@ -52,7 +52,7 @@ function submitAddForm(event) {
   let productImageValue = "https://" + productImage.value.trim();
   const imageAltTextValue = imageAltText.value.trim();
 
-  console.log(productImageValue);
+  // console.log(productImageValue);
 
   const featuredValue = document.querySelector(
     'input[name="featured"]:checked'
@@ -75,8 +75,8 @@ function submitAddForm(event) {
   if (
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
-    checkLength(shortDescription.value, 14) &&
-    checkMaxLength(description.value, 131) &&
+    checkLength(shortDescription.value, 9) &&
+    checkMaxLength(shortDescription.value, 131) &&
     checkLength(description.value, 14) &&
     // checkLength(productImage.value, 9) &&
     checkLength(imageAltText.value, 9) &&

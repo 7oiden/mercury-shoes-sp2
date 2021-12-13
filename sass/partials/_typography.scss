@@ -64,12 +64,12 @@ strong {
 
 .featured__heading {
   font-family: $primary-headings;
-  font-size: getFontSizes(mainSubHeadingSmall);
+  font-size: getFontSize(mainSubHeadingSmall);
   font-weight: 400;
   margin-bottom: 0.5rem;
 
   @media (min-width: getBreakpoint(large)) {
-    font-size: getFontSizes(mainSubHeadingLarge);
+    font-size: getFontSize(mainSubHeadingLarge);
   }
 }
 
@@ -99,7 +99,6 @@ strong {
   font-size: 1.125rem;
   margin: 0;
   padding: 0.25rem 0;
-  font-style: italic;
 }
 
 .basket__title {
@@ -361,7 +360,7 @@ label {
 .add__list-heading,
 .edit__list-heading {
   margin: 0;
-  padding: 1rem 0 0 0;
+  padding: 0;
   font-size: 1.25rem;
   border-radius: 5px;
   font-weight: bold;

@@ -11,6 +11,10 @@
   }
 }
 
+.add__input, .edit__input {
+  font-size: 1rem;
+}
+
 input[type="radio"] {
   cursor: pointer;
 }
@@ -119,6 +123,7 @@ select {
 
 textarea {
   font-family: $body-text;
+  font-size: 1rem !important;
 }
 
 #short-description {
