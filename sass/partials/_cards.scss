@@ -1,6 +1,5 @@
 .card {
   display: block;
-  width: $card-width;
   height: $card-height;
   transition: all 0.3s;
   background-color: getColor(primary);
@@ -15,6 +14,7 @@
 
   &__container {
     transition: all 0.3s;
+    width: $card-width;
 
     @include content-border(5px);
 
@@ -63,6 +63,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   max-width: 700px;
 
   @media (min-width: getBreakpoint(medium)) {
@@ -83,8 +84,8 @@
     @media (min-width: getBreakpoint(medium)) {
       font-size: 1.125rem;
       padding-top: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 1.5rem;
+      padding-right: 1rem;
     }
   }
 
@@ -93,10 +94,7 @@
     font-family: $secondary-headings;
     font-style: italic;
     max-width: 400px;
-
-    @media (min-width: getBreakpoint(large)) {
-      font-size: 1.125rem;
-    }
+    font-size: 1.125rem;
   }
 
   &-name {

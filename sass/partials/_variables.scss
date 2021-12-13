@@ -11,7 +11,7 @@ $colors: (
   dark: #000000,
   error: #ed553b,
   success: #159E4A,
-  warning: #eecd39,
+  warning: #ffdd48,
   border: #D9D9D9,
   admin: #094A54,
 );
@@ -32,6 +32,18 @@ $breakpoints: (
   @return map-get($breakpoints, $breakpoint);
 }
 
+$fontSizes: (
+  mainHeadingSmall: 2rem,
+  mainHeadingLarge: 2.5rem,
+  mainSubHeadingSmall: 1.875rem,
+  mainSubHeadingLarge: 2.25rem,
+);
+
+@function getFontSize($fontSize) {
+  @return map-get($fontSizes, $fontSize);
+}
+
+//sets width and height of product cards
 $card-width: 300px;
 $card-height: 440px;
 

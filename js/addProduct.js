@@ -7,6 +7,7 @@ import { baseUrl } from "./settings/api.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { checkLength, checkMaxLength, validateNumber } from "./utils/validators.js";
 import { validateAddForm } from "./components/editProducts/validateAddForm.js";
+import { placeholderUrl } from "./settings/constants.js";
 
 const token = getToken();
 
@@ -33,7 +34,7 @@ const imageAltText = document.querySelector("#image-alt-text");
 
 const alert = document.querySelector(".addalert-container");
 
-document.getElementById("product-image").value = "via.placeholder.com/500x400";
+document.getElementById("product-image").value = placeholderUrl;
 
 addForm.addEventListener("submit", submitAddForm);
 
@@ -68,14 +69,14 @@ function submitAddForm(event) {
 
   //automatically adds placeholder image if the input field has been left empty
   if (productImage.value === "") {
-    productImageValue = "https://via.placeholder.com/500x400";
+    productImageValue = placeholderUrl;
   }
 
   if (
     checkLength(title.value, 4) &&
     checkLength(color.value, 2) &&
-    checkLength(shortDescription.value, 9) &&
-    checkMaxLength(shortDescription.value, 131) &&
+    checkLength(shortDescription.value, 14) &&
+    checkMaxLength(description.value, 131) &&
     checkLength(description.value, 14) &&
     // checkLength(productImage.value, 9) &&
     checkLength(imageAltText.value, 9) &&

@@ -1,17 +1,3 @@
-.hero__heading-group {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-
-  @media (min-width: getBreakpoint(large)) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-  }
-}
-
 strong {
   text-transform: uppercase;
   font-weight: bold;
@@ -19,6 +5,20 @@ strong {
 }
 
 .hero {
+  &__heading-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+    }
+  }
+
   &__heading {
     font-family: $primary-headings;
     font-size: 3.75rem;
@@ -64,41 +64,42 @@ strong {
 
 .featured__heading {
   font-family: $primary-headings;
-  font-size: 2.25rem;
+  font-size: getFontSizes(mainSubHeadingSmall);
   font-weight: 400;
   margin-bottom: 0.5rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: getFontSizes(mainSubHeadingLarge);
+  }
 }
 
 .products__heading,
 .add__heading,
 .edit__heading,
 .about__heading,
-.contact__heading,
-.faq__heading,
-.returns__heading,
-.sizes__heading,
 .basket__heading {
   font-family: $primary-headings;
-  font-size: 2.5rem;
+  font-size: getFontSize(mainHeadingSmall);
   font-weight: 400;
   margin: 0;
   padding: 0;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: getFontSize(mainHeadingLarge);
+  }
 }
 
-.edit__info-text, .add__info-text {
+.add__list, .edit__list{
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.edit__list-text,
+.add__list-text {
   font-size: 1.125rem;
-  font-weight: bold;
-  margin: 1rem 0 0 0;
-  padding: 0;
-}
-
-.about__heading-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.about__sub-heading {
-  font-size: 1.375rem;
+  margin: 0;
+  padding: 0.25rem 0;
+  font-style: italic;
 }
 
 .basket__title {
@@ -107,8 +108,8 @@ strong {
   padding: 0;
 
   @media (min-width: getBreakpoint(small)) {
-      font-size: 1.125rem;
-    }
+    font-size: 1.125rem;
+  }
 }
 
 .summary__heading {
@@ -131,45 +132,61 @@ strong {
 }
 
 .card__icon-container {
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background-color: getColor(border);
-    position: relative;
-  }
-
-.newsletter {
-  &__heading {
-    font-family: $primary-headings;
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding: 0;
-    margin: 0;
-  }
-
-  &__description {
-    font-size: 1.125rem;
-    font-family: $secondary-headings;
-    padding: 0.5rem 0 1.5rem 0;
-    margin: 0;
-  }
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: getColor(border);
+  position: relative;
 }
 
 .news {
   &__header {
     font-family: $primary-headings;
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     font-weight: 400;
     margin: 0;
     padding: 0;
+
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.75rem;
+    }
   }
 
   &__text {
     font-family: $secondary-headings;
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 1rem;
+
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.newsletter {
+  &__heading {
+    font-family: $primary-headings;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    font-family: $secondary-headings;
+    padding: 0.5rem 0 1.5rem 0;
+    margin: 0;
+
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.125rem;
+    }
   }
 }
 
@@ -235,6 +252,83 @@ strong {
   }
 }
 
+
+//about page
+.about {
+  &__heading-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sub-heading {
+    font-size: 1.125rem;
+    margin: 0;
+    font-family: $secondary-headings;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.375rem;
+    }
+  }
+
+  &__card-quote {
+    margin: 0;
+    font-family: $secondary-headings;
+    font-style: italic;
+    max-width: 400px;
+    font-size: 1.125rem;
+  }
+}
+
+.contact__heading,
+.faq__heading,
+.returns__heading,
+.sizes__heading {
+  font-family: $primary-headings;
+  font-size: getFontSizes(mainSubHeadingSmall);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: getFontSizes(mainSubHeadingLarge);
+  }
+}
+
+.contact__sub-heading {
+  font-size: 1.125rem;
+  margin: 0;
+  padding-bottom: 0.35rem;
+}
+
+.contact__paragraph {
+  margin: 0;
+  padding: 0;
+
+  &--bold {
+    font-family: $secondary-headings;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 0.25rem 0;
+  }
+}
+
+.contact__heading,
+.faq__heading,
+.returns__heading,
+.sizes__heading {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: 1.875rem;
+  }
+}
+
+.faq__list {
+  padding-left: 1rem;
+}
+
 // footer
 .footer__header {
   font-size: 1.125rem;
@@ -263,9 +357,11 @@ label {
 }
 
 .add__radio-heading,
-.edit__radio-heading {
+.edit__radio-heading,
+.add__list-heading,
+.edit__list-heading {
   margin: 0;
-  padding-top: 1rem;
+  padding: 1rem 0 0 0;
   font-size: 1.25rem;
   border-radius: 5px;
   font-weight: bold;
@@ -281,37 +377,3 @@ i {
   }
 }
 
-//about page
-.about-small-heading {
-  font-size: 1.125rem;
-  text-decoration: underline;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact__paragraph {
-  margin: 0;
-
-  &--bold {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-}
-
-.about__sub-heading {
-  margin: 0;
-  font-family: $secondary-headings;
-}
-
-.contact__heading,
-.faq__heading,
-.returns__heading,
-.sizes__heading {
-  font-size: 1.875rem;
-  margin: 0;
-  padding: 0;
-}
-
-.faq__list {
-  padding-left: 1rem;
-}

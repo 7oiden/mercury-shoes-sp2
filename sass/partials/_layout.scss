@@ -212,14 +212,14 @@
   }
 }
 
-.about-wrapper {
+.about-page-wrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   background-color: getColor(primary);
 
   @media (min-width: getBreakpoint(medium)) {
@@ -354,5 +354,13 @@
 
   @media (min-width: getBreakpoint(xxlarge)) {
     width: getWidth(newsletterXxLarge);
+  }
+}
+
+.contact__sub-wrapper {
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

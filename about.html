@@ -137,7 +137,7 @@
       </header>
 
       <main>
-        <div class="about-wrapper">
+        <div class="about-page-wrapper">
           <section class="about">
             <hgroup class="about__heading-group">
               <h1 class="about__heading" id="about">About Us</h1>
@@ -247,28 +247,40 @@
           </section>
           <div class="contact-wrapper">
             <section class="contact">
-              <h3 class="contact__heading" id="contact">Contact</h3>
-              <div class="red-line"></div>
-              <h4 class="about-small-heading">Email</h4>
-              <p class="contact__paragraph--bold">For support or feedback:</p>
-              <p class="contact__paragraph">support@mercuryshoes.com</p>
-              <h4 class="about-small-heading">Calls</h4>
-              <p class="contact__paragraph--bold">You can reach us at:</p>
-              <p class="contact__paragraph">Phone: 5555 55555</p>
-              <p class="contact__paragraph">Monday to friday 9AM - 6PM (UST)</p>
-              <h4 id="address" class="about-small-heading">Address</h4>
-              <p class="contact__paragraph--bold">Main office address:</p>
-              <p class="contact__paragraph">Mercury Shoes LTD</p>
-              <p class="contact__paragraph">5th Avenue</p>
-              <p class="contact__paragraph">NY 55555 United States</p>
+              <div class="contact__sub-wrapper">
+                <h3 class="contact__heading" id="contact">Contact</h3>
+                <div class="red-line"></div>
+                <h4 class="contact__sub-heading">Email</h4>
+                <p class="contact__paragraph--bold">For support or feedback:</p>
+                <p class="contact__paragraph">support@mercuryshoes.com</p>
+              </div>
+
+              <div class="contact__sub-wrapper">
+                <h4 class="contact__sub-heading">Calls</h4>
+                <p class="contact__paragraph--bold">You can reach us at:</p>
+                <p class="contact__paragraph">Phone: 5555 55555</p>
+                <p class="contact__paragraph">
+                  Monday to friday 9AM - 6PM (UST)
+                </p>
+              </div>
+
+              <div class="contact__sub-wrapper">
+                <h4 id="address" class="contact__sub-heading">Address</h4>
+                <p class="contact__paragraph--bold">Main office address:</p>
+                <p class="contact__paragraph">Mercury Shoes LTD</p>
+                <p class="contact__paragraph">5th Avenue</p>
+                <p class="contact__paragraph">NY 55555 United States</p>
+              </div>
             </section>
             <section class="location">
               <h2 class="contact__heading" id="location">Location</h2>
               <div class="red-line"></div>
-              <h4 class="about-small-heading">Main store</h4>
-              <p class="contact__paragraph">Mercury Shoes LTD</p>
-              <p class="contact__paragraph">5th Avenue</p>
-              <p class="contact__paragraph">NY 55555 United States</p>
+              <div class="contact__sub-wrapper">
+                <h4 class="contact__sub-heading">Main store</h4>
+                <p class="contact__paragraph">Mercury Shoes LTD</p>
+                <p class="contact__paragraph">5th Avenue</p>
+                <p class="contact__paragraph">NY 55555 United States</p>
+              </div>
               <iframe
                 class="location__map"
                 title="address to Mercury main store"
@@ -333,7 +345,9 @@
           <p class="footer__header">Support:</p>
           <ul class="footer__list">
             <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
-            <li><a href="about.html#returns" class="footer__link">Returns</a></li>
+            <li>
+              <a href="about.html#returns" class="footer__link">Returns</a>
+            </li>
             <li>
               <a href="about.html#sizes" class="footer__link">Sizes</a>
             </li>

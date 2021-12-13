@@ -14,8 +14,8 @@ const colorError = document.querySelector("#add-color-error");
 const shortDescriptionError = document.querySelector(
   "#add-short-description-error"
 );
-const shortDescriptionError2 = document.querySelector(
-  "#add-short-description-error2"
+const descriptionError2 = document.querySelector(
+  "#add-description-error2"
 );
 const descriptionError = document.querySelector("#add-description-error");
 // const urlError = document.querySelector("#add-url-error");
@@ -49,12 +49,12 @@ export function validateAddForm() {
       }
 
       //check this
-      if (checkMaxLength(shortDescription.value, 131)) {
-        shortDescriptionError2.style.display = "none";
-        shortDescriptionError.style.display = "none";
+      if (checkMaxLength(description.value, 131)) {
+        descriptionError2.style.display = "none";
+        descriptionError.style.display = "none";
       } else {
-        shortDescriptionError2.style.display = "block";
-        shortDescriptionError.style.display = "none";
+        descriptionError2.style.display = "block";
+        descriptionError.style.display = "none";
       }
 
       if (checkLength(description.value, 14)) {
@@ -141,15 +141,15 @@ export function validateAddForm() {
       shortDescription.style.border = "2px solid #ed553b";
     }
 
-    if (checkMaxLength(shortDescription.value, 131)) {
-      shortDescriptionError2.style.display = "none";
-      shortDescription.style.border = "1px solid #bdbdbd";
+    if (checkMaxLength(description.value, 14)) {
+      descriptionError2.style.display = "none";
+      description.style.border = "1px solid #bdbdbd";
     } else {
-      shortDescriptionError2.style.display = "block";
-      shortDescription.style.border = "2px solid #ed553b";
+      descriptionError2.style.display = "block";
+      description.style.border = "2px solid #ed553b";
     }
 
-    if (checkLength(description.value, 14)) {
+    if (checkLength(description.value, 131)) {
       descriptionError.style.display = "none";
       description.style.border = "1px solid #bdbdbd";
     } else {

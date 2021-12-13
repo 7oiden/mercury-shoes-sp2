@@ -93,10 +93,14 @@ hr {
 
 .red-line {
     width: 150px;
-    height: 4px;
+    height: 3px;
     background-color: getColor(accent);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+
+    @media (min-width: getBreakpoint(large)) {
+    height: 4px;
+  }
   }
 
   .basket-main {

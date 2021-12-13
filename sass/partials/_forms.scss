@@ -131,28 +131,16 @@ textarea {
   height: 250px;
 }
 
+.add__input,
+.edit__input {
+  width: 100%;
+}
+
 .add__input-wrapper,
 .edit__input-wrapper {
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto;
-}
-
-.add__radio-wrapper,
-.edit__radio-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: getBreakpoint(small)) {
-    width: 90%;
-  }
-}
-
-.add__input,
-.edit__input {
-  width: 100%;
 }
 
 .add__input-prefix-wrapper,

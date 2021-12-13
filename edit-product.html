@@ -198,15 +198,13 @@
                   placeholder="Write short description here..."
                 ></textarea>
                 <div class="error-messages" id="edit-short-description-error">
-                  *Must be at least 10 characters
-                </div>
-                <div class="error-messages" id="edit-short-description-error2">
-                  *Can not be longer than 100 characters
+                  *Must be at least 15 characters
                 </div>
               </div>
               <div class="edit__input-wrapper">
                 <label for="description"
-                  >Description (must be at least 15 characters)</label
+                  >Description (must be between 9 and 131
+                  characters)</label
                 >
                 <textarea
                   name="description"
@@ -217,17 +215,24 @@
                 <div class="error-messages" id="edit-description-error">
                   *Must be at least 15 characters
                 </div>
+                <div class="error-messages" id="edit-description-error2">
+                  *Can not be longer than 130 characters
+                </div>
               </div>
-              <div class="edit__input-wrapper">
-                <p class="edit__info-text">
-                  Product image must have a 5:4 aspect ratio to be shown
-                  correctly:
-                </p>
+              <div class="add__input-wrapper">
+                <p class="add__list-heading">Product images:</p>
+                <ul class="add__list">
+                  <li class="add__list-text">
+                    Product image must have a 5:4 aspect ratio to avoid stretching
+                  </li>
+                  <li class="add__list-text">
+                    A placeholder image will automatically be inserted if the input field is left blank
+                  </li>
+                </ul>
               </div>
               <div class="edit__input-wrapper">
                 <label for="product-image"
-                  >Image URL (if left empty a placeholder image will be
-                  inserted)</label
+                  >Image URL</label
                 >
                 <div class="edit__input-prefix-wrapper">
                   <div class="edit__input-prefix">https://</div>
@@ -255,7 +260,7 @@
                   *Must be at least 10 characters
                 </div>
               </div>
-              <div class="edit__radio-wrapper">
+              <div class="edit__input-wrapper">
                 <p class="edit__radio-heading">Featured product:</p>
                 <div class="edit__radio-flex">
                   <input
@@ -278,7 +283,7 @@
                   <label class="radio-label" for="featured-yes">YES</label>
                 </div>
               </div>
-              <div class="edit__radio-wrapper">
+              <div class="edit__input-wrapper">
                 <p class="edit__radio-heading">In stock:</p>
                 <div class="edit__radio-flex">
                   <input
