@@ -18,9 +18,11 @@
 
     @include content-border(5px);
 
-    &:hover {
-      @include dropShadow(12px, 12px);
-      scale: 1.05;
+    @media (min-width: getBreakpoint(large)) {
+      &:hover {
+        @include dropShadow(12px, 12px);
+        scale: 1.05;
+      }
     }
   }
 

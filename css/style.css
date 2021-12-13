@@ -661,7 +661,7 @@ hr {
   }
 }
 
-hgroup {
+.hero__heading-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,7 +677,7 @@ hgroup {
 }
 
 @media (min-width: 992px) {
-  hgroup {
+  .hero__heading-group {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1469,10 +1469,12 @@ header {
   border: 1px solid #D9D9D9;
 }
 
-.card__container:hover {
-  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
-  scale: 1.05;
+@media (min-width: 992px) {
+  .card__container:hover {
+    -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+  }
 }
 
 .card__link {
