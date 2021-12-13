@@ -66,7 +66,7 @@ export function renderProducts(products) {
 
   if (products.length <= 8) {
     loadButton.style.display = "none"
-  }
+  } 
 
   loadButton.onclick = function () {
     num = num + 8;

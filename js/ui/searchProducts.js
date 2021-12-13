@@ -7,8 +7,6 @@ export function searchProducts(products) {
   searchInput.onkeyup = function (event) {
     const searchValue = event.target.value.trim().toLowerCase();
 
-    loadButton.style.display = "none";
-
     const filteredProducts = products.filter(function (product) {
       if (
         product.title.toLowerCase().includes(searchValue) ||
@@ -23,5 +21,15 @@ export function searchProducts(products) {
     });
 
     renderProducts(filteredProducts);
+
+    console.log(filteredProducts.length);
+
+    if (filteredProducts.length > 8) {
+      loadButton.style.display = "block";
+    } else {
+      loadButton.style.display = "none";
+    }
   };
+
+  
 }
