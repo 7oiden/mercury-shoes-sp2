@@ -20,6 +20,7 @@ strong {
   &__heading {
     font-family: $hero-headings;
     font-size: getFontSize(heroHeadingSmall);
+    font-weight: 700;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -37,7 +38,7 @@ strong {
     padding: 0;
     text-transform: lowercase;
     font-style: oblique;
-    font-weight: 300;
+    font-weight: 400;
 
     @media (min-width: getBreakpoint(large)) {
       font-size: 1.75rem;
@@ -47,7 +48,7 @@ strong {
   &__tagline {
     font-family: $secondary-headings;
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0;
     padding-top: 0.5rem;
     padding-bottom: 1rem;

@@ -38,15 +38,17 @@ header {
 }
 
 .nav {
-  background-color: #f0f0f0;
+  background: linear-gradient(
+    180deg,
+    rgba(230, 230, 230, 1)  0%,
+    rgba(255, 255, 255, 1) 100%
+  );
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 999;
   position: relative;
-
-  @include dropShadow(6px, 6px);
-
   
+  @include dropShadow(6px, 6px);
 
   &__links-wrapper {
     display: flex;
@@ -97,63 +99,4 @@ header {
       justify-content: space-between;
     }
   }
-}
-
-#basket {
-  position: relative;
-}
-
-#counter-container {
-  // animation: shake-animation 5s ease;
-  color: #fff;
-  font-weight: bold;
-  position: absolute;
-  top: 0px;
-  left: 27px;
-  background-color: getColor(accent);
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  z-index: 9;
-  font-family: $button-text;
-  display: none;
-}
-
-#counter-number {
-  position: absolute;
-  line-height: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes shake-animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  1.78571% {
-    transform: translate(5px, 0);
-  }
-  3.57143% {
-    transform: translate(0, 0);
-  }
-  5.35714% {
-    transform: translate(5px, 0);
-  }
-  7.14286% {
-    transform: translate(0, 0);
-  }
-  8.92857% {
-    transform: translate(5px, 0);
-  }
-  10.71429% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.animation {
-  animation: shake-animation 5s ease;
 }

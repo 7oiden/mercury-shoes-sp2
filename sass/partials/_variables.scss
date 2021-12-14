@@ -7,14 +7,15 @@ $button-text: "proxima nova", verdana, sans-serif;
 $colors: (
   primary: #ffffff,
   secondary: #323232,
-  accent: #ED4E32,
-  background: #f7f5f5,
+  // accent: #ed4e32,
+  accent: #be402a,
+  background: #FAFAFA,
   dark: #000000,
   error: #ed553b,
-  success: #159E4A,
+  success: #159e4a,
   warning: #ffdd48,
-  border: #D9D9D9,
-  admin: #094A54,
+  border: #d9d9d9,
+  admin: #0E6673,
 );
 
 @function getColor($color) {
@@ -54,7 +55,6 @@ $fontSizes: (
 $card-width: 300px;
 $card-height: 440px;
 
-
 $widths: (
   //sets padding on mobile dropdown
   dynamicPadding: 7.5%,
@@ -92,18 +92,16 @@ $widths: (
   formMedium: 80%,
   formLarge: 80%,
   formXLarge: 75%,
-  formXxLarge: 70%,
+  formXxLarge: 70%
 );
 
 @function getWidth($width) {
   @return map-get($widths, $width);
 }
 
-
-
 @mixin content-border($radius) {
   border-radius: $radius;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
 }
 
 @mixin dropShadow($offsetY, $blur) {

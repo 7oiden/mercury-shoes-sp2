@@ -7,7 +7,7 @@ import { placeholderUrl } from "./settings/constants.js";
 import deleteButton from "./components/editProducts/deleteButton.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
-import { validateEditForm } from "./components/editProducts/validateEditForm.js";
+import { validateEditForm } from "./components/formValidation/validateEditForm.js";
 import {
   checkLength,
   checkMaxLength,

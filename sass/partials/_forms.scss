@@ -2,7 +2,7 @@
   padding: 0.5rem 1rem;
   font-family: $body-text;
   font-size: 1.125rem;
-  background-color: getColor(background);
+  background-color: getColor(primary);
 
   @include content-border(5px);
 
@@ -200,5 +200,6 @@ textarea {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 
 

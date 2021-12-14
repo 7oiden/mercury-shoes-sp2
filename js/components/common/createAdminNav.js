@@ -25,7 +25,7 @@ export default function createAdminNav() {
 
     adminLogout.innerHTML = `<div class="nav__icon" id="logout"><svg viewBox="0 0 24 24">
     <path fill="currentColor" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" />
-</svg></div>`;
+    </svg></div>`;
 
     addLink = `
     <a href="add.html" class="${
@@ -38,7 +38,7 @@ export default function createAdminNav() {
     bannerContainer.innerHTML = `
   <li>${authUser}</li>`;
 
-    banner.style.backgroundColor = "#094A54";
+    banner.style.backgroundColor = "#0E6673";
   }
 
   linksContainer.innerHTML = `

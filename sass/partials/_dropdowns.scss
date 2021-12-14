@@ -21,9 +21,13 @@
   &__dropdown {
     position: absolute;
     width: 100%;
-    background-color: #f0f0f0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(230, 230, 230, 1) 100%,
+    );
     // background: linear-gradient(#f0f0f0 0, #f0f0f0 50%, #ea564e 100%);
-    top: 163px;
+    top: 126px;
     right: 0;
     gap: 1rem;
     z-index: -1;
@@ -50,7 +54,6 @@
     }
 
     @media (min-width: getBreakpoint(large)) {
-      top: 132px;
       width: 600px;
       top: 85px;
     }
@@ -59,8 +62,6 @@
 
 .mobile-menu {
   display: none;
-  
-
   @media (min-width: getBreakpoint(large)) {
     display: none !important;
   }
@@ -69,7 +70,7 @@
     margin-top: 1rem;
     margin-left: getWidth(dynamicPadding);
 
-    @extend .base-list
+    @extend .base-list;
   }
 
   &__item {
@@ -88,4 +89,3 @@
     }
   }
 }
-

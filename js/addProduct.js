@@ -6,7 +6,7 @@ import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { checkLength, checkMaxLength, validateNumber } from "./utils/validators.js";
-import { validateAddForm } from "./components/editProducts/validateAddForm.js";
+import { validateAddForm } from "./components/formValidation/validateAddForm.js";
 import { placeholderUrl } from "./settings/constants.js";
 
 const token = getToken();

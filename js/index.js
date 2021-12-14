@@ -1,7 +1,7 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
 import adminLogin from "./components/common/adminLogin.js";
-import { validateNewsletterForm } from "./components/validateNewsletterForm.js";
+import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 import { productsUrl, heroUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
