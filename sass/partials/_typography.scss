@@ -20,15 +20,15 @@ strong {
   }
 
   &__heading {
-    font-family: $primary-headings;
-    font-size: 3.75rem;
+    font-family: $hero-heading;
+    font-size: getFontSize(heroHeadingSmall);
     text-transform: uppercase;
     text-align: center;
     margin: 0;
     padding: 0;
 
     @media (min-width: getBreakpoint(medium)) {
-      font-size: 5.5rem;
+      font-size: getFontSize(heroHeadingLarge);
       line-height: 1.2;
     }
   }
@@ -283,13 +283,13 @@ strong {
 .returns__heading,
 .sizes__heading {
   font-family: $primary-headings;
-  font-size: getFontSizes(mainSubHeadingSmall);
+  font-size: getFontSize(mainSubHeadingSmall);
   font-weight: 400;
   margin: 0;
   padding: 0;
 
   @media (min-width: getBreakpoint(large)) {
-    font-size: getFontSizes(mainSubHeadingLarge);
+    font-size: getFontSize(mainSubHeadingLarge);
   }
 }
 
@@ -370,5 +370,13 @@ i {
   color: getColor(primary) {
 
   }
+}
+
+.button-message {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-style: italic;
+  color: getColor(success);
 }
 

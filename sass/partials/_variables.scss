@@ -1,3 +1,4 @@
+$hero-heading: "proxima nova", tahoma, sans-serif;
 $primary-headings: "soleil", tahoma, sans-serif;
 $secondary-headings: "ff-tisa-web-pro", georgia, serif;
 $body-text: "ff-tisa-sans-web-pro", arial, sans-serif;
@@ -7,7 +8,7 @@ $colors: (
   primary: #ffffff,
   secondary: #323232,
   accent: #ED4E32,
-  background: #fafafa,
+  background: #f7f5f5,
   dark: #000000,
   error: #ed553b,
   success: #159E4A,
@@ -33,10 +34,16 @@ $breakpoints: (
 }
 
 $fontSizes: (
+  heroHeadingSmall: 3.75rem,
+  heroHeadingLarge: 5.5rem,
   mainHeadingSmall: 2rem,
   mainHeadingLarge: 2.5rem,
   mainSubHeadingSmall: 1.875rem,
   mainSubHeadingLarge: 2.25rem,
+  buttonSmall: 1.25rem,
+  buttonLarge: 1.375rem,
+  heroButtonSmall: 1.375rem,
+  heroButtonLarge: 1.5rem,
 );
 
 @function getFontSize($fontSize) {

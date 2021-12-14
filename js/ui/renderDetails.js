@@ -10,10 +10,10 @@ const basket = getExistingBasket();
 const token = getToken();
 
 export default function renderDetails(details) {
-  let editProd = "";
+  let editButton = "";
 
   if (token) {
-    editProd = `<a href="edit-product.html?id=${details.id}" class="details__edit-button edit-button">
+    editButton = `<a href="edit-product.html?id=${details.id}" class="edit-button edit-button--details">
         Edit Product
       </a>`;
   }
@@ -87,7 +87,7 @@ export default function renderDetails(details) {
   <div class="details__head">
   <div class="details__title-wrapper">
   <h1 class="details__title">${details.title}</h1>
-  ${editProd}
+  ${editButton}
   </div>
   <p class="details__price">$${details.price.toFixed(2)}</p>
   </div>

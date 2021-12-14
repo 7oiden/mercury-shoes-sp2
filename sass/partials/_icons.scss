@@ -1,6 +1,7 @@
 svg {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 
   path {
     fill: black;
@@ -8,17 +9,12 @@ svg {
 }
 
 i {
-  color: getColor(dark);
   cursor: pointer;
-}
-
-.fa-plus-square, .fa-minus-square {
-  font-size: 1.25rem;
 }
 
 .search__icon {
   position: absolute;
-  top: 65%;
+  top: 68%;
   transform: translateY(-50%);
   right: 0.5rem;
   height: 32px;
@@ -28,7 +24,6 @@ i {
 .nav__icon {
   margin-left: 2rem;
   transition: opacity 0.3s;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.75;
@@ -67,7 +62,6 @@ i {
 }
 
 .remove-icon {
-  cursor: pointer;
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -107,12 +101,9 @@ i {
   }
 }
 
-// #plus-icon {
-//   width: 2rem;
-//   height: 2rem;
-//   cursor: pointer;
+.fa-plus-square, .fa-minus-square {
+  color: getColor(dark);
+  font-size: 1.25rem;
+}
 
-//   @media (min-width: getBreakpoint(large)) {
-//     visibility: hidden;
-//   }
-// }
+
