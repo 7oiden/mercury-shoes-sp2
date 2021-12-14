@@ -67,7 +67,7 @@
 
   &__list {
     margin-top: 1rem;
-    margin-left: getWidth(paddingSmallScreen);
+    margin-left: getWidth(dynamicPadding);
 
     @extend .base-list
   }

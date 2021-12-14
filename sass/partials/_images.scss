@@ -1,17 +1,9 @@
-.hero__container {
-  height: 900px;
-  margin: 0;
-  position: relative;
 
-  @media (min-width: getBreakpoint(large)) {
-   
-  }
-}
 
 .products-banner {
   background-image: url("../images/products-banner.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom right;
   height: 400px;
 }
 

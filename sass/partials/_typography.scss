@@ -10,33 +10,29 @@ strong {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    align-items: center;
 
     @media (min-width: getBreakpoint(large)) {
-      flex-direction: row;
-      justify-content: center;
-      align-items: baseline;
+      // flex-direction: row;
+      // align-items: baseline;
     }
   }
 
   &__heading {
-    font-family: $hero-heading;
+    font-family: $hero-headings;
     font-size: getFontSize(heroHeadingSmall);
     text-transform: uppercase;
-    text-align: center;
     margin: 0;
     padding: 0;
+    line-height: 1;
 
-    @media (min-width: getBreakpoint(medium)) {
+    @media (min-width: getBreakpoint(large)) {
       font-size: getFontSize(heroHeadingLarge);
-      line-height: 1.2;
     }
   }
 
   &__heading-secondary {
-    font-family: $body-text;
-    font-size: 1.5rem;
-    text-align: center;
+    font-family: $hero-headings;
+    font-size: 1.375rem;
     margin: 0;
     padding: 0;
     text-transform: lowercase;
@@ -52,12 +48,12 @@ strong {
     font-family: $secondary-headings;
     font-size: 1.125rem;
     font-weight: 400;
-    text-align: center;
     margin: 0;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
 
     @media (min-width: getBreakpoint(large)) {
-      font-size: 1.5rem;
+      font-size: 1.375rem;
     }
   }
 }
@@ -89,7 +85,8 @@ strong {
   }
 }
 
-.add__list, .edit__list{
+.add__list,
+.edit__list {
   margin: 0;
   padding-left: 1.5rem;
 }
@@ -251,7 +248,6 @@ strong {
   }
 }
 
-
 //about page
 .about {
   &__heading-group {
@@ -366,12 +362,6 @@ label {
   font-size: 1.5rem;
 }
 
-i {
-  color: getColor(primary) {
-
-  }
-}
-
 .button-message {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -379,4 +369,3 @@ i {
   font-style: italic;
   color: getColor(success);
 }
-

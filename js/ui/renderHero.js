@@ -18,18 +18,22 @@ export function renderHero(hero) {
   if (window.innerWidth <= 992) {
     heroContainer.style.background = `url(${heroImageSmall})`;
     heroContainer.style.backgroundSize = "cover";
+    heroContainer.style.backgroundPosition = "right bottom";
   } else if (screen.width > 992) {
     heroContainer.style.background = `url(${heroImage})`;
     heroContainer.style.backgroundSize = "cover";
+    heroContainer.style.backgroundPosition = "right bottom";
   }
 
   window.onresize = function () {
     if (window.innerWidth <= 992) {
       heroContainer.style.background = `url(${heroImageSmall})`;
       heroContainer.style.backgroundSize = "cover";
+      heroContainer.style.backgroundPosition = "right bottom";
     } else {
       heroContainer.style.background = `url(${heroImage})`;
       heroContainer.style.backgroundSize = "cover";
+      heroContainer.style.backgroundPosition = "right bottom";
     }
   };
 }

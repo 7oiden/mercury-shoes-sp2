@@ -1,8 +1,6 @@
 .footer {
-  background-color: black;
+  background-color: getColor(dark);
   color: getColor(background);
-
- 
 
   &__list {
     @extend .base-list;
