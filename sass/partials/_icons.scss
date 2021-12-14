@@ -7,6 +7,15 @@ svg {
   }
 }
 
+i {
+  color: getColor(dark);
+  cursor: pointer;
+}
+
+.fa-plus-square, .fa-minus-square {
+  font-size: 1.25rem;
+}
+
 .search__icon {
   position: absolute;
   top: 65%;

@@ -1,0 +1,25 @@
+.faq__list {
+  @extend .base-list;
+}
+
+.faq__question {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq__a-container {
+  margin-top: 0.5rem;
+}
+
+.faq__answer {
+  display: none;
+}
+
+.faq__answer--display {
+  list-style: none;
+  list-style: block;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+  padding: 0;
+}

@@ -1,11 +1,12 @@
 import { getToken } from "../utils/storage.js";
+import loadMoreItems from "../components/loadMoreButton.js";
 
 const token = getToken();
 
 const productsContainer = document.querySelector(".products__grid");
 
 export function renderProducts(products) {
-  console.log(products);
+  // console.log(products);
 
   productsContainer.innerHTML = "";
 
@@ -52,34 +53,5 @@ export function renderProducts(products) {
       </div>`; 
   });
 
-  // load more button (will only show up when array length is at least 9)
-  const productCards = document.querySelectorAll(".card__container");
-  const loadButton = document.querySelector("#load-button");
-
-  let num = 8;
-
-  for (let i = 0; i < productCards.length; i++) {
-    if (i < num) {
-      productCards[i].classList.remove("remove-card");
-    } 
-  }
-
-  if (products.length <= 8) {
-    loadButton.style.display = "none"
-  } 
-
-  loadButton.onclick = function () {
-    num = num + 8;
-
-    for (let i = 0; i < productCards.length; i++) {
-      if (i < num) {
-        productCards[i].classList.remove("remove-card");
-      } 
-
-      if (num >= productCards.length) {
-        loadButton.classList.add("disabled");
-        loadButton.innerHTML = "No more products";
-      }
-    }
-  };
+  loadMoreItems(products);
 }

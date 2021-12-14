@@ -3,7 +3,7 @@ import displayAlert from "./components/common/displayAlert.js";
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import { adminToggler } from "./components/dropdownTogglers.js";
 import adminLogin from "./components/common/adminLogin.js";
-import { validateNewsletterForm } from "./components/newsletter.js";
+import { validateNewsletterForm } from "./components/validateNewsletterForm.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 // import descriptionToggler from "./components/productDetails/descriptionToggler.js";
 // import { getExistingBasket, saveBasket } from "./utils/storage.js";
