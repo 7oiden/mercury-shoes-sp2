@@ -11,12 +11,13 @@
   }
 }
 
-.add__input, .edit__input {
-  font-size: 1rem;
-}
-
 input[type="radio"] {
   cursor: pointer;
+}
+
+textarea {
+  font-family: $body-text;
+  font-size: 1rem;
 }
 
 label {
@@ -28,13 +29,8 @@ label {
   font-weight: normal;
 }
 
-// .search__label {
-//   text-transform: uppercase;
-// }
-
 .newsletter__label {
   color: getColor(primary);
-  padding-bottom: 0.25rem;
 }
 
 .radio-label {
@@ -48,13 +44,13 @@ select {
   padding: 0.25rem;
   font-size: 1rem;
 
-  @include content-border(5px)
+  @include content-border(5px);
 }
 
-#quantity, #size {
+#quantity,
+#size {
   width: 4rem;
 }
-
 
 .newsletter {
   &__form {
@@ -91,7 +87,6 @@ select {
 
   &__form {
     position: relative;
-    // background-color: pink;
   }
 
   &__input {
@@ -102,8 +97,6 @@ select {
 
     @include content-border(5px);
   }
-
-  
 }
 
 .admin {
@@ -125,51 +118,62 @@ select {
   }
 }
 
-textarea {
-  font-family: $body-text;
-  font-size: 1rem !important;
+.add,
+.edit {
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem auto;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  &__input-prefix-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-prefix {
+    font-size: 1rem;
+    background-color: getColor(secondary);
+    color: getColor(primary);
+    padding: 0.5rem 0.75rem;
+    border-left: 1px solid getColor(secondary);
+    border-top: 1px solid getColor(secondary);
+    border-bottom: 1px solid getColor(secondary);
+    border-radius: 5px 0 0 5px;
+  }
+
+  &__radio-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__radio-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
 }
 
+//short description input
 #short-description {
-  font-size: 1.125rem;
   height: 100px;
 }
 
+//description input
 #description {
-  font-size: 1.125rem;
   height: 250px;
 }
 
-.add__input,
-.edit__input {
-  width: 100%;
-}
-
-.add__input-wrapper,
-.edit__input-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 1.5rem auto;
-}
-
-.add__input-prefix-wrapper,
-.edit__input-prefix-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.add__input-prefix,
-.edit__input-prefix {
-  font-size: 1.125rem;
-  background-color: getColor(secondary);
-  color: getColor(primary);
-  padding: 0.5rem 0.75rem;
-  border-left: 1px solid getColor(secondary);
-  border-top: 1px solid getColor(secondary);
-  border-bottom: 1px solid getColor(secondary);
-  border-radius: 5px 0 0 5px;
-}
-
+//image url input
 #product-image {
   border-radius: 0 5px 5px 0;
   border-right: 1px solid getColor(border);
@@ -177,6 +181,7 @@ textarea {
   border-bottom: 1px solid getColor(border);
 }
 
+//price input
 #price {
   width: 120px;
   border-radius: 0 5px 5px 0;
@@ -184,22 +189,3 @@ textarea {
   border-top: 1px solid getColor(border);
   border-bottom: 1px solid getColor(border);
 }
-
-.add__radio-flex,
-.edit__radio-flex {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.radio-wrapper {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-
-

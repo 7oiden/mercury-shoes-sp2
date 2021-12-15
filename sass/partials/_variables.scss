@@ -56,8 +56,9 @@ $card-width: 300px;
 $card-height: 440px;
 
 $widths: (
-  //sets padding on mobile dropdown
+  //sets padding on mobile dropdown and hero content
   dynamicPadding: 7.5%,
+  dynamicPadding2: 10%, 
   //sets wrapper width of nav, footer and news
   baseSmallScreen: 85%,
   baseLargeScreen: 90%,

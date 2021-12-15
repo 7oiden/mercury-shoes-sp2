@@ -13,15 +13,18 @@ basketCounter();
 createAdminNav();
 adminLogin();
 
+
 (async function fetchApi() {
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    // console.log(json);
-
+    console.log(json);
     renderProducts(json);
     searchProducts(json);
+
+    console.log(json);
+
   } catch (error) {
     displayAlert(
       "alert error",

@@ -8,6 +8,7 @@
     @media (min-width: getBreakpoint(large)) {
     }
   }
+
   &__transparent-wrapper {
     width: 100%;
     position: absolute;
@@ -36,6 +37,7 @@
 
     @media (min-width: getBreakpoint(xlarge)) {
       top: 75px;
+      padding-left: getWidth(dynamicPadding2);
       background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0.85) 0%,
@@ -51,9 +53,5 @@
     background-color: getColor(accent);
     margin: 0.5rem 0;
     padding: 0;
-
-    // @media (min-width: getBreakpoint(large)) {
-    //   height: 4px;
-    // }
   }
 }

@@ -12,13 +12,15 @@ export function renderProducts(products) {
 
   products.forEach((product) => {
     let editProd = "";
+
+    //removes bottom border when editbutton is displayed
     let adminClass = "";
 
     if (token) {
       editProd = `<a href="edit-product.html?id=${product.id}" class="edit-button">
         Edit Product
       </a>`;
-      adminClass = "card--admin";
+      adminClass = "card__admin";
     }
 
     let featuredIcon = "";
@@ -30,7 +32,7 @@ export function renderProducts(products) {
     }
 
     productsContainer.innerHTML += `
-      <div class="remove-card card__container">
+      <div class="remove-card card__container ${adminClass}">
         <a href="products-details.html?id=${
           product.id
         }" class="card ${adminClass}">
@@ -44,14 +46,13 @@ export function renderProducts(products) {
         ${featuredIcon}
         </div>
         <p class="card__price">$${product.price.toFixed(2)}</p>
-        <div class="test">
+        <div>
         <p class="card__text">${product.short_description}</p>
         </div>
         </div>
         </a>
         ${editProd}
-      </div>`; 
+      </div>`;
   });
-
   loadMoreItems(products);
 }

@@ -1,61 +1,53 @@
+.card__container {
+  transition: all 0.3s;
+  width: $card-width;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid getColor(border);
+  border-radius: 5px;
+
+  @media (min-width: getBreakpoint(large)) {
+    &:hover {
+      @include dropShadow(12px, 12px);
+      scale: 1.05;
+    }
+  }
+}
+
 .card {
   display: block;
   height: $card-height;
   transition: all 0.3s;
   background-color: getColor(primary);
   padding-bottom: 1rem;
-  overflow: hidden;
   border-radius: 5px;
-
-  // &:hover {
-  //   @include dropShadow(12px, 12px);
-  //   scale: 1.05;
-  // }
-
-  &__container {
-    transition: all 0.3s;
-    width: $card-width;
-
-    @include content-border(5px);
-
-    @media (min-width: getBreakpoint(large)) {
-      &:hover {
-        @include dropShadow(12px, 12px);
-        scale: 1.05;
-      }
-    }
-  }
-
-  &__link {
-    cursor: pointer;
-  }
-
-  &__image-container {
-    height: 240px;
-  }
+  overflow: hidden;
 
   &__body {
     background-color: getColor(primary);
-    padding: 1rem 1rem 2rem 1rem;
-    border-radius: 0 0 5px 5px;
+    padding: 1rem;
     position: relative;
   }
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+  // &__wrapper {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: baseline;
+  // }
 
   &__header-wrapper {
     display: flex;
     justify-content: space-between;
   }
 
-  &--admin {
-    border-radius: 5px 5px 0 0;
-    border-bottom: none;
-  }
+  // &--admin {
+  //
+  // }
+}
+
+.card__admin {
+  border-bottom: none;
 }
 
 .about__card {
@@ -205,4 +197,8 @@
       align-items: center;
     }
   }
+}
+
+.remove-card {
+  display: none;
 }

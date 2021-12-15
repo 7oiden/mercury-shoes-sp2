@@ -1,14 +1,20 @@
+.basket-main {
+  height: 100%;
+}
+
 .basket {
   &__container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     flex: 1;
+    
   }
 
   &__list {
     display: block;
     margin-bottom: 1rem;
+    background-color: getColor(background);
 
     @extend .base-list;
 
@@ -17,7 +23,7 @@
     }
   }
 
-  &__list-empty {
+  &__list--empty {
   font-size: 1.25rem;
   padding: 1rem;
   background-color: getColor(primary);

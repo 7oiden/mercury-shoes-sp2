@@ -1,6 +1,6 @@
-import { getToken } from "../utils/storage.js";
+// import { getToken } from "../utils/storage.js";
 
-const token = getToken();
+// const token = getToken();
 
 const featuredContainer = document.querySelector(".featured__grid");
 
@@ -16,14 +16,7 @@ export function renderFeaturedProducts(products) {
   });
 
   featuredProducts.forEach((product) => {
-    // let editProd = "";
-
-    // if (token) {
-    //   editProd = `<a href="edit-product.html?id=${product.id}" class="edit-button">
-    //     Edit Product
-    //   </a>`;
-    // }
-
+  
     featuredContainer.innerHTML += `
        <div class="card__container">
         <a href="products-details.html?id=${product.id}" class="card">

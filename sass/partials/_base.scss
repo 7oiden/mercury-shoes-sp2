@@ -52,6 +52,7 @@ main {
 
   &.index {
     padding-top: 0;
+    margin-top: 0;
   }
 
   &.products-overview {
@@ -78,18 +79,13 @@ main {
   }
 }
 
-.remove-card {
-  display: none;
-}
+
 
 hr {
   color: getColor(border);
 }
 
-.faq__item {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
+
 
 .red-line {
   width: 150px;
@@ -103,9 +99,7 @@ hr {
   }
 }
 
-.basket-main {
-  height: 100%;
-}
+
 
 #section-frame {
   border: 3px solid getColor(admin);
