@@ -4,8 +4,6 @@ export function basketCounter() {
   const counterNumber = document.querySelector("#counter-number");
   const counterContainer = document.querySelector("#counter-container");
 
-  // const htmlSelector = document.querySelectorAll("html");
-
   const basket = getExistingBasket();
 
   //  console.log(basket);
@@ -21,15 +19,5 @@ export function basketCounter() {
     }
     counterContainer.style.display = "block";
     counterNumber.innerHTML = counter;
-
-    // console.log(htmlSelector[0].className);
-
-    // if (htmlSelector[0].className === "details-page") {
-      
-    //   counterContainer.classList.add("animation");
-    //   setTimeout(function () {
-    //     counterContainer.classList.remove("animation");
-    //   }, 1500);
-    // }
   }
 }

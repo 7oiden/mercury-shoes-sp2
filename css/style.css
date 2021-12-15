@@ -1585,6 +1585,10 @@ header {
   }
 }
 
+.remove-card {
+  display: none;
+}
+
 .card {
   display: block;
   height: 440px;
@@ -1849,10 +1853,6 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.remove-card {
-  display: none;
 }
 
 .newsletter {

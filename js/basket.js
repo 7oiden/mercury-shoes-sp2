@@ -27,8 +27,11 @@ for (let i = 0; i < basket.length; i++) {
 let orderTotal = 0;
 let shipping = 10;
 
-if (subTotal >= 50 || subTotal === 0) {
+let shippingText = `<th scope="row" >Shipping (free shipping over 50$):</th>`;
+
+if (subTotal > 50 || subTotal === 0) {
   shipping = 0;
+  shippingText = `<th scope="row" >Shipping</th>`;
 }
 
 orderTotal = subTotal + shipping;
@@ -41,7 +44,7 @@ summaryContainer.innerHTML = `
                     <td class="summary__table-data">$${subTotal}</td>
                   </tr>
                   <tr id="shipping">
-                    <th scope="row" >Shipping:</th>
+                    ${shippingText}
                     <td class="summary__table-data">$${shipping}</td>
                   </tr>
                   <tr id="order-total">
