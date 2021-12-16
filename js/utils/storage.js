@@ -10,7 +10,7 @@ export function getExistingBasket() {
 }
 
 export function saveBasket(items) {
-  localStorage.setItem("basket-items", JSON.stringify(items));
+    localStorage.setItem("basket-items", JSON.stringify(items));
 }
 
 //admin login

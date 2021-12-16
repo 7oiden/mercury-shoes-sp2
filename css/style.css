@@ -798,7 +798,10 @@ strong {
 
 .summary__heading {
   margin: 0;
-  padding-bottom: 1rem;
+}
+
+.summary__message {
+  color: #be402a;
 }
 
 .card__title,
@@ -2655,6 +2658,7 @@ select {
   text-align: left;
   width: 100%;
   font-size: 1.12rem;
+  margin-top: 1rem;
   border-collapse: collapse;
 }
 

@@ -1,9 +1,8 @@
-import { saveBasket } from "../../utils/storage.js";
-
 export function clearBasket() {
   const clearButton = document.querySelector("#clear-basket");
   const basketContainer = document.querySelector(".basket__list");
   const counterContainer = document.querySelector("#counter-container");
+  const summaryContainer = document.querySelector(".summary");
 
   clearButton.addEventListener("click", clearBasketList);
 
@@ -13,14 +12,7 @@ export function clearBasket() {
       basketContainer.innerHTML = `<li class="basket__list--empty">Your basket is empty...</li>`;
       clearButton.style.display = "none";
       counterContainer.style.display = "none";
+      // summaryContainer.style.display = "none"
     }
   }
 }
-
-
-
-
-
-
-    
-

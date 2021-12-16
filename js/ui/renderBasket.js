@@ -3,10 +3,12 @@ import { basketCounter } from "../components/common/basketCounter.js";
 
 const basketContainer = document.querySelector(".basket__list");
 const clearButton = document.querySelector("#clear-basket");
+const summaryContainer = document.querySelector(".summary");
 
 let currentBasket = getExistingBasket();
 
 renderBasket(currentBasket);
+// renderSummary(currentBasket);
 
 export function renderBasket() {
   basketContainer.innerHTML = "";
@@ -72,6 +74,7 @@ export function renderBasket() {
                   </svg>
                 </li>`;
   });
+
   const removeIcon = document.querySelectorAll(".basket__remove-icon");
 
   removeIcon.forEach((icons) => {
@@ -79,9 +82,58 @@ export function renderBasket() {
   });
 }
 
+export function renderSummary() {
+  let subTotal = 0;
+  let shipping = 0;
+  let orderTotal = 0;
+
+  console.log(currentBasket.length);
+  for (let i = 0; i < currentBasket.length; i++) {
+    subTotal += Number(currentBasket[i].price * currentBasket[i].quantity);
+    orderTotal = subTotal + shipping;
+  }
+
+  let shippingMessage = `* get free shipping over 50$`;
+
+  if (subTotal > 50 || subTotal === 0) {
+    shipping = 0;
+    shippingMessage = "";
+  }
+
+  
+
+  summaryContainer.innerHTML = `
+  <h2 class="summary__heading">Order summary</h2>
+  <span class="summary__message">${shippingMessage}</span>
+    <table class="summary__table">
+      <tr>
+      <th scope="row">Sub total:</th>
+      <td class="summary__table-data">$${subTotal}</td>
+      </tr>
+       <tr id="shipping">
+        <th scope="row" >Shipping:</th>
+        <td class="summary__table-data">$${shipping}</td>
+        </tr>
+        <tr id="order-total">
+         <th scope="row">Order total:</th>
+       <td class="summary__table-data">$${orderTotal}</td>
+       </tr>
+       </table>
+       <div>
+       <a href="index.html" class="button primary-button checkout-button"
+       >Checkout</a
+        >
+       </div>`;
+
+       const checkoutButton = document.querySelector(".checkout-button");
+
+       if (orderTotal === 0) {
+         checkoutButton.classList.add("disabled")
+       }      
+}
+
 function handleClick() {
   const id = this.dataset.id;
-
   console.log(id);
 
   console.log(currentBasket);
@@ -97,5 +149,6 @@ function handleClick() {
   console.log(newBasket);
   saveBasket(newBasket);
   renderBasket();
+  renderSummary();
   basketCounter();
 }

@@ -5,7 +5,7 @@ import createAdminNav from "./components/common/createAdminNav.js";
 import { clearBasket } from "./components/basket/clearBasket.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { getExistingBasket } from "./utils/storage.js";
-import { renderBasket } from "./ui/renderBasket.js";
+import { renderBasket, renderSummary } from "./ui/renderBasket.js";
 
 
 basketCounter();
@@ -14,48 +14,14 @@ adminLogin();
 
 const basket = getExistingBasket();
 
-renderBasket(basket);
-
-const summaryContainer = document.querySelector(".summary");
-
-let subTotal = 0;
-
-for (let i = 0; i < basket.length; i++) {
-  subTotal += Number(basket[i].price * basket[i].quantity);
-}
-
-let orderTotal = 0;
-let shipping = 10;
-
-let shippingText = `<th scope="row" >Shipping (free shipping over 50$):</th>`;
-
-if (subTotal > 50 || subTotal === 0) {
-  shipping = 0;
-  shippingText = `<th scope="row" >Shipping</th>`;
-}
-
-orderTotal = subTotal + shipping;
-
-summaryContainer.innerHTML = `
-  <h2 class="summary__heading">Order summary</h2>
-                <table class="summary__table">
-                  <tr>
-                    <th scope="row">Sub total:</th>
-                    <td class="summary__table-data">$${subTotal}</td>
-                  </tr>
-                  <tr id="shipping">
-                    ${shippingText}
-                    <td class="summary__table-data">$${shipping}</td>
-                  </tr>
-                  <tr id="order-total">
-                    <th scope="row">Order total:</th>
-                    <td class="summary__table-data">$${orderTotal}</td>
-                  </tr>
-                </table>
-                <div>
-                  <a href="index.html" class="button primary-button checkout-button"
-                    >Checkout</a
-                  >
-                </div>`;
-
+renderBasket();
 clearBasket();
+renderSummary();
+
+
+console.log(basket);
+
+
+
+
+
