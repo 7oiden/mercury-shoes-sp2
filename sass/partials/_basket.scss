@@ -13,6 +13,7 @@
 
   &__list {
     display: block;
+    max-width: 600px;
     margin-bottom: 1rem;
     background-color: getColor(background);
 

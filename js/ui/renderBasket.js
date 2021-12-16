@@ -8,7 +8,6 @@ const summaryContainer = document.querySelector(".summary");
 let currentBasket = getExistingBasket();
 
 renderBasket(currentBasket);
-// renderSummary(currentBasket);
 
 export function renderBasket() {
   basketContainer.innerHTML = "";
@@ -93,14 +92,18 @@ export function renderSummary() {
     orderTotal = subTotal + shipping;
   }
 
+  // if (currentBasket.length === 0) {
+  //   setTimeout(function () {
+  //     document.location.href = "products-overview.html";
+  //   }, 1500);
+  // }
+
   let shippingMessage = `* get free shipping over 50$`;
 
   if (subTotal > 50 || subTotal === 0) {
     shipping = 0;
     shippingMessage = "";
   }
-
-  
 
   summaryContainer.innerHTML = `
   <h2 class="summary__heading">Order summary</h2>
@@ -125,11 +128,11 @@ export function renderSummary() {
         >
        </div>`;
 
-       const checkoutButton = document.querySelector(".checkout-button");
+  const checkoutButton = document.querySelector(".checkout-button");
 
-       if (orderTotal === 0) {
-         checkoutButton.classList.add("disabled")
-       }      
+  if (orderTotal === 0) {
+    checkoutButton.classList.add("disabled");
+  }
 }
 
 function handleClick() {
@@ -152,3 +155,22 @@ function handleClick() {
   renderSummary();
   basketCounter();
 }
+
+// export function clearBasket() {
+//   const clearButton = document.querySelector("#clear-basket");
+//   const basketContainer = document.querySelector(".basket__list");
+//   const counterContainer = document.querySelector("#counter-container");
+//   const summaryContainer = document.querySelector(".summary");
+//   // const checkoutButton = document.querySelector(".checkout-button");
+
+//   clearButton.addEventListener("click", clearBasketList);
+
+//   function clearBasketList() {
+//     if (confirm("Are you sure you want to clear all items from the basket?")) {
+//       localStorage.removeItem("basket-items");
+//       basketContainer.innerHTML = `<li class="basket__list--empty">Your basket is empty...</li>`;
+//       clearButton.style.display = "none";
+//       summaryContainer.style.visibility = "none"
+//     }
+//   }
+// }

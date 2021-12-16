@@ -1960,7 +1960,7 @@ header {
   width: 200px;
   display: inline-block;
   color: #ffffff;
-  padding: 0.75rem 2rem;
+  padding: 0.65rem 2rem;
   border: none;
   border-radius: 50px;
   font-family: "proxima nova", verdana, sans-serif;
@@ -2555,6 +2555,7 @@ select {
 
 .basket__list {
   display: block;
+  max-width: 600px;
   margin-bottom: 1rem;
   background-color: #FAFAFA;
 }

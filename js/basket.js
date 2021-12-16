@@ -5,7 +5,7 @@ import createAdminNav from "./components/common/createAdminNav.js";
 import { clearBasket } from "./components/basket/clearBasket.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { getExistingBasket } from "./utils/storage.js";
-import { renderBasket, renderSummary } from "./ui/renderBasket.js";
+import { renderBasket, renderSummary} from "./ui/renderBasket.js";
 
 
 basketCounter();
