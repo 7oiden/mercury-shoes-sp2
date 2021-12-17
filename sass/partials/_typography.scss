@@ -1,7 +1,6 @@
 strong {
   text-transform: uppercase;
   font-weight: bold;
-  font-style: normal;
 }
 
 .hero {
@@ -384,4 +383,26 @@ label {
   font-size: 1.125rem;
   font-style: italic;
   color: getColor(success);
+}
+
+.nav__icon--admin {
+  display: flex;
+  align-items: center;
+}
+
+#login-label {
+  width: 50px;
+  display: inline-block;
+  position: absolute;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: getColor(dark);
+  top: 8.5px;
+  right: 32px;
+  padding: 0;
+  cursor: pointer;
+}
+
+#login {
+  position: relative;
 }

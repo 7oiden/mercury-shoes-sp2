@@ -18,10 +18,15 @@
   }
 
 .products-banner {
-  background-image: url("../images/products-banner.jpg");
+  background-image: url("../images/products-banner-small.jpg");
   background-size: cover;
   background-position: bottom right;
   height: 450px;
+
+  @media (min-width: getBreakpoint(large)) {
+  background-image: url("../images/products-banner-large.jpg");
+  height: 500px;
+  }
 }
 
 .card__image-container {

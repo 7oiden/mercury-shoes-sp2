@@ -15,18 +15,18 @@ export function renderHero(hero) {
 
   heroContainer.style.background = `url(${heroImage})`;
   
-  if (window.innerWidth <= 992) {
+  if (window.innerWidth <= 1200) {
     heroContainer.style.background = `url(${heroImageSmall})`;
     heroContainer.style.backgroundSize = "cover";
     heroContainer.style.backgroundPosition = "right bottom";
-  } else if (screen.width > 992) {
+  } else if (screen.width > 1200) {
     heroContainer.style.background = `url(${heroImage})`;
     heroContainer.style.backgroundSize = "cover";
     heroContainer.style.backgroundPosition = "right bottom";
   }
 
   window.onresize = function () {
-    if (window.innerWidth <= 992) {
+    if (window.innerWidth <= 1200) {
       heroContainer.style.background = `url(${heroImageSmall})`;
       heroContainer.style.backgroundSize = "cover";
       heroContainer.style.backgroundPosition = "right bottom";

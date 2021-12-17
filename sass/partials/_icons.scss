@@ -22,7 +22,7 @@ i {
 }
 
 .nav__icon {
-  margin-left: 2rem;
+  margin-left: 4rem;
   transition: opacity 0.3s;
 
   &:hover {
@@ -32,6 +32,7 @@ i {
 
 .basket__icon {
   margin-left: 0;
+  padding: 0;
 }
 
 .card__icon {
@@ -89,7 +90,8 @@ i {
   transform: translate(-50%, -50%);
 }
 
-.fa-plus, .fa-minus {
+.fa-plus,
+.fa-minus {
   color: black;
   font-size: 1.125rem;
   padding-bottom: 0.5rem;
@@ -101,13 +103,14 @@ i {
   }
 }
 
-.fa-plus-square, .fa-minus-square {
+.fa-plus-square,
+.fa-minus-square {
   color: getColor(dark);
   font-size: 1.25rem;
 }
 
 .footer__icon {
-  color: getColor(primary)
+  color: getColor(primary);
 }
 
 #basket {
@@ -168,6 +171,3 @@ i {
 .animation {
   animation: shake-animation 5s ease;
 }
-
-
-

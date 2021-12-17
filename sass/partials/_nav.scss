@@ -40,8 +40,7 @@ header {
 .nav {
   background: linear-gradient(
     180deg,
-    rgba(230, 230, 230, 1)  0%,
-    rgba(250, 250, 250, 1)  25%,
+    rgba(250, 250, 250, 1)  0%,
     rgba(250, 250, 250, 1)  50%,
     rgba(230, 230, 230, 1) 100%
   );
@@ -89,6 +88,7 @@ header {
   &__icons-wrapper {
     display: flex;
     align-items: center;
+    padding-top: 5px;
   }
 
   &__icons-list {

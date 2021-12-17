@@ -110,7 +110,7 @@
 }
 
 .featured {
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .grid-wrapper {
@@ -119,6 +119,10 @@
 
   @media (min-width: getBreakpoint(medium)) {
     width: getWidth(gridMedium);
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    margin-top: 3rem;
   }
 
   @media (min-width: getBreakpoint(xlarge)) {

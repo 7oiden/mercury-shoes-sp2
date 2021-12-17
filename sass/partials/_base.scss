@@ -45,10 +45,15 @@ main {
   background-image: url("../images/background_pattern_grey.jpg");
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: getBreakpoint(large)) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 
   &.index {
     padding-top: 0;
@@ -79,13 +84,9 @@ main {
   }
 }
 
-
-
 hr {
   color: getColor(border);
 }
-
-
 
 .red-line {
   width: 150px;
@@ -99,8 +100,6 @@ hr {
   }
 }
 
-
-
 #section-frame {
   border: 3px solid getColor(admin);
   border-radius: 5px;
@@ -108,5 +107,3 @@ hr {
   padding: 1rem 2rem;
   color: getColor(admin);
 }
-
-

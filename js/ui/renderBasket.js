@@ -83,8 +83,15 @@ export function renderBasket() {
 
 export function renderSummary() {
   let subTotal = 0;
-  let shipping = 0;
+  let shipping = 10;
   let orderTotal = 0;
+
+   let shippingMessage = `* get free shipping over 50$`;
+
+   if (subTotal > 50 || subTotal === 0) {
+     shippingMessage = "";
+     shipping = 0;
+   }
 
   console.log(currentBasket.length);
   for (let i = 0; i < currentBasket.length; i++) {
@@ -97,13 +104,6 @@ export function renderSummary() {
   //     document.location.href = "products-overview.html";
   //   }, 1500);
   // }
-
-  let shippingMessage = `* get free shipping over 50$`;
-
-  if (subTotal > 50 || subTotal === 0) {
-    shipping = 0;
-    shippingMessage = "";
-  }
 
   summaryContainer.innerHTML = `
   <h2 class="summary__heading">Order summary</h2>
