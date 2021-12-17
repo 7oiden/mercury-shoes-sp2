@@ -20,6 +20,21 @@ textarea {
   font-size: 1rem;
 }
 
+select {
+  background-color: getColor(background);
+  margin-top: 0.35rem;
+  padding: 0.25rem;
+  font-size: 1rem;
+
+  @include content-border(5px);
+}
+
+//quantity and size select
+#quantity,
+#size {
+  width: 4rem;
+}
+
 label {
   font-weight: bold;
   padding-bottom: 0.25rem;
@@ -36,20 +51,6 @@ label {
 .radio-label {
   padding-bottom: 0;
   padding-top: 5px;
-}
-
-select {
-  background-color: getColor(background);
-  margin-top: 0.35rem;
-  padding: 0.25rem;
-  font-size: 1rem;
-
-  @include content-border(5px);
-}
-
-#quantity,
-#size {
-  width: 4rem;
 }
 
 .newsletter {
@@ -92,7 +93,7 @@ select {
   &__input {
     width: 100%;
     font-size: 1.125rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 45px 0.5rem 1rem;
     background-color: getColor(primary);
 
     @include content-border(5px);
@@ -188,4 +189,12 @@ select {
   border-right: 1px solid getColor(border);
   border-top: 1px solid getColor(border);
   border-bottom: 1px solid getColor(border);
+}
+
+#info-frame {
+  border: 3px solid getColor(admin);
+  border-radius: 5px;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  color: getColor(admin);
 }

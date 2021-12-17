@@ -9,11 +9,6 @@ strong {
     flex-direction: column;
     margin: 0;
     padding: 0;
-
-    @media (min-width: getBreakpoint(large)) {
-      // flex-direction: row;
-      // align-items: baseline;
-    }
   }
 
   &__heading {
@@ -195,6 +190,7 @@ strong {
   }
 }
 
+// details page
 .details {
   &__title {
     font-family: $primary-headings;

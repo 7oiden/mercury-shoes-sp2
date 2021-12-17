@@ -12,11 +12,6 @@
   }
 }
 
-.news__image {
-    display: block;
-    width: 100%;
-  }
-
 .products-banner {
   background-image: url("../images/products-banner-small.jpg");
   background-size: cover;
@@ -24,9 +19,14 @@
   height: 450px;
 
   @media (min-width: getBreakpoint(large)) {
-  background-image: url("../images/products-banner-large.jpg");
-  height: 500px;
+    background-image: url("../images/products-banner-large.jpg");
+    height: 500px;
   }
+}
+
+.news__image {
+  display: block;
+  width: 100%;
 }
 
 .card__image-container {
@@ -41,10 +41,10 @@
 }
 
 .details__image {
-    display: block;
-    width: 100%;
-    flex: 1;
-  }
+  display: block;
+  width: 100%;
+  flex: 1;
+}
 
 .basket__image {
   width: 100%;
@@ -63,8 +63,3 @@
     border-radius: 5px 0 0 5px;
   }
 }
-
-
-
- 
-  

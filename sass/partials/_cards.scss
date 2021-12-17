@@ -15,12 +15,6 @@
   }
 }
 
-//this class sets the product to not be displayed when the array is longer than 8 
-//until the load button is clicked.
-.remove-card {
-  display: none;
-}
-
 .card {
   display: block;
   height: $card-height;
@@ -36,75 +30,20 @@
     position: relative;
   }
 
-  // &__wrapper {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: baseline;
-  // }
-
   &__header-wrapper {
     display: flex;
     justify-content: space-between;
   }
+}
 
-  // &--admin {
-  //
-  // }
+// this class hides products when the array has more than 8 products
+// the load button then removes this class for 8 items at the time.
+.remove-card {
+  display: none;
 }
 
 .card__admin {
   border-bottom: none;
-}
-
-.about__card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  max-width: 700px;
-  background-color: getColor(primary);
-
-  @media (min-width: getBreakpoint(medium)) {
-    flex-direction: row;
-
-    @include content-border(5px);
-  }
-
-  &-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    padding-top: 3rem;
-  }
-
-  &-wrapper {
-    @media (min-width: getBreakpoint(medium)) {
-      font-size: 1.125rem;
-      padding-top: 1rem;
-      padding-left: 1.5rem;
-      padding-right: 1rem;
-    }
-  }
-
-  &-quote {
-    margin: 0;
-    font-family: $secondary-headings;
-    font-style: italic;
-    max-width: 400px;
-    font-size: 1.125rem;
-  }
-
-  &-name {
-    margin: 0 auto;
-    padding-top: 1rem;
-    font-weight: bold;
-
-    @media (min-width: getBreakpoint(large)) {
-      font-size: 1.125rem;
-    }
-  }
 }
 
 .details {

@@ -1,27 +1,29 @@
-.faq__list {
-  @extend .base-list;
-}
+.faq {
+  &__list {
+    @extend .base-list;
+  }
 
-.faq__question {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+  &__question {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 
-.faq__a-container {
-  margin-top: 0.5rem;
-}
+  &__answer-container {
+    margin-top: 0.5rem;
+  }
 
-.faq__answer {
-  display: none;
-}
+  &__answer {
+    display: none;
+  }
 
-.faq__answer--display {
-  list-style: none;
-  list-style: block;
-  font-weight: bold;
-  margin-top: 0.25rem;
-  margin-bottom: 2rem;
-  padding: 0;
+  &__answer--display {
+    list-style: none;
+    list-style: block;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
 }
 
 .location__map {
@@ -34,5 +36,56 @@
   @media (min-width: getBreakpoint(medium)) {
     width: 375px;
     height: 250px;
+  }
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  background-color: getColor(primary);
+
+  @media (min-width: getBreakpoint(medium)) {
+    flex-direction: row;
+
+    @include content-border(5px);
+  }
+
+  &-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-top: 3rem;
+  }
+
+  &-wrapper {
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.125rem;
+      padding-top: 1rem;
+      padding-left: 1.5rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &-quote {
+    margin: 0;
+    font-family: $secondary-headings;
+    font-style: italic;
+    max-width: 400px;
+    font-size: 1.125rem;
+  }
+
+  &-name {
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-weight: bold;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.125rem;
+    }
   }
 }

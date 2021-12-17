@@ -204,6 +204,7 @@ export default function renderDetails(details) {
         size: size,
         quantity: quantity,
       };
+
       //runs basket counter animation when product is added
       counterContainer.classList.add("animation");
       setTimeout(function () {
@@ -218,7 +219,6 @@ export default function renderDetails(details) {
       }, 1500);
     } else {
       messageContainer.innerHTML = "Product removed from basket.";
-
       setTimeout(function () {
         messageContainer.innerHTML = "";
       }, 1500);

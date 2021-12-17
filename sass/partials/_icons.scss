@@ -14,9 +14,8 @@ i {
 
 .search__icon {
   position: absolute;
-  top: 68%;
-  transform: translateY(-50%);
-  right: 0.5rem;
+  top: 31px;
+  right: 8px;
   height: 32px;
   width: 32px;
 }
@@ -118,7 +117,6 @@ i {
 }
 
 #counter-container {
-  // animation: shake-animation 5s ease;
   color: #fff;
   font-weight: bold;
   position: absolute;
@@ -139,6 +137,10 @@ i {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.animation {
+  animation: shake-animation 5s ease;
 }
 
 @keyframes shake-animation {
@@ -168,6 +170,4 @@ i {
   }
 }
 
-.animation {
-  animation: shake-animation 5s ease;
-}
+

@@ -6,8 +6,6 @@ export function basketCounter() {
 
   const basket = getExistingBasket();
 
-  //  console.log(basket);
-
   counterNumber.innerHTML = "";
   counterContainer.style.display = "none";
 

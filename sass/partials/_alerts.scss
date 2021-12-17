@@ -1,17 +1,17 @@
- .alert-container {
-   margin-top: 1rem;
- }
- 
- .newsletter__success {
-    font-size: 1.125rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: getColor(success);
-    transition: all 0.5s;
-  }
+.alert-container {
+  margin-top: 1rem;
+}
+
+.newsletter__success {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: getColor(newsletter);
+  transition: all 0.5s;
+}
 
 .alert {
   display: inline-block;
@@ -29,7 +29,7 @@
 
 .success {
   background-color: getColor(success);
- color: white;
+  color: white;
 }
 
 .warning {

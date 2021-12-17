@@ -1,4 +1,4 @@
-$hero-headings: "futura pt", tahoma, sans-serif;
+$hero-headings: "futura pt", trebuchet, tahoma, sans-serif;
 $primary-headings: "soleil", tahoma, sans-serif;
 $secondary-headings: "ff-tisa-web-pro", georgia, serif;
 $body-text: "ff-tisa-sans-web-pro", arial, sans-serif;
@@ -7,15 +7,15 @@ $button-text: "proxima nova", verdana, sans-serif;
 $colors: (
   primary: #ffffff,
   secondary: #323232,
-  // accent: #ed4e32,
   accent: #be402a,
-  background: #FAFAFA,
+  background: #fafafa,
   dark: #000000,
   error: #ed553b,
-  success: #159e4a,
+  success: #07612a,
   warning: #ffdd48,
   border: #d9d9d9,
-  admin: #0E6673,
+  admin: #0e6673,
+  newsletter: #00f6db,
 );
 
 @function getColor($color) {
@@ -58,7 +58,7 @@ $card-height: 440px;
 $widths: (
   //sets padding on mobile dropdown and hero content
   dynamicPadding: 7.5%,
-  dynamicPadding2: 10%, 
+  dynamicPadding2: 10%,
   //sets wrapper width of nav, footer and news
   baseSmallScreen: 85%,
   baseLargeScreen: 90%,

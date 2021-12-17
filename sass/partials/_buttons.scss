@@ -12,6 +12,8 @@
   cursor: pointer;
 }
 
+//hover state removed from small screens because else JS class toggle causes issues
+
 .hero__button {
   display: block;
   width: 200px;
@@ -19,7 +21,6 @@
   background-color: getColor(accent);
   font-size: getFontSize(heroButtonSmall);
 
-  //hover state removed from small screen because else JS class toggle causes issues
   @media (min-width: getBreakpoint(large)) {
     font-size: getFontSize(heroButtonLarge);
 
@@ -126,10 +127,11 @@
 }
 
 #buy-button {
-  width: 250px;
+  width: 265px;
   margin-top: 0.25rem;
 }
 
+// add and remove classes is toggled by JS
 .add-to-basket {
   background-color: getColor(accent);
 }
