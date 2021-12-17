@@ -88,12 +88,13 @@ header {
   &__icons-wrapper {
     display: flex;
     align-items: center;
-    padding-top: 5px;
   }
 
   &__icons-list {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding-top: 5px;
 
     @extend .base-list;
 

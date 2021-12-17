@@ -63,6 +63,8 @@ strong {
   font-size: getFontSize(mainSubHeadingSmall);
   font-weight: 400;
   margin-bottom: 0.5rem;
+  margin-top: 0;
+  padding-top: 0;
 
   @media (min-width: getBreakpoint(large)) {
     font-size: getFontSize(mainSubHeadingLarge);
@@ -390,7 +392,7 @@ label {
   align-items: center;
 }
 
-#login-label {
+.log-label {
   width: 50px;
   display: inline-block;
   position: absolute;
@@ -398,11 +400,11 @@ label {
   font-weight: 600;
   color: getColor(dark);
   top: 8.5px;
-  right: 32px;
+  right: 35px;
   padding: 0;
   cursor: pointer;
 }
 
-#login {
+#login, #logout {
   position: relative;
 }

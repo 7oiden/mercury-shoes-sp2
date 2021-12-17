@@ -45,7 +45,8 @@
             <ul class="nav__icons-list">
               <li>
                 <div class="nav__icon mobile-menu__toggle">
-                  <svg viewBox="0 0 24 24">
+                  <svg role="img" viewbox="0 0 24 24">
+                    <title>Navigation menu</title>
                     <path
                       fill="currentColor"
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
@@ -57,6 +58,7 @@
                 <li>
                   <a
                     href="basket.html"
+                    aria-label="basket"
                     class="nav__icon basket__icon"
                     id="basket"
                   >
@@ -73,6 +75,7 @@
                 </li>
                 <li class="admin-login">
                   <div class="nav__icon" id="login">
+                    <label for="login" id="login-label">Admin</label>
                     <svg viewBox="0 0 24 24">
                       <path
                         fill="currentColor"
@@ -144,7 +147,12 @@
                 <div class="edit-form-error"></div>
               </div>
               <div class="edit__input-wrapper">
-                <label for="title">Title <span class="label-light">(must be at least 5 characters)</span></label>
+                <label for="title"
+                  >Title
+                  <span class="label-light"
+                    >(must be at least 5 characters)</span
+                  ></label
+                >
                 <input
                   type="text"
                   class="input edit__input"
@@ -174,8 +182,10 @@
               </div>
               <div class="edit__input-wrapper">
                 <label for="color"
-                  >Color/s <span class="label-light">(multiple colors must be separated by a
-                  backslash)</span></label
+                  >Color/s
+                  <span class="label-light"
+                    >(multiple colors must be separated by a backslash)</span
+                  ></label
                 >
                 <input
                   type="text"
@@ -189,7 +199,11 @@
               </div>
               <div class="edit__input-wrapper">
                 <label for="short-description"
-                  >Short description <span class="label-light">(must be at least 10 characters and no more than 130 characters)</span></label
+                  >Short description
+                  <span class="label-light"
+                    >(must be at least 10 characters and no more than 130
+                    characters)</span
+                  ></label
                 >
                 <textarea
                   name="short-description"
@@ -206,7 +220,10 @@
               </div>
               <div class="edit__input-wrapper">
                 <label for="description"
-                  >Description <span class="label-light">(must be at least 15 characters)</span></label
+                  >Description
+                  <span class="label-light"
+                    >(must be at least 15 characters)</span
+                  ></label
                 >
                 <textarea
                   name="description"
@@ -217,23 +234,22 @@
                 <div class="error-messages" id="edit-description-error">
                   *Must be at least 15 characters
                 </div>
-                
               </div>
               <div class="add__input-wrapper" id="section-frame">
                 <p class="add__list-heading">Product images:</p>
                 <ul class="add__list">
                   <li class="add__list-text">
-                    Product image must have a 5:4 aspect ratio to avoid stretching
+                    Product image must have a 5:4 aspect ratio to avoid
+                    stretching
                   </li>
                   <li class="add__list-text">
-                    A placeholder image will automatically be inserted if the input field is left blank
+                    A placeholder image will automatically be inserted if the
+                    input field is left blank
                   </li>
                 </ul>
               </div>
               <div class="edit__input-wrapper">
-                <label for="product-image"
-                  >Image URL</label
-                >
+                <label for="product-image">Image URL</label>
                 <div class="edit__input-prefix-wrapper">
                   <div class="edit__input-prefix">https://</div>
                   <input
@@ -248,7 +264,10 @@
               </div>
               <div class="edit__input-wrapper">
                 <label for="image-alt-text"
-                  >Image alt-text <span class="label-light">(must be at least 10 characters)</span></label
+                  >Image alt-text
+                  <span class="label-light"
+                    >(must be at least 10 characters)</span
+                  ></label
                 >
                 <input
                   type="text"

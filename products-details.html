@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Mercury Shoes | Product details page"
-    />
+    <meta name="description" content="Mercury Shoes | Product details page" />
     <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
     <link
       rel="stylesheet"
@@ -49,7 +46,8 @@
             <ul class="nav__icons-list">
               <li>
                 <div class="nav__icon mobile-menu__toggle">
-                  <svg viewBox="0 0 24 24">
+                  <svg role="img" viewbox="0 0 24 24">
+                    <title>Navigation menu</title>
                     <path
                       fill="currentColor"
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
@@ -61,6 +59,7 @@
                 <li>
                   <a
                     href="basket.html"
+                    aria-label="basket"
                     class="nav__icon basket__icon"
                     id="basket"
                   >
@@ -77,6 +76,7 @@
                 </li>
                 <li class="admin-login">
                   <div class="nav__icon" id="login">
+                    <label for="login" id="login-label">Admin</label>
                     <svg viewBox="0 0 24 24">
                       <path
                         fill="currentColor"
@@ -154,7 +154,9 @@
               </p>
               <form class="newsletter__form">
                 <div class="newsletter__input-wrapper">
-                  <label for="newsletter-email" class="newsletter__label">Email</label>
+                  <label for="newsletter-email" class="newsletter__label"
+                    >Email</label
+                  >
                   <input
                     type="text"
                     class="newsletter__input input"
@@ -218,17 +220,17 @@
         <div>
           <ul class="footer__list">
             <li class="footer__item">
-              <a href="https://twitter.com"
+              <a href="https://twitter.com" aria-label="Twitter"
                 ><i class="fab fa-twitter footer__icon"></i
               ></a>
             </li>
             <li class="footer-item">
-              <a href="https://www.instagram.com/"
+              <a href="https://www.instagram.com/" arial-label="Instagram"
                 ><i class="fab fa-instagram footer__icon"></i
               ></a>
             </li>
             <li class="footer-item">
-              <a href="https://www.facebook.com/"
+              <a href="https://www.facebook.com/" aria-label="Facebook"
                 ><i class="fab fa-facebook-f footer__icon"></i
               ></a>
             </li>

@@ -109,20 +109,19 @@
   }
 }
 
-.featured {
-  padding-top: 25px;
-}
+
 
 .grid-wrapper {
   width: getWidth(gridSmall);
   margin: 0 auto;
+  margin-top: 50px;
 
   @media (min-width: getBreakpoint(medium)) {
     width: getWidth(gridMedium);
   }
 
   @media (min-width: getBreakpoint(large)) {
-    margin-top: 3rem;
+    
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
@@ -133,6 +132,7 @@
     width: getWidth(gridXxLarge);
   }
 }
+
 
 .featured__grid {
   width: getWidth(gridSmall);

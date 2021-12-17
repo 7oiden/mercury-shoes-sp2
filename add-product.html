@@ -45,7 +45,8 @@
             <ul class="nav__icons-list">
               <li>
                 <div class="nav__icon mobile-menu__toggle">
-                  <svg viewBox="0 0 24 24">
+                  <svg role="img" viewbox="0 0 24 24">
+                    <title>Navigation menu</title>
                     <path
                       fill="currentColor"
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
@@ -57,6 +58,7 @@
                 <li>
                   <a
                     href="basket.html"
+                    aria-label="basket"
                     class="nav__icon basket__icon"
                     id="basket"
                   >
@@ -73,6 +75,7 @@
                 </li>
                 <li class="admin-login">
                   <div class="nav__icon" id="login">
+                    <label for="login" id="login-label">Admin</label>
                     <svg viewBox="0 0 24 24">
                       <path
                         fill="currentColor"
@@ -143,7 +146,12 @@
                 <div class="add-form-error"></div>
               </div>
               <div class="add__input-wrapper">
-                <label for="title">Title <span class="label-light">(must be at least 5 characters)</span></label>
+                <label for="title"
+                  >Title
+                  <span class="label-light"
+                    >(must be at least 5 characters)</span
+                  ></label
+                >
                 <input
                   type="text"
                   class="input add__input"
@@ -173,8 +181,10 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="color"
-                  >Color/s <span class="label-light">(multiple colors must be separated by a
-                  backslash)</span></label
+                  >Color/s
+                  <span class="label-light"
+                    >(multiple colors must be separated by a backslash)</span
+                  ></label
                 >
                 <input
                   type="text"
@@ -188,7 +198,11 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="short-description"
-                  >Short description <span class="label-light">(must be at least 10 characters and no more than 130 characters)</span></label
+                  >Short description
+                  <span class="label-light"
+                    >(must be at least 10 characters and no more than 130
+                    characters)</span
+                  ></label
                 >
                 <textarea
                   name="short-description"
@@ -205,7 +219,10 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="description"
-                  >Description <span class="label-light">(must be at least 15 characters)</span></label
+                  >Description
+                  <span class="label-light"
+                    >(must be at least 15 characters)</span
+                  ></label
                 >
                 <textarea
                   name="description"
@@ -250,7 +267,10 @@
               </div>
               <div class="add__input-wrapper">
                 <label for="image-alt-text"
-                  >Image alt-text <span class="label-light">(must be at least 10 characters)</span></label
+                  >Image alt-text
+                  <span class="label-light"
+                    >(must be at least 10 characters)</span
+                  ></label
                 >
                 <input
                   type="text"
