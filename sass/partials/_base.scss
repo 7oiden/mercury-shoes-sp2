@@ -42,6 +42,7 @@ a {
 }
 
 main {
+  height: 100%;
   background-image: url("../images/background_pattern_grey.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -72,7 +73,7 @@ main {
   border-radius: 50%;
   width: 65px;
   height: 65px;
-  margin-top: 1rem;
+  padding-top: 1rem;
   animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin {
@@ -99,5 +100,3 @@ hr {
     height: 4px;
   }
 }
-
-

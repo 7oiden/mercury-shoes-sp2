@@ -53,6 +53,7 @@ a {
 }
 
 main {
+  height: 100%;
   background-image: url("../images/background_pattern_grey.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -85,7 +86,7 @@ main.products-overview {
   border-radius: 50%;
   width: 65px;
   height: 65px;
-  margin-top: 1rem;
+  padding-top: 1rem;
   -webkit-animation: spin 1s ease-in-out infinite;
           animation: spin 1s ease-in-out infinite;
 }
@@ -213,7 +214,8 @@ strong {
 .add__heading,
 .edit__heading,
 .about__heading,
-.basket__heading {
+.basket__heading,
+.confirmation__heading {
   font-family: "soleil", tahoma, sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -226,8 +228,31 @@ strong {
   .add__heading,
   .edit__heading,
   .about__heading,
-  .basket__heading {
+  .basket__heading,
+  .confirmation__heading {
     font-size: 2.5rem;
+  }
+}
+
+.confirmation__heading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .confirmation__heading {
+    font-size: 2rem;
+  }
+}
+
+.confirmation__sub-heading {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  .confirmation__sub-heading {
+    font-size: 1.25rem;
   }
 }
 
@@ -559,7 +584,7 @@ label {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   font-style: italic;
-  color: #07612a;
+  color: #097c35;
 }
 
 .nav__icon--admin {
@@ -578,13 +603,14 @@ label {
   font-size: 0.875rem;
   font-weight: 600;
   color: #000000;
-  top: 8.5px;
-  right: 35px;
+  bottom: 15px;
+  left: 5px;
   padding: 0;
   cursor: pointer;
 }
 
-#login, #logout {
+#login,
+#logout {
   position: relative;
 }
 
@@ -882,7 +908,8 @@ label {
 .returns,
 .sizes,
 .contact,
-.location {
+.location,
+.confirmation {
   margin: 0 auto;
   width: 90%;
 }
@@ -893,12 +920,14 @@ label {
   .returns,
   .sizes,
   .contact,
-  .location {
+  .location,
+  .confirmation {
     width: 85%;
   }
 }
 
-.about-page-wrapper {
+.about-page-wrapper,
+.confirmation-page-wrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
@@ -915,13 +944,15 @@ label {
 }
 
 @media (min-width: 768px) {
-  .about-page-wrapper {
+  .about-page-wrapper,
+  .confirmation-page-wrapper {
     width: 85%;
   }
 }
 
 @media (min-width: 992px) {
-  .about-page-wrapper {
+  .about-page-wrapper,
+  .confirmation-page-wrapper {
     width: 70%;
     border-radius: 5px;
     border: 1px solid #d9d9d9;
@@ -929,15 +960,23 @@ label {
 }
 
 @media (min-width: 1200px) {
-  .about-page-wrapper {
+  .about-page-wrapper,
+  .confirmation-page-wrapper {
     width: 65%;
   }
 }
 
 @media (min-width: 1400px) {
-  .about-page-wrapper {
+  .about-page-wrapper,
+  .confirmation-page-wrapper {
     width: 55%;
   }
+}
+
+.confirmation-page-wrapper {
+  padding-top: 0;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
 }
 
 .contact-wrapper {
@@ -1184,7 +1223,7 @@ i {
 }
 
 .in-stock {
-  background-color: #07612a;
+  background-color: #097c35;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -1479,6 +1518,13 @@ header {
   }
 }
 
+.confirmation__head {
+  padding: 1rem;
+  border-radius: 5px 5px 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, #fafafa), to(#e6e6e6));
+  background: linear-gradient(180deg, white 0%, #fafafa 50%, #e6e6e6 100%);
+}
+
 .nav__logo {
   width: 150px;
   display: block;
@@ -1493,6 +1539,12 @@ header {
     margin-right: 3rem;
     margin-bottom: 0;
   }
+}
+
+.confirmation__logo {
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 0.25rem;
 }
 
 .products-banner {
@@ -1696,6 +1748,12 @@ header {
   margin-top: 0.25rem;
 }
 
+#confirmation-button {
+  width: 280px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .add-to-basket {
   background-color: #be402a;
 }
@@ -1865,28 +1923,41 @@ header {
   display: block;
   top: 50px;
   background: transparent;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.65)), to(rgba(255, 255, 255, 0.65)));
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.65) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 7.5%;
   padding-right: 7.5%;
 }
 
+@media (min-width: 768px) {
+  .hero__transparent-wrapper {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.85)), color-stop(75%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
 @media (min-width: 992px) {
   .hero__transparent-wrapper {
     top: 75px;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.85)), color-stop(85%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.85)), color-stop(75%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0) 100%);
   }
 }
 
 @media (min-width: 1200px) {
   .hero__transparent-wrapper {
-    top: 75px;
     padding-left: 10%;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.85)), color-stop(75%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.85)), color-stop(65%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero__transparent-wrapper {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.85)), color-stop(55%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
   }
 }
 
@@ -2199,9 +2270,8 @@ header {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    background: #584f4f;
     background: radial-gradient(circle, #584f4f 0%, black 100%);
-    color: white;
+    color: #ffffff;
   }
 }
 
@@ -2568,7 +2638,7 @@ label {
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;
-  border-radius: 5px;
+  border: 1px solid #d9d9d9;
   margin-bottom: 1rem;
 }
 
@@ -2578,22 +2648,18 @@ label {
 }
 
 .success {
-  background-color: #07612a;
+  background-color: #097c35;
   color: white;
 }
 
 .warning {
-  background-color: #ffdd48;
+  background-color: #f1cc28;
 }
 
 .error-messages {
   color: #ed553b;
   display: none;
   padding-top: 0.25rem;
-}
-
-.basket-main {
-  height: 100%;
 }
 
 .basket__container {

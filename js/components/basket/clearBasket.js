@@ -1,9 +1,7 @@
 export function clearBasket() {
   const clearButton = document.querySelector("#clear-basket");
   const basketContainer = document.querySelector(".basket__list");
-  const counterContainer = document.querySelector("#counter-container");
   const summaryContainer = document.querySelector(".summary");
-  const checkoutButton = document.querySelector(".checkout-button");
 
   clearButton.addEventListener("click", clearBasketList);
 

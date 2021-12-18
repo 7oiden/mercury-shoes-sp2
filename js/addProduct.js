@@ -1,7 +1,6 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import displayAlert from "./components/common/displayAlert.js";
-// import { alertContainer } from "./settings/constants.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import { basketCounter } from "./components/common/basketCounter.js";
@@ -16,11 +15,9 @@ if (!token) {
 }
 
 basketCounter();
-
-const alertContainer = document.querySelector(".addalert-container");
-
 createAdminNav();
 
+const alertContainer = document.querySelector(".addalert-container");
 const addFormError = document.querySelector(".add-form-error");
 
 const addForm = document.querySelector(".add__form");
@@ -52,8 +49,6 @@ function submitAddForm(event) {
   let productImageValue = "https://" + productImage.value.trim();
   const imageAltTextValue = imageAltText.value.trim();
 
-  // console.log(productImageValue);
-
   const featuredValue = document.querySelector(
     'input[name="featured"]:checked'
   ).value;
@@ -61,8 +56,6 @@ function submitAddForm(event) {
   const stockValue = document.querySelector(
     'input[name="stock"]:checked'
   ).value;
-
-  console.log(productImageValue);
 
   // validation
   validateAddForm();
@@ -78,7 +71,6 @@ function submitAddForm(event) {
     checkLength(shortDescription.value, 9) &&
     checkMaxLength(shortDescription.value, 131) &&
     checkLength(description.value, 14) &&
-    // checkLength(productImage.value, 9) &&
     checkLength(imageAltText.value, 9) &&
     validateNumber(price.value)
   ) {
@@ -143,7 +135,7 @@ function submitAddForm(event) {
       const response = await fetch(productsUrl, options);
       const json = await response.json();
 
-      console.log(json);
+      // console.log(json);
 
       if (json.created_at) {
         displayAlert(
@@ -160,11 +152,11 @@ function submitAddForm(event) {
       }
 
       if (json.error) {
-        displayAlert("error", json.message, ".addalert-container");
+        displayAlert("error", json.message, ".add__form");
       }
-      console.log(json);
+      // console.log(json);
     } catch (error) {
-      displayAlert("error", "Something went wrong!", ".addalert-container");
+      displayAlert("error", "Something went wrong!", ".add__form");
     }
   }
 }

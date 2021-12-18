@@ -9,12 +9,10 @@ const adminForm = document.querySelector(".admin__form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 
-
-
 export default function adminLogin() {
   adminForm.addEventListener("submit", submitAdminForm);
 
-  console.log(username.value);
+  // console.log(username.value);
 
   function submitAdminForm(event) {
     event.preventDefault();
@@ -49,12 +47,11 @@ export default function adminLogin() {
       const response = await fetch(adminUrl, options);
       const json = await response.json();
 
-      console.log(json);
+      // console.log(json);
 
       if (json.user) {
         saveToken(json.jwt);
         saveUser(json.user);
-
         window.location.reload();
       }
 

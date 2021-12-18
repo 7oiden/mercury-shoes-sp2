@@ -109,8 +109,6 @@
   }
 }
 
-
-
 .grid-wrapper {
   width: getWidth(gridSmall);
   margin: 0 auto;
@@ -121,7 +119,6 @@
   }
 
   @media (min-width: getBreakpoint(large)) {
-    
   }
 
   @media (min-width: getBreakpoint(xlarge)) {
@@ -132,7 +129,6 @@
     width: getWidth(gridXxLarge);
   }
 }
-
 
 .featured__grid {
   width: getWidth(gridSmall);
@@ -198,7 +194,8 @@
 .returns,
 .sizes,
 .contact,
-.location {
+.location,
+.confirmation {
   margin: 0 auto;
   width: 90%;
 
@@ -216,7 +213,8 @@
   }
 }
 
-.about-page-wrapper {
+.about-page-wrapper,
+.confirmation-page-wrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
@@ -243,6 +241,12 @@
   @media (min-width: getBreakpoint(xxlarge)) {
     width: getWidth(containerXxLarge);
   }
+}
+
+.confirmation-page-wrapper {
+  padding-top: 0;
+
+  @include content-border(5px);
 }
 
 .contact-wrapper {

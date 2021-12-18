@@ -4,22 +4,20 @@ import adminLogin from "./components/common/adminLogin.js";
 import createAdminNav from "./components/common/createAdminNav.js";
 import { clearBasket } from "./components/basket/clearBasket.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { getExistingBasket } from "./utils/storage.js";
+// import { getExistingBasket } from "./utils/storage.js";
 import { renderBasket, renderSummary} from "./ui/renderBasket.js";
 
 
+// const basket = getExistingBasket();
 basketCounter();
 createAdminNav();
 adminLogin();
-
-const basket = getExistingBasket();
-
 renderBasket();
 clearBasket();
 renderSummary();
 
 
-console.log(basket);
+// console.log(basket);
 
 
 

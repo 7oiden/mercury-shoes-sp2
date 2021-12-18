@@ -17,31 +17,48 @@
     background: transparent;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.65) 0%,
-      rgba(255, 255, 255, 0.65) 100%
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.7) 100%
     );
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: getWidth(dynamicPadding);
     padding-right: getWidth(dynamicPadding);
 
+    @media (min-width: getBreakpoint(medium)) {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(255, 255, 255, 0) 75%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
     @media (min-width: getBreakpoint(large)) {
       top: 75px;
       background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0.85) 0%,
-        rgba(255, 255, 255, 0) 85%,
+        rgba(255, 255, 255, 0.5) 75%,
         rgba(255, 255, 255, 0) 100%
       );
     }
 
     @media (min-width: getBreakpoint(xlarge)) {
-      top: 75px;
       padding-left: getWidth(dynamicPadding2);
       background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0.85) 0%,
-        rgba(255, 255, 255, 0) 75%,
+        rgba(255, 255, 255, 0) 65%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    @media (min-width: getBreakpoint(xxlarge)) {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(255, 255, 255, 0) 55%,
         rgba(255, 255, 255, 0) 100%
       );
     }

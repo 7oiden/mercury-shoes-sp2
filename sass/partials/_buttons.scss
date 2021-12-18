@@ -131,6 +131,12 @@
   margin-top: 0.25rem;
 }
 
+#confirmation-button {
+  width: 280px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 // add and remove classes is toggled by JS
 .add-to-basket {
   background-color: getColor(accent);

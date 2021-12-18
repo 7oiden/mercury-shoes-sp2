@@ -70,7 +70,8 @@ strong {
 .add__heading,
 .edit__heading,
 .about__heading,
-.basket__heading {
+.basket__heading,
+.confirmation__heading {
   font-family: $primary-headings;
   font-size: getFontSize(mainHeadingSmall);
   font-weight: 400;
@@ -79,6 +80,24 @@ strong {
 
   @media (min-width: getBreakpoint(large)) {
     font-size: getFontSize(mainHeadingLarge);
+  }
+}
+
+.confirmation__heading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: 2rem;
+  }
+}
+
+.confirmation__sub-heading {
+  padding-top: 1rem;
+  font-size: 1rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: 1.25rem;
   }
 }
 
@@ -110,7 +129,7 @@ strong {
 }
 
 .summary__message {
-  color: getColor(accent)
+  color: getColor(accent);
 }
 
 .card__title,
@@ -395,12 +414,13 @@ label {
   font-size: 0.875rem;
   font-weight: 600;
   color: getColor(dark);
-  top: 8.5px;
-  right: 35px;
+  bottom: 15px;
+  left: 5px;
   padding: 0;
   cursor: pointer;
 }
 
-#login, #logout {
+#login,
+#logout {
   position: relative;
 }

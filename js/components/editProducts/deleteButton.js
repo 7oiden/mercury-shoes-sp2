@@ -5,7 +5,7 @@ import { getExistingBasket, saveBasket } from "../../utils/storage.js";
 
 export default function deleteButton(id) {
   const deleteContainer = document.querySelector(".delete-container");
-
+  
   deleteContainer.innerHTML = `<button type="button" class="button delete-button">Delete product</button>`;
 
   const deleteButton = document.querySelector(".delete-button");
@@ -58,7 +58,7 @@ export default function deleteButton(id) {
           displayAlert("error", json.message, ".editalert-container");
         }
 
-        console.log(json);
+        // console.log(json);
       } catch (error) {
         //console.log(error);
         displayAlert("error", "Something went wrong!", ".editalert-container");

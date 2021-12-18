@@ -20,10 +20,6 @@ if (!token) {
   location.href = "/";
 }
 
-// const newsButton = document.querySelector("#news-test");
-
-// console.log(newsButton.getAttribute("data-test"));
-
 basketCounter();
 
 const alertContainer = document.querySelector(".editalert-container");
@@ -41,7 +37,6 @@ if (!id) {
 const productUrl = baseUrl + "products/" + id;
 
 const editFormError = document.querySelector(".edit-form-error");
-
 const editForm = document.querySelector(".edit__form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
@@ -53,7 +48,6 @@ const imageAltText = document.querySelector("#image-alt-text");
 const loader = document.querySelector(".loader");
 
 const idInput = document.querySelector("#id");
-
 const featuredNo = document.querySelector("#featured-no");
 const featuredYes = document.querySelector("#featured-yes");
 const stockNo = document.querySelector("#stock-no");
@@ -66,7 +60,7 @@ const stockYes = document.querySelector("#stock-yes");
     const response = await fetch(productUrl);
     const details = await response.json();
 
-    console.log(details);
+    // console.log(details);
 
     if (details.featured === true) {
       featuredYes.checked = true;
@@ -100,13 +94,13 @@ const stockYes = document.querySelector("#stock-yes");
     } else {
       displayAlert(
         "warning",
-        "This product is linked to the new section on the home-page and can not be deleted.",
+        "This product is linked to the news section at the home-page and can not be deleted.",
         ".editalert-container"
       );
     }
  
   } catch (error) {
-    displayAlert("error", error, ".alert-container");
+    displayAlert("error", error, ".edit__form");
     //console.log(error);
   } finally {
     loader.style.display = "none";
@@ -123,8 +117,6 @@ function submitEditForm(event) {
   }
 
   event.preventDefault();
-
-  console.log("hi");
 
   editFormError.innerHTML = "";
   alertContainer.innerHTML = "";
@@ -233,10 +225,6 @@ function submitEditForm(event) {
 
     const editData = JSON.stringify(jsonData);
 
-    // const token = getToken();
-
-    // console.log(editData);
-
     const options = {
       method: "PUT",
       body: editData,
@@ -265,10 +253,10 @@ function submitEditForm(event) {
       }
 
       if (json.error) {
-        displayAlert("error", json.message, ".alert-container");
+        displayAlert("error", json.message, ".edit__form");
       }
     } catch (error) {
-      displayAlert("error", "Something went wrong!", ".alert-container");
+      displayAlert("error", "Something went wrong!", ".edit__form");
     }
   }
 }
