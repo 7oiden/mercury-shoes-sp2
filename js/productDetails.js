@@ -1,5 +1,4 @@
-import { mobileToggler } from "./components/dropdownTogglers.js";
-import { adminToggler } from "./components/dropdownTogglers.js";
+import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
 import { baseUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
@@ -10,6 +9,7 @@ import renderDetails from "./ui/renderDetails.js";
 
 basketCounter();
 createAdminNav();
+adminToggler();
 adminLogin();
 
 const queryString = document.location.search;

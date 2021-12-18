@@ -56,6 +56,11 @@
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
                     />
                   </svg>
+                  <div class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                      <!-- dynamic created -->
+                    </ul>
+                  </div>
                 </div>
               </li>
               <div class="nav__icons-wrapper">
@@ -77,64 +82,58 @@
                     </div>
                   </a>
                 </li>
-                <li class="admin-login" id="login">
+                <li class="admin-login">
                   <div class="nav__icon">
-                    <span for="login" class="log-label" >Admin</span>
-                    <svg viewbox="0 0 24 24">
+                    <!-- <span for="login" class="log-label">Admin</span> -->
+                    <svg viewbox="0 0 24 24" class="login">
                       <path
+                        class="login"
                         fill="currentColor"
                         d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z"
                       />
                     </svg>
                   </div>
+                  <div class="admin__dropdown">
+                    <div class="admin__container">
+                      <p class="admin__heading">Admin login</p>
+                      <div class="red-line"></div>
+                      <form class="admin__form">
+                        <div class="admin__input-wrapper">
+                          <label for="username">Username</label>
+                          <input
+                            type="text"
+                            class="input admin__input"
+                            id="username"
+                            placeholder="Username"
+                          />
+                          <div class="error-messages" id="admin-username-error">
+                            * Must be at least 4 characters
+                          </div>
+                        </div>
+                        <div class="admin__input-wrapper">
+                          <label for="password">Password</label>
+                          <input
+                            type="password"
+                            name="password"
+                            class="input admin__input"
+                            id="password"
+                            placeholder="Password"
+                          />
+                          <div class="error-messages" id="admin-password-error">
+                            * Must be at least 6 characters
+                          </div>
+                        </div>
+                        <div class="alert-container"></div>
+                        <button id="sign-in" class="button secondary-button">
+                          Sign in
+                        </button>
+                      </form>
+                    </div>
+                  </div>
                 </li>
                 <li class="admin-logout"></li>
               </div>
             </ul>
-          </div>
-
-          <div class="mobile-menu">
-            <ul class="mobile-menu__list">
-              <!-- dynamic created -->
-            </ul>
-          </div>
-
-          <div class="admin__dropdown">
-            <div class="admin__container">
-              <p class="admin__heading">Admin login</p>
-              <div class="red-line"></div>
-              <form class="admin__form">
-                <div class="admin__input-wrapper">
-                  <label for="username">Username</label>
-                  <input
-                    type="text"
-                    class="input admin__input"
-                    id="username"
-                    placeholder="Username"
-                  />
-                  <div class="error-messages" id="admin-username-error">
-                    * Must be at least 4 characters
-                  </div>
-                </div>
-                <div class="admin__input-wrapper">
-                  <label for="password">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    class="input admin__input"
-                    id="password"
-                    placeholder="Password"
-                  />
-                  <div class="error-messages" id="admin-password-error">
-                    * Must be at least 6 characters
-                  </div>
-                </div>
-                <div class="alert-container"></div>
-                <button id="sign-in" class="button secondary-button">
-                  Sign in
-                </button>
-              </form>
-            </div>
           </div>
         </nav>
       </header>
@@ -150,9 +149,7 @@
               </h2>
             </hgroup>
             <div class="hero__red-line"></div>
-            <p class="hero__tagline">
-              High quality running shoes since 1988
-            </p>
+            <p class="hero__tagline">High quality running shoes since 1988</p>
             <a href="products-overview.html" class="button hero__button"
               >Shop now</a
             >
@@ -280,7 +277,10 @@
             </li>
             <li class="footer-item">
               <a href="https://www.facebook.com/" aria-label="Facebook"
-                ><i aria-hidden="true" class="fab fa-facebook-f footer__icon"></i
+                ><i
+                  aria-hidden="true"
+                  class="fab fa-facebook-f footer__icon"
+                ></i
               ></a>
             </li>
           </ul>

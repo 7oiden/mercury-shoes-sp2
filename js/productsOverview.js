@@ -1,5 +1,4 @@
-import { mobileToggler } from "./components/dropdownTogglers.js";
-import { adminToggler } from "./components/dropdownTogglers.js";
+import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
 import adminLogin from "./components/common/adminLogin.js";
 import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 import { productsUrl } from "./settings/api.js";
@@ -11,6 +10,7 @@ import { basketCounter } from "./components/common/basketCounter.js";
 
 basketCounter();
 createAdminNav();
+adminToggler();
 adminLogin();
 
 

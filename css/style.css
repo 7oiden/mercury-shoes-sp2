@@ -1187,7 +1187,7 @@ i {
 }
 
 .nav__icon {
-  margin-left: 4rem;
+  margin-left: 3rem;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -1822,7 +1822,7 @@ header {
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), color-stop(50%, #fafafa), to(#e6e6e6));
   background: linear-gradient(180deg, #e6e6e6 0%, #fafafa 50%, #e6e6e6 100%);
-  top: 117px;
+  top: 120px;
   right: 0;
   gap: 1rem;
   z-index: -1;
@@ -1832,8 +1832,8 @@ header {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   display: none;
-  -webkit-animation: animate-dropdown 400ms ease-in-out forwards;
-          animation: animate-dropdown 400ms ease-in-out forwards;
+  -webkit-animation: animate-dropdown 300ms ease-in-out forwards;
+          animation: animate-dropdown 300ms ease-in-out forwards;
   -webkit-transform-origin: top center;
           transform-origin: top center;
   -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
@@ -1844,10 +1844,6 @@ header {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
-  }
-  80% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1);
@@ -1860,10 +1856,6 @@ header {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-  80% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -1873,7 +1865,7 @@ header {
 @media (min-width: 992px) {
   .admin__dropdown {
     width: 600px;
-    top: 78px;
+    top: 83px;
   }
 }
 

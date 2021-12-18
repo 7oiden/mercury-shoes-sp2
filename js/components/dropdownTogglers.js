@@ -11,16 +11,26 @@ export function mobileToggler() {
 
 hamburgerIcon.addEventListener("click", mobileToggler);
 
-const adminLoginIcon = document.querySelector("#login");
+const adminLoginIcon = document.querySelector(".login");
 const adminDropdown = document.querySelector(".admin__dropdown");
 
 export function adminToggler() {
-  if (adminDropdown.style.display === "block") {
-    adminDropdown.style.display = "none";
-  } else {
-    adminDropdown.style.display = "block";
-    adminDropdown.style.zIndex = "9999";
+  function openAdminDropdown() {
+    if (adminDropdown.style.display === "block") {
+      adminDropdown.style.display = "none";
+    } else {
+      adminDropdown.style.display = "block";
+      adminDropdown.style.zIndex = "9999";
+    }
   }
-}
 
-adminLoginIcon.addEventListener("click", adminToggler);
+  adminLoginIcon.addEventListener("click", openAdminDropdown);
+
+  document.addEventListener("click", function (event) {
+    const isClickInsideDropdown = adminDropdown.contains(event.target);
+
+    if (!isClickInsideDropdown && !event.target.matches(".login")) {
+      adminDropdown.style.display = "none";
+    }
+  });
+}

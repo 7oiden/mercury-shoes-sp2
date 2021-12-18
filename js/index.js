@@ -1,5 +1,4 @@
-import { mobileToggler } from "./components/dropdownTogglers.js";
-import { adminToggler } from "./components/dropdownTogglers.js";
+import { mobileToggler, adminToggler} from "./components/dropdownTogglers.js";
 import adminLogin from "./components/common/adminLogin.js";
 import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 import { productsUrl, heroUrl } from "./settings/api.js";
@@ -9,10 +8,10 @@ import createAdminNav from "./components/common/createAdminNav.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { renderHero } from "./ui/renderHero.js";
 
-
 basketCounter();
-createAdminNav();
+adminToggler();
 adminLogin();
+createAdminNav();
 
 (async function fetchApi() {
   try {
@@ -46,7 +45,24 @@ adminLogin();
   }
 })();
 
+const adminLoginIcon = document.querySelector("#login");
+const adminDropdown = document.querySelector(".admin__dropdown");
 
+// function openAdminDropdown() {
+//   if (adminDropdown.style.display === "block") {
+//     adminDropdown.style.display = "none";
+//   } else {
+//     adminDropdown.style.display = "block";
+//     adminDropdown.style.zIndex = "9999";
+//   }
+// }
 
+// adminLoginIcon.addEventListener("click", openAdminDropdown);
 
+// document.addEventListener("click", function (event) {
+//   const isClickInsideDropdown = adminDropdown.contains(event.target);
 
+//   if (!isClickInsideDropdown && !event.target.matches("#login")) {
+//     adminDropdown.style.display = "none";
+//   }
+// });
