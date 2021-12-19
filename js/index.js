@@ -21,9 +21,9 @@ adminLogin();
     renderHero(result);
   } catch (error) {
     displayAlert(
-      "alert error",
-      "An error has occured when trying to fetch the API",
-      ".featured__grid"
+      "alert warning",
+      "Background image could not be fetched, please try to reload page in a while",
+      ".image-alert"
     );
   }
 })();
@@ -32,7 +32,7 @@ adminLogin();
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
-
+   
     renderFeaturedProducts(json);
   } catch (error) {
     displayAlert(

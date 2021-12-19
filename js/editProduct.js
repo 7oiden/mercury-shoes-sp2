@@ -94,7 +94,7 @@ const stockYes = document.querySelector("#stock-yes");
       );
     }
   } catch (error) {
-    displayAlert("error", error, ".edit__form");
+    displayAlert("error", "An error has occured when trying to fetch the API", ".edit__form");
   } finally {
     loader.style.display = "none";
   }

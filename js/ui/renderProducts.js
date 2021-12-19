@@ -6,8 +6,7 @@ const token = getToken();
 const productsContainer = document.querySelector(".products__grid");
 
 export function renderProducts(products) {
-  // console.log(products);
-
+ 
   productsContainer.innerHTML = "";
 
   products.forEach((product) => {

@@ -86,7 +86,6 @@ main.products-overview {
   border-radius: 50%;
   width: 65px;
   height: 65px;
-  padding-top: 1rem;
   -webkit-animation: spin 1s ease-in-out infinite;
           animation: spin 1s ease-in-out infinite;
 }

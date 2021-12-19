@@ -4,8 +4,6 @@ export default function loadMoreItems(items) {
 
    let num = 8;
 
-  //  console.log(items);
-
    for (let i = 0; i < productCards.length; i++) {
      if (i < num) {
        productCards[i].classList.remove("remove-card");

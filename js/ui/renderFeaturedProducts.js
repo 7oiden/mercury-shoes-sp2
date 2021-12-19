@@ -1,7 +1,6 @@
 const featuredContainer = document.querySelector(".featured__grid");
 
 export function renderFeaturedProducts(products) {
-  // console.log(products);
 
   featuredContainer.innerHTML = "";
 

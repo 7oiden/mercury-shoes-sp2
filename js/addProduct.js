@@ -64,8 +64,6 @@ function submitAddForm(event) {
   // validation
   validateAddForm();
 
-  console.log(productImage.value);
-
   //automatically adds placeholder image if the input field has been left empty
   if (productImage.value === "") {
     productImageValue = placeholderUrl;
