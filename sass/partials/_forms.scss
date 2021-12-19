@@ -29,12 +29,6 @@ select {
   @include content-border(5px);
 }
 
-//quantity and size select
-#quantity,
-#size {
-  width: 4rem;
-}
-
 label {
   font-weight: bold;
   padding-bottom: 0.25rem;
@@ -193,6 +187,12 @@ label {
   border-right: 1px solid getColor(border);
   border-top: 1px solid getColor(border);
   border-bottom: 1px solid getColor(border);
+}
+
+//quantity and size select
+#quantity,
+#size {
+  width: 4rem;
 }
 
 #info-frame {

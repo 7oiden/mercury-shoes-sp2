@@ -125,7 +125,13 @@ strong {
 }
 
 .summary__heading {
+  font-family: $primary-headings;
   margin: 0;
+  font-size: 1.25rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: 1.375rem;
+  }
 }
 
 .summary__message {
