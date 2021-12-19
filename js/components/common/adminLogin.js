@@ -12,8 +12,6 @@ const password = document.querySelector("#password");
 export default function adminLogin() {
   adminForm.addEventListener("submit", submitAdminForm);
 
-  // console.log(username.value);
-
   function submitAdminForm(event) {
     event.preventDefault();
 
@@ -46,8 +44,6 @@ export default function adminLogin() {
     try {
       const response = await fetch(adminUrl, options);
       const json = await response.json();
-
-      // console.log(json);
 
       if (json.user) {
         saveToken(json.jwt);

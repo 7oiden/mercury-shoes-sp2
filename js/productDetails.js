@@ -1,7 +1,7 @@
 import { baseUrl } from "./settings/api.js";
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
+import { mobileToggler, adminToggler } from "./components/common/dropdownTogglers.js";
 import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
 import renderDetails from "./ui/renderDetails.js";
@@ -26,8 +26,6 @@ const detailUrl = baseUrl + "products/" + id;
   try {
     const response = await fetch(detailUrl);
     const json = await response.json();
-
-    // console.log(json);
 
     document.title = `Mercury Shoes | ${json.title}`;
 

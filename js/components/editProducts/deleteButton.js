@@ -57,10 +57,7 @@ export default function deleteButton(id) {
         if (json.error) {
           displayAlert("error", json.message, ".editalert-container");
         }
-
-        // console.log(json);
       } catch (error) {
-        //console.log(error);
         displayAlert("error", "Something went wrong!", ".editalert-container");
       }
     }

@@ -44,7 +44,6 @@ a {
 main {
   height: 100%;
   background-image: url("../images/background_pattern_grey.jpg");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
@@ -52,6 +51,7 @@ main {
   padding-bottom: 30px;
 
   @media (min-width: getBreakpoint(large)) {
+    background-attachment: fixed;
     padding-top: 75px;
     padding-bottom: 75px;
   }

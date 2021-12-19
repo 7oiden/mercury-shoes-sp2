@@ -1,7 +1,10 @@
 import { productsUrl } from "./settings/api.js";
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
+import {
+  mobileToggler,
+  adminToggler,
+} from "./components/common/dropdownTogglers.js";
 import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
 import { renderProducts } from "./ui/renderProducts.js";
@@ -18,7 +21,6 @@ adminLogin();
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    // console.log(json);
     renderProducts(json);
     searchProducts(json);
   } catch (error) {

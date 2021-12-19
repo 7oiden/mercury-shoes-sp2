@@ -2,7 +2,7 @@ import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler } from "./components/dropdownTogglers.js";
+import { mobileToggler } from "./components/common/dropdownTogglers.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { placeholderUrl } from "./settings/constants.js";
 import {
@@ -33,8 +33,6 @@ const description = document.querySelector("#description");
 const productImage = document.querySelector("#product-image");
 const imageAltText = document.querySelector("#image-alt-text");
 
-const alert = document.querySelector(".addalert-container");
-
 document.getElementById("product-image").value = placeholderUrl.substring(
   "https://".length
 );
@@ -45,7 +43,7 @@ function submitAddForm(event) {
   event.preventDefault();
 
   addFormError.innerHTML = "";
-  alert.innerHTML = "";
+  alertContainer.innerHTML = "";
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
@@ -143,8 +141,6 @@ function submitAddForm(event) {
       const response = await fetch(productsUrl, options);
       const json = await response.json();
 
-      // console.log(json);
-
       if (json.created_at) {
         displayAlert(
           "success",
@@ -162,7 +158,6 @@ function submitAddForm(event) {
       if (json.error) {
         displayAlert("error", json.message, ".add__form");
       }
-      // console.log(json);
     } catch (error) {
       displayAlert("error", "Something went wrong!", ".add__form");
     }

@@ -1,5 +1,5 @@
 import { getToken } from "../utils/storage.js";
-import loadMoreItems from "../components/loadMoreButton.js";
+import loadMoreItems from "../components/productsOverview/loadMoreButton.js";
 
 const token = getToken();
 

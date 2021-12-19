@@ -21,12 +21,13 @@
 .products-banner {
   background-image: url("../images/products-banner-small.jpg");
   background-size: cover;
-  background-position: bottom right;
+  background-position: 90% bottom;
   height: 450px;
 
   @media (min-width: getBreakpoint(large)) {
     background-image: url("../images/products-banner-large.jpg");
     height: 500px;
+    background-position: center bottom;
   }
 }
 

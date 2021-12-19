@@ -14,22 +14,22 @@ export function renderHero(hero) {
   if (window.innerWidth <= 1200) {
     heroContainer.style.background = `url(${heroImageSmall})`;
     heroContainer.style.backgroundSize = "cover";
-    heroContainer.style.backgroundPosition = "right bottom";
+    heroContainer.style.backgroundPosition = "70% bottom";
   } else if (screen.width > 1200) {
     heroContainer.style.background = `url(${heroImage})`;
     heroContainer.style.backgroundSize = "cover";
-    heroContainer.style.backgroundPosition = "right bottom";
+    heroContainer.style.backgroundPosition = "70% bottom";
   }
 
   window.onresize = function () {
     if (window.innerWidth <= 1200) {
       heroContainer.style.background = `url(${heroImageSmall})`;
       heroContainer.style.backgroundSize = "cover";
-      heroContainer.style.backgroundPosition = "right bottom";
+      heroContainer.style.backgroundPosition = "70% bottom";
     } else {
       heroContainer.style.background = `url(${heroImage})`;
       heroContainer.style.backgroundSize = "cover";
-      heroContainer.style.backgroundPosition = "right bottom";
+      heroContainer.style.backgroundPosition = "70% bottom";
     }
   };
 }

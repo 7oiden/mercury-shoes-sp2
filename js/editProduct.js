@@ -2,7 +2,7 @@ import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler } from "./components/dropdownTogglers.js";
+import { mobileToggler } from "./components/common/dropdownTogglers.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
 import { placeholderUrlShort } from "./settings/constants.js";
@@ -21,10 +21,9 @@ if (!token) {
 }
 
 basketCounter();
+createNavLinks();
 
 const alertContainer = document.querySelector(".editalert-container");
-
-createNavLinks();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -57,8 +56,6 @@ const stockYes = document.querySelector("#stock-yes");
   try {
     const response = await fetch(productUrl);
     const details = await response.json();
-
-    // console.log(details);
 
     if (details.featured === true) {
       featuredYes.checked = true;
@@ -98,7 +95,6 @@ const stockYes = document.querySelector("#stock-yes");
     }
   } catch (error) {
     displayAlert("error", error, ".edit__form");
-    //console.log(error);
   } finally {
     loader.style.display = "none";
   }
