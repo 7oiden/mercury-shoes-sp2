@@ -293,6 +293,7 @@
 .add__container,
 .edit__container {
   margin: 0 auto;
+  padding-top: 1.5rem;
   width: getWidth(formDefault);
 
   @media (min-width: getBreakpoint(small)) {
@@ -304,6 +305,7 @@
   }
 
   @media (min-width: getBreakpoint(large)) {
+    padding-top: 2rem;
     width: getWidth(formLarge);
   }
 

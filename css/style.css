@@ -1053,6 +1053,7 @@ label {
 .add__container,
 .edit__container {
   margin: 0 auto;
+  padding-top: 1.5rem;
   width: 95%;
 }
 
@@ -1073,6 +1074,7 @@ label {
 @media (min-width: 992px) {
   .add__container,
   .edit__container {
+    padding-top: 2rem;
     width: 80%;
   }
 }
@@ -2529,6 +2531,11 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 1.5rem auto;
+}
+
+.add__input-wrapper:first-child,
+.edit__input-wrapper:first-child {
+  margin-top: 0;
 }
 
 .add__input,

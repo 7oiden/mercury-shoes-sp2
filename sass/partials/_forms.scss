@@ -125,6 +125,10 @@ label {
     display: flex;
     flex-direction: column;
     margin: 1.5rem auto;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &__input {
