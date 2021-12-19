@@ -22,14 +22,16 @@ export function renderBasket() {
   currentBasket.forEach((item) => {
     const total = item.price * item.quantity;
 
+    console.log(item);
+
     basketContainer.innerHTML += `
     <li class="basket__item">
-      <div class="basket__image">
+      <a href="products-details.html?id=${item.id}" class="basket__image">
         <img
         src="${item.image}"
-        alt=""
+        alt="${item.image_alt}"
         class="basket__image"
-        />
+        /a>
       </div>
       <div class="basket__content">
         <h2 class="basket__title">

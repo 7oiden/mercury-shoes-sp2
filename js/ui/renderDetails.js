@@ -123,6 +123,7 @@ export default function renderDetails(details) {
           id="buy-button" 
           data-id="${details.id}"
           data-image="${details.image_url}"
+          data-image_alt="${details.image_alt_text}"
           data-color="${details.color}"
           data-title="${details.title}"
           data-price="${details.price}"
@@ -182,6 +183,7 @@ export default function renderDetails(details) {
 
     const id = this.dataset.id;
     const image = this.dataset.image;
+    const image_alt = this.dataset.image_alt;
     const color = this.dataset.color;
     const title = this.dataset.title;
     const price = this.dataset.price;
@@ -196,6 +198,7 @@ export default function renderDetails(details) {
       const basket = {
         id: id,
         image: image,
+        image_alt: image_alt,
         color: color,
         title: title,
         price: price,
