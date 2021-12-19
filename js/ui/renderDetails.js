@@ -122,7 +122,7 @@ export default function renderDetails(details) {
         <button class="button primary-button ${buttonClass}"
           id="buy-button" 
           data-id="${details.id}"
-          data-image="${details.image_url}"
+          data-image_url="${details.image_url}"
           data-image_alt="${details.image_alt_text}"
           data-color="${details.color}"
           data-title="${details.title}"
@@ -182,7 +182,7 @@ export default function renderDetails(details) {
     });
 
     const id = this.dataset.id;
-    const image = this.dataset.image;
+    const image_url = this.dataset.image_url;
     const image_alt = this.dataset.image_alt;
     const color = this.dataset.color;
     const title = this.dataset.title;
@@ -197,7 +197,7 @@ export default function renderDetails(details) {
     if (!basketInStorage) {
       const basket = {
         id: id,
-        image: image,
+        image_url: image_url,
         image_alt: image_alt,
         color: color,
         title: title,

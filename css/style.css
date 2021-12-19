@@ -465,6 +465,7 @@ strong {
 .about__sub-heading {
   font-size: 1.125rem;
   margin: 0;
+  padding-top: 0.5rem;
   font-family: "ff-tisa-web-pro", georgia, serif;
 }
 

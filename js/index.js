@@ -1,12 +1,12 @@
-import { mobileToggler, adminToggler} from "./components/dropdownTogglers.js";
-import adminLogin from "./components/common/adminLogin.js";
-import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 import { productsUrl, heroUrl } from "./settings/api.js";
-import displayAlert from "./components/common/displayAlert.js";
-import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
+import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
+import displayAlert from "./components/common/displayAlert.js";
+import adminLogin from "./components/common/adminLogin.js";
 import { renderHero } from "./ui/renderHero.js";
+import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
+import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();

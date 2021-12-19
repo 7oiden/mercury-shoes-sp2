@@ -15,6 +15,7 @@ export default function createNavLinks() {
 
   let authUser = "";
   let addLink = "";
+  let addLinkMobile = "";
 
   adminLogout.innerHTML = "";
 
@@ -32,7 +33,12 @@ export default function createNavLinks() {
     <li>
       <a href="add-product.html" class="nav__link ${
         pathname === "/add-product.html" ? "nav__link--active" : ""
-        }">Add Product</a>
+      }">Add Product</a>
+    </li>`;
+
+    addLinkMobile = `
+    <li>
+      <a href="add-product.html" class="mobile-menu__item">Add Product</a>
     </li>`;
 
     authUser = `
@@ -47,18 +53,18 @@ export default function createNavLinks() {
   linksContainer.innerHTML = `
   <li>
     <a href="/" class="${
-     pathname === "/" || pathname === "/index.html" ? "nav__link--active" : ""
+      pathname === "/" || pathname === "/index.html" ? "nav__link--active" : ""
     } 
     nav__link">Home</a>
   </li>
   <li>
     <a href="products-overview.html" class="${
-     pathname === "/products-overview.html" ? "nav__link--active" : ""
-      } nav__link">Products</a>
+      pathname === "/products-overview.html" ? "nav__link--active" : ""
+    } nav__link">Products</a>
   </li>
   <li id="about"><a href="about.html" class="${
     pathname === "/about.html" ? "nav__link--active" : ""
-    } nav__link">About us</a></li>
+  } nav__link">About us</a></li>
   ${addLink}
   `;
 
@@ -72,7 +78,7 @@ export default function createNavLinks() {
   <li class="mobile-menu__item" id="about">
     <a href="about.html" class="mobile-menu__link">About us</a>
   </li>
-  ${addLink}`;
+  ${addLinkMobile}`;
 
   logoutIcon();
 }

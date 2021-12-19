@@ -1,12 +1,12 @@
-import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
-import adminLogin from "./components/common/adminLogin.js";
-import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 import { productsUrl } from "./settings/api.js";
-import displayAlert from "./components/common/displayAlert.js";
-import { renderProducts } from "./ui/renderProducts.js";
-import { searchProducts } from "./ui/searchProducts.js";
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
+import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
+import displayAlert from "./components/common/displayAlert.js";
+import adminLogin from "./components/common/adminLogin.js";
+import { renderProducts } from "./ui/renderProducts.js";
+import { searchProducts } from "./ui/searchProducts.js";
+import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();
@@ -21,7 +21,6 @@ adminLogin();
     // console.log(json);
     renderProducts(json);
     searchProducts(json);
-
   } catch (error) {
     displayAlert(
       "alert error",

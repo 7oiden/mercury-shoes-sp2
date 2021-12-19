@@ -3,7 +3,7 @@ import createNavLinks from "./components/common/createNavLinks.js";
 import { getToken } from "./utils/storage.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { baseUrl } from "./settings/api.js";
-import { placeholderUrl } from "./settings/constants.js";
+import { placeholderUrl, placeholderUrlShort } from "./settings/constants.js";
 import deleteButton from "./components/editProducts/deleteButton.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
@@ -110,10 +110,9 @@ const stockYes = document.querySelector("#stock-yes");
 editForm.addEventListener("submit", submitEditForm);
 
 function submitEditForm(event) {
-
   //automatically adds placeholder image if the input field has been left empty
   if (productImage.value === "") {
-    document.getElementById("product-image").value = placeholderUrl
+    document.getElementById("product-image").value = placeholderUrlShort;
   }
 
   event.preventDefault();

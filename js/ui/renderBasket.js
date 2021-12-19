@@ -28,7 +28,7 @@ export function renderBasket() {
     <li class="basket__item">
       <a href="products-details.html?id=${item.id}" class="basket__image">
         <img
-        src="${item.image}"
+        src="${item.image_url}"
         alt="${item.image_alt}"
         class="basket__image"
         /a>
