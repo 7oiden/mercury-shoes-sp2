@@ -1,12 +1,16 @@
-import { mobileToggler } from "./components/dropdownTogglers.js";
-import createNavLinks from "./components/common/createNavLinks.js";
-import displayAlert from "./components/common/displayAlert.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { checkLength, checkMaxLength, validateNumber } from "./utils/validators.js";
-import { validateAddForm } from "./components/formValidation/validateAddForm.js";
+import { mobileToggler } from "./components/dropdownTogglers.js";
+import displayAlert from "./components/common/displayAlert.js";
 import { placeholderUrl } from "./settings/constants.js";
+import {
+  checkLength,
+  checkMaxLength,
+  validateNumber,
+} from "./utils/validators.js";
+import { validateAddForm } from "./components/formValidation/validateAddForm.js";
 
 const token = getToken();
 
@@ -16,7 +20,6 @@ if (!token) {
 
 createNavLinks();
 basketCounter();
-
 
 const alertContainer = document.querySelector(".addalert-container");
 const addFormError = document.querySelector(".add-form-error");
@@ -32,7 +35,9 @@ const imageAltText = document.querySelector("#image-alt-text");
 
 const alert = document.querySelector(".addalert-container");
 
-document.getElementById("product-image").value = placeholderUrl.substring("https://".length);
+document.getElementById("product-image").value = placeholderUrl.substring(
+  "https://".length
+);
 
 addForm.addEventListener("submit", submitAddForm);
 
@@ -61,7 +66,7 @@ function submitAddForm(event) {
   // validation
   validateAddForm();
 
-console.log(productImage.value);
+  console.log(productImage.value);
 
   //automatically adds placeholder image if the input field has been left empty
   if (productImage.value === "") {

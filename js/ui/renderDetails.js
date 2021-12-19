@@ -1,7 +1,6 @@
-import { getExistingBasket, saveBasket } from "../utils/storage.js";
-import { getToken } from "../utils/storage.js";
-import descriptionToggler from "../components/productDetails/descriptionToggler.js";
+import { getExistingBasket, saveBasket, getToken } from "../utils/storage.js";
 import { basketCounter } from "../components/common/basketCounter.js";
+import descriptionToggler from "../components/productDetails/descriptionToggler.js";
 
 const detailsContainer = document.querySelector(".details__container");
 

@@ -1,12 +1,12 @@
-import { mobileToggler } from "./components/dropdownTogglers.js";
-import createNavLinks from "./components/common/createNavLinks.js";
 import { getToken } from "./utils/storage.js";
-import displayAlert from "./components/common/displayAlert.js";
 import { baseUrl } from "./settings/api.js";
-import { placeholderUrl, placeholderUrlShort } from "./settings/constants.js";
-import deleteButton from "./components/editProducts/deleteButton.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
+import { mobileToggler } from "./components/dropdownTogglers.js";
+import displayAlert from "./components/common/displayAlert.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
+import { placeholderUrlShort } from "./settings/constants.js";
+import deleteButton from "./components/editProducts/deleteButton.js";
 import { validateEditForm } from "./components/formValidation/validateEditForm.js";
 import {
   checkLength,
@@ -53,8 +53,6 @@ const featuredYes = document.querySelector("#featured-yes");
 const stockNo = document.querySelector("#stock-no");
 const stockYes = document.querySelector("#stock-yes");
 
-
-
 (async function () {
   try {
     const response = await fetch(productUrl);
@@ -98,7 +96,6 @@ const stockYes = document.querySelector("#stock-yes");
         ".editalert-container"
       );
     }
- 
   } catch (error) {
     displayAlert("error", error, ".edit__form");
     //console.log(error);
