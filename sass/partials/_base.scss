@@ -48,8 +48,8 @@ main {
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (min-width: getBreakpoint(large)) {
     padding-top: 75px;

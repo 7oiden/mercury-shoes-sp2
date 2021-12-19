@@ -26,6 +26,46 @@
   }
 }
 
+.about__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  background-color: getColor(primary);
+
+  @media (min-width: getBreakpoint(small)) {
+    flex-direction: row;
+
+    @include content-border(5px);
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  &-wrapper {
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.125rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &-name {
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-weight: bold;
+
+    @media (min-width: getBreakpoint(medium)) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
 .location__map {
   width: 300px;
   height: 200px;
@@ -36,56 +76,5 @@
   @media (min-width: getBreakpoint(medium)) {
     width: 375px;
     height: 250px;
-  }
-}
-
-.about__card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  max-width: 700px;
-  background-color: getColor(primary);
-
-  @media (min-width: getBreakpoint(medium)) {
-    flex-direction: row;
-
-    @include content-border(5px);
-  }
-
-  &-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    padding-top: 3rem;
-  }
-
-  &-wrapper {
-    @media (min-width: getBreakpoint(medium)) {
-      font-size: 1.125rem;
-      padding-top: 1rem;
-      padding-left: 1.5rem;
-      padding-right: 1rem;
-    }
-  }
-
-  &-quote {
-    margin: 0;
-    font-family: $secondary-headings;
-    font-style: italic;
-    max-width: 400px;
-    font-size: 1.125rem;
-  }
-
-  &-name {
-    margin: 0 auto;
-    padding-top: 1rem;
-    font-weight: bold;
-
-    @media (min-width: getBreakpoint(large)) {
-      font-size: 1.125rem;
-    }
   }
 }

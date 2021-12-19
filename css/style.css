@@ -59,8 +59,8 @@ main {
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media (min-width: 992px) {
@@ -479,7 +479,13 @@ strong {
   font-family: "ff-tisa-web-pro", georgia, serif;
   font-style: italic;
   max-width: 400px;
-  font-size: 1.125rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  .about__card-quote {
+    font-size: 1.125rem;
+  }
 }
 
 .contact__heading,
@@ -1242,20 +1248,14 @@ i {
 }
 
 .about__card-icon {
-  position: absolute;
+  position: relative;
   background-color: #be402a;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   left: 0;
   top: 0;
-}
-
-@media (min-width: 768px) {
-  .about__card-icon {
-    left: 1.5rem;
-    top: 0.5rem;
-  }
+  margin-bottom: 0.75rem;
 }
 
 .about__card-icon svg {
@@ -1603,10 +1603,10 @@ header {
   display: block;
   width: 200px;
   margin: 0;
-  border-radius: 5px;
+  border-radius: 5px 0 0 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .about__image {
     width: 200px;
     border-radius: 5px 0 0 5px;
@@ -1752,6 +1752,10 @@ header {
 #buy-button {
   width: 265px;
   margin-top: 0.25rem;
+}
+
+#clear-basket {
+  margin-top: 0;
 }
 
 #confirmation-button {
@@ -2842,21 +2846,6 @@ label {
   padding: 0;
 }
 
-.location__map {
-  width: 300px;
-  height: 200px;
-  margin-top: 1rem;
-  border-radius: 5px;
-  border: 1px solid #d9d9d9;
-}
-
-@media (min-width: 768px) {
-  .location__map {
-    width: 375px;
-    height: 250px;
-  }
-}
-
 .about__card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2872,7 +2861,7 @@ label {
   background-color: #ffffff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .about__card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2884,7 +2873,6 @@ label {
 }
 
 .about__card-body {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2892,25 +2880,15 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 1rem;
-  padding-top: 3rem;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
 
 @media (min-width: 768px) {
   .about__card-wrapper {
     font-size: 1.125rem;
-    padding-top: 1rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     padding-right: 1rem;
   }
-}
-
-.about__card-quote {
-  margin: 0;
-  font-family: "ff-tisa-web-pro", georgia, serif;
-  font-style: italic;
-  max-width: 400px;
-  font-size: 1.125rem;
 }
 
 .about__card-name {
@@ -2919,9 +2897,24 @@ label {
   font-weight: bold;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .about__card-name {
     font-size: 1.125rem;
+  }
+}
+
+.location__map {
+  width: 300px;
+  height: 200px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+}
+
+@media (min-width: 768px) {
+  .location__map {
+    width: 375px;
+    height: 250px;
   }
 }
 /*# sourceMappingURL=style.css.map */

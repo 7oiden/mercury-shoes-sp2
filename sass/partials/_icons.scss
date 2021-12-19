@@ -72,18 +72,14 @@ i {
 }
 
 .about__card-icon {
-  position: absolute;
+  position: relative;
   background-color: getColor(accent);
   border-radius: 50%;
   width: 40px;
   height: 40px;
   left: 0;
   top: 0;
-
-  @media (min-width: getBreakpoint(medium)) {
-    left: 1.5rem;
-    top: 0.5rem;
-  }
+  margin-bottom: 0.75rem;
 }
 
 .about__card-icon svg {
