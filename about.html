@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mercury Shoes | About us, FAQ, Contact, Returns, Sizes and fit, Contact and Location"
+      content="Mercury Shoes | Proud provider of quality running shoes since 1988 | About us, FAQ, Contact, Returns, Sizes and fit, Contact and Location"
     />
     <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
     <link
@@ -31,7 +31,7 @@
             </li>
           </ul>
         </div>
-        <nav class="nav">
+        <nav class="nav" aria-label="main menu">
           <div class="nav__container">
             <div class="nav__links-wrapper">
               <a href="index.html" class="nav__logo"
@@ -49,18 +49,13 @@
             <ul class="nav__icons-list">
               <li>
                 <div class="nav__icon mobile-menu__toggle">
-                  <svg role="img" viewbox="0 0 24 24">
-                    <title>Navigation menu</title>
+                  <svg viewbox="0 0 24 24">
+                    <title>Mobile menu toggler</title>
                     <path
                       fill="currentColor"
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
                     />
                   </svg>
-                  <div class="mobile-menu">
-                    <ul class="mobile-menu__list">
-                      <!-- dynamic created -->
-                    </ul>
-                  </div>
                 </div>
               </li>
               <div class="nav__icons-wrapper">
@@ -84,8 +79,8 @@
                 </li>
                 <li class="admin-login">
                   <div class="nav__icon">
-                    <!-- <span for="login" class="log-label">Admin</span> -->
                     <svg viewbox="0 0 24 24" class="login">
+                      <title>Admin login</title>
                       <path
                         class="login"
                         fill="currentColor"
@@ -135,6 +130,11 @@
               </div>
             </ul>
           </div>
+          <div class="mobile-menu" aria-label="mobile link menu">
+            <ul class="mobile-menu__list">
+              <!-- dynamic created -->
+            </ul>
+          </div>
         </nav>
       </header>
 
@@ -181,7 +181,11 @@
                   <p class="about__card-name">Charles Hudson - CEO</p>
                 </div>
                 <div class="about__card-icon">
-                  <svg style="width: 24px; height: 24px" viewbox="0 0 24 24">
+                  <svg
+                    aria-hidden="true"
+                    style="width: 24px; height: 24px"
+                    viewbox="0 0 24 24"
+                  >
                     <path
                       fill="currentColor"
                       d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
@@ -202,7 +206,12 @@
                 quas modi cumque ut illum, voluptatum adipisci tenetur iure
                 error cum laborum?
                 <div class="faq__answer-container">
-                  <i class="far fa-plus-square faq__icon1"></i>
+                  <i
+                    aria-hidden="true"
+                    class="far fa-plus-square faq__icon1"
+                    title="Show/hide answer"
+                  ></i>
+                  <span class="sr-only">Show/hide answer</span>
                   <p class="faq__answer" id="a1">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
@@ -217,7 +226,12 @@
                 quas modi cumque ut illum, voluptatum adipisci tenetur iure
                 error cum laborum?
                 <div class="faq__answer-container">
-                  <i class="far fa-plus-square faq__icon2"></i>
+                  <i
+                    aria-hidden="true"
+                    class="far fa-plus-square faq__icon2"
+                    title="Show/hide answer"
+                  ></i>
+                  <span class="sr-only">Show/hide answer</span>
                   <p class="faq__answer" id="a2">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
@@ -232,7 +246,12 @@
                 quas modi cumque ut illum, voluptatum adipisci tenetur iure
                 error cum laborum?
                 <div class="faq__anaswer-container">
-                  <i class="far fa-plus-square faq__icon3"></i>
+                  <i
+                    aria-hidden="true"
+                    class="far fa-plus-square faq__icon3"
+                    title="Show/hide answer"
+                  ></i>
+                  <span class="sr-only">Show/hide answer</span>
                   <p class="faq__answer" id="a3">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
@@ -247,7 +266,12 @@
                 quas modi cumque ut illum, voluptatum adipisci tenetur iure
                 error cum laborum?
                 <div class="faq__answer-container">
-                  <i class="far fa-plus-square faq__icon4"></i>
+                  <i
+                    aria-hidden="true"
+                    class="far fa-plus-square faq__icon4"
+                    title="Show/hide answer"
+                  ></i>
+                  <span class="sr-only">Show/hide answer</span>
                   <p class="faq__answer" id="a4">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
@@ -262,7 +286,12 @@
                 quas modi cumque ut illum, voluptatum adipisci tenetur iure
                 error cum laborum?
                 <div class="faq__answer-container">
-                  <i class="far fa-plus-square faq__icon5"></i>
+                  <i
+                    aria-hidden="true"
+                    class="far fa-plus-square faq__icon5"
+                    title="Show/hide answer"
+                  ></i>
+                  <span class="sr-only">Show/hide answer</span>
                   <p class="faq__answer" id="a5">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
@@ -281,7 +310,8 @@
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
+              dicta sunt explicabo. Et harum quidem rerum facilis est et
+              expedita distinctio.
             </p>
           </section>
 
@@ -289,10 +319,11 @@
             <h3 class="sizes__heading" id="sizes">Sizes and fit</h3>
             <div class="red-line"></div>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga.
             </p>
           </section>
           <div class="contact-wrapper">
@@ -426,7 +457,10 @@
             </li>
             <li class="footer-item">
               <a href="https://www.facebook.com/" aria-label="Facebook"
-                ><i aria-hidden="true" class="fab fa-facebook-f footer__icon"></i
+                ><i
+                  aria-hidden="true"
+                  class="fab fa-facebook-f footer__icon"
+                ></i
               ></a>
             </li>
           </ul>

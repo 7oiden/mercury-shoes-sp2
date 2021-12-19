@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mercury Shoes | Product details page" />
+    <meta
+      name="description"
+      content="Mercury Shoes | Proud provider of quality running shoes since 1988 | Pruduct Details page | Get free shipping on orders over 50$"
+    />
     <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
     <link
       rel="stylesheet"
@@ -28,7 +31,7 @@
             </li>
           </ul>
         </div>
-        <nav class="nav">
+        <nav class="nav" aria-label="main menu">
           <div class="nav__container">
             <div class="nav__links-wrapper">
               <a href="index.html" class="nav__logo"
@@ -46,18 +49,13 @@
             <ul class="nav__icons-list">
               <li>
                 <div class="nav__icon mobile-menu__toggle">
-                  <svg role="img" viewbox="0 0 24 24">
-                    <title>Navigation menu</title>
+                  <svg viewbox="0 0 24 24">
+                    <title>Mobile menu toggler</title>
                     <path
                       fill="currentColor"
                       d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
                     />
                   </svg>
-                  <div class="mobile-menu">
-                    <ul class="mobile-menu__list">
-                      <!-- dynamic created -->
-                    </ul>
-                  </div>
                 </div>
               </li>
               <div class="nav__icons-wrapper">
@@ -81,8 +79,8 @@
                 </li>
                 <li class="admin-login">
                   <div class="nav__icon">
-                    <!-- <span for="login" class="log-label">Admin</span> -->
                     <svg viewbox="0 0 24 24" class="login">
+                      <title>Admin login</title>
                       <path
                         class="login"
                         fill="currentColor"
@@ -130,6 +128,11 @@
                 </li>
                 <li class="admin-logout"></li>
               </div>
+            </ul>
+          </div>
+          <div class="mobile-menu" aria-label="mobile link menu">
+            <ul class="mobile-menu__list">
+              <!-- dynamic created -->
             </ul>
           </div>
         </nav>

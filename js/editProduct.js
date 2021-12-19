@@ -1,5 +1,5 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
-import createAdminNav from "./components/common/createAdminNav.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import { getToken } from "./utils/storage.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { baseUrl } from "./settings/api.js";
@@ -24,7 +24,7 @@ basketCounter();
 
 const alertContainer = document.querySelector(".editalert-container");
 
-createAdminNav();
+createNavLinks();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

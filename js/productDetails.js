@@ -3,12 +3,12 @@ import { baseUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
 import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
-import createAdminNav from "./components/common/createAdminNav.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import renderDetails from "./ui/renderDetails.js";
 
+createNavLinks();
 basketCounter();
-createAdminNav();
 adminToggler();
 adminLogin();
 

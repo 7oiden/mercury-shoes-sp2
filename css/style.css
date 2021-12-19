@@ -1187,13 +1187,19 @@ i {
 }
 
 .nav__icon {
-  margin-left: 3rem;
+  margin-left: 2rem;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
 .nav__icon:hover {
   opacity: 0.75;
+}
+
+@media (min-width: 992px) {
+  .nav__icon {
+    margin-left: 3rem;
+  }
 }
 
 .basket__icon {

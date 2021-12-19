@@ -1,5 +1,5 @@
 import { mobileToggler } from "./components/dropdownTogglers.js";
-import createAdminNav from "./components/common/createAdminNav.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
@@ -14,8 +14,9 @@ if (!token) {
   location.href = "/";
 }
 
+createNavLinks();
 basketCounter();
-createAdminNav();
+
 
 const alertContainer = document.querySelector(".addalert-container");
 const addFormError = document.querySelector(".add-form-error");

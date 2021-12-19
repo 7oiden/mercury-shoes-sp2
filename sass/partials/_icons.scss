@@ -21,11 +21,15 @@ i {
 }
 
 .nav__icon {
-  margin-left: 3rem;
+  margin-left: 2rem;
   transition: opacity 0.3s;
 
   &:hover {
     opacity: 0.75;
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    margin-left: 3rem;
   }
 }
 

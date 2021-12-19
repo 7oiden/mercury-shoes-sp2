@@ -78,7 +78,6 @@ export default function renderDetails(details) {
     details.image_alt_text
   }" class="details__image"/>
   </div>
-
   <div class="details__card">
     <div class="details__head">
       <div class="details__title-wrapper">
@@ -108,7 +107,8 @@ export default function renderDetails(details) {
       <div class="details__block2">
         <div class="details__heading-wrapper">
           <h2 class="details__sub-heading">Product info:</h2>
-          <i class="fas ${iconClass} fa-minus"></i>
+          <i aria-hidden="true" class="fas ${iconClass} fa-minus" title="Show/hide product details"></i>
+          <span class="sr-only">Show/hide product details</span>
         </div>
         <p class="details__text">${details.description}</p>
       </div>

@@ -4,14 +4,14 @@ import { validateNewsletterForm } from "./components/formValidation/validateNews
 import { productsUrl, heroUrl } from "./settings/api.js";
 import displayAlert from "./components/common/displayAlert.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
-import createAdminNav from "./components/common/createAdminNav.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { renderHero } from "./ui/renderHero.js";
 
+createNavLinks();
 basketCounter();
 adminToggler();
 adminLogin();
-createAdminNav();
 
 (async function fetchApi() {
   try {

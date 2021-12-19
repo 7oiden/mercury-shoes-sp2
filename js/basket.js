@@ -1,25 +1,17 @@
 import { mobileToggler, adminToggler } from "./components/dropdownTogglers.js";
 import adminLogin from "./components/common/adminLogin.js";
-import createAdminNav from "./components/common/createAdminNav.js";
+import createNavLinks from "./components/common/createNavLinks.js";
 import { clearBasket } from "./components/basket/clearBasket.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-// import { getExistingBasket } from "./utils/storage.js";
 import { renderBasket, renderSummary} from "./ui/renderBasket.js";
 
 
-// const basket = getExistingBasket();
+createNavLinks();
 basketCounter();
-createAdminNav();
 adminToggler();
 adminLogin();
 renderBasket();
-clearBasket();
 renderSummary();
-
-
-// console.log(basket);
-
-
-
+clearBasket();
 
 
