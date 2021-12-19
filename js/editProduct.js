@@ -17,7 +17,7 @@ import {
 const token = getToken();
 
 if (!token) {
-  location.href = "/";
+  document.location.href = "/";
 }
 
 basketCounter();

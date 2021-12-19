@@ -130,10 +130,8 @@ export function validateAddForm() {
 
     if (checkMaxLength(shortDescription.value, 131)) {
       shortDescriptionError2.style.display = "none";
-      shortDescription.style.border = "1px solid #bdbdbd";
     } else {
       shortDescriptionError2.style.display = "block";
-      shortDescription.style.border = "2px solid #ed553b";
     }
 
     if (checkLength(description.value, 15)) {

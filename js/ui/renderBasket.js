@@ -36,23 +36,23 @@ export function renderBasket() {
           <a href="products-details.html?id=${item.id}" class="basket__link">${item.title}</a>
         </h2>
         <table class="basket__table">
-          <tr>
+          <tr class="basket__row">
             <th scope="row" class="basket__table-heading">Gender:</th>
               <td>Unisex</td>
           </tr>
-          <tr>
+          <tr class="basket__row">
             <th scope="row" class="basket__table-heading">Color:</th>
               <td>${item.color}</td>
           </tr>
-          <tr>
+          <tr class="basket__row">
             <th scope="row" class="basket__table-heading">Size:</th>
               <td>${item.size}</td>
           </tr>
-          <tr>
+          <tr class="basket__row">
             <th scope="row" class="basket__table-heading">Price:</th>
               <td>$${item.price}</td>
           </tr>
-          <tr>
+          <tr class="basket__row">
             <th scope="row" class="basket__table-heading">Quantity:</th>
               <td>${item.quantity}</td>
           </tr>
@@ -82,17 +82,18 @@ export function renderSummary() {
   let shipping = 10;
   let orderTotal = 0;
 
-  let shippingMessage = `*get free shipping over 50$`;
-
-  if (subTotal > 50 || subTotal === 0) {
-    shippingMessage = "";
-    shipping = 0;
-  }
+  let shippingMessage = `* get free shipping over 50$`;
 
   for (let i = 0; i < currentBasket.length; i++) {
-    subTotal += Number(currentBasket[i].price * currentBasket[i].quantity);
-    orderTotal = subTotal + shipping;
+    subTotal += Number(currentBasket[i].price * currentBasket[i].quantity); 
   }
+
+   if (subTotal > 50 || subTotal === 0) {
+     shippingMessage = "";
+     shipping = 0;
+   }  
+
+   orderTotal = subTotal + shipping;
 
   summaryContainer.innerHTML = `
   <h3 class="summary__heading">Order summary</h3>

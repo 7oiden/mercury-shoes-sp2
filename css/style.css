@@ -2643,6 +2643,7 @@ label {
 }
 
 .alert {
+  margin-top: 1rem;
   display: inline-block;
   padding: 1rem 1.5rem;
   color: black;
@@ -2755,6 +2756,10 @@ label {
   .basket__table {
     font-size: 1rem;
   }
+}
+
+.basket__row {
+  line-height: 1.2;
 }
 
 .basket__table-heading {
