@@ -18,8 +18,8 @@ Mercury shoes is an e-commerce site selling running shoes. The site is coded usi
 
 The home page must include:
 
-- A hero banner with an image that is uploaded to Strapi. You can find this in the Home single type in the provided Strapi project.
-- A list of featured products. On Strapi products can be marked as ‘featured’. When a product is marked as ‘featured’ it should be displayed on the homepage. You can find the products in the Products collection type.
+- A hero banner with an image that is uploaded to Strapi.
+- A list of featured products. On Strapi products can be marked as ‘featured’. When a product is marked as ‘featured’ it should be displayed on the homepage.
 
 <h4>Products page:</h4>
 
@@ -53,7 +53,7 @@ After the list of products, display the total price of all the products in the c
 
 <h3>Admin section</h3>
 
-The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features.
+The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features:
 
 <h4>Login/logout:</h4>
 
@@ -68,17 +68,19 @@ For adding/editing product images use either of these 2 methods:
 - Use a file upload field to upload images to Strapi, or
 - Use a text input that allows a URL to be entered. This allows an image from an external URL to be used as the product image.
 
-Create form(s) that allow products to be added and edited. The form must allow the user to toggle whether a product is featured.
+Create a form that allow products to be added and edited. The form must allow the user to toggle whether a product is featured.
 
 Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - HTML
 - Javascript
 - Sass
+
+
+## API
+
 - [Strapi](https://strapi.io)
 - [Heroku](https://heroku.com)
 
@@ -116,11 +118,10 @@ Here you can detail any information you want to provide regarding contributing t
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+Get in touch at:
 
-[My Twitter page](www.twitter.com)
+[LinkedIn](https://www.linkedin.com/in/tommy-j-16b56678/)
 
-[My LinkedIn page](www.linkedin.com)
 
 ## Acknowledgments
 
