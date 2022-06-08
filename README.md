@@ -14,21 +14,21 @@ Mercury shoes is an e-commerce site selling running shoes. The site is coded usi
 
 ### Customer facing pages
 
-<h4>Homepage:</h4>
+#### Homepage:
 
 The home page must include:
 
 - A hero banner with an image that is uploaded to Strapi.
 - A list of featured products. On Strapi products can be marked as ‘featured’. When a product is marked as ‘featured’ it should be displayed on the homepage.
 
-<h4>Products page:</h4>
+#### Products page:
 
 The products page must include:
 
 - A list of all products added to Strapi. Each product must display its title, price and image. The product should link to its products detail page.
 - A search text box. When searching (filtering), only the products that include the searched text in their title or description should be listed.
 
-<h4>Product details page:</h4>
+#### Product details page:
 
 This page is reached by a user clicking on a product on the product list page. The product details page must include:
 
@@ -38,7 +38,7 @@ This page is reached by a user clicking on a product on the product list page. T
 - price
 - an add to cart button. This will toggle the product in and out of a cart array stored in local storage.
 
-<h4>Cart/Basket page:</h4>
+#### Cart/Basket page:
 
 The cart/basket page must display a list of all products added to the cart. Load the items that have been added to local storage and display them on the page. If the cart is empty display a message indicating this.
 
@@ -51,17 +51,17 @@ Each product in the cart must display:
 
 After the list of products, display the total price of all the products in the cart.
 
-<h3>Admin section</h3>
+### Admin section
 
 The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features:
 
-<h4>Login/logout:</h4>
+#### Login/logout:
 
 Create an admin login form that allows administrator users to login. Use local storage to keep the user logged in.
 
 When logged in, display a logout button in the layout that logs the user out. Logging out should not clear the cart.
 
-<h4>Add/edit products:</h4>
+#### Add/edit products:
 
 For adding/editing product images use either of these 2 methods:
 
