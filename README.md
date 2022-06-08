@@ -10,9 +10,9 @@ This project is an assignment from Noroff's Frontend course second year.
 
 Mercury shoes is an e-commerce site selling running shoes. The site is coded using HTML and vanilla Javascript, and is styled using Sass. The site has a costumer facing side with basket functionality using local storage to store data, and also an admin facing side, where products can be added, edited and deleted. An API from Strapi hosted on Heroku is used to store and fetch content data.
 
-<h2>Assignment requirements:</h2>
+## Assignment requirements:
 
-<h3>Customer facing pages</h3>
+### Customer facing pages
 
 <h4>Homepage:</h4>
 
@@ -79,7 +79,7 @@ Allow products to be deleted. Before a product is deleted you must display a con
 - Sass
 
 
-## API
+## API Created With
 
 - [Strapi](https://strapi.io)
 - [Heroku](https://heroku.com)
