@@ -2,7 +2,7 @@
 
 ![image](https://res.cloudinary.com/dhd2paq70/image/upload/v1654681036/mercury_lyf9vl.jpg)
 
-A simple overview of the use/purpose of the project.
+The projects hero at the homepage.
 
 ## Description
 
