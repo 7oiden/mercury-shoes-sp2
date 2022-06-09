@@ -78,7 +78,6 @@ Allow products to be deleted. Before a product is deleted you must display a con
 - Javascript
 - Sass
 
-
 ## API Created With
 
 - [Strapi](https://strapi.io)
@@ -92,16 +91,6 @@ Allow products to be deleted. Before a product is deleted you must display a con
 
 ```bash
 git clone git@github.com:7oiden/mercury-shoes.git
-```
-
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
 ```
 
 ## Contact
