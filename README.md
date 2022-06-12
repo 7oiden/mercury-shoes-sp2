@@ -78,6 +78,8 @@ Create a form that allow products to be added and edited. The form must allow th
 
 Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
 
+<hr/>
+
 ## Built With
 
 - HTML
