@@ -14,6 +14,8 @@ This project is an assignment from Noroff's Frontend course second year and was 
 - Username: admin
 - Password: Pass1234
 
+<hr/>
+
 ## Assignment requirements:
 
 ### Customer facing pages
