@@ -55,7 +55,7 @@ Each product in the cart must display:
 - a link to the product view page
 - image
 
-After the list of products, display the total price of all the products in the cart.
+After the list of products, display the total price of all the products in the cart. Making checkout functionality is not part of the assingment.
 
 ### Admin section
 
