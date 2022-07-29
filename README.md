@@ -2,7 +2,7 @@
 
 ![image](https://res.cloudinary.com/dhd2paq70/image/upload/v1654681036/mercury_lyf9vl.jpg)
 
-Screenshot of the projects hero at the homepage.
+_Screenshot of the projects hero at the homepage_
 
 ## Description
 
@@ -11,6 +11,7 @@ Mercury shoes is an e-commerce site selling running shoes. The site is coded usi
 This project is an assignment from Noroff's Frontend course second year and was delivered in December 2021. The timeframe was 5 weeks, and the project requirements are listed in the next section.
 
 #### Sign in as admin:
+
 - Username: admin
 - Password: Pass1234
 
@@ -55,7 +56,7 @@ Each product in the cart must display:
 - a link to the product view page
 - image
 
-After the list of products, display the total price of all the products in the cart. Making checkout functionality is not part of the assingment.
+After the list of products, display the total price of all the products in the cart. Making checkout functionality is not part of the assignment.
 
 ### Admin section
 
@@ -104,4 +105,3 @@ git clone git@github.com:7oiden/mercury-shoes.git
 ## Contact
 
 Get in touch at [LinkedIn](https://www.linkedin.com/in/tommy-j-16b56678/)
-
