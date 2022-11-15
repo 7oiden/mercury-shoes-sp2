@@ -7,7 +7,7 @@ $button-text: "proxima nova", verdana, sans-serif;
 $colors: (
   primary: #ffffff,
   secondary: #323232,
-  accent: #be402a,
+  accent: #BF1E0F,
   background: #fafafa,
   dark: #000000,
   error: #ed553b,
@@ -41,10 +41,10 @@ $fontSizes: (
   mainHeadingLarge: 2.5rem,
   mainSubHeadingSmall: 1.875rem,
   mainSubHeadingLarge: 2.25rem,
-  buttonSmall: 1.25rem,
-  buttonLarge: 1.375rem,
-  heroButtonSmall: 1.375rem,
-  heroButtonLarge: 1.5rem,
+  buttonSmall: 1.125rem,
+  buttonLarge: 1.25rem,
+  heroButtonSmall: 1.25rem,
+  heroButtonLarge: 1.375rem,
 );
 
 @function getFontSize($fontSize) {

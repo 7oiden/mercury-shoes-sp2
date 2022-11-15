@@ -2,14 +2,28 @@
   width: 200px;
   display: inline-block;
   color: getColor(primary);
-  padding: 0.65rem 2rem;
+  background-image: linear-gradient(
+    to right,
+    #a01313 0%,
+    #bf1e0f 51%,
+    #a01313 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  padding: 0.75rem 2rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 3px;
   font-family: $button-text;
   font-weight: 400;
   text-align: center;
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .hero__button {
@@ -23,8 +37,9 @@
     font-size: getFontSize(heroButtonLarge);
 
     &:hover {
-      scale: 1.1;
-      @include dropShadow(12px, 12px);
+      background-position: right center;
+      scale: 1.05;
+      @include dropShadow(6px, 6px);
     }
   }
 }
@@ -37,13 +52,15 @@
     font-size: getFontSize(buttonLarge);
 
     &:hover {
-      scale: 1.1;
-      @include dropShadow(12px, 12px);
+      background-position: right center;
+      scale: 1.05;
+      @include dropShadow(6px, 6px);
     }
   }
 }
 
 .secondary-button {
+  background-image: linear-gradient(to right, #000 0%, #323232 51%, #000 100%);
   font-size: getFontSize(buttonSmall);
   background-color: getColor(secondary);
   color: getColor(primary);
@@ -52,6 +69,7 @@
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {
+      background-position: right center;
       background-color: getColor(accent);
     }
   }
@@ -96,10 +114,10 @@
 }
 
 .delete-button {
+  background: transparent;
   background-color: transparent;
   margin-top: 2rem;
   font-size: 1.125rem;
-  font-weight: bold;
   border: 3px solid getColor(error);
   border-radius: 5px;
   color: getColor(error);
@@ -145,6 +163,7 @@
 }
 
 .remove-from-basket {
+  background: transparent;
   background-color: transparent;
   border: 3px solid getColor(accent);
   color: getColor(accent);

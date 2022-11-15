@@ -48,12 +48,12 @@ main {
   background-repeat: repeat;
   background-size: cover;
   padding-top: 30px;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
 
   @media (min-width: getBreakpoint(large)) {
     background-attachment: fixed;
     padding-top: 75px;
-    padding-bottom: 75px;
+    // padding-bottom: 75px;
   }
 
   &.index {
@@ -67,12 +67,14 @@ main {
 }
 
 .loader {
-  border: 10px solid getColor(secondary);
-  border-top: 10px solid getColor(accent);
+  position: relative;
+  top: 2rem;
+  border: 0.5rem solid getColor(secondary);
+  border-top: 0.5rem solid getColor(accent);
   margin: 0 auto;
   border-radius: 50%;
-  width: 65px;
-  height: 65px;
+  width: 3rem;
+  height: 3rem;
   animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin {

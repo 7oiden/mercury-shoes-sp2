@@ -12,7 +12,7 @@ export function renderProducts(products) {
   products.forEach((product) => {
     let editProd = "";
 
-    //removes bottom border when editbutton is displayed
+    //removes bottom border when edit button is displayed
     let adminClass = "";
 
     if (token) {
