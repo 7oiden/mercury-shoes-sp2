@@ -93,6 +93,17 @@ i {
   }
 }
 
+.modal-icon {
+  position: absolute;
+  width: 2rem;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  path {
+    fill: getColor(primary);
+  }
+}
+
 .fa-plus,
 .fa-minus {
   color: black;
@@ -173,5 +184,3 @@ i {
     transform: translate(0, 0);
   }
 }
-
-

@@ -1,23 +1,42 @@
+.newsletter-trigger {
+  position: relative;
+}
+
 .newsletter {
+  width: 95%;
+  max-width: 500px;
+  display: none;
+  position: absolute;
   background-image: url("../images/asphalt-pattern.jpg");
   background-size: cover;
-  color: getColor(primary);
-  margin-top: 50px;
-  margin-bottom: 50px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+  animation-name: animate-opacity;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
 
-  @media (min-width: getBreakpoint(large)) {
-    margin-top: 100px;
+  // @media (min-width: getBreakpoint(large)) {
+  //   margin-top: 100px;
+  // }
+
+  &__container {
+    background-color: #000000bf;
+    // backdrop-filter: opacity(0.5);
+    color: getColor(primary);
+    padding: 2rem;
   }
 
   &__wrapper {
-    width: 85%;
-    margin: 0 auto;
+    // width: 85%;
+    // margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     @media (min-width: getBreakpoint(small)) {
-      width: 70%;
+      // width: 70%;
     }
   }
 }

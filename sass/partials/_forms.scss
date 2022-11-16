@@ -4,7 +4,7 @@
   font-size: 1.125rem;
   background-color: getColor(primary);
 
-  @include content-border(5px);
+  @include content-border(3px);
 
   &:focus {
     background-color: getColor(primary);

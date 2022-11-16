@@ -6,12 +6,14 @@ import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
+import newsletterModal from "./components/common/newsletterModal.js";
 import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();
 adminToggler();
 adminLogin();
+newsletterModal();
 
 (async function fetchApi() {
   try {
