@@ -6,12 +6,12 @@
     width: getWidth(baseLargeScreen);
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(baseXlargeScreen);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(basexLargeScreen);
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
-    width: getWidth(baseXxlargeScreen);
+  @media (min-width: getBreakpoint(xxLarge)) {
+    width: getWidth(baseXxLargeScreen);
   }
 }
 
@@ -63,7 +63,7 @@
     width: 95%;
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
+  @media (min-width: getBreakpoint(xLarge)) {
     width: 90%;
   }
 }
@@ -80,11 +80,11 @@
     width: getWidth(basketLarge);
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(basketXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(basketxLarge);
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(basketXxLarge);
   }
 
@@ -99,11 +99,11 @@
       justify-content: space-between;
     }
 
-    @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xLarge)) {
       gap: 4rem;
     }
 
-    @media (min-width: getBreakpoint(xxlarge)) {
+    @media (min-width: getBreakpoint(xxLarge)) {
       gap: 6rem;
     }
   }
@@ -121,11 +121,11 @@
   @media (min-width: getBreakpoint(large)) {
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(gridXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(gridxLarge);
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(gridXxLarge);
   }
 }
@@ -148,13 +148,13 @@
     grid-template-columns: auto auto;
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(gridXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(gridxLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto;
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(gridXxLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto;
@@ -176,13 +176,13 @@
     grid-template-columns: auto auto;
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(gridXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(gridxLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto;
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(gridXxLarge);
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto;
@@ -206,10 +206,10 @@
   @media (min-width: getBreakpoint(large)) {
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
+  @media (min-width: getBreakpoint(xLarge)) {
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
   }
 }
 
@@ -234,11 +234,11 @@
     @include content-border(5px);
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(containerXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(containerxLarge);
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(containerXxLarge);
   }
 }
@@ -254,7 +254,7 @@
   flex-direction: column;
   gap: 2rem;
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     flex-direction: row;
     margin: 0 auto;
     width: 85%;
@@ -276,11 +276,11 @@
     width: getWidth(containerLarge);
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(containerXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(containerxLarge);
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(containerXxLarge);
   }
 
@@ -309,11 +309,11 @@
     width: getWidth(formLarge);
   }
 
-  @media (min-width: getBreakpoint(xlarge)) {
-    width: getWidth(formXLarge);
+  @media (min-width: getBreakpoint(xLarge)) {
+    width: getWidth(formxLarge);
   }
 
-  @media (min-width: getBreakpoint(xxlarge)) {
+  @media (min-width: getBreakpoint(xxLarge)) {
     width: getWidth(formXxLarge);
   }
 }
@@ -330,15 +330,15 @@
       gap: 2rem;
     }
 
-    @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xLarge)) {
       width: 90%;
     }
 
-    @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xLarge)) {
       width: 85%;
     }
 
-    @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xLarge)) {
       width: 80%;
     }
   }
@@ -358,11 +358,11 @@
 //     width: getWidth(newsletterLarge);
 //   }
 
-//   @media (min-width: getBreakpoint(xlarge)) {
-//     width: getWidth(newsletterXLarge);
+//   @media (min-width: getBreakpoint(xLarge)) {
+//     width: getWidth(newsletterxLarge);
 //   }
 
-//   @media (min-width: getBreakpoint(xxlarge)) {
+//   @media (min-width: getBreakpoint(xxLarge)) {
 //     width: getWidth(newsletterXxLarge);
 //   }
 // }

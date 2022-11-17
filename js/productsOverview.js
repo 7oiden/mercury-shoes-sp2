@@ -9,7 +9,7 @@ import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./ui/searchProducts.js";
-import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
+// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();

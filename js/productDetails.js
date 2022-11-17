@@ -5,7 +5,7 @@ import { mobileToggler, adminToggler } from "./components/common/dropdownToggler
 import displayAlert from "./components/common/displayAlert.js";
 import adminLogin from "./components/common/adminLogin.js";
 import renderDetails from "./ui/renderDetails.js";
-import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
+// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();

@@ -74,7 +74,7 @@ label {
     margin-top: 2rem;
     margin-bottom: 2rem;
 
-    @media (min-width: getBreakpoint(xlarge)) {
+    @media (min-width: getBreakpoint(xLarge)) {
       flex-direction: row;
       align-items: center;
     }

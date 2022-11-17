@@ -10,7 +10,7 @@ $colors: (
   accent: #BF1E0F,
   background: #fafafa,
   dark: #000000,
-  error: #ed553b,
+  error: #eb4d32,
   success: #097c35,
   warning: #f1cc28,
   border: #d9d9d9,
@@ -26,8 +26,8 @@ $breakpoints: (
   small: 576px,
   medium: 768px,
   large: 992px,
-  xlarge: 1200px,
-  xxlarge: 1400px,
+  xLarge: 1200px,
+  xxLarge: 1400px,
 );
 
 @function getBreakpoint($breakpoint) {
@@ -62,37 +62,37 @@ $widths: (
   //sets wrapper width of nav, footer and news
   baseSmallScreen: 85%,
   baseLargeScreen: 90%,
-  baseXlargeScreen: 80%,
-  baseXxlargeScreen: 80%,
+  basexLargeScreen: 80%,
+  baseXxLargeScreen: 80%,
   //sets wrapper width of about-, add- and edit-page
   containerSmall: 100%,
   containerMedium: 85%,
   containerLarge: 70%,
-  containerXLarge: 65%,
+  containerxLarge: 65%,
   containerXxLarge: 55%,
   //sets wrapper width of basket
   basketSmall: 95%,
   basketMedium: 80%,
   basketLarge: 95%,
-  basketXLarge: 85%,
+  basketxLarge: 85%,
   basketXxLarge: 75%,
   //sets wrapper width of product card grid
   gridSmall: 300px,
   gridMedium: 632px,
   gridLarge: 632px,
-  gridXLarge: 964px,
+  gridxLarge: 964px,
   gridXxLarge: 1296px,
   newsletterSmall: 100%,
   newsletterMedium: 85%,
   newsletterLarge: 70%,
-  newsletterXLarge: 50%,
+  newsletterxLarge: 50%,
   newsletterXxLarge: 40%,
   //sets input container width
   formDefault: 95%,
   formSmall: 85%,
   formMedium: 80%,
   formLarge: 80%,
-  formXLarge: 75%,
+  formxLarge: 75%,
   formXxLarge: 70%
 );
 

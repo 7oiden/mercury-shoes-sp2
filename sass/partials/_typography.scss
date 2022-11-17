@@ -175,6 +175,10 @@ strong {
     @media (min-width: getBreakpoint(medium)) {
       font-size: 1.75rem;
     }
+
+    @media (min-width: getBreakpoint(xLarge)) {
+      font-size: 2rem;
+    }
   }
 
   &__text {
@@ -186,6 +190,10 @@ strong {
 
     @media (min-width: getBreakpoint(medium)) {
       font-size: 1.125rem;
+    }
+
+    @media (min-width: getBreakpoint(xLarge)) {
+      font-size: 1.25rem;
     }
   }
 }

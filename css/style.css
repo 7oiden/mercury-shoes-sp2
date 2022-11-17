@@ -49,6 +49,7 @@ main {
   background-repeat: repeat;
   background-size: cover;
   padding-top: 30px;
+  padding-bottom: 300px;
 }
 @media (min-width: 992px) {
   main {
@@ -113,7 +114,7 @@ hr {
 
 .fade-background {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7490196078);
+  background-color: rgba(0, 0, 0, 0.6509803922);
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -170,7 +171,7 @@ hr {
 }
 
 .error {
-  background-color: #ed553b;
+  background-color: #eb4d32;
   color: white;
 }
 
@@ -184,7 +185,7 @@ hr {
 }
 
 .error-messages {
-  color: #ed553b;
+  color: #eb4d32;
   display: none;
   padding-top: 0.25rem;
 }
@@ -376,6 +377,11 @@ strong {
     font-size: 1.75rem;
   }
 }
+@media (min-width: 1200px) {
+  .news__header {
+    font-size: 2rem;
+  }
+}
 .news__text {
   font-family: "ff-tisa-web-pro", georgia, serif;
   font-size: 1rem;
@@ -386,6 +392,11 @@ strong {
 @media (min-width: 768px) {
   .news__text {
     font-size: 1.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .news__text {
+    font-size: 1.25rem;
   }
 }
 
@@ -1078,7 +1089,7 @@ i {
 }
 
 .out-of-stock {
-  background-color: #ed553b;
+  background-color: #eb4d32;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -1611,14 +1622,14 @@ header {
   background-color: transparent;
   margin-top: 2rem;
   font-size: 1.125rem;
-  border: 3px solid #ed553b;
+  border: 3px solid #eb4d32;
   border-radius: 5px;
-  color: #ed553b;
+  color: #eb4d32;
   padding: 0.5rem 0.75rem;
 }
 @media (min-width: 992px) {
   .delete-button:hover {
-    background-color: #ed553b;
+    background-color: #eb4d32;
     color: #ffffff;
   }
 }
@@ -1868,11 +1879,11 @@ header {
   }
 }
 
-.newsletter-trigger {
+.newsletter {
+  margin-top: 150px;
   position: relative;
 }
-
-.newsletter {
+.newsletter__modal {
   width: 95%;
   max-width: 500px;
   display: none;
@@ -1881,7 +1892,7 @@ header {
   background-size: cover;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 1010;
   -webkit-animation-name: animate-opacity;
           animation-name: animate-opacity;
@@ -1889,9 +1900,10 @@ header {
           animation-duration: 0.3s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
 }
 .newsletter__container {
-  background-color: rgba(0, 0, 0, 0.7490196078);
+  background-color: rgba(0, 0, 0, 0.7019607843);
   color: #ffffff;
   padding: 2rem;
 }
@@ -1900,6 +1912,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .news {
   display: flex;
   flex-direction: column;
@@ -1917,13 +1930,6 @@ header {
   order: 2;
   position: relative;
   flex: 1;
-}
-@media (min-width: 992px) {
-  .news__block1 {
-    order: 1;
-    background: radial-gradient(circle, rgb(88, 79, 79) 0%, rgb(0, 0, 0) 100%);
-    color: #ffffff;
-  }
 }
 .news__block2 {
   order: 1;

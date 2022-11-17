@@ -65,7 +65,7 @@
       @include content-border(5px);
     }
 
-    @media (min-width: getBreakpoint(xxlarge)) {
+    @media (min-width: getBreakpoint(xxLarge)) {
       padding: 2rem 3rem 3rem 3rem;
     }
   }
