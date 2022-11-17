@@ -12,12 +12,18 @@ i {
   cursor: pointer;
 }
 
-.search__icon {
+.filter__icon {
   position: absolute;
-  top: 31px;
-  right: 8px;
-  height: 32px;
-  width: 32px;
+  bottom: 0;
+  transform: translateY(-25%);
+  right: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: default;
+}
+
+#sort-icon {
+  right: 1.5rem;
 }
 
 .nav__icon {

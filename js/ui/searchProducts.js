@@ -1,7 +1,7 @@
 import { renderProducts } from "./renderProducts.js";
 
 export function searchProducts(products) {
-  const searchInput = document.querySelector(".search__input");
+  const searchInput = document.querySelector("#search-input");
 
   searchInput.onkeyup = function (event) {
     const searchValue = event.target.value.trim().toLowerCase();
