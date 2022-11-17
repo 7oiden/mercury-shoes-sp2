@@ -1060,10 +1060,6 @@ i {
   cursor: default;
 }
 
-#sort-icon {
-  right: 1.5rem;
-}
-
 .nav__icon {
   margin-left: 2rem;
   transition: opacity 0.3s;
@@ -2084,10 +2080,17 @@ label {
 .filter__container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem 2rem;
+}
+@media (min-width: 768px) {
+  .filter__container {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .filter__form {
   position: relative;
+  flex: 1;
 }
 .filter__input {
   width: 100%;
