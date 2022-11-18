@@ -124,12 +124,36 @@
           <a href="products-overview.html" class="button hero__button">Shop now</a>
         </div>
       </div>
-      <section class="featured grid-wrapper">
-        <h3 class="featured__heading">Featured products</h3>
-        <div class="red-line"></div>
-        <div class="featured__grid">
-          <div class="loader"></div>
-          <!-- dynamic content -->
+      <section class="featured">
+        <div class="featured__header">
+          <div>
+            <h3 class="featured__heading">Featured products</h3>
+            <div class="red-line"></div>
+          </div>
+          <div class="slider__controls">
+            <svg viewBox="0 0 24 24" id="left">
+              <path fill="currentColor"
+                d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M15.4,16.6L10.8,12L15.4,7.4L14,6L8,12L14,18L15.4,16.6Z" />
+            </svg>
+            <svg viewBox="0 0 24 24" id="right">
+              <path fill="currentColor"
+                d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M10,18L16,12L10,6L8.6,7.4L13.2,12L8.6,16.6L10,18Z" />
+            </svg>
+          </div>
+        </div>
+        <div class="slider__wrapper">
+          <div class="slider__container">
+            <div class="slider">
+              <div class="loader"></div>
+              <!-- dynamic content -->
+            </div>
+          </div>
+        </div>
+        <div class="indicator-container">
+          <div id="indicator-1" class="indicator selected"></div>
+          <div id="indicator-2" class="indicator"></div>
+          <div id="indicator-3" class="indicator"></div>
+          <div id="indicator-4" class="indicator"></div>
         </div>
       </section>
       <section class="news">
