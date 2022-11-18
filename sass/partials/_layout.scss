@@ -56,7 +56,31 @@
 }
 
 .featured {
-  @extend .base-container;
+  width: 100%;
+
+  @media (min-width: getBreakpoint(small)) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    width: 85%;
+    margin: 2rem auto 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (min-width: getBreakpoint(small)) {
+      width: 100%;
+    }
+
+    @media (min-width: getBreakpoint(medium)) {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 
   // @media (min-width: getBreakpoint(large)) {
   //   width: 60%;
