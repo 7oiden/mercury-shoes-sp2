@@ -174,8 +174,18 @@ hr {
 .slider {
   height: 100%;
   display: flex;
-  width: 300%;
+  width: 400%;
   transition: all 0.3s;
+}
+@media (min-width: 768px) {
+  .slider {
+    width: 300%;
+  }
+}
+@media (min-width: 1200px) {
+  .slider {
+    width: 150%;
+  }
 }
 
 .slider__controls {
@@ -190,8 +200,10 @@ hr {
   transition: opacity 0.3s ease;
 }
 
-#left:hover, #right:hover {
-  opacity: 1;
+@media (min-width: 992px) {
+  #left:hover, #right:hover {
+    opacity: 1;
+  }
 }
 
 .slide {
@@ -248,7 +260,6 @@ hr {
   width: 33.33%;
   background-color: transparent;
   opacity: 0.5;
-  transform: translate();
 }
 
 .selected {
@@ -808,17 +819,6 @@ label {
   .news {
     flex-direction: row;
     justify-content: center;
-  }
-}
-
-@media (min-width: 992px) {
-  .featured {
-    width: 60%;
-  }
-}
-@media (min-width: 1200px) {
-  .featured {
-    width: 50%;
   }
 }
 

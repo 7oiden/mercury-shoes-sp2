@@ -58,13 +58,13 @@
 .featured {
   @extend .base-container;
 
-  @media (min-width: getBreakpoint(large)) {
-    width: 60%;
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  //   width: 60%;
+  // }
 
-  @media (min-width: getBreakpoint(xLarge)) {
-    width: 50%;
-  }
+  // @media (min-width: getBreakpoint(xLarge)) {
+  //   width: 50%;
+  // }
 }
 
 .details-container {
