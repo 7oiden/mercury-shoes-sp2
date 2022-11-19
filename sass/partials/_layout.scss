@@ -45,27 +45,38 @@
 .news {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  padding-top: 4rem;
 
-  @extend .base-container;
-
-  @media (min-width: getBreakpoint(large)) {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-.featured {
-  width: 100%;
+  // @extend .base-container;
 
   @media (min-width: getBreakpoint(small)) {
     width: 85%;
     margin: 0 auto;
   }
 
+  @media (min-width: getBreakpoint(large)) {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+}
+
+.featured {
+  width: 100%;
+  padding-top: 3rem;
+
+  @media (min-width: getBreakpoint(small)) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    padding-top: 5rem;
+  }
+
   &__header {
     width: 85%;
-    margin: 2rem auto 1rem auto;
+    margin: 0 auto 1rem auto;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
