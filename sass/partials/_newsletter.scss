@@ -6,11 +6,11 @@
     width: 95%;
     max-width: 500px;
     display: none;
-    position: absolute;
+    position: fixed;
     background-image: url("../images/asphalt-pattern.jpg");
     background-size: cover;
     left: 50%;
-    bottom: 0;
+    bottom: 50%;
     transform: translateX(-50%);
     z-index: 1010;
     animation-name: animate-opacity;

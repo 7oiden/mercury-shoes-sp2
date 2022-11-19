@@ -2,6 +2,7 @@ const newsletter = document.querySelector(".newsletter__modal");
 const fadeBackground = document.querySelector(".fade-background");
 
 export default function newsletterModal() {
+  let closeCounter = 0;
   function closeNewsletterModal(event) {
     if (
       newsletter.style.display === "block" &&
@@ -10,6 +11,7 @@ export default function newsletterModal() {
       newsletter.style.display = "none";
       fadeBackground.style.display = "none";
       document.body.style.overflow = "visible";
+      closeCounter += 1;
     }
   }
 
@@ -17,10 +19,10 @@ export default function newsletterModal() {
 
   const newsletterObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && closeCounter === 0) {
         newsletter.style.display = "block";
         fadeBackground.style.display = "block";
-        document.body.style.overflow = "hidden";
+        // document.body.style.overflow = "hidden";
         return;
       }
     });
