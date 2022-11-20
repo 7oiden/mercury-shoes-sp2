@@ -1,41 +1,88 @@
+// .card__container {
+//   position: relative;
+//   transition: all 0.3s;
+//   width: $card-width;
+//   display: flex;
+//   flex-direction: column;
+
+//   border: 1px solid getColor(border);
+//   border-radius: 5px;
+
+//   @media (min-width: getBreakpoint(large)) {
+//     &:hover {
+//       @include dropShadow(12px, 12px);
+//       scale: 1.05;
+//     }
+//   }
+// }
+
 .card__container {
   position: relative;
-  transition: all 0.3s;
-  width: $card-width;
-  display: flex;
-  flex-direction: column;
-
-  border: 1px solid getColor(border);
-  border-radius: 5px;
-
-  @media (min-width: getBreakpoint(large)) {
-    &:hover {
-      @include dropShadow(12px, 12px);
-      scale: 1.05;
-    }
-  }
+  border-radius: 3px;
 }
 
 .card {
-  display: block;
-  height: $card-height;
-  transition: all 0.3s;
-  background-color: getColor(primary);
-  padding-bottom: 1rem;
-  border-radius: 5px;
-  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid getColor(border);
+  border-radius: 3px;
+  background-color: #ffffff;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  // &__image-container {
+  //   width: 100%;
+  // }
+
+  // &__image-container img {
+  //   display: block;
+  //   width: 100%;
+  //   margin: 0;
+  //   padding: 0;
+  // }
 
   &__body {
-    background-color: getColor(primary);
-    padding: 1rem;
-    position: relative;
-  }
-
-  &__header-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__title {
+    font-family: $primary-headings;
   }
 }
+
+// .card {
+//   position: relative;
+//   display: block;
+//   height: $card-height;
+//   transition: all 0.3s;
+//   background-color: getColor(primary);
+//   padding-bottom: 1rem;
+//   border-radius: 5px;
+//   overflow: hidden;
+
+//   &__body {
+//     background-color: getColor(primary);
+//     padding: 1rem;
+//     position: relative;
+//   }
+
+//   &__header-wrapper {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
 
 // this class hides products when the array has more than 8 products
 // the load button then removes this class for 8 items at the time.
@@ -144,4 +191,3 @@
     }
   }
 }
-

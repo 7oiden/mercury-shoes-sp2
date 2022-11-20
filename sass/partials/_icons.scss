@@ -58,11 +58,17 @@ i {
 }
 
 .fa-heart {
-  // position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  position: absolute;
+  display: block;
+  top: 1rem;
+  right: 1rem;
   font-size: 1.5rem;
-  color: black;
+  color: getColor(secondary);
+  z-index: 200;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: 1.75rem;
+  }
 }
 
 .out-of-stock {
