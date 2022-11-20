@@ -26,16 +26,14 @@ export function renderProducts(products) {
       adminClass = "card__admin";
     }
 
-    // let featuredIcon = "";
+    let featuredIcon = "";
 
-    // if (product.featured) {
-    //   featuredIcon = `
-    //   <div class="card__icon-container">
-    //     <svg class="card__icon" viewBox="0 0 24 24">
-    //       <path fill="currentColor" d="M14.5,7.66L20.64,6.97L17,12L20.68,16.97L14.5,16.32L12.03,22L9.5,16.34L3.36,17.03L7,12L3.32,7.03L9.5,7.68L11.97,2L14.5,7.66Z" />
-    //     </svg>
-    //   </div>`;
-    // }
+    if (product.featured) {
+      featuredIcon = `
+      <svg viewBox="0 0 24 24" class="card__feat-icon">
+      <path fill="currentColor" d="M8.58,17.25L9.5,13.36L6.5,10.78L10.45,10.41L12,6.8L13.55,10.45L17.5,10.78L14.5,13.36L15.42,17.25L12,15.19L8.58,17.25M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+      </svg>`;
+    }
 
     let favIconClass = "far";
 
@@ -49,6 +47,7 @@ export function renderProducts(products) {
 
     productsContainer.innerHTML += `
     <div class="remove-card card__container">
+    ${featuredIcon}
     <i class="${favIconClass} fa-heart" data-id="${product.id}" data-image="${
       product.image_url
     }" data-title="${product.title}" data-price="${

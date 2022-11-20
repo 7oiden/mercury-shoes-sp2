@@ -157,17 +157,20 @@
 }
 
 .grid-wrapper {
-  // width: getWidth(gridSmall);
+  width: 90%;
   margin: 0 auto;
-  padding-top: 3
-  rem;
+  padding-top: 3rem;
 
   @media (min-width: getBreakpoint(small)) {
     width: 85%;
-    margin: 0 auto;
+  }
+
+  @media (min-width: getBreakpoint(medium)) {
+    width: 65%;
   }
 
   @media (min-width: getBreakpoint(large)) {
+    width: 85%;
     padding-top: 5rem;
   }
 
@@ -194,7 +197,7 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr;
-  justify-items: center;
+  // justify-items: center;
   gap: 2rem 1rem;
 
   @media (min-width: getBreakpoint(large)) {

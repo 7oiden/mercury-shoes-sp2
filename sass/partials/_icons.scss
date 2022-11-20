@@ -57,7 +57,8 @@ i {
   }
 }
 
-.fa-heart {
+.fa-heart,
+.card__feat-icon {
   position: absolute;
   display: block;
   top: 1rem;
@@ -68,6 +69,17 @@ i {
 
   @media (min-width: getBreakpoint(large)) {
     font-size: 1.75rem;
+  }
+}
+
+.card__feat-icon {
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+
+  path {
+    fill: getColor(secondary);
   }
 }
 
