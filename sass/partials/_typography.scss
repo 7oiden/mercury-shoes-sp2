@@ -138,31 +138,31 @@ strong {
   color: getColor(accent);
 }
 
-.card__title,
-.card__price {
-  font-size: 1.125rem;
-  font-family: $primary-headings;
-  margin: 0;
-  padding: 0;
-}
+// .card__title,
+// .card__price {
+//   font-size: 1.125rem;
+//   font-family: $primary-headings;
+//   margin: 0;
+//   padding: 0;
+// }
 
-.card__text {
-  display: inline-block;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  font-weight: 300;
-  margin: 0;
-  padding: 0.5rem 0 0 0;
-}
+// .card__text {
+//   display: inline-block;
+//   overflow-wrap: break-word;
+//   word-wrap: break-word;
+//   word-break: break-word;
+//   font-weight: 300;
+//   margin: 0;
+//   padding: 0.5rem 0 0 0;
+// }
 
-.card__icon-container {
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  background-color: getColor(border);
-  position: relative;
-}
+// .card__icon-container {
+//   height: 24px;
+//   width: 24px;
+//   border-radius: 50%;
+//   background-color: getColor(border);
+//   position: relative;
+// }
 
 .news {
   &__header {

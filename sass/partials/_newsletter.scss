@@ -10,8 +10,8 @@
     background-image: url("../images/asphalt-pattern.jpg");
     background-size: cover;
     left: 50%;
-    bottom: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1010;
     animation-name: animate-opacity;
     animation-duration: 0.3s;
