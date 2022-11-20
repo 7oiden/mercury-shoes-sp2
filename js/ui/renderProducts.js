@@ -67,7 +67,6 @@ export function renderProducts(products) {
               ${featuredIcon}
             </div>
             <p class="card__price">$${product.price.toFixed(2)}</p>
-            <p class="card__text">${product.short_description}</p>
           </div>
         </a>
         ${editProd}
