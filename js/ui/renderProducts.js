@@ -49,11 +49,11 @@ export function renderProducts(products) {
 
     productsContainer.innerHTML += `
     <div class="remove-card card__container">
-    <i class="${favIconClass} fa-heart" data-id="${product.id}" data-title="${
-      product.title
-    }" data-price="${product.price}" data-description="${
-      product.short_description
-    }"></i>
+    <i class="${favIconClass} fa-heart" data-id="${product.id}" data-image="${
+      product.image_url
+    }" data-title="${product.title}" data-price="${
+      product.price
+    }" data-description="${product.short_description}"></i>
       <a href="products-details.html?id=${
         product.id
       }" class="card ${adminClass}">
@@ -80,8 +80,8 @@ export function renderProducts(products) {
     this.classList.toggle("far");
 
     const id = this.dataset.id;
-    const title = this.dataset.title;
     const image = this.dataset.image;
+    const title = this.dataset.title;
     const price = this.dataset.price;
     const description = this.dataset.description;
 
@@ -94,6 +94,7 @@ export function renderProducts(products) {
     if (!productInStorage) {
       const product = {
         id: id,
+        image: image,
         title: title,
         image: image,
         price: price,

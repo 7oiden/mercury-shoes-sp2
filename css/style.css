@@ -840,7 +840,8 @@ label {
 .sizes,
 .contact,
 .location,
-.confirmation {
+.confirmation,
+.favorites {
   margin: 0 auto;
   width: 90%;
 }
@@ -851,7 +852,8 @@ label {
 .sizes,
 .contact,
 .location,
-.confirmation {
+.confirmation,
+.favorites {
     width: 85%;
   }
 }
@@ -1105,10 +1107,12 @@ i {
   border-radius: 50%;
 }
 
-.basket__remove-icon {
+.basket__remove-icon,
+.fav__remove-icon {
   position: absolute;
   right: 1rem;
   top: 1rem;
+  z-index: 200;
 }
 
 .about__card-icon {
@@ -2025,6 +2029,72 @@ header {
   .details__title-wrapper {
     flex-direction: row;
     align-items: center;
+  }
+}
+
+.favorites__list {
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.favorites__list--empty {
+  font-size: 1.25rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.fav a {
+  transition: all 0.3s ease;
+}
+.fav a:hover {
+  opacity: 0.75;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fav {
+  position: relative;
+  list-style: none;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+}
+.fav__container {
+  display: flex;
+}
+.fav__image {
+  width: 100%;
+  flex: 1;
+}
+.fav__image img {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.fav__body {
+  flex: 2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.fav__body > * {
+  margin: 0;
+  padding: 0;
+}
+.fav__title {
+  font-family: "soleil", tahoma, sans-serif;
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .fav__title {
+    font-size: 1.25rem;
   }
 }
 

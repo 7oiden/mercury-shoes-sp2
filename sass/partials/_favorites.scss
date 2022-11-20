@@ -1,0 +1,72 @@
+.favorites__list {
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &--empty {
+    font-size: 1.25rem;
+    padding: 1rem;
+    background-color: getColor(primary);
+    border-radius: 5px;
+    list-style: none;
+  }
+}
+
+.fav a {
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.75;
+    @include dropShadow(6px, 12px);
+  }
+}
+
+.fav {
+  position: relative;
+  list-style: none;
+  border-radius: 3px;
+  border: 1px solid getColor(border);
+
+  &__container {
+    display: flex;
+  }
+
+  &__image {
+    width: 100%;
+    flex: 1;
+  }
+
+  &__image img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__body {
+    flex: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__body > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    font-family: $primary-headings;
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.25rem;
+    }
+  }
+}
