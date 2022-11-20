@@ -14,8 +14,8 @@ export default function loadMoreItems(items) {
     loadButton.style.display = "none";
   } else {
     loadButton.style.display = "block";
-    loadButton.classList.remove("disabled");
-    loadButton.innerHTML = "Load more products";
+    // loadButton.classList.remove("disabled");
+    // loadButton.innerHTML = "Load more products";
   }
 
   loadButton.onclick = function () {

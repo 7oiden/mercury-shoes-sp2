@@ -48,7 +48,7 @@ export function renderProducts(products) {
     }
 
     productsContainer.innerHTML += `
-    <div class="card__container">
+    <div class="remove-card card__container">
     <i class="${favIconClass} fa-heart" data-id="${product.id}" data-title="${
       product.title
     }" data-price="${product.price}" data-description="${
@@ -107,7 +107,6 @@ export function renderProducts(products) {
       });
       saveFavs(newFavs);
     }
-
-    loadMoreItems(products);
   }
+  loadMoreItems(products);
 }

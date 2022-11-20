@@ -2,8 +2,8 @@ import { renderProducts } from "./renderProducts.js";
 
 export function filterProducts(products) {
   const filterInput = document.querySelector("#filter-select");
-  const filterIcon = document.querySelector(".filter-icon");
-  const filterForm = document.querySelector("#filter-form");
+  // const filterIcon = document.querySelector(".filter-icon");
+  // const filterForm = document.querySelector("#filter-form");
 
   console.log(products);
 
