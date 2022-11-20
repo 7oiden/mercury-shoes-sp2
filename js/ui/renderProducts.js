@@ -1,4 +1,5 @@
 import { getToken } from "../utils/storage.js";
+import { getExistingFavs, saveFavs } from "../utils/storage.js";
 import loadMoreItems from "../components/productsOverview/loadMoreButton.js";
 
 const token = getToken();
@@ -6,7 +7,8 @@ const token = getToken();
 const productsContainer = document.querySelector(".products__grid");
 
 export function renderProducts(products) {
- 
+  const favorites = getExistingFavs();
+  
   productsContainer.innerHTML = "";
 
   products.forEach((product) => {
@@ -35,8 +37,23 @@ export function renderProducts(products) {
       </div>`;
     }
 
+    let favIconClass = "far";
+
+    const objectAlreadyFav = favorites.find((fav) => {
+      return parseInt(fav.id) === product.id;
+    });
+
+    if (objectAlreadyFav) {
+      favIconClass = "fas";
+    }
+
     productsContainer.innerHTML += `
       <div class="remove-card card__container ${adminClass}">
+      <i class="${favIconClass} fa-heart" data-id="${product.id}" data-title="${
+      product.title
+    }" data-price="${product.price}" data-description="${
+      product.short_description
+    }"></i>
         <a href="products-details.html?id=${
           product.id
         }" class="card ${adminClass}">
@@ -56,6 +73,46 @@ export function renderProducts(products) {
         ${editProd}
       </div>`;
   });
-  
-  loadMoreItems(products);
+
+  const favIcons = document.querySelectorAll(".fa-heart");
+
+  favIcons.forEach((icon) => {
+    icon.addEventListener("click", handleFavClick);
+  });
+
+  function handleFavClick() {
+    this.classList.toggle("fas");
+    this.classList.toggle("far");
+
+    const id = this.dataset.id;
+    const title = this.dataset.title;
+    const image = this.dataset.image;
+    const price = this.dataset.price;
+    const description = this.dataset.description;
+
+    const currentFavs = getExistingFavs();
+
+    const productInStorage = currentFavs.find((fav) => {
+      return fav.id === id;
+    });
+
+    if (!productInStorage) {
+      const product = {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        description: description,
+      };
+      currentFavs.push(product);
+      saveFavs(currentFavs);
+    } else {
+      const newFavs = currentFavs.filter((fav) => {
+        return fav.id !== id;
+      });
+      saveFavs(newFavs);
+    }
+
+    loadMoreItems(products);
+  }
 }

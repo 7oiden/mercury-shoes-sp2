@@ -1,4 +1,5 @@
 .card__container {
+  position: relative;
   transition: all 0.3s;
   width: $card-width;
   display: flex;
@@ -38,9 +39,9 @@
 
 // this class hides products when the array has more than 8 products
 // the load button then removes this class for 8 items at the time.
-.remove-card {
-  display: none;
-}
+// .remove-card {
+//   display: none;
+// }
 
 .card__admin {
   border-bottom: none;

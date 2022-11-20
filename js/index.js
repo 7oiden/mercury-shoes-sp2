@@ -20,7 +20,7 @@ newsletterModal();
     const response = await fetch(heroUrl);
     const result = await response.json();
 
-    console.log(result);
+    // console.log(result);
 
     renderHero(result);
   } catch (error) {

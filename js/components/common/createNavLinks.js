@@ -65,6 +65,9 @@ export default function createNavLinks() {
   <li id="about"><a href="about.html" class="${
     pathname === "/about.html" ? "nav__link--active" : ""
   } nav__link">About us</a></li>
+  <li id="about"><a href="favorites.html" class="${
+    pathname === "/favorites.html" ? "nav__link--active" : ""
+  } nav__link">Favorites</a></li>
   ${addLink}
   `;
 
