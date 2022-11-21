@@ -62,9 +62,9 @@ export function renderBasket() {
           </tr>
         </table>
       </div>
-      <svg style="width:1.5rem;height:1.5rem" viewBox="0 0 24 24" class="basket__remove-icon" data-id="${item.id}">
-      <title>Remove item</title>
-      <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+      <svg style="width:1.5rem;height:1.5rem" viewBox="0 0 24 24" class="fav__remove-icon" data-id="${item.id}">
+        <title>Remove item</title>
+        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
       </svg>
       </li>`;
   });

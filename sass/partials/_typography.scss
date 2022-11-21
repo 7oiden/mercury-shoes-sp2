@@ -414,10 +414,12 @@ label {
 }
 
 .button-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
-  font-style: italic;
   color: getColor(success);
 }
 
@@ -443,4 +445,3 @@ label {
 #logout {
   position: relative;
 }
-

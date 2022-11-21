@@ -181,6 +181,7 @@
 }
 
 .disabled {
+  background: transparent;
   background-color: grey;
   pointer-events: none;
   cursor: default;

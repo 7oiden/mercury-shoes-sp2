@@ -214,13 +214,13 @@ export default function renderDetails(details) {
       currentBasket.push(basket);
       saveBasket(currentBasket);
       basketCounter();
-      messageContainer.innerHTML = "Product added to basket.";
+      messageContainer.innerHTML = `<i class="fas fa-check"></i><span>Product added to basket</span>`;
 
       setTimeout(function () {
         messageContainer.innerHTML = "";
       }, 1500);
     } else {
-      messageContainer.innerHTML = "Product removed from basket.";
+      messageContainer.innerHTML = `<i class="fas fa-check"></i><span>Product removed from basket</span>`;
 
       setTimeout(function () {
         messageContainer.innerHTML = "";

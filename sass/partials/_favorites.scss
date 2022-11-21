@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  
+
   &--empty {
     font-size: 1.25rem;
     padding: 1rem;
@@ -31,13 +31,28 @@
   background-color: getColor(primary);
   border: 1px solid getColor(border);
 
+  &__heading-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__count {
+    font-family: $primary-headings;
+    font-size: 1.25rem;
+  }
+
   &__container {
     display: flex;
+    flex-direction: column;
+
+    @media (min-width: getBreakpoint(large)) {
+      flex-direction: row;
+    }
   }
 
   &__image {
     width: 100%;
-    flex: 1;
   }
 
   &__image img {
@@ -47,28 +62,28 @@
     padding: 0;
   }
 
-  &__body {
-    flex: 2;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  &__body > * {
-    margin: 0;
-    padding: 0;
-  }
-
   &__title {
     font-family: $primary-headings;
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
     font-weight: bold;
 
     @media (min-width: getBreakpoint(large)) {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 1rem;
+
+    & p {
+      margin: 0;
+      padding: 0;
     }
   }
 }

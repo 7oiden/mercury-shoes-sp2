@@ -2,6 +2,7 @@ import { getExistingFavs, saveFavs } from ".././utils/storage.js";
 
 const favList = document.querySelector(".favorites__list");
 const clearButton = document.querySelector("#clear-favorites");
+const headingContainer = document.querySelector(".fav__heading-container")
 
 let currentFavs = getExistingFavs();
 
@@ -12,7 +13,10 @@ export default function renderFavorites() {
 
   let favCount = currentFavs.length;
 
+  headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1><span class="fav__count">(${favCount})</span>`
+
   if (favCount === 0) {
+    headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1>`
     favList.innerHTML = `<li class="favorites__list--empty">No favorite is added yet</li>`;
     clearButton.style.display = "none";
   }
@@ -20,22 +24,22 @@ export default function renderFavorites() {
   currentFavs.forEach((favorite) => {
     favList.innerHTML += `
     <li class="fav">
-    <a href="products-details.html?id=${favorite.id}">
-    <div class="fav__container">
-    <div class="fav__image">
-    <img src="${favorite.image}"/>
-    </div>
-    <div class="fav__body">
-    <h2 class="fav__title">${favorite.title}</h2>
-    <p>$${favorite.price}</p>
-    <p>${favorite.description}</p>
-    </div>
-    </div>
-    </a>
-    <svg style="width:1.5rem;height:1.5rem" viewBox="0 0 24 24" class="fav__remove-icon" data-id="${favorite.id}">
-    <title>Remove item</title>
-    <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-    </svg>
+      <svg style="width:2rem;height:2rem" viewBox="0 0 24 24" class="fav__remove-icon" data-id="${favorite.id}">
+        <title>Remove item</title>
+        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+      </svg>
+      <a href="products-details.html?id=${favorite.id}">
+       <div class="fav__container">
+        <div class="fav__image">
+          <img src="${favorite.image}"/>
+        </div>
+        <div class="fav__body">
+          <h2 class="fav__title">${favorite.title}</h2>
+          <p>$${favorite.price}</p>
+          <p>${favorite.description}</p>
+         </div>
+        </div>
+      </a>
     </li>`;
   });
 
