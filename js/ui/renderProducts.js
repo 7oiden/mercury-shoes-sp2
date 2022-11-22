@@ -3,12 +3,12 @@ import { getExistingFavs, saveFavs } from "../utils/storage.js";
 import loadMoreItems from "../components/productsOverview/loadMoreButton.js";
 
 const token = getToken();
+const favorites = getExistingFavs();
 
 const productsContainer = document.querySelector(".products__grid");
 
 export function renderProducts(products) {
-  const favorites = getExistingFavs();
-
+  
   productsContainer.innerHTML = "";
 
   products.forEach((product) => {

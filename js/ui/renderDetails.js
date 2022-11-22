@@ -1,12 +1,13 @@
 import { getExistingBasket, saveBasket, getToken } from "../utils/storage.js";
 import { basketCounter } from "../components/common/basketCounter.js";
 import descriptionToggler from "../components/productDetails/descriptionToggler.js";
+import { getExistingFavs, saveFavs } from "../utils/storage.js";
+import imageModal from "../components/productDetails/imageModal.js";
 
 const detailsContainer = document.querySelector(".details__container");
-
 const basket = getExistingBasket();
-
 const token = getToken();
+const favorites = getExistingFavs();
 
 export default function renderDetails(details) {
   let editButton = "";
@@ -71,6 +72,17 @@ export default function renderDetails(details) {
     </select>
   </div>`;
 
+  //handles favorite icon
+  let favIconClass = "far";
+
+  const objectAlreadyFav = favorites.find((fav) => {
+    return parseInt(fav.id) === details.id;
+  });
+
+  if (objectAlreadyFav) {
+    favIconClass = "fas";
+  }
+
   detailsContainer.innerHTML = `
   <div class="details__image">
     <img src="${details.image_url}" alt="${
@@ -78,6 +90,11 @@ export default function renderDetails(details) {
   }" class="details__image"/>
   </div>
   <div class="details__card">
+  <i class="${favIconClass} fa-heart" data-id="${details.id}" data-image="${
+    details.image_url
+  }" data-title="${details.title}" data-price="${
+    details.price
+  }" data-description="${details.short_description}"></i>
     <div class="details__head">
       <div class="details__title-wrapper">
         <h1 class="details__title">${details.title}</h1>
@@ -233,4 +250,46 @@ export default function renderDetails(details) {
       basketCounter();
     }
   }
+
+  //handles favorite
+  const favIcons = document.querySelector(".fa-heart");
+
+  favIcons.addEventListener("click", handleFavClick);
+
+  function handleFavClick() {
+    this.classList.toggle("fas");
+    this.classList.toggle("far");
+
+    const id = this.dataset.id;
+    const image = this.dataset.image;
+    const title = this.dataset.title;
+    const price = this.dataset.price;
+    const description = this.dataset.description;
+
+    const currentFavs = getExistingFavs();
+
+    const productInStorage = currentFavs.find((fav) => {
+      return fav.id === id;
+    });
+
+    if (!productInStorage) {
+      const product = {
+        id: id,
+        image: image,
+        title: title,
+        image: image,
+        price: price,
+        description: description,
+      };
+      currentFavs.push(product);
+      saveFavs(currentFavs);
+    } else {
+      const newFavs = currentFavs.filter((fav) => {
+        return fav.id !== id;
+      });
+      saveFavs(newFavs);
+    }
+  }
+
+  imageModal(details);
 }

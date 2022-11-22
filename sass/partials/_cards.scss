@@ -67,6 +67,7 @@
 
 .details {
   &__card {
+    position: relative;
     padding: 2rem 5% 3rem 5%;
     flex: 1;
     background-color: getColor(primary);

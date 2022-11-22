@@ -2,7 +2,7 @@ import { getExistingFavs, saveFavs } from ".././utils/storage.js";
 
 const favList = document.querySelector(".favorites__list");
 const clearButton = document.querySelector("#clear-favorites");
-const headingContainer = document.querySelector(".fav__heading-container")
+const headingContainer = document.querySelector(".fav__heading-container");
 
 let currentFavs = getExistingFavs();
 
@@ -13,10 +13,10 @@ export default function renderFavorites() {
 
   let favCount = currentFavs.length;
 
-  headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1><span class="fav__count">(${favCount})</span>`
+  headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1><span class="fav__count">(${favCount})</span>`;
 
   if (favCount === 0) {
-    headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1>`
+    headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1>`;
     favList.innerHTML = `<li class="favorites__list--empty">No favorite is added yet</li>`;
     clearButton.style.display = "none";
   }
@@ -34,8 +34,10 @@ export default function renderFavorites() {
           <img src="${favorite.image}"/>
         </div>
         <div class="fav__body">
+        <div class="fav__header">
           <h2 class="fav__title">${favorite.title}</h2>
-          <p>$${favorite.price}</p>
+          <span>$${favorite.price}</span>
+          </div>
           <p>${favorite.description}</p>
          </div>
         </div>
