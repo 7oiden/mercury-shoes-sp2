@@ -67,26 +67,38 @@
 
 .details {
   &__card {
-    position: relative;
-    padding: 2rem 5% 3rem 5%;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem 0 2rem 0;
     flex: 1;
-    background-color: getColor(primary);
 
     @media (min-width: getBreakpoint(small)) {
-      padding: 2rem 7.5% 3rem 7.5%;
+      // padding: 2rem 7.5% 1rem 7.5%;
+      width: 90%;
     }
 
     @media (min-width: getBreakpoint(medium)) {
-      padding: 2rem 12.5% 3rem 12.5%;
+      // padding: 0 12.5% 2rem 12.5%;
+      width: 85%;
     }
 
     @media (min-width: getBreakpoint(large)) {
-      padding: 2rem 2rem 3rem 2rem;
-      @include content-border(5px);
+      // padding: 0 2rem 1rem 2rem;
+      width: 100%;
+      padding: 1rem 1.5rem 2rem 1.5rem;
     }
 
-    @media (min-width: getBreakpoint(xxLarge)) {
-      padding: 2rem 3rem 3rem 3rem;
+    @media (min-width: getBreakpoint(xLarge)) {
+      flex: 3;
+      padding: 1rem 2rem 2rem 2rem;
+    }
+
+    @media (min-width: getBreakpoint(xxxLarge)) {
+      flex: 4;
     }
   }
 
@@ -98,7 +110,7 @@
 
     @media (min-width: getBreakpoint(large)) {
       flex-direction: row;
-      gap: 3rem;
+      gap: 0;
       margin-bottom: 2rem;
     }
   }

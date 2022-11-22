@@ -9,6 +9,8 @@ const basket = getExistingBasket();
 const token = getToken();
 const favorites = getExistingFavs();
 
+const placeholderImage = "https://via.placeholder.com/500x400?text=Mercury";
+
 export default function renderDetails(details) {
   let editButton = "";
 
@@ -84,17 +86,35 @@ export default function renderDetails(details) {
   }
 
   detailsContainer.innerHTML = `
-  <div class="details__image">
-    <img src="${details.image_url}" alt="${
-    details.image_alt_text
-  }" class="details__image"/>
-  </div>
-  <div class="details__card">
-  <i class="${favIconClass} fa-heart" data-id="${details.id}" data-image="${
+  <div class="details__image-container">
+  <i id="details-fav-icon" class="${favIconClass} fa-heart" data-id="${details.id}" data-image="${
     details.image_url
   }" data-title="${details.title}" data-price="${
     details.price
   }" data-description="${details.short_description}"></i>
+    <div class="details__image">
+      <img src="${details.image_url}" alt="${
+    details.image_alt_text
+  }" class="details__image"/>
+    </div>
+    <div class="details__preview-wrapper">
+      <div class="details__preview" id="preview-1">
+        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+      </div>
+      <div class="details__preview" id="preview-2">
+        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+      </div>
+      <div class="details__preview" id="preview-3">
+        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+      </div>
+      <div class="details__preview id="preview-4">
+        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+      </div>
+    </div>
+  </div>
+
+  <div class="details__card">
+  <div>
     <div class="details__head">
       <div class="details__title-wrapper">
         <h1 class="details__title">${details.title}</h1>
@@ -130,6 +150,7 @@ export default function renderDetails(details) {
       </div>
     </div>
     <hr />
+    </div>
       <div class="details__button-wrapper">
         <div class="button-message"></div>
         <div class="details__stock-wrapper">

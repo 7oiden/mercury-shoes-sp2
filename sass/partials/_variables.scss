@@ -7,7 +7,7 @@ $button-text: "proxima nova", verdana, sans-serif;
 $colors: (
   primary: #ffffff,
   secondary: #323232,
-  accent: #BF1E0F,
+  accent: #bf1e0f,
   background: #fafafa,
   dark: #000000,
   error: #eb4d32,
@@ -28,6 +28,7 @@ $breakpoints: (
   large: 992px,
   xLarge: 1200px,
   xxLarge: 1400px,
+  xxxLarge: 1600px,
 );
 
 @function getBreakpoint($breakpoint) {

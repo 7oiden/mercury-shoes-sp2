@@ -1,5 +1,3 @@
-const modal = document.querySelector(".modal");
-const modalImage = document.querySelector(".modal__content");
 
 export default function imageModal(details) {
   const modal = document.querySelector(".modal");
