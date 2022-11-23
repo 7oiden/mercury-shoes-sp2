@@ -143,7 +143,7 @@ export default function renderDetails(details) {
       <div class="details__block2">
         <div class="details__heading-wrapper">
           <h2 class="details__sub-heading">Product info:</h2>
-          <i aria-hidden="true" class="fas ${iconClass} fa-minus" title="Show/hide product details"></i>
+          <i aria-hidden="true" id="show-icon" class="fas ${iconClass} fa-minus" title="Show/hide product details"></i>
           <span class="sr-only">Show/hide product details</span>
         </div>
         <p class="details__text">${details.description}</p>

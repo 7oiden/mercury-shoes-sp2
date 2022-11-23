@@ -8,7 +8,6 @@ const favorites = getExistingFavs();
 const productsContainer = document.querySelector(".products__grid");
 
 export function renderProducts(products) {
-  
   productsContainer.innerHTML = "";
 
   products.forEach((product) => {
@@ -36,6 +35,7 @@ export function renderProducts(products) {
     }
 
     let favIconClass = "far";
+    let favIconTitle = "Add favorite";
 
     const objectAlreadyFav = favorites.find((fav) => {
       return parseInt(fav.id) === product.id;
@@ -43,16 +43,19 @@ export function renderProducts(products) {
 
     if (objectAlreadyFav) {
       favIconClass = "fas";
+      favIconTitle = "Remove favorite";
     }
 
     productsContainer.innerHTML += `
     <div class="remove-card card__container">
     ${featuredIcon}
-    <i class="${favIconClass} fa-heart" data-id="${product.id}" data-image="${
-      product.image_url
-    }" data-title="${product.title}" data-price="${
-      product.price
-    }" data-description="${product.short_description}"></i>
+    <i title="${favIconTitle}" class="${favIconClass} fa-heart" data-id="${
+      product.id
+    }" data-image="${product.image_url}" data-title="${
+      product.title
+    }" data-price="${product.price}" data-description="${
+      product.short_description
+    }"></i>
       <a href="products-details.html?id=${
         product.id
       }" class="card ${adminClass}">
@@ -77,6 +80,14 @@ export function renderProducts(products) {
     event.stopPropagation();
     this.classList.toggle("fas");
     this.classList.toggle("far");
+
+    if (this.classList.contains("fas")) {
+      this.setAttribute("title", "Remove favorite");
+      this.classList.add("heart");
+    } else if (this.classList.contains("far")) {
+      this.setAttribute("title", "Add favorite");
+      this.classList.remove("heart");
+    }
 
     const id = this.dataset.id;
     const image = this.dataset.image;

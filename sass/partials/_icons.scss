@@ -73,8 +73,15 @@ i {
 }
 
 #details-fav-icon {
-  top: 2rem;
-  left: 2rem;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.75rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+  }
 }
 
 .card__feat-icon {
@@ -193,6 +200,10 @@ i {
   transform: translate(-50%, -50%);
 }
 
+.heart {
+  animation: heart-animation 0.4s ease;
+}
+
 .animation {
   animation: shake-animation 5s ease;
 }
@@ -221,5 +232,19 @@ i {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

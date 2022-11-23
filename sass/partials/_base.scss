@@ -233,7 +233,11 @@ hr {
 }
 
 .details__button-wrapper {
-  align-self: flex-end;
+  align-self: flex-start;
+
+  @media (min-width: getBreakpoint(large)) {
+    align-self: flex-end;
+  }
 }
 
 // .placeholder {

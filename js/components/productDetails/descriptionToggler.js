@@ -1,5 +1,5 @@
 export default function descriptionToggler() {
-  const iconSelector = document.querySelector(".fas");
+  const iconSelector = document.querySelector("#show-icon");
   const descriptionParagraph = document.querySelector(".details__text");
 
   if (descriptionParagraph.style.display === "block") {
@@ -17,7 +17,7 @@ export default function descriptionToggler() {
     }
   }
 
-  //prevents text from getting lost when rezising window
+  //prevents text from getting lost when resizing window
   window.onresize = function () {
     if (window.innerWidth >= 992) {
       descriptionParagraph.style.display = "block";

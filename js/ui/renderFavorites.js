@@ -24,9 +24,9 @@ export default function renderFavorites() {
   currentFavs.forEach((favorite) => {
     favList.innerHTML += `
     <li class="fav">
-      <svg style="width:2rem;height:2rem" viewBox="0 0 24 24" class="fav__remove-icon" data-id="${favorite.id}">
-        <title>Remove item</title>
-        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+      <svg style="width:1.75rem;height:1.75rem" viewBox="0 0 24 24" class="fav__remove-icon" data-id="${favorite.id}">
+      <title>Remove item</title>
+        <path fill="currentColor" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" />
       </svg>
       <a href="products-details.html?id=${favorite.id}">
        <div class="fav__container">

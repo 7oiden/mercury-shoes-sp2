@@ -246,7 +246,12 @@ hr {
 }
 
 .details__button-wrapper {
-  align-self: flex-end;
+  align-self: flex-start;
+}
+@media (min-width: 992px) {
+  .details__button-wrapper {
+    align-self: flex-end;
+  }
 }
 
 .alert-container {
@@ -1202,8 +1207,16 @@ i {
 }
 
 #details-fav-icon {
-  top: 2rem;
-  left: 2rem;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.75rem;
+}
+@media (min-width: 992px) {
+  #details-fav-icon {
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+  }
 }
 
 .card__feat-icon {
@@ -1321,6 +1334,11 @@ i {
   transform: translate(-50%, -50%);
 }
 
+.heart {
+  -webkit-animation: heart-animation 0.4s ease;
+          animation: heart-animation 0.4s ease;
+}
+
 .animation {
   -webkit-animation: shake-animation 5s ease;
           animation: shake-animation 5s ease;
@@ -1377,6 +1395,28 @@ i {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 header {
