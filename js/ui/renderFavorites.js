@@ -1,4 +1,5 @@
 import { getExistingFavs, saveFavs } from ".././utils/storage.js";
+import descriptionToggler from "../components/productDetails/descriptionToggler.js";
 
 const favList = document.querySelector(".favorites__list");
 const clearButton = document.querySelector("#clear-favorites");
@@ -12,6 +13,8 @@ export default function renderFavorites() {
   favList.innerHTML = "";
 
   let favCount = currentFavs.length;
+
+  let showIconClass = "fa-plus";
 
   headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1><span class="fav__count">(${favCount})</span>`;
 

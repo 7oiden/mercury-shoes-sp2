@@ -285,12 +285,7 @@ strong {
 
   &__text {
     margin-top: 0;
-    padding: 0;
-    display: none;
-
-    @media (min-width: getBreakpoint(large)) {
-      display: block;
-    }
+    margin-bottom: 1rem;
   }
 }
 
@@ -444,4 +439,12 @@ label {
 #login,
 #logout {
   position: relative;
+}
+
+.text-show {
+  display: block;
+}
+
+.text-hide {
+  display: none;
 }

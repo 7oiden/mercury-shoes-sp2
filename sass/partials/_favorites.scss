@@ -16,11 +16,13 @@
 }
 
 .fav a {
-  transition: all 0.3s ease;
+  @media (min-width: getBreakpoint(large)) {
+    transition: all 0.3s ease;
 
-  &:hover {
-    opacity: 0.75;
-    @include dropShadow(6px, 12px);
+    &:hover {
+      opacity: 0.75;
+      @include dropShadow(6px, 12px);
+    }
   }
 }
 
@@ -68,17 +70,12 @@
     gap: 0.25rem;
     margin: 0;
     padding: 1rem;
-
-    & p {
-      margin: 0;
-      padding: 1rem 0 0 0;
-    }
   }
 
   &__header {
     display: flex;
+
     justify-content: space-between;
-    border-bottom: 1px solid getColor(secondary);
     padding-bottom: 0.5rem;
 
     @media (min-width: getBreakpoint(large)) {
@@ -88,7 +85,7 @@
 
   &__title {
     font-family: $primary-headings;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -96,9 +93,5 @@
     @media (min-width: getBreakpoint(large)) {
       font-size: 1.125rem;
     }
-  }
-
-  &__description {
-    padding-top: 1rem;
   }
 }

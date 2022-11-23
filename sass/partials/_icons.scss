@@ -57,34 +57,33 @@ i {
   }
 }
 
-.fa-heart,
-.card__feat-icon {
+.fa-heart {
   position: absolute;
   display: block;
-
+  font-size: 1.75rem;
   color: getColor(secondary);
   z-index: 200;
+
+  @media (min-width: getBreakpoint(large)) {
+    font-size: 2rem;
+  }
 }
 
 #card-fav-icon {
   top: 1rem;
   right: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 
-  @media (min-width: getBreakpoint(large)) {
-    font-size: 1.75rem;
-  }
+  
 }
 
 #details-fav-icon {
   top: 1rem;
   left: 1rem;
-  font-size: 1.75rem;
 
   @media (min-width: getBreakpoint(large)) {
     top: 2rem;
     left: 2rem;
-    font-size: 2rem;
   }
 }
 
@@ -162,9 +161,9 @@ i {
   cursor: pointer;
   margin-right: 1rem;
 
-  @media (min-width: getBreakpoint(large)) {
-    visibility: hidden;
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  //   visibility: hidden;
+  // }
 }
 
 .fa-plus-square,

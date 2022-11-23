@@ -1,29 +1,52 @@
 export default function descriptionToggler() {
-  const iconSelector = document.querySelector("#show-icon");
-  const descriptionParagraph = document.querySelector(".details__text");
+  const showIcon = document.querySelector(".show-icon");
+  const description = document.querySelector(".details__text");
 
-  if (descriptionParagraph.style.display === "block") {
-  }
+  // showIcons.forEach((icon) => {
+  //   icon.addEventListener("click", handleFavClick);
+  // });
 
-  iconSelector.addEventListener("click", paragraphToggler);
+  showIcon.addEventListener("click", handleShowClick);
 
-  function paragraphToggler() {
-    if (descriptionParagraph.style.display === "block") {
-      descriptionParagraph.style.display = "none";
-      iconSelector.classList.add("fa-plus");
-    } else {
-      descriptionParagraph.style.display = "block";
-      iconSelector.classList.remove("fa-plus");
+  function handleShowClick(event) {
+    event.stopPropagation();
+    this.classList.toggle("fa-plus");
+    this.classList.toggle("fa-minus");
+    description.classList.toggle("text-show");
+    description.classList.toggle("text-hide");
+
+    if (this.classList.contains("fa-plus")) {
+      this.setAttribute("title", "Show info");
+    } else if (this.classList.contains("fa-minus")) {
+      this.setAttribute("title", "Hide info");
     }
   }
 
-  //prevents text from getting lost when resizing window
+  if (window.innerWidth >= 992) {
+    showIcon.classList.remove("fa-plus");
+    showIcon.classList.add("fa-minus");
+    showIcon.setAttribute("title", "Hide info");
+    description.classList.add("text-show");
+    description.classList.remove("text-hide");
+  } else if (window.innerWidth < 992) {
+    description.classList.remove("text-show");
+    description.classList.add("text-hide");
+    showIcon.setAttribute("title", "Show info");
+    showIcon.classList.add("fa-plus");
+    showIcon.classList.remove("fa-minus");
+  }
+
   window.onresize = function () {
     if (window.innerWidth >= 992) {
-      descriptionParagraph.style.display = "block";
+      showIcon.classList.remove("fa-plus");
+      showIcon.classList.add("fa-minus");
+      description.classList.add("text-show");
+      description.classList.remove("text-hide");
     } else if (window.innerWidth < 992) {
-      descriptionParagraph.style.display = "none";
-      iconSelector.classList.add("fa-plus");
+      description.classList.remove("text-show");
+      description.classList.add("text-hide");
+      showIcon.classList.add("fa-plus");
+      showIcon.classList.remove("fa-minus");
     }
   };
 }

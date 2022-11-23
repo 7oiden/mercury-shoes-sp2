@@ -32,6 +32,6 @@ const detailUrl = baseUrl + "products/" + id;
     renderDetails(json);
   } catch (error) {
     console.log(error)
-    displayAlert("alert error", "An error has occured when trying to fetch the API", ".details__container");
+    displayAlert("alert error", "An error has occurred when trying to fetch the API", ".details__container");
   }
 })();
