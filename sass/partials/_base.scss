@@ -235,7 +235,7 @@ hr {
 .details__button-wrapper {
   align-self: flex-start;
 
-  @media (min-width: getBreakpoint(large)) {
+  @media (min-width: getBreakpoint(xLarge)) {
     align-self: flex-end;
   }
 }

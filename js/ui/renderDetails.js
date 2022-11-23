@@ -1,8 +1,9 @@
 import { getExistingBasket, saveBasket, getToken } from "../utils/storage.js";
 import { basketCounter } from "../components/common/basketCounter.js";
 import descriptionToggler from "../components/productDetails/descriptionToggler.js";
-import { getExistingFavs, saveFavs } from "../utils/storage.js";
+import { getExistingFavs } from "../utils/storage.js";
 import imageModal from "../components/productDetails/imageModal.js";
+import handleFav from "../components/common/handleFav.js";
 
 const detailsContainer = document.querySelector(".details__container");
 const basket = getExistingBasket();
@@ -27,7 +28,7 @@ export default function renderDetails(details) {
   let buttonText = "Add to basket";
 
   const itemAlreadyInBasket = basket.find((item) => {
-    detailsContainer.innerHTML = "";
+    // detailsContainer.innerHTML = "";
 
     return parseInt(item.id) === details.id;
   });
@@ -76,6 +77,7 @@ export default function renderDetails(details) {
 
   //handles favorite icon
   let favIconClass = "far";
+  let favIconTitle = "Add favorite";
 
   const objectAlreadyFav = favorites.find((fav) => {
     return parseInt(fav.id) === details.id;
@@ -83,15 +85,21 @@ export default function renderDetails(details) {
 
   if (objectAlreadyFav) {
     favIconClass = "fas";
+    favIconTitle = "Remove favorite";
   }
+
+  detailsContainer.style.backgroundColor = "white";
+  detailsContainer.style.borderColor = "#d9d9d9";
 
   detailsContainer.innerHTML = `
   <div class="details__image-container">
-  <i id="details-fav-icon" class="${favIconClass} fa-heart" data-id="${details.id}" data-image="${
-    details.image_url
-  }" data-title="${details.title}" data-price="${
-    details.price
-  }" data-description="${details.short_description}"></i>
+  <i id="details-fav-icon" class="${favIconClass} fa-heart" title="${favIconTitle}" data-id="${
+    details.id
+  }" data-image="${details.image_url}" data-title="${
+    details.title
+  }" data-price="${details.price}" data-description="${
+    details.short_description
+  }"></i>
     <div class="details__image">
       <img src="${details.image_url}" alt="${
     details.image_alt_text
@@ -272,45 +280,6 @@ export default function renderDetails(details) {
     }
   }
 
-  //handles favorite
-  const favIcons = document.querySelector(".fa-heart");
-
-  favIcons.addEventListener("click", handleFavClick);
-
-  function handleFavClick() {
-    this.classList.toggle("fas");
-    this.classList.toggle("far");
-
-    const id = this.dataset.id;
-    const image = this.dataset.image;
-    const title = this.dataset.title;
-    const price = this.dataset.price;
-    const description = this.dataset.description;
-
-    const currentFavs = getExistingFavs();
-
-    const productInStorage = currentFavs.find((fav) => {
-      return fav.id === id;
-    });
-
-    if (!productInStorage) {
-      const product = {
-        id: id,
-        image: image,
-        title: title,
-        image: image,
-        price: price,
-        description: description,
-      };
-      currentFavs.push(product);
-      saveFavs(currentFavs);
-    } else {
-      const newFavs = currentFavs.filter((fav) => {
-        return fav.id !== id;
-      });
-      saveFavs(newFavs);
-    }
-  }
-
   imageModal(details);
+  handleFav();
 }

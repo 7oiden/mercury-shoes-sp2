@@ -1,6 +1,7 @@
 import { getToken } from "../utils/storage.js";
-import { getExistingFavs, saveFavs } from "../utils/storage.js";
+import { getExistingFavs} from "../utils/storage.js";
 import loadMoreItems from "../components/productsOverview/loadMoreButton.js";
+import handleFav from "../components/common/handleFav.js";
 
 const token = getToken();
 const favorites = getExistingFavs();
@@ -25,14 +26,14 @@ export function renderProducts(products) {
       adminClass = "card__admin";
     }
 
-    let featuredIcon = "";
+    // let featuredIcon = "";
 
-    if (product.featured) {
-      featuredIcon = `
-      <svg viewBox="0 0 24 24" class="card__feat-icon">
-      <path fill="currentColor" d="M8.58,17.25L9.5,13.36L6.5,10.78L10.45,10.41L12,6.8L13.55,10.45L17.5,10.78L14.5,13.36L15.42,17.25L12,15.19L8.58,17.25M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
-      </svg>`;
-    }
+    // if (product.featured) {
+    //   featuredIcon = `
+    //   <svg viewBox="0 0 24 24" class="card__feat-icon">
+    //   <path fill="currentColor" d="M8.58,17.25L9.5,13.36L6.5,10.78L10.45,10.41L12,6.8L13.55,10.45L17.5,10.78L14.5,13.36L15.42,17.25L12,15.19L8.58,17.25M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+    //   </svg>`;
+    // }
 
     let favIconClass = "far";
     let favIconTitle = "Add favorite";
@@ -48,8 +49,7 @@ export function renderProducts(products) {
 
     productsContainer.innerHTML += `
     <div class="remove-card card__container">
-    ${featuredIcon}
-    <i title="${favIconTitle}" class="${favIconClass} fa-heart" data-id="${
+    <i title="${favIconTitle}" id="card-fav-icon" class="${favIconClass} fa-heart" data-id="${
       product.id
     }" data-image="${product.image_url}" data-title="${
       product.title
@@ -70,54 +70,6 @@ export function renderProducts(products) {
       </a>${editProd}</div>`;
   });
 
-  const favIcons = document.querySelectorAll(".fa-heart");
-
-  favIcons.forEach((icon) => {
-    icon.addEventListener("click", handleFavClick);
-  });
-
-  function handleFavClick(event) {
-    event.stopPropagation();
-    this.classList.toggle("fas");
-    this.classList.toggle("far");
-
-    if (this.classList.contains("fas")) {
-      this.setAttribute("title", "Remove favorite");
-      this.classList.add("heart");
-    } else if (this.classList.contains("far")) {
-      this.setAttribute("title", "Add favorite");
-      this.classList.remove("heart");
-    }
-
-    const id = this.dataset.id;
-    const image = this.dataset.image;
-    const title = this.dataset.title;
-    const price = this.dataset.price;
-    const description = this.dataset.description;
-
-    const currentFavs = getExistingFavs();
-
-    const productInStorage = currentFavs.find((fav) => {
-      return fav.id === id;
-    });
-
-    if (!productInStorage) {
-      const product = {
-        id: id,
-        image: image,
-        title: title,
-        image: image,
-        price: price,
-        description: description,
-      };
-      currentFavs.push(product);
-      saveFavs(currentFavs);
-    } else {
-      const newFavs = currentFavs.filter((fav) => {
-        return fav.id !== id;
-      });
-      saveFavs(newFavs);
-    }
-  }
+  handleFav();
   loadMoreItems(products);
 }

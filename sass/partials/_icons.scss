@@ -61,11 +61,15 @@ i {
 .card__feat-icon {
   position: absolute;
   display: block;
+
+  color: getColor(secondary);
+  z-index: 200;
+}
+
+#card-fav-icon {
   top: 1rem;
   right: 1rem;
   font-size: 1.5rem;
-  color: getColor(secondary);
-  z-index: 200;
 
   @media (min-width: getBreakpoint(large)) {
     font-size: 1.75rem;
@@ -242,6 +246,7 @@ i {
 
   50% {
     transform: scale(1.25);
+    color: getColor(accent);
   }
 
   100% {
