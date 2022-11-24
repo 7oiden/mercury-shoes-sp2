@@ -2,10 +2,6 @@ export default function descriptionToggler() {
   const showIcon = document.querySelector(".show-icon");
   const description = document.querySelector(".details__text");
 
-  // showIcons.forEach((icon) => {
-  //   icon.addEventListener("click", handleFavClick);
-  // });
-
   showIcon.addEventListener("click", handleShowClick);
 
   function handleShowClick(event) {
@@ -36,17 +32,17 @@ export default function descriptionToggler() {
     showIcon.classList.remove("fa-minus");
   }
 
-  window.onresize = function () {
-    if (window.innerWidth >= 992) {
-      showIcon.classList.remove("fa-plus");
-      showIcon.classList.add("fa-minus");
-      description.classList.add("text-show");
-      description.classList.remove("text-hide");
-    } else if (window.innerWidth < 992) {
-      description.classList.remove("text-show");
-      description.classList.add("text-hide");
-      showIcon.classList.add("fa-plus");
-      showIcon.classList.remove("fa-minus");
-    }
-  };
+  // window.onresize = function () {
+  //   if (window.innerWidth >= 992) {
+  //     showIcon.classList.remove("fa-plus");
+  //     showIcon.classList.add("fa-minus");
+  //     description.classList.add("text-show");
+  //     description.classList.remove("text-hide");
+  //   } else if (window.innerWidth < 992) {
+  //     description.classList.remove("text-show");
+  //     description.classList.add("text-hide");
+  //     showIcon.classList.add("fa-plus");
+  //     showIcon.classList.remove("fa-minus");
+  //   }
+  // };
 }

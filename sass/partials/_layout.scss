@@ -225,18 +225,18 @@
   margin: 0 auto;
   width: 90%;
 
-  @media (min-width: getBreakpoint(medium)) {
-    width: 85%;
-  }
+  // @media (min-width: getBreakpoint(medium)) {
+  //   width: 85%;
+  // }
 
-  @media (min-width: getBreakpoint(large)) {
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  // }
 
-  @media (min-width: getBreakpoint(xLarge)) {
-  }
+  // @media (min-width: getBreakpoint(xLarge)) {
+  // }
 
-  @media (min-width: getBreakpoint(xxLarge)) {
-  }
+  // @media (min-width: getBreakpoint(xxLarge)) {
+  // }
 }
 
 .about-page-wrapper,
