@@ -4,13 +4,12 @@ import descriptionToggler from "../components/productDetails/descriptionToggler.
 import { getExistingFavs } from "../utils/storage.js";
 import imageModal from "../components/productDetails/imageModal.js";
 import handleFav from "../components/common/handleFav.js";
+import { placeholderUrl } from "../settings/constants.js";
 
 const detailsContainer = document.querySelector(".details__container");
 const basket = getExistingBasket();
 const token = getToken();
 const favorites = getExistingFavs();
-
-const placeholderImage = "https://via.placeholder.com/500x400?text=Mercury";
 
 export default function renderDetails(details) {
   let editButton = "";
@@ -107,16 +106,16 @@ export default function renderDetails(details) {
     </div>
     <div class="details__preview-wrapper">
       <div class="details__preview" id="preview-1">
-        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
       </div>
       <div class="details__preview" id="preview-2">
-        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
       </div>
       <div class="details__preview" id="preview-3">
-        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
       </div>
       <div class="details__preview id="preview-4">
-        <img src="${placeholderImage}" alt="${details.image_alt_text}">
+        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 export const alertContainer = document.querySelector(".alert-container");
 export const newsButton = document.getElementById("news-test");
 export const placeholderUrl =
-  "https://via.placeholder.com/500x400?text=Mercury";
-export const placeholderUrlShort = "via.placeholder.com/500x400?text=Mercury";
+  "https://res.cloudinary.com/dhd2paq70/image/upload/v1669282435/mercury-placeholder_adrqkc.jpg";
+export const placeholderUrlShort = "res.cloudinary.com/dhd2paq70/image/upload/v1669282435/mercury-placeholder_adrqkc.jpg";
+

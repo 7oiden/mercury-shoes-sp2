@@ -14,8 +14,6 @@ export default function renderFavorites() {
 
   let favCount = currentFavs.length;
 
-  let showIconClass = "fa-plus";
-
   headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1><span class="fav__count">(${favCount})</span>`;
 
   if (favCount === 0) {

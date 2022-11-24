@@ -2063,6 +2063,7 @@ header {
 }
 @media (min-width: 768px) {
   .details__preview-wrapper {
+    padding-top: 0.5rem;
     padding-right: 0.5rem;
   }
 }
@@ -2070,6 +2071,7 @@ header {
   .details__preview-wrapper {
     flex-direction: row;
     padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
     padding-right: 0;
   }
 }

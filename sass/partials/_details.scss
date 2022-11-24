@@ -38,12 +38,6 @@
   }
 }
 
-// #preview-1, #preview-1 img {
-//   @media (min-width: getBreakpoint(large)) {
-//     border-radius: 0 0 0 5px;
-//   }
-// }
-
 .details__preview-wrapper {
   display: flex;
   flex-direction: row;
@@ -58,12 +52,14 @@
   }
 
   @media (min-width: getBreakpoint(medium)) {
+    padding-top: 0.5rem;
     padding-right: 0.5rem;
   }
 
   @media (min-width: getBreakpoint(xLarge)) {
     flex-direction: row;
     padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
     padding-right: 0;
   }
 }
