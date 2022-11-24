@@ -11,6 +11,7 @@ createNavLinks();
 basketCounter();
 adminToggler();
 adminLogin();
+mobileToggler();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

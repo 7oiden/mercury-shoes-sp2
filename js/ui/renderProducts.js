@@ -1,5 +1,5 @@
 import { getToken } from "../utils/storage.js";
-import { getExistingFavs} from "../utils/storage.js";
+import { getExistingFavs } from "../utils/storage.js";
 import loadMoreItems from "../components/productsOverview/loadMoreButton.js";
 import handleFav from "../components/common/handleFav.js";
 

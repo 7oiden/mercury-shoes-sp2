@@ -44,7 +44,6 @@
   width: 100%;
   gap: 0.5rem;
   flex: 1;
-  // margin-bottom: 0.5rem;
 
   @media (min-width: getBreakpoint(small)) {
     flex-direction: column;
@@ -86,7 +85,7 @@
     // position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 95%;
     // background-color: getColor(primary);
     margin: 0 auto;
@@ -113,7 +112,7 @@
     @media (min-width: getBreakpoint(xLarge)) {
       width: 100%;
       flex: 3;
-      padding: 1rem 2rem 2rem 2rem;
+      padding: 2rem 2rem 2rem 3rem;
     }
 
     @media (min-width: getBreakpoint(xxxLarge)) {

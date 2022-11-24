@@ -1,7 +1,7 @@
 .modal {
   display: none;
   position: fixed;
-  padding-top: 80px;
+  padding-top: 32px;
   left: 0;
   top: 0;
   width: 100%;
@@ -13,6 +13,7 @@
 }
 
 .modal__content {
+  position: relative;
   margin: auto;
   display: block;
   width: 95%;
@@ -23,9 +24,13 @@
   cursor: default;
 }
 
-.modal-content {
+.modal__content {
   animation-name: zoom;
   animation-duration: 0.6s;
+}
+
+.modal__content img {
+  width: 100%;
 }
 
 @keyframes zoom {
@@ -36,3 +41,9 @@
     transform: scale(1);
   }
 }
+
+// .modal__close-icon {
+//   position: absolute;
+//   top: 1rem;
+//   right: 1rem;
+// }

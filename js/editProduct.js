@@ -22,6 +22,7 @@ if (!token) {
 
 basketCounter();
 createNavLinks();
+mobileToggler();
 
 const alertContainer = document.querySelector(".editalert-container");
 

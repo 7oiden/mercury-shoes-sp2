@@ -20,6 +20,7 @@ if (!token) {
 
 createNavLinks();
 basketCounter();
+mobileToggler();
 
 const alertContainer = document.querySelector(".addalert-container");
 const addFormError = document.querySelector(".add-form-error");

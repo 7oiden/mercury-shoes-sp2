@@ -73,8 +73,6 @@ i {
   top: 1rem;
   right: 1rem;
   font-size: 1.75rem;
-
-  
 }
 
 #details-fav-icon {
@@ -142,14 +140,13 @@ i {
   }
 }
 
-.modal-icon {
+.modal__close-icon {
   position: absolute;
-  width: 2rem;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 1rem;
+  right: 1rem;
 
   path {
-    fill: getColor(primary);
+    fill: getColor(secondary);
   }
 }
 

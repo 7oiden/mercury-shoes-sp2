@@ -16,6 +16,7 @@ createNavLinks();
 basketCounter();
 adminToggler();
 adminLogin();
+mobileToggler();
 
 (async function fetchApi() {
   try {

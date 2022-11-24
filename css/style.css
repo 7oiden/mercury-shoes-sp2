@@ -83,8 +83,8 @@ main.products-overview {
 .loader {
   position: relative;
   top: 2rem;
-  border: 0.5rem solid #323232;
-  border-top: 0.5rem solid #bf1e0f;
+  border: 0.5rem solid #bf1e0f;
+  border-top: 0.5rem solid transparent;
   margin: 0 auto;
   border-radius: 50%;
   width: 3rem;
@@ -871,25 +871,28 @@ label {
 }
 
 .about-page-wrapper,
-.confirmation-page-wrapper {
+.confirmation-page-wrapper,
+.fav-page-wrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  background-color: #fafafa;
+  gap: 1.5rem;
+  background-color: #ffffff;
 }
 @media (min-width: 768px) {
   .about-page-wrapper,
-.confirmation-page-wrapper {
+.confirmation-page-wrapper,
+.fav-page-wrapper {
     width: 85%;
   }
 }
 @media (min-width: 992px) {
   .about-page-wrapper,
-.confirmation-page-wrapper {
+.confirmation-page-wrapper,
+.fav-page-wrapper {
     width: 70%;
     border-radius: 5px;
     border: 1px solid #d9d9d9;
@@ -897,15 +900,23 @@ label {
 }
 @media (min-width: 1200px) {
   .about-page-wrapper,
-.confirmation-page-wrapper {
+.confirmation-page-wrapper,
+.fav-page-wrapper {
     width: 65%;
   }
 }
 @media (min-width: 1400px) {
   .about-page-wrapper,
-.confirmation-page-wrapper {
+.confirmation-page-wrapper,
+.fav-page-wrapper {
     width: 55%;
   }
+}
+
+.fav-page-wrapper {
+  background-color: transparent;
+  border: none;
+  padding-top: 0;
 }
 
 .confirmation-page-wrapper {
@@ -923,7 +934,7 @@ label {
   .contact-wrapper {
     flex-direction: row;
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -1183,14 +1194,13 @@ i {
   fill: #ffffff;
 }
 
-.modal-icon {
+.modal__close-icon {
   position: absolute;
-  width: 2rem;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 1rem;
+  right: 1rem;
 }
-.modal-icon path {
-  fill: #ffffff;
+.modal__close-icon path {
+  fill: #323232;
 }
 
 .fa-plus,
@@ -1364,8 +1374,8 @@ header {
 
 .nav {
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(250, 250, 250) 50%, rgb(230, 230, 230) 100%);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   z-index: 999;
   position: relative;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
@@ -1428,7 +1438,7 @@ header {
 }
 @media (min-width: 992px) {
   .nav__logo {
-    width: 200px;
+    width: 175px;
     margin-right: 3rem;
     margin-bottom: 0;
   }
@@ -1515,7 +1525,7 @@ header {
   position: absolute;
   width: 100%;
   background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgb(250, 250, 250) 50%, rgb(230, 230, 230) 100%);
-  top: 120px;
+  top: 105px;
   right: 0;
   gap: 1rem;
   z-index: -1;
@@ -1548,7 +1558,7 @@ header {
 @media (min-width: 992px) {
   .admin__dropdown {
     width: 600px;
-    top: 83px;
+    top: 67px;
   }
 }
 
@@ -1561,8 +1571,8 @@ header {
   }
 }
 .mobile-menu__list {
-  margin-top: 1rem;
   margin-left: 7.5%;
+  padding-bottom: 0.5rem;
 }
 .mobile-menu__item {
   font-family: "proxima nova", verdana, sans-serif;
@@ -2097,7 +2107,7 @@ header {
 .details__card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 95%;
   margin: 0 auto;
   padding: 1rem 0 2rem 0;
@@ -2124,7 +2134,7 @@ header {
   .details__card {
     width: 100%;
     flex: 3;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 3rem;
   }
 }
 @media (min-width: 1600px) {
@@ -2287,6 +2297,7 @@ header {
 @media (min-width: 768px) {
   .fav__body {
     flex: 2;
+    padding: 0 1rem 1rem 1rem;
   }
 }
 .fav__header {
@@ -2309,7 +2320,7 @@ header {
 }
 @media (min-width: 992px) {
   .fav__title {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -2392,7 +2403,7 @@ header {
 .modal {
   display: none;
   position: fixed;
-  padding-top: 80px;
+  padding-top: 32px;
   left: 0;
   top: 0;
   width: 100%;
@@ -2404,6 +2415,7 @@ header {
 }
 
 .modal__content {
+  position: relative;
   margin: auto;
   display: block;
   width: 95%;
@@ -2414,11 +2426,15 @@ header {
   cursor: default;
 }
 
-.modal-content {
+.modal__content {
   -webkit-animation-name: zoom;
           animation-name: zoom;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
+}
+
+.modal__content img {
+  width: 100%;
 }
 
 @-webkit-keyframes zoom {
@@ -2548,7 +2564,6 @@ label {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 1200px) {

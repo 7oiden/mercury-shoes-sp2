@@ -84,14 +84,15 @@ main {
 .loader {
   position: relative;
   top: 2rem;
-  border: 0.5rem solid getColor(secondary);
-  border-top: 0.5rem solid getColor(accent);
+  border: 0.5rem solid getColor(accent);
+  border-top: 0.5rem solid transparent;
   margin: 0 auto;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
   animation: spin 1s ease-in-out infinite;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

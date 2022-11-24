@@ -10,3 +10,4 @@ basketCounter();
 adminToggler();
 adminLogin();
 faqToggler();
+mobileToggler();

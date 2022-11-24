@@ -27,7 +27,7 @@
       rgba(250, 250, 250, 1) 50%,
       rgba(230, 230, 230, 1) 100%,
     );
-    top: 120px;
+    top: 105px;
     right: 0;
     gap: 1rem;
     z-index: -1;
@@ -52,7 +52,7 @@
 
     @media (min-width: getBreakpoint(large)) {
       width: 600px;
-      top: 83px;
+      top: 67px;
     }
   }
 }
@@ -64,8 +64,8 @@
   }
 
   &__list {
-    margin-top: 1rem;
     margin-left: getWidth(dynamicPadding);
+    padding-bottom: 0.5rem;
 
     @extend .base-list;
   }

@@ -12,3 +12,4 @@ adminLogin();
 renderBasket();
 renderSummary();
 clearBasket();
+mobileToggler();

@@ -1,5 +1,4 @@
 import { getExistingFavs, saveFavs } from ".././utils/storage.js";
-import descriptionToggler from "../components/productDetails/descriptionToggler.js";
 
 const favList = document.querySelector(".favorites__list");
 const clearButton = document.querySelector("#clear-favorites");
@@ -56,10 +55,9 @@ export default function renderFavorites() {
     icons.addEventListener("click", handleClick);
   });
 
-  function handleClick(event) {
-    event.stopPropagation();
+  function handleClick() {
     const id = this.dataset.id;
-
+    
     const newFavs = currentFavs.filter((item) => {
       if (item.id !== id) {
         return true;

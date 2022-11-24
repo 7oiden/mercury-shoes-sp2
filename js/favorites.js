@@ -1,5 +1,6 @@
 import createNavLinks from "./components/common/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
+import adminLogin from "./components/common/adminLogin.js";
 import {
   mobileToggler,
   adminToggler,
@@ -11,3 +12,6 @@ createNavLinks();
 basketCounter();
 renderFavorites();
 clearFavs();
+mobileToggler();
+adminToggler();
+adminLogin();

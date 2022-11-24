@@ -14,6 +14,7 @@ basketCounter();
 adminToggler();
 adminLogin();
 newsletterModal();
+mobileToggler();
 
 (async function fetchApi() {
   try {
