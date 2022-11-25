@@ -206,7 +206,7 @@ hr {
 }
 
 .success {
-  background-color: #097c35;
+  background-color: #0e6673;
   color: white;
 }
 
@@ -234,8 +234,7 @@ strong {
 .hero__heading {
   font-family: "futura pt", trebuchet, tahoma, sans-serif;
   font-size: 3.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -622,7 +621,7 @@ label {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
-  color: #097c35;
+  color: #0e6673;
 }
 
 .nav__icon--admin {
@@ -1163,7 +1162,7 @@ i {
 }
 
 .in-stock {
-  background-color: #097c35;
+  background-color: #0e6673;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -1205,6 +1204,10 @@ i {
 }
 .modal__close-icon path {
   fill: #323232;
+}
+
+#nl-modal-icon {
+  fill: #ffffff;
 }
 
 .fa-plus,
@@ -1436,14 +1439,17 @@ header {
 .nav__logo {
   width: 150px;
   display: block;
-  margin: 0 auto;
   cursor: pointer;
-  margin-bottom: 0.25rem;
 }
 @media (min-width: 992px) {
   .nav__logo {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .nav__logo {
     width: 175px;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 0;
   }
 }
@@ -1452,20 +1458,6 @@ header {
   width: 200px;
   margin: 0 auto;
   padding-top: 0.25rem;
-}
-
-.products-banner {
-  background-image: url("../images/products-banner-small.jpg");
-  background-size: cover;
-  background-position: 90% bottom;
-  height: 450px;
-}
-@media (min-width: 992px) {
-  .products-banner {
-    background-image: url("../images/products-banner-large.jpg");
-    height: 500px;
-    background-position: center bottom;
-  }
 }
 
 .news__image {
@@ -1679,12 +1671,10 @@ header {
   transition: background-color 0.3s;
   border-radius: 0 0 3px 3px;
   text-align: center;
-  order: 1;
 }
 @media (min-width: 992px) {
   .edit-button:hover {
-    background-color: #bf1e0f;
-    color: #ffffff;
+    background-color: #323232;
   }
 }
 .edit-button--details {
@@ -1965,11 +1955,11 @@ header {
   border-radius: 3px;
   border: 1px solid #d9d9d9;
 }
-.card__container a {
+.card__container a:first-of-type {
   transition: all 0.3s ease;
 }
 @media (min-width: 992px) {
-  .card__container a:hover {
+  .card__container a:first-of-type:hover {
     opacity: 0.75;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }

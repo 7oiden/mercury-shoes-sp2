@@ -85,12 +85,10 @@
   transition: background-color 0.3s;
   border-radius: 0 0 3px 3px;
   text-align: center;
-  order: 1;
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {
-      background-color: getColor(accent);
-      color: getColor(primary);
+      background-color: getColor(secondary);
     }
   }
 

@@ -1,13 +1,17 @@
 .nav__logo {
   width: 150px;
   display: block;
-  margin: 0 auto;
+  // margin: 0 auto;
   cursor: pointer;
-  margin-bottom: 0.25rem;
+  // margin-bottom: 0.25rem;
 
   @media (min-width: getBreakpoint(large)) {
+    margin-right: 1rem;
+  }
+
+  @media (min-width: getBreakpoint(xLarge)) {
     width: 175px;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 0;
   }
 }
@@ -18,18 +22,18 @@
   padding-top: 0.25rem;
 }
 
-.products-banner {
-  background-image: url("../images/products-banner-small.jpg");
-  background-size: cover;
-  background-position: 90% bottom;
-  height: 450px;
+// .products-banner {
+//   background-image: url("../images/products-banner-small.jpg");
+//   background-size: cover;
+//   background-position: 90% bottom;
+//   height: 450px;
 
-  @media (min-width: getBreakpoint(large)) {
-    background-image: url("../images/products-banner-large.jpg");
-    height: 500px;
-    background-position: center bottom;
-  }
-}
+//   @media (min-width: getBreakpoint(large)) {
+//     background-image: url("../images/products-banner-large.jpg");
+//     height: 500px;
+//     background-position: center bottom;
+//   }
+// }
 
 .news__image {
   display: block;

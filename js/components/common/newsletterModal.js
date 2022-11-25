@@ -6,7 +6,7 @@ export default function newsletterModal() {
   function closeNewsletterModal(event) {
     if (
       newsletter.style.display === "block" &&
-      event.target.matches(".modal-icon")
+      event.target.matches(".modal__close-icon")
     ) {
       newsletter.style.display = "none";
       fadeBackground.style.display = "none";

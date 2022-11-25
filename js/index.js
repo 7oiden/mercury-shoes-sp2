@@ -42,7 +42,7 @@ mobileToggler();
   } catch (error) {
     displayAlert(
       "alert error",
-      "An error has occured when trying to fetch the API",
+      "An error has occurred when trying to fetch the API",
       ".featured__grid"
     );
   }

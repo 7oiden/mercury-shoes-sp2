@@ -5,7 +5,7 @@
 
   // transition: all 0.3s ease;
 
-  & a {
+  & a:first-of-type {
     transition: all 0.3s ease;
     @media (min-width: getBreakpoint(large)) {
       &:hover {

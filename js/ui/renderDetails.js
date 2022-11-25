@@ -110,16 +110,16 @@ export default function renderDetails(details) {
     </div>
     <div class="details__preview-wrapper">
       <div class="details__preview">
-        <img id="preview-1" src="${placeholderUrlFront}" alt="${details.image_alt_text}">
+        <img class="preview-1" src="${placeholderUrlFront}" alt="${details.image_alt_text}">
       </div>
       <div class="details__preview">
-        <img id="preview-2" src="${placeholderUrlBack}" alt="${details.image_alt_text}">
+        <img class="preview-2" src="${placeholderUrlBack}" alt="${details.image_alt_text}">
       </div>
       <div class="details__preview">
-        <img id="preview-3" src="${placeholderUrlSide}" alt="${details.image_alt_text}">
+        <img class="preview-3" src="${placeholderUrlSide}" alt="${details.image_alt_text}">
       </div>
       <div class="details__preview">
-        <img id="preview-4" src="${placeholderUrlBottom}" alt="${details.image_alt_text}">
+        <img class="preview-4" src="${placeholderUrlBottom}" alt="${details.image_alt_text}">
       </div>
     </div>
   </div>
