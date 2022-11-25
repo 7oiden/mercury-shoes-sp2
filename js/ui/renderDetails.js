@@ -4,12 +4,16 @@ import descriptionToggler from "../components/productDetails/descriptionToggler.
 import { getExistingFavs } from "../utils/storage.js";
 import imageModal from "../components/productDetails/imageModal.js";
 import handleFav from "../components/common/handleFav.js";
-import { placeholderUrl } from "../settings/constants.js";
 
 const detailsContainer = document.querySelector(".details__container");
 const basket = getExistingBasket();
 const token = getToken();
 const favorites = getExistingFavs();
+
+const placeholderUrlFront = "https://res.cloudinary.com/dhd2paq70/image/upload/v1669372510/mercury-placeholder-front_c1otlu.jpg";
+const placeholderUrlBack = "https://res.cloudinary.com/dhd2paq70/image/upload/v1669372483/mercury-placeholder-back_dkmzop.jpg";
+const placeholderUrlSide = "https://res.cloudinary.com/dhd2paq70/image/upload/v1669372502/mercury-placeholder-side_bzxi39.jpg";
+const placeholderUrlBottom = "https://res.cloudinary.com/dhd2paq70/image/upload/v1669372495/mercury-placeholder-bottom_jnwov3.jpg";
 
 export default function renderDetails(details) {
   let editButton = "";
@@ -105,21 +109,20 @@ export default function renderDetails(details) {
   }" class="details__image"/>
     </div>
     <div class="details__preview-wrapper">
-      <div class="details__preview" id="preview-1">
-        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
+      <div class="details__preview">
+        <img id="preview-1" src="${placeholderUrlFront}" alt="${details.image_alt_text}">
       </div>
-      <div class="details__preview" id="preview-2">
-        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
+      <div class="details__preview">
+        <img id="preview-2" src="${placeholderUrlBack}" alt="${details.image_alt_text}">
       </div>
-      <div class="details__preview" id="preview-3">
-        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
+      <div class="details__preview">
+        <img id="preview-3" src="${placeholderUrlSide}" alt="${details.image_alt_text}">
       </div>
-      <div class="details__preview id="preview-4">
-        <img src="${placeholderUrl}" alt="${details.image_alt_text}">
+      <div class="details__preview">
+        <img id="preview-4" src="${placeholderUrlBottom}" alt="${details.image_alt_text}">
       </div>
     </div>
   </div>
-
   <div class="details__card">
   <div>
     <div class="details__head">
@@ -279,6 +282,6 @@ export default function renderDetails(details) {
     }
   }
 
-  imageModal(details);
+  imageModal();
   handleFav();
 }

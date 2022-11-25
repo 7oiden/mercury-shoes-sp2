@@ -83,8 +83,8 @@ main.products-overview {
 .loader {
   position: relative;
   top: 2rem;
-  border: 0.5rem solid #bf1e0f;
-  border-top: 0.5rem solid transparent;
+  border: 0.4rem solid #bf1e0f;
+  border-top: 0.4rem solid transparent;
   margin: 0 auto;
   border-radius: 50%;
   width: 3rem;
@@ -497,12 +497,16 @@ strong {
   font-size: 1.125rem;
   margin: 0;
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-family: "ff-tisa-web-pro", georgia, serif;
 }
 @media (min-width: 992px) {
   .about__sub-heading {
     font-size: 1.375rem;
   }
+}
+.about p {
+  padding: 0.5rem 0;
 }
 .about__card-quote {
   margin: 0;
@@ -2062,6 +2066,14 @@ header {
   }
 }
 
+.details__preview {
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+.details__preview:hover {
+  opacity: 0.9;
+}
+
 .details__preview-wrapper {
   display: flex;
   flex-direction: row;
@@ -2077,16 +2089,13 @@ header {
 }
 @media (min-width: 768px) {
   .details__preview-wrapper {
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0.5rem 0.5rem 0 0;
   }
 }
 @media (min-width: 1200px) {
   .details__preview-wrapper {
     flex-direction: row;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0;
+    padding: 0 0 0.5rem 0.5rem;
   }
 }
 
