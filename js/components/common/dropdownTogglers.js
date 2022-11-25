@@ -2,10 +2,10 @@ const hamburgerIcon = document.querySelector(".mobile-menu__toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 export function mobileToggler() {
-  if (mobileMenu.style.display === "block") {
-    mobileMenu.style.display = "none";
-  } else {
+  if (mobileMenu.style.display === "none") {
     mobileMenu.style.display = "block";
+  } else {
+    mobileMenu.style.display = "none";
   }
 }
 
