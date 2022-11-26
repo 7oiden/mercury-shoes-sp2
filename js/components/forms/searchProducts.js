@@ -1,4 +1,4 @@
-import { renderProducts } from "./renderProducts.js";
+import { renderProducts } from "../../ui/renderProducts.js";
 
 export function searchProducts(products) {
   const searchInput = document.querySelector("#search-input");

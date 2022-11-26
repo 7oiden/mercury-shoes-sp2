@@ -1,6 +1,6 @@
 import { baseUrl } from "../../settings/api.js";
 import { getToken } from "../../utils/storage.js";
-import displayAlert from "../common/displayAlert.js";
+import displayAlert from "../alerts/displayAlert.js";
 import { getExistingBasket, saveBasket } from "../../utils/storage.js";
 
 export default function deleteProdButton(id) {

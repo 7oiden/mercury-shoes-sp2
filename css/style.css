@@ -132,7 +132,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.6509803922);
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   display: none;
   -webkit-animation-name: animate-opacity;
@@ -1349,10 +1349,12 @@ header {
 }
 
 .banner {
+  position: relative;
   background-color: #323232;
   margin: 0;
   text-align: center;
   padding: 0.625rem;
+  z-index: 999;
 }
 .banner__list {
   display: flex;
@@ -1503,31 +1505,17 @@ header {
   width: 85%;
   margin: 0 auto;
 }
-@media (min-width: 576px) {
-  .admin__container {
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .admin__container {
-    width: 40%;
-  }
-}
-@media (min-width: 992px) {
-  .admin__container {
-    width: 85%;
-  }
-}
 .admin__dropdown {
   position: absolute;
   width: 100%;
-  background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgb(250, 250, 250) 50%, rgb(230, 230, 230) 100%);
-  top: 105px;
+  max-width: 500px;
+  background: #ffffff;
+  top: 95px;
   right: 0;
   gap: 1rem;
-  z-index: -1;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  z-index: 2000;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   border-radius: 0 0 0 5px;
   perspective: 1000px;
   display: none;
@@ -1592,8 +1580,7 @@ header {
 }
 
 .button {
-  width: 200px;
-  display: inline-block;
+  display: block;
   color: #ffffff;
   background-image: linear-gradient(to right, #a01313 0%, #bf1e0f 51%, #a01313 100%);
   transition: 0.5s;
@@ -1606,6 +1593,7 @@ header {
   text-align: center;
   transition: all 0.3s;
   cursor: pointer;
+  align-self: flex-start;
 }
 
 .btn-grad:hover {
@@ -1616,7 +1604,6 @@ header {
 
 .hero__button {
   display: block;
-  width: 200px;
   margin: 1rem 0 0 0;
   background-color: #bf1e0f;
   font-size: 1.25rem;
@@ -1652,8 +1639,8 @@ header {
   font-size: 1.125rem;
   background-color: #323232;
   color: #ffffff;
-  margin-top: 1rem;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3px;
 }
 @media (min-width: 992px) {
   .secondary-button:hover {
@@ -1683,7 +1670,7 @@ header {
   margin-top: 0;
   margin-bottom: 0.75rem;
   max-width: 150px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 @media (min-width: 576px) {
   .edit-button--details {
@@ -1704,9 +1691,9 @@ header {
   margin-top: 2rem;
   font-size: 1.125rem;
   border: 3px solid #eb4d32;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #eb4d32;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1rem;
 }
 @media (min-width: 992px) {
   .delete-button:hover {
@@ -1723,11 +1710,9 @@ header {
 #load-button {
   display: block;
   margin: 4rem auto 0 auto;
-  width: 260px;
 }
 
 #buy-button {
-  width: 265px;
   margin-top: 0.25rem;
 }
 
@@ -1784,7 +1769,8 @@ header {
 .hero__transparent-wrapper {
   width: 100%;
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: column;
   top: 50px;
   background: transparent;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);

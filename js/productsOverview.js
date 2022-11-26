@@ -6,8 +6,8 @@ import { loginModal } from "./components/modals/loginModal.js";
 import displayAlert from "./components/alerts/displayAlert.js";
 import adminLoginForm from "./components/forms/adminLoginForm.js";
 import { renderProducts } from "./ui/renderProducts.js";
-import { searchProducts } from "./ui/searchProducts.js";
-import { filterProducts } from "./ui/filterProducts.js";
+import { searchProducts } from "./components/forms/searchProducts.js";
+import { filterProducts } from "./components/forms/filterProducts.js";
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();

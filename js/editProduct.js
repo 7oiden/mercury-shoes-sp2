@@ -14,16 +14,15 @@ import {
   validateNumber,
 } from "./utils/validators.js";
 
-
-basketCounter();
-createNavLinks();
-mobileMenuToggler();
-
 const token = getToken();
 
 if (!token) {
   document.location.href = "/";
 }
+
+basketCounter();
+createNavLinks();
+mobileMenuToggler();
 
 const alertContainer = document.querySelector(".edit-alert-container");
 

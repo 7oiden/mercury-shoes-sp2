@@ -1,4 +1,4 @@
-import { renderProducts } from "./renderProducts.js";
+import { renderProducts } from "../../ui/renderProducts.js";
 
 export function filterProducts(products) {
   const filterInput = document.querySelector("#filter-select");

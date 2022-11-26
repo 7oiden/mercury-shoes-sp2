@@ -12,7 +12,8 @@
   &__transparent-wrapper {
     width: 100%;
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
     top: 50px;
     background: transparent;
     background: linear-gradient(
