@@ -3,7 +3,7 @@ import { getToken } from "../../utils/storage.js";
 import displayAlert from "../common/displayAlert.js";
 import { getExistingBasket, saveBasket } from "../../utils/storage.js";
 
-export default function deleteButton(id) {
+export default function deleteProdButton(id) {
   const deleteContainer = document.querySelector(".delete-container");
   
   deleteContainer.innerHTML = `<button type="button" class="button delete-button">Delete product</button>`;
@@ -46,7 +46,7 @@ export default function deleteButton(id) {
           displayAlert(
             "success",
             "Product successfully deleted",
-            ".editalert-container"
+            ".edit-alert-container"
           );
 
           setTimeout(function () {
@@ -55,10 +55,10 @@ export default function deleteButton(id) {
         }
 
         if (json.error) {
-          displayAlert("error", json.message, ".editalert-container");
+          displayAlert("error", json.message, ".edit-alert-container");
         }
       } catch (error) {
-        displayAlert("error", "Something went wrong!", ".editalert-container");
+        displayAlert("error", "Something went wrong!", ".edit-alert-container");
       }
     }
   };

@@ -1,12 +1,12 @@
 import { getToken } from "./utils/storage.js";
+import displayAlert from "./components/alerts/displayAlert.js";
 import { baseUrl } from "./settings/api.js";
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler } from "./components/common/dropdownTogglers.js";
-import displayAlert from "./components/common/displayAlert.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
 import { placeholderUrlShort } from "./settings/constants.js";
-import deleteButton from "./components/editProducts/deleteButton.js";
+import deleteButton from "./components/buttons/deleteProdButton.js";
 import { validateEditForm } from "./components/formValidation/validateEditForm.js";
 import {
   checkLength,
@@ -14,17 +14,18 @@ import {
   validateNumber,
 } from "./utils/validators.js";
 
+
+basketCounter();
+createNavLinks();
+mobileMenuToggler();
+
 const token = getToken();
 
 if (!token) {
   document.location.href = "/";
 }
 
-basketCounter();
-createNavLinks();
-mobileToggler();
-
-const alertContainer = document.querySelector(".editalert-container");
+const alertContainer = document.querySelector(".edit-alert-container");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -91,11 +92,15 @@ const stockYes = document.querySelector("#stock-yes");
       displayAlert(
         "warning",
         "This product is linked to the news section at the home-page and can not be deleted.",
-        ".editalert-container"
+        ".edit-alert-container"
       );
     }
   } catch (error) {
-    displayAlert("error", "An error has occurred when trying to fetch the API", ".edit__form");
+    displayAlert(
+      "error",
+      "An error has occurred when trying to fetch the API",
+      ".edit__form"
+    );
   } finally {
     loader.style.display = "none";
   }
@@ -237,7 +242,7 @@ function submitEditForm(event) {
         displayAlert(
           "success",
           "Product successfully updated",
-          ".editalert-container"
+          ".edit-alert-container"
         );
 
         setTimeout(function () {

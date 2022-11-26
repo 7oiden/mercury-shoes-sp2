@@ -1,5 +1,5 @@
 import { adminUrl } from "../../settings/api.js";
-import displayAlert from "./displayAlert.js";
+import displayAlert from "../alerts/displayAlert.js";
 import { saveToken, saveUser } from "../../utils/storage.js";
 import { alertContainer } from "../../settings/constants.js";
 import { ValidateAdminLogin } from "../formValidation/validateAdminLogin.js";
@@ -9,7 +9,7 @@ const adminForm = document.querySelector(".admin__form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 
-export default function adminLogin() {
+export default function adminLoginForm() {
   adminForm.addEventListener("submit", submitAdminForm);
 
   function submitAdminForm(event) {

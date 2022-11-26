@@ -44,12 +44,13 @@ header {
     rgba(250, 250, 250, 1)  50%,
     rgba(230, 230, 230, 1) 100%
   );
+  background: white;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   z-index: 999;
   position: relative;
   
-  @include dropShadow(6px, 6px);
+  @include dropShadow(6px, 12px);
 
   &__links-wrapper {
     display: flex;

@@ -1,17 +1,15 @@
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import adminLogin from "./components/common/adminLogin.js";
-import {
-  mobileToggler,
-  adminToggler,
-} from "./components/common/dropdownTogglers.js";
+import adminLoginForm from "./components/forms/adminLoginForm.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
+import { loginModal } from "./components/modals/loginModal.js";
 import renderFavorites from "./ui/renderFavorites.js";
-import { clearFavs } from "./components/basket/clearFavs.js";
+import { clearFavsButton } from "./components/buttons/clearFavsButton.js";
 
 createNavLinks();
 basketCounter();
 renderFavorites();
-clearFavs();
-mobileToggler();
-adminToggler();
-adminLogin();
+clearFavsButton();
+mobileMenuToggler();
+loginModal();
+adminLoginForm();

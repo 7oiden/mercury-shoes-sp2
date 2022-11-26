@@ -14,8 +14,6 @@ export default function loadMoreItems(items) {
     loadButton.style.display = "none";
   } else {
     loadButton.style.display = "block";
-    // loadButton.classList.remove("disabled");
-    // loadButton.innerHTML = "Load more products";
   }
 
   loadButton.onclick = function () {
@@ -28,8 +26,6 @@ export default function loadMoreItems(items) {
 
       if (num >= productCards.length) {
         loadButton.style.display = "none";
-        // loadButton.classList.add("disabled");
-        // loadButton.innerHTML = "No more products";
       }
     }
   };

@@ -1,9 +1,9 @@
 import { getToken } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler } from "./components/common/dropdownTogglers.js";
-import displayAlert from "./components/common/displayAlert.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
+import displayAlert from "./components/alerts/displayAlert.js";
 import { placeholderUrl } from "./settings/constants.js";
 import {
   checkLength,
@@ -20,9 +20,9 @@ if (!token) {
 
 createNavLinks();
 basketCounter();
-mobileToggler();
+mobileMenuToggler();
 
-const alertContainer = document.querySelector(".addalert-container");
+const alertContainer = document.querySelector(".add-alert-container");
 const addFormError = document.querySelector(".add-form-error");
 
 const addForm = document.querySelector(".add__form");
@@ -144,7 +144,7 @@ function submitAddForm(event) {
         displayAlert(
           "success",
           "New Product successfully created",
-          ".addalert-container"
+          ".add-alert-container"
         );
 
         setTimeout(function () {

@@ -1,15 +1,16 @@
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler, adminToggler } from "./components/common/dropdownTogglers.js";
-import adminLogin from "./components/common/adminLogin.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
+import { loginModal } from "./components/modals/loginModal.js";
+import adminLoginForm from "./components/forms/adminLoginForm.js";
 import { renderBasket, renderSummary } from "./ui/renderBasket.js";
-import { clearBasket } from "./components/basket/clearBasket.js";
+import { clearBasketButton } from "./components/buttons/clearBasketButton.js";
 
 createNavLinks();
 basketCounter();
-adminToggler();
-adminLogin();
+loginModal();
+adminLoginForm();
 renderBasket();
 renderSummary();
-clearBasket();
-mobileToggler();
+clearBasketButton();
+mobileMenuToggler();

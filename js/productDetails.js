@@ -1,17 +1,18 @@
 import { baseUrl } from "./settings/api.js";
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler, adminToggler } from "./components/common/dropdownTogglers.js";
-import displayAlert from "./components/common/displayAlert.js";
-import adminLogin from "./components/common/adminLogin.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
+import { loginModal } from "./components/modals/loginModal.js";
+import displayAlert from "./components/alerts/displayAlert.js";
+import adminLogin from "./components/forms/adminLoginForm.js";
 import renderDetails from "./ui/renderDetails.js";
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();
-adminToggler();
+loginModal();
 adminLogin();
-mobileToggler();
+mobileMenuToggler();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -32,7 +33,11 @@ const detailUrl = baseUrl + "products/" + id;
 
     renderDetails(json);
   } catch (error) {
-    console.log(error)
-    displayAlert("alert error", "An error has occurred when trying to fetch the API", ".details__container");
+    console.log(error);
+    displayAlert(
+      "alert error",
+      "An error has occurred when trying to fetch the API",
+      ".details__container"
+    );
   }
 })();

@@ -1,20 +1,21 @@
 import { productsUrl, heroUrl } from "./settings/api.js";
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import { mobileToggler, adminToggler } from "./components/common/dropdownTogglers.js";
-import displayAlert from "./components/common/displayAlert.js";
-import adminLogin from "./components/common/adminLogin.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
+import { loginModal } from "./components/modals/loginModal.js";
+import displayAlert from "./components/alerts/displayAlert.js";
+import adminLogin from "./components/forms/adminLoginForm.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
-import newsletterModal from "./components/common/newsletterModal.js";
+import newsletterModal from "./components/modals/newsletterModal.js";
 import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();
-adminToggler();
 adminLogin();
 newsletterModal();
-mobileToggler();
+mobileMenuToggler();
+loginModal();
 
 (async function fetchApi() {
   try {
@@ -37,7 +38,7 @@ mobileToggler();
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
-   
+
     renderFeaturedProducts(json);
   } catch (error) {
     displayAlert(

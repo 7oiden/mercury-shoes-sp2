@@ -1,8 +1,8 @@
 import { getExistingBasket, saveBasket, getToken } from "../utils/storage.js";
 import { basketCounter } from "../components/common/basketCounter.js";
-import descriptionToggler from "../components/productDetails/descriptionToggler.js";
+import descriptionToggler from "../components/togglers/descriptionToggler.js";
 import { getExistingFavs } from "../utils/storage.js";
-import imageModal from "../components/productDetails/imageModal.js";
+import imageModal from "../components/modals/imageModal.js";
 import handleFav from "../components/common/handleFav.js";
 
 const detailsContainer = document.querySelector(".details__container");

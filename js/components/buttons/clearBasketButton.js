@@ -1,4 +1,4 @@
-export function clearBasket() {
+export function clearBasketButton() {
   const clearButton = document.querySelector("#clear-basket");
   const basketContainer = document.querySelector(".basket__list");
   const summaryContainer = document.querySelector(".summary");

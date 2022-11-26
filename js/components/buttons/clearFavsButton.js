@@ -1,4 +1,4 @@
-export function clearFavs() {
+export function clearFavsButton() {
     const clearButton = document.querySelector("#clear-favorites");
     const favsList = document.querySelector(".favorites__list");
     const headingContainer = document.querySelector(".fav__heading-container")
@@ -9,7 +9,7 @@ export function clearFavs() {
       if (confirm("Are you sure you want to clear all items from favorites list?")) {
         localStorage.removeItem("favorites");
         headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1>`
-        favsList.innerHTML = `<li class="favorites__list--empty">Your favorite list is now empty...</li>`;
+        favsList.innerHTML = `<li class="favorites__list--empty">Your favorite list is empty...</li>`;
         clearButton.style.display = "none";
   
         setTimeout(function () {

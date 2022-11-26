@@ -1,4 +1,4 @@
-export default function slider() {
+export default function featSlider() {
   const slider = document.querySelector(".slider");
   const leftArrow = document.querySelector("#left");
   const rightArrow = document.querySelector("#right");

@@ -1,4 +1,4 @@
-import slider from "./slider.js";
+import slider from "../components/sliders/featSlider.js";
 
 const sliderContainer = document.querySelector(".slider");
 

@@ -1,12 +1,10 @@
 import { productsUrl } from "./settings/api.js";
-import createNavLinks from "./components/common/createNavLinks.js";
+import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
-import {
-  mobileToggler,
-  adminToggler,
-} from "./components/common/dropdownTogglers.js";
-import displayAlert from "./components/common/displayAlert.js";
-import adminLogin from "./components/common/adminLogin.js";
+import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
+import { loginModal } from "./components/modals/loginModal.js";
+import displayAlert from "./components/alerts/displayAlert.js";
+import adminLoginForm from "./components/forms/adminLoginForm.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./ui/searchProducts.js";
 import { filterProducts } from "./ui/filterProducts.js";
@@ -14,9 +12,9 @@ import { filterProducts } from "./ui/filterProducts.js";
 
 createNavLinks();
 basketCounter();
-adminToggler();
-adminLogin();
-mobileToggler();
+loginModal();
+adminLoginForm();
+mobileMenuToggler();
 
 (async function fetchApi() {
   try {

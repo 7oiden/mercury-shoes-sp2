@@ -1,5 +1,5 @@
-import { getUsername } from "../../utils/storage.js";
-import logoutIcon from "./logoutIcon.js";
+import { getUsername } from "../utils/storage.js";
+import logoutIcon from "../components/buttons/logoutIcon.js";
 
 export default function createNavLinks() {
   const { pathname } = document.location;
