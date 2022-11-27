@@ -14,8 +14,8 @@ strong {
   &__heading {
     font-family: $hero-headings;
     font-size: getFontSize(heroHeadingSmall);
-    font-weight: 500;
-    // text-transform: uppercase;
+    font-weight: 600;
+    text-transform: uppercase;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -93,8 +93,8 @@ strong {
 }
 
 .confirmation__sub-heading {
-  padding-top: 1rem;
   font-size: 1rem;
+  font-weight: normal;
 
   @media (min-width: getBreakpoint(large)) {
     font-size: 1.25rem;

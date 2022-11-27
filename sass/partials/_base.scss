@@ -81,9 +81,16 @@ main {
   }
 }
 
-.loader {
-  position: relative;
+.loader-container {
+  position: absolute;
   top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+}
+
+.loader {
   border: 0.4rem solid getColor(accent);
   border-top: 0.4rem solid transparent;
   margin: 0 auto;
@@ -91,6 +98,10 @@ main {
   width: 3rem;
   height: 3rem;
   animation: spin 1s ease-in-out infinite;
+}
+
+.slider-loader {
+  display: none;
 }
 
 @keyframes spin {
@@ -155,7 +166,3 @@ hr {
     justify-content: space-between;
   }
 }
-
-
-
-

@@ -7,9 +7,11 @@ const token = getToken();
 const favorites = getExistingFavs();
 
 const productsContainer = document.querySelector(".products__grid");
+const loadButton = document.querySelector("#load-button");
 
 export function renderProducts(products) {
   productsContainer.innerHTML = "";
+  loadButton.style.display = "block";
 
   products.forEach((product) => {
     let editProd = "";

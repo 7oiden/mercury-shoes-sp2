@@ -1,15 +1,24 @@
 import slider from "../components/sliders/featSlider.js";
 
 const sliderContainer = document.querySelector(".slider");
+const indicatorContainer = document.querySelector(".indicator-container");
+const sliderControls = document.querySelector(".slider__controls");
+const loader = document.querySelector(".slider-loader")
 
 export function renderFeaturedProducts(products) {
   sliderContainer.innerHTML = "";
+  indicatorContainer.style.display = "flex";
+  sliderControls.style.display = "flex";
+  loader.style.display = "block"
+  
 
   const featuredProducts = products.filter(function (product) {
     if (product.featured) {
       return true;
     }
   });
+
+  
 
   featuredProducts.forEach((product) => {
     sliderContainer.innerHTML += `
@@ -24,5 +33,5 @@ export function renderFeaturedProducts(products) {
         </div>
       </a>`;
   });
-  slider()
+  slider();
 }

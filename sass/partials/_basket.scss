@@ -8,10 +8,9 @@
 
   &__list {
     display: block;
-    max-width: 600px;
+    // max-width: 600px;
     margin-bottom: 1rem;
     background-color: getColor(background);
-
     @extend .base-list;
 
     @media (min-width: getBreakpoint(medium)) {
@@ -75,25 +74,32 @@
 
   &__table-heading {
     width: 100px;
+    font-weight: normal;
 
     @media (min-width: getBreakpoint(small)) {
       width: 150px;
     }
   }
-  &__emtpy {
-    background-color: white;
-  }
+
+  // &__emtpy {
+  //   background-color: white;
+  // }
 }
 
 .summary {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem 5%;
   background-color: getColor(primary);
 
   @media (min-width: getBreakpoint(medium)) {
-    max-height: 350px;
+    
 
     @include content-border(5px);
+  }
+
+  @media (min-width: getBreakpoint(large)) {
+    padding: 2rem 7.5%;
+    align-self: flex-start;
   }
 
   &__table {

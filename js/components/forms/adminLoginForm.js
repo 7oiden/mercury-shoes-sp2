@@ -8,6 +8,7 @@ import { checkLength } from "../../utils/validators.js";
 const adminForm = document.querySelector(".admin__form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
+const signInButton = document.querySelector("#sign-in");
 
 export default function adminLoginForm() {
   adminForm.addEventListener("submit", submitAdminForm);
@@ -48,6 +49,7 @@ export default function adminLoginForm() {
       if (json.user) {
         saveToken(json.jwt);
         saveUser(json.user);
+        signInButton.innerHTML = "Signing in...";
         window.location.reload();
       }
 

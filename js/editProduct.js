@@ -45,7 +45,7 @@ const shortDescription = document.querySelector("#short-description");
 const description = document.querySelector("#description");
 const productImage = document.querySelector("#product-image");
 const imageAltText = document.querySelector("#image-alt-text");
-const loader = document.querySelector(".loader");
+const loader = document.querySelector(".loader-container");
 
 const idInput = document.querySelector("#id");
 const featuredNo = document.querySelector("#featured-no");

@@ -1,6 +1,6 @@
 .slider__wrapper {
   width: 100%;
-  position: relative;
+  // position: relative;
   margin: 0 auto 2rem auto;
 }
 
@@ -10,27 +10,21 @@
 }
 
 .slider {
+  position: relative;
   height: 100%;
   display: flex;
   width: 400%;
   transition: all 0.3s;
   gap: 0.5rem;
-  position: relative;
-
+  
   @media (min-width: getBreakpoint(medium)) {
     width: 200%;
   }
 
   &__controls {
-    display: flex;
+    display: none;
     align-self: flex-end;
     gap: 1rem;
-  }
-
-  &__loader {
-    position: absolute;
-    left: 0;
-    bottom: 0;
   }
 }
 
@@ -107,7 +101,7 @@
 
 .indicator-container {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 

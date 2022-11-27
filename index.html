@@ -43,10 +43,10 @@
             <li>
               <div class="mobile-menu__toggle">
                 <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
-                    <title>Menu</title>
-                    <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                  <title>Menu</title>
+                  <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
                 </svg>
-            </div>
+              </div>
             </li>
             <div class="nav__icons-wrapper">
               <li>
@@ -110,11 +110,13 @@
 
     <main class="hero index">
       <div class="hero__container">
-        <div class="loader"></div>
+        <div class="loader-container">
+          <div class="loader slider__loader"></div>
+        </div>
         <div class="hero__transparent-wrapper">
           <div class="image-alert"></div>
           <hgroup class="hero__heading-group">
-            <h1 class="hero__heading">STEP it UP</h1>
+            <h1 class="hero__heading">STEP IT UP</h1>
             <h2 class="hero__heading-secondary">
               With<strong> mercury</strong>
             </h2>
@@ -143,8 +145,11 @@
         </div>
         <div class="slider__wrapper">
           <div class="slider__container">
+            
             <div class="slider">
-              <div class="loader slider__loader"></div>
+              <div class="loader-container slider-loader">
+                <div class="loader"></div>
+              </div>
               <!-- dynamic content -->
             </div>
           </div>
@@ -159,8 +164,10 @@
       <section class="news">
         <div class="news__block1">
           <div class="news__text-wrapper">
-            <h5 class="news__header">Introducing the new Mercury Vibrant</h5>
-            <div class="red-line"></div>
+            <div>
+              <h5 class="news__header">Introducing the new Mercury Vibrant</h5>
+              <div class="red-line"></div>
+            </div>
             <p class="news__text">
               When you know what you want, waiting isn't an option
             </p>
