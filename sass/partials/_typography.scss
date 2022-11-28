@@ -53,25 +53,7 @@ strong {
   }
 }
 
-.featured__heading {
-  font-family: $primary-headings;
-  font-size: getFontSize(mainSubHeadingSmall);
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-  padding-top: 0;
-
-  @media (min-width: getBreakpoint(large)) {
-    font-size: getFontSize(mainSubHeadingLarge);
-  }
-}
-
-.products__heading,
-.add__heading,
-.edit__heading,
-.about__heading,
-.basket__heading,
-.confirmation__heading {
+.main-heading {
   font-family: $primary-headings;
   font-size: getFontSize(mainHeadingSmall);
   font-weight: 400;
@@ -83,18 +65,23 @@ strong {
   }
 }
 
-.confirmation__heading {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+.secondary-heading {
+  color: getColor(dark);
+  font-family: $primary-headings;
+  font-size: getFontSize(secondaryHeadingSmall);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: getBreakpoint(large)) {
-    font-size: 2rem;
+    font-size: getFontSize(secondaryHeadingLarge);
   }
 }
 
-.confirmation__sub-heading {
-  font-size: 1rem;
-  font-weight: normal;
+.sub-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: $secondary-headings;
 
   @media (min-width: getBreakpoint(large)) {
     font-size: 1.25rem;
@@ -165,35 +152,33 @@ strong {
 // }
 
 .news {
-  &__header {
-    font-family: $primary-headings;
-    font-size: 1.375rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: bold;
 
-    @media (min-width: getBreakpoint(medium)) {
-      font-size: 1.75rem;
+    @media (min-width: getBreakpoint(large)) {
+      color: getColor(primary);
     }
 
     @media (min-width: getBreakpoint(xLarge)) {
+      font-size: 1.875rem;
+    }
+
+    @media (min-width: getBreakpoint(xxLarge)) {
       font-size: 2rem;
     }
   }
 
-  &__text {
-    font-family: $secondary-headings;
-    font-size: 1rem;
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 1rem;
-
-    @media (min-width: getBreakpoint(medium)) {
-      font-size: 1.125rem;
-    }
+  &__sub-heading {
+    font-size: 1.125rem;
+    font-weight: normal;
 
     @media (min-width: getBreakpoint(xLarge)) {
       font-size: 1.25rem;
+    }
+
+    @media (min-width: getBreakpoint(xxLarge)) {
+      font-size: 1.5rem;
     }
   }
 }
@@ -291,22 +276,22 @@ strong {
 
 //about page
 .about {
-  &__heading-group {
+  &__secondary-heading {
     display: flex;
     flex-direction: column;
   }
 
-  &__sub-heading {
-    font-size: 1.125rem;
-    margin: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-family: $secondary-headings;
+  // &__sub-heading {
+  //   font-size: 1.125rem;
+  //   margin: 0;
+  //   padding-top: 0.5rem;
+  //   padding-bottom: 0.5rem;
+  //   font-family: $secondary-headings;
 
-    @media (min-width: getBreakpoint(large)) {
-      font-size: 1.375rem;
-    }
-  }
+  //   @media (min-width: getBreakpoint(large)) {
+  //     font-size: 1.375rem;
+  //   }
+  // }
 
   & p {
     padding: 0.5rem 0;
@@ -325,21 +310,6 @@ strong {
   }
 }
 
-.contact__heading,
-.faq__heading,
-.returns__heading,
-.sizes__heading {
-  font-family: $primary-headings;
-  font-size: getFontSize(mainSubHeadingSmall);
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-
-  @media (min-width: getBreakpoint(large)) {
-    font-size: getFontSize(mainSubHeadingLarge);
-  }
-}
-
 .contact__sub-heading {
   font-size: 1.125rem;
   margin: 0;
@@ -355,19 +325,6 @@ strong {
     font-weight: bold;
     margin: 0;
     padding: 0 0 0.25rem 0;
-  }
-}
-
-.contact__heading,
-.faq__heading,
-.returns__heading,
-.sizes__heading {
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
-
-  @media (min-width: getBreakpoint(large)) {
-    font-size: 1.875rem;
   }
 }
 
@@ -390,13 +347,13 @@ label {
   color: getColor(dark);
 }
 
-.admin__heading {
-  color: getColor(dark);
-  font-family: $primary-headings;
-  font-size: 1.875rem;
-  margin: 0;
-  padding: 0;
-}
+// .admin__heading {
+//   color: getColor(dark);
+//   font-family: $primary-headings;
+//   font-size: 1.875rem;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .add__radio-heading,
 .edit__radio-heading,

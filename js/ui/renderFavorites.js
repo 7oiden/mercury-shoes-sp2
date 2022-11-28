@@ -13,11 +13,11 @@ export default function renderFavorites() {
 
   let favCount = currentFavs.length;
 
-  headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1><span class="fav__count">(${favCount})</span>`;
+  headingContainer.innerHTML = `<h1 class="main-heading">Favorites</h1><span class="fav__count">(${favCount})</span>`;
 
   if (favCount === 0) {
-    headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1>`;
-    favList.innerHTML = `<li class="favorites__list--empty">No favorite is added yet</li>`;
+    headingContainer.innerHTML = `<h1 class="main-heading">Favorites</h1>`;
+    favList.innerHTML = `<li class="favorites__list--empty">Your favorite list is empty...</li>`;
     clearButton.style.display = "none";
   }
 

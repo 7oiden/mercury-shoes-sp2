@@ -259,6 +259,7 @@
 
   @media (min-width: getBreakpoint(large)) {
     width: getWidth(containerLarge);
+    gap: 2rem;
 
     @include content-border(5px);
   }
