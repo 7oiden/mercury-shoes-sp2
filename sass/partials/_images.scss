@@ -1,17 +1,16 @@
 .nav__logo {
   width: 150px;
   display: block;
-  // margin: 0 auto;
+  margin: 0 auto;
   cursor: pointer;
   // margin-bottom: 0.25rem;
 
   @media (min-width: getBreakpoint(large)) {
-    margin-right: 1rem;
+    margin-right: 2.5rem;
   }
 
   @media (min-width: getBreakpoint(xLarge)) {
     width: 175px;
-    margin-right: 2rem;
     margin-bottom: 0;
   }
 }

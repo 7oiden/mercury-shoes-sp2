@@ -50,13 +50,14 @@ export default function createNavLinks() {
     banner.style.backgroundColor = "#0E6673";
   }
 
+//   <li>
+//   <a href="/" class="${
+//     pathname === "/" || pathname === "/index.html" ? "nav__link--active" : ""
+//   } 
+//   nav__link">Home</a>
+// </li>
+
   linksContainer.innerHTML = `
-  <li>
-    <a href="/" class="${
-      pathname === "/" || pathname === "/index.html" ? "nav__link--active" : ""
-    } 
-    nav__link">Home</a>
-  </li>
   <li>
     <a href="products-overview.html" class="${
       pathname === "/products-overview.html" ? "nav__link--active" : ""
@@ -72,10 +73,11 @@ export default function createNavLinks() {
   ${addLink}
   `;
 
+//   <li class="mobile-menu__item">
+//   <a href="/" class= mobile-menu__link">Home</a>
+// </li>
+
   mobileLinksContainer.innerHTML = `
-  <li class="mobile-menu__item">
-    <a href="/" class= mobile-menu__link">Home</a>
-  </li>
   <li class="mobile-menu__item">
     <a href="products-overview.html" class="mobile-menu__link">Products</a>
   </li>

@@ -6,7 +6,6 @@
   // transition: all 0.3s ease;
 
   & a:first-of-type {
-  
     @media (min-width: getBreakpoint(large)) {
       position: relative;
       transition: all 0.3s ease;
@@ -45,6 +44,24 @@
 
   &__title {
     font-family: $primary-headings;
+  }
+
+  &__feat-badge {
+    position: absolute;
+    background-color: #cc5006;
+    color: getColor(primary);
+    font-family: $secondary-headings;
+    // font-weight: bold;
+    font-size: 1rem;
+    left: 0;
+    top: 1rem;
+    border-radius: 0 3px 3px 0;
+    padding: 0.25rem 1rem;
+    transition: opacity 0.3s ease;
+
+    @media (min-width: getBreakpoint(small)) {
+      font-size: 1.125rem;
+    }
   }
 }
 

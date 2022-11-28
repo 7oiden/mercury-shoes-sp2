@@ -526,7 +526,7 @@ strong {
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
-  padding: 0 0 1rem 0;
+  padding: 0 0 0.75rem 0;
 }
 
 .footer__icon {
@@ -1100,24 +1100,6 @@ i {
   }
 }
 
-.card__feat-badge {
-  position: absolute;
-  background-color: #CC5006;
-  color: #ffffff;
-  font-family: "ff-tisa-web-pro", georgia, serif;
-  font-size: 1rem;
-  left: 0;
-  top: 1rem;
-  border-radius: 0 3px 3px 0;
-  padding: 0.25rem 1rem;
-  transition: opacity 0.3s ease;
-}
-@media (min-width: 576px) {
-  .card__feat-badge {
-    font-size: 1.125rem;
-  }
-}
-
 .out-of-stock {
   background-color: #eb4d32;
   width: 1rem;
@@ -1415,17 +1397,17 @@ header {
 .nav__logo {
   width: 150px;
   display: block;
+  margin: 0 auto;
   cursor: pointer;
 }
 @media (min-width: 992px) {
   .nav__logo {
-    margin-right: 1rem;
+    margin-right: 2.5rem;
   }
 }
 @media (min-width: 1200px) {
   .nav__logo {
     width: 175px;
-    margin-right: 2rem;
     margin-bottom: 0;
   }
 }
@@ -1949,6 +1931,23 @@ header {
 }
 .card__title {
   font-family: "soleil", tahoma, sans-serif;
+}
+.card__feat-badge {
+  position: absolute;
+  background-color: #cc5006;
+  color: #ffffff;
+  font-family: "ff-tisa-web-pro", georgia, serif;
+  font-size: 1rem;
+  left: 0;
+  top: 1rem;
+  border-radius: 0 3px 3px 0;
+  padding: 0.25rem 1rem;
+  transition: opacity 0.3s ease;
+}
+@media (min-width: 576px) {
+  .card__feat-badge {
+    font-size: 1.125rem;
+  }
 }
 
 .card__title,
