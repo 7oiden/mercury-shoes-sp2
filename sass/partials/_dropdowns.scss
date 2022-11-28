@@ -22,12 +22,6 @@
     position: absolute;
     width: 100%;
     max-width: 500px;
-    // background: linear-gradient(
-    //   180deg,
-    //   rgba(230, 230, 230, 1) 0%,
-    //   rgba(250, 250, 250, 1) 50%,
-    //   rgba(230, 230, 230, 1) 100%
-    // );
     background: getColor(primary);
     top: 95px;
     right: 0;
@@ -35,7 +29,6 @@
     z-index: 2000;
     padding-top: 1rem;
     padding-bottom: 3rem;
-    border-radius: 0 0 0 5px;
     perspective: 1000px;
     display: none;
     animation: animate-dropdown 300ms ease-in-out forwards;
@@ -50,6 +43,10 @@
       100% {
         transform: scale(1);
       }
+    }
+
+    @media (min-width: getBreakpoint(small)) {
+      border-radius: 0 0 0 5px;
     }
 
     @media (min-width: getBreakpoint(large)) {

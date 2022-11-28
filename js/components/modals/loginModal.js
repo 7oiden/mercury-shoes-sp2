@@ -3,26 +3,33 @@ const adminDropdown = document.querySelector(".admin__dropdown");
 const fadeBackground = document.querySelector(".fade-background");
 
 export function loginModal() {
-    function openAdminDropdown() {
-      if (adminDropdown.style.display === "block") {
-        adminDropdown.style.display = "none";
-        fadeBackground.style.display = "none";
-      } else {
-        adminDropdown.style.display = "block";
-        adminDropdown.style.zIndex = "9999";
-        fadeBackground.style.display = "block";
-        fadeBackground.style.zIndex = "1";
-      }
+  function openAdminDropdown() {
+    if (adminDropdown.style.display === "block") {
+      adminDropdown.style.display = "none";
+      fadeBackground.style.display = "none";
+    } else {
+      adminDropdown.style.display = "block";
+      adminDropdown.style.zIndex = "9999";
+      fadeBackground.style.display = "block";
+      fadeBackground.style.zIndex = "1";
     }
-  
-    adminLoginIcon.addEventListener("click", openAdminDropdown);
-  
-    document.addEventListener("click", function (event) {
-      const isClickInsideDropdown = adminDropdown.contains(event.target);
-  
-      if (!isClickInsideDropdown && !event.target.matches(".login")) {
-        adminDropdown.style.display = "none";
-        fadeBackground.style.display = "none";
-      }
-    });
   }
+
+  adminLoginIcon.addEventListener("click", openAdminDropdown);
+
+  document.addEventListener("click", function (event) {
+    const isClickInsideDropdown = adminDropdown.contains(event.target);
+
+    if (!isClickInsideDropdown && !event.target.matches(".login")) {
+      adminDropdown.style.display = "none";
+      fadeBackground.style.display = "none";
+    }
+  });
+
+  document.addEventListener("scroll", function () {
+    if (window.pageYOffset > 450) {
+      adminDropdown.style.display = "none";
+      fadeBackground.style.display = "none";
+    }
+  });
+}

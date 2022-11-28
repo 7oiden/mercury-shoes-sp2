@@ -130,7 +130,8 @@ hr {
 }
 
 //new code
-.fade-background {
+.fade-background,
+.fade-background-nl {
   height: 100%;
   background-color: #000000a6;
   position: fixed;
@@ -143,6 +144,16 @@ hr {
   animation-timing-function: ease-out;
 }
 
+.fade-background-nl {
+  z-index: 1000;
+}
+
+// .animate-opacity {
+//   animation-name: animate-opacity-reverse;
+//   animation-duration: 0.3s;
+//   animation-timing-function: ease-out;
+// }
+
 @keyframes animate-opacity {
   from {
     opacity: 0;
@@ -152,6 +163,16 @@ hr {
     opacity: 1;
   }
 }
+
+// @keyframes animate-opacity-reverse {
+//   from {
+//     opacity: 1;
+//   }
+
+//   to {
+//     opacity: 0;
+//   }
+// }
 
 .featured__header {
   display: flex;
