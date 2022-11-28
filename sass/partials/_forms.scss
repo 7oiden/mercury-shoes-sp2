@@ -71,7 +71,11 @@ label {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+      margin-bottom: 2rem;
+    }
 
     @media (min-width: getBreakpoint(xLarge)) {
       flex-direction: row;

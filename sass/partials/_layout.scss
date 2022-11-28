@@ -59,6 +59,10 @@
     justify-content: center;
     padding-top: 8rem;
   }
+
+  @media (min-width: getBreakpoint(xxLarge)) {
+    width: 75%;
+  }
 }
 
 .featured {
@@ -72,6 +76,10 @@
 
   @media (min-width: getBreakpoint(large)) {
     padding-top: 5rem;
+  }
+
+  @media (min-width: getBreakpoint(xxLarge)) {
+    width: 75%;
   }
 
   &__header {

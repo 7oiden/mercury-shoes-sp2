@@ -6,8 +6,11 @@
   // transition: all 0.3s ease;
 
   & a:first-of-type {
-    transition: all 0.3s ease;
+  
     @media (min-width: getBreakpoint(large)) {
+      position: relative;
+      transition: all 0.3s ease;
+
       &:hover {
         opacity: 0.75;
         @include dropShadow(6px, 12px);

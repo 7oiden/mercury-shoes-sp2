@@ -31,7 +31,7 @@
   border-radius: 3px;
   background-color: getColor(primary);
   border: 1px solid getColor(border);
-  
+
   @media (min-width: getBreakpoint(medium)) {
     padding: 1rem;
   }
@@ -86,7 +86,7 @@
 
     @media (min-width: getBreakpoint(medium)) {
       flex: 2;
-      padding: 0 1rem 1rem 1rem;
+      padding: 0.5rem 1rem 1rem 1rem;
     }
   }
 
@@ -108,6 +108,14 @@
     padding: 0;
     font-weight: bold;
     text-decoration: underline;
+
+    @media (min-width: getBreakpoint(large)) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__price {
+    font-size: 1.125rem;
 
     @media (min-width: getBreakpoint(large)) {
       font-size: 1.25rem;

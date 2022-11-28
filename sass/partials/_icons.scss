@@ -85,15 +85,18 @@ i {
   }
 }
 
-.card__feat-icon {
-  left: 1rem;
-  width: 2rem;
-  height: 2rem;
-  opacity: 0.5;
-
-  path {
-    fill: getColor(secondary);
-  }
+.card__feat-badge {
+  position: absolute;
+  background-color: rgb(255, 189, 46);
+  color: rgb(55, 55, 55);
+  font-family: $secondary-headings;
+  font-weight: bold;
+  font-size: 1.125rem;
+  left: 0;
+  top: 1rem;
+  border-radius: 0 3px 3px 0;
+  padding: 0.25rem 1rem;
+  transition: opacity 0.3s ease;
 }
 
 .out-of-stock {
@@ -258,3 +261,5 @@ i {
     transform: scale(1);
   }
 }
+
+

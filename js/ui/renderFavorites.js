@@ -28,7 +28,6 @@ export default function renderFavorites() {
       <title>Remove item</title>
       <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
       </svg>
-      
        <div class="fav__container">
         <div class="fav__image">
         <a href="products-details.html?id=${favorite.id}">
@@ -40,12 +39,11 @@ export default function renderFavorites() {
         <a href="products-details.html?id=${favorite.id}">
           <h2 class="fav__title">${favorite.title}</h2>
           </a>
-          <span>$${favorite.price}</span>
+          <span class="fav__price">$${favorite.price}</span>
           </div>
           <p>${favorite.description}</p>
          </div>
         </div>
-     
     </li>`;
   });
 

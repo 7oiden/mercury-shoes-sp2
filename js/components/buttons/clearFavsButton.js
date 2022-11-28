@@ -8,7 +8,7 @@ export function clearFavsButton() {
     function clearFavsList() {
       if (confirm("Are you sure you want to clear all items from favorites list?")) {
         localStorage.removeItem("favorites");
-        headingContainer.innerHTML = `<h1 class="about__heading" id="about">Favorites</h1>`
+        headingContainer.innerHTML = `<h1 class="main-heading" id="about">Favorites</h1>`
         favsList.innerHTML = `<li class="favorites__list--empty">Your favorite list is empty...</li>`;
         clearButton.style.display = "none";
   
