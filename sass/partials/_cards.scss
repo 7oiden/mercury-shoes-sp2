@@ -55,7 +55,7 @@
   padding: 0;
   font-weight: 500;
 
-  @media (min-width: getBreakpoint(large)) {
+  @media (min-width: getBreakpoint(small)) {
     font-size: 1.125rem;
   }
 }
