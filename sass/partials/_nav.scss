@@ -28,12 +28,15 @@ header {
     list-style: none;
     padding-left: 5%;
     padding-right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
     &--inactive {
       display: none;
 
       @media (min-width: getBreakpoint(large)) {
-        display: block;
+        display: flex;
       }
     }
   }
@@ -51,7 +54,7 @@ header {
   padding-bottom: 0.5rem;
   z-index: 999;
   position: relative;
-  
+
   @include dropShadow(6px, 12px);
 
   @media (min-width: getBreakpoint(large)) {

@@ -241,6 +241,16 @@ strong {
   font-weight: bold;
 }
 
+#normal {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+@media (min-width: 992px) {
+  #normal {
+    font-size: 1.5rem;
+  }
+}
+
 .hero__heading-group {
   display: flex;
   flex-direction: column;
@@ -248,9 +258,9 @@ strong {
   padding: 0;
 }
 .hero__heading {
-  font-family: "futura pt", trebuchet, tahoma, sans-serif;
+  font-family: "muli", "proxima-nova", sans-serif;
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 900;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -262,13 +272,13 @@ strong {
   }
 }
 .hero__heading-secondary {
-  font-family: "futura pt", trebuchet, tahoma, sans-serif;
+  font-family: "muli", "proxima-nova", sans-serif;
   font-size: 1.375rem;
   margin: 0;
   padding: 0;
-  text-transform: lowercase;
-  font-style: oblique;
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1;
 }
 @media (min-width: 992px) {
   .hero__heading-secondary {
@@ -1195,7 +1205,7 @@ i {
   width: 25px;
   border-radius: 50%;
   z-index: 9;
-  font-family: "proxima nova", verdana, sans-serif;
+  font-family: "proxima-nova", verdana, sans-serif;
   display: none;
 }
 
@@ -1322,13 +1332,16 @@ header {
   list-style: none;
   padding-left: 5%;
   padding-right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .banner__item--inactive {
   display: none;
 }
 @media (min-width: 992px) {
   .banner__item--inactive {
-    display: block;
+    display: flex;
   }
 }
 
@@ -1397,7 +1410,6 @@ header {
 .nav__logo {
   width: 150px;
   display: block;
-  margin: 0 auto;
   cursor: pointer;
 }
 @media (min-width: 992px) {
@@ -1519,7 +1531,7 @@ header {
   padding-bottom: 0.5rem;
 }
 .mobile-menu__item {
-  font-family: "proxima nova", verdana, sans-serif;
+  font-family: "proxima-nova", verdana, sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
   padding-top: 0.5rem;
@@ -1546,7 +1558,7 @@ header {
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 3px;
-  font-family: "proxima nova", verdana, sans-serif;
+  font-family: "proxima-nova", verdana, sans-serif;
   font-weight: 400;
   text-align: center;
   transition: all 0.3s;
