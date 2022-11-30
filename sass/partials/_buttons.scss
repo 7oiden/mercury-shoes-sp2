@@ -117,14 +117,15 @@
   background-color: transparent;
   margin-top: 2rem;
   font-size: 1.125rem;
-  border: 3px solid getColor(error);
+  font-weight: 500;
+  border: 3px solid getColor(accent);
   border-radius: 3px;
-  color: getColor(error);
+  color: getColor(accent);
   padding: 0.5rem 1rem;
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {
-      background-color: getColor(error);
+      background-color: getColor(accent);
       color: getColor(primary);
     }
   }

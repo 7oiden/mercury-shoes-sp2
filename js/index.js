@@ -8,6 +8,7 @@ import adminLogin from "./components/forms/adminLoginForm.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import newsletterModal from "./components/modals/newsletterModal.js";
+import apiAlert from "./components/alerts/apiAlert.js";
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
@@ -16,11 +17,13 @@ adminLogin();
 newsletterModal();
 mobileMenuToggler();
 loginModal();
+apiAlert();
 
 (async function fetchApi() {
   try {
     const response = await fetch(heroUrl);
     const result = await response.json();
+
     // console.log(result);
     renderHero(result);
   } catch (error) {

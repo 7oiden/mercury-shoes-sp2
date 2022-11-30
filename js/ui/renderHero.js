@@ -1,18 +1,13 @@
-// import displayAlert from "../components/alerts/displayAlert.js";
+import displayAlert from "../components/alerts/displayAlert.js";
 
 const heroContainer = document.querySelector(".hero__container");
-const loader = document.querySelector(".loader");
+const test = document.querySelector(".test");
 // const alertContainer = document.querySelector(".hero-alert-container");
-
 
 export function renderHero(hero) {
   // loader.style.display = "none";
   heroContainer.innerHTML = "";
   // alertContainer.innerHTML = "test";
-
-  // setTimeout(function () {
-  //   alertContainer.innerHTML = "Please wait";
-  // }, 3000);
 
   heroContainer.innerHTML = `
   <div class="hero__transparent-wrapper">
@@ -26,7 +21,7 @@ export function renderHero(hero) {
           <p class="hero__tagline">High quality running shoes since 1988</p>
           <a href="products-overview.html" class="button hero__button">Shop now</a>
     </div>
-  `
+  `;
 
   const heroImage = hero.hero_url;
   const heroImageSmall = hero.hero_small_url;

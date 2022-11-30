@@ -14,8 +14,14 @@ export function checkMaxLength(value, len) {
   }
 }
 
-export function validateNumber(priceValue) {
+export function validateNumber(value) {
   const regEx = /^-?\d+\.?\d*$/;
-  const patternMatches = regEx.test(priceValue);
+  const patternMatches = regEx.test(value);
+  return patternMatches;
+}
+
+export function validateEmail(email) {
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(email);
   return patternMatches;
 }

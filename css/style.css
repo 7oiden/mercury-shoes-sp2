@@ -191,6 +191,10 @@ hr {
   }
 }
 
+.test {
+  background-color: pink;
+}
+
 .alert-container {
   margin-top: 1rem;
 }
@@ -210,13 +214,18 @@ hr {
 }
 
 .alert {
-  margin-top: 1rem;
+  margin: 0.5rem 0;
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   text-align: center;
+}
+.alert::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 0.75rem;
 }
 
 .absolute-pos {
@@ -227,39 +236,33 @@ hr {
 }
 
 .error {
-  background-color: #eb4d32;
-  color: white;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
 }
 .error::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f00d";
-  padding-right: 1rem;
 }
 
 .success {
-  background-color: #0e6673;
-  color: white;
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
 }
 .success::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f00c";
-  padding-right: 1rem;
 }
 
 .warning {
-  background-color: #f1cc28;
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
 }
 .warning::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
   content: "\f12a";
-  padding-right: 1rem;
 }
 
 .error-messages {
-  color: #eb4d32;
   display: none;
   padding-top: 0.25rem;
 }
@@ -600,7 +603,6 @@ label {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
-  color: #0e6673;
 }
 
 .nav__icon--admin {
@@ -1139,14 +1141,12 @@ i {
 }
 
 .out-of-stock {
-  background-color: #eb4d32;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
 }
 
 .in-stock {
-  background-color: #0e6673;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -1688,14 +1688,15 @@ header {
   background-color: transparent;
   margin-top: 2rem;
   font-size: 1.125rem;
-  border: 3px solid #eb4d32;
+  font-weight: 500;
+  border: 3px solid #bf1e0f;
   border-radius: 3px;
-  color: #eb4d32;
+  color: #bf1e0f;
   padding: 0.5rem 1rem;
 }
 @media (min-width: 992px) {
   .delete-button:hover {
-    background-color: #eb4d32;
+    background-color: #bf1e0f;
     color: #ffffff;
   }
 }

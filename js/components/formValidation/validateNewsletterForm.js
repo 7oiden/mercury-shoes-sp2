@@ -1,3 +1,5 @@
+import { validateEmail } from "../../utils/validators.js";
+
 const newsletterForm = document.querySelector(".newsletter__form");
 const newsletterEmailError = document.querySelector("#newsletter-email-error");
 const newsletterSuccess = document.querySelector(".newsletter__success");
@@ -30,8 +32,8 @@ newsletterInput.onfocus = function () {
 
 newsletterForm.addEventListener("submit", validateNewsletterForm);
 
-function validateEmail(newsletterInput) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(newsletterInput);
-  return patternMatches;
-}
+// function validateEmail(newsletterInput) {
+//   const regEx = /\S+@\S+\.\S+/;
+//   const patternMatches = regEx.test(newsletterInput);
+//   return patternMatches;
+// }

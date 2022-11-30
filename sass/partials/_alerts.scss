@@ -18,13 +18,19 @@
 }
 
 .alert {
-  margin-top: 1rem;
+  margin: 0.5rem 0;
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;
   border: 1px solid getColor(border);
   border-radius: 3px;
   text-align: center;
+
+  &::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    padding-right: 0.75rem;
+  }
 }
 
 .absolute-pos {
@@ -35,37 +41,32 @@
 }
 
 .error {
-  background-color: getColor(error);
-  color: white;
+  background-color: getColor(errorBg);
+  color: getColor(errorText);
+  border-color: getColor(errorBorder);
 
   &::before {
-    font-family: "Font Awesome\ 5 Free";
-    font-weight: 900;
     content: "\f00d";
-    padding-right: 1rem;
   }
 }
 
 .success {
-  background-color: getColor(success);
-  color: white;
+  background-color: getColor(successBg);
+  color: getColor(successText);
+  border-color: getColor(successBorder);
 
   &::before {
-    font-family: "Font Awesome\ 5 Free";
-    font-weight: 900;
     content: "\f00c";
-    padding-right: 1rem;
   }
 }
 
 .warning {
-  background-color: getColor(warning);
+  background-color: getColor(warningBg);
+  color: getColor(warningText);
+  border-color: getColor(warningBorder);
 
   &::before {
-    font-family: "Font Awesome\ 5 Free";
-    font-weight: 900;
     content: "\f12a";
-    padding-right: 1rem;
   }
 }
 
