@@ -1,15 +1,14 @@
+import { getToken } from "../../utils/storage.js";
+import { validateNewsletterForm } from ".././formValidation/validateNewsletterForm.js";
+
 const newsletter = document.querySelector(".newsletter__modal");
-const test = document.querySelector(".fade-background");
 const fadeBackground = document.querySelector(".fade-background-nl");
-const adminDropdown = document.querySelector(".admin__dropdown");
-const banner = document.querySelector(".banner");
-const navbar = document.querySelector(".nav");
 
 export default function newsletterModal() {
   let closeCounter = 0;
-  function closeNewsletterModal(event) {
-    // event.preventDefault();
-    //   event.stopPropagation();
+
+  function closeNewsletterModal() {
+    // event.stopPropagation();
     if (
       newsletter.style.display === "block" &&
       event.target.matches(".modal__close-icon")
@@ -28,13 +27,15 @@ export default function newsletterModal() {
       if (entry.isIntersecting && closeCounter === 0) {
         newsletter.style.display = "block";
         fadeBackground.style.display = "block";
-        // banner.style.zIndex = "1";
-        // navbar.style.zIndex = "1";
-        // document.body.style.overflow = "hidden";
         return;
       }
     });
   });
 
-  newsletterObserver.observe(document.querySelector(".footer"));
+  //prevents triggering modal when logged in as admin
+  const token = getToken();
+
+  if (!token) {
+    newsletterObserver.observe(document.querySelector(".footer"));
+  }
 }

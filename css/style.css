@@ -197,37 +197,65 @@ hr {
 
 .newsletter__success {
   font-size: 1.125rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #00f6db;
   transition: all 0.5s;
 }
+.newsletter__success span::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  padding-right: 0.5rem;
+}
 
 .alert {
   margin-top: 1rem;
-  display: inline-block;
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;
   border: 1px solid #d9d9d9;
-  margin-bottom: 1rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.absolute-pos {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .error {
   background-color: #eb4d32;
   color: white;
 }
+.error::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00d";
+  padding-right: 1rem;
+}
 
 .success {
   background-color: #0e6673;
   color: white;
 }
+.success::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  padding-right: 1rem;
+}
 
 .warning {
   background-color: #f1cc28;
+}
+.warning::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f12a";
+  padding-right: 1rem;
 }
 
 .error-messages {
@@ -413,7 +441,7 @@ strong {
 .newsletter__heading {
   font-family: "soleil", tahoma, sans-serif;
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: bold;
   padding: 0;
   margin: 0;
 }
@@ -1779,6 +1807,7 @@ header {
 
 .slider__wrapper {
   width: 100%;
+  position: relative;
   margin: 0 auto 2rem auto;
 }
 
@@ -2303,40 +2332,6 @@ header {
   }
 }
 
-.newsletter {
-  margin-top: 150px;
-  position: relative;
-}
-.newsletter__modal {
-  width: 95%;
-  max-width: 500px;
-  display: none;
-  position: fixed;
-  background-image: url("../images/asphalt-pattern.jpg");
-  background-size: cover;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1010;
-  -webkit-animation-name: animate-opacity;
-          animation-name: animate-opacity;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
-}
-.newsletter__container {
-  background-color: rgba(0, 0, 0, 0.7019607843);
-  color: #ffffff;
-  padding: 2rem;
-}
-.newsletter__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .news {
   display: flex;
   flex-direction: column;
@@ -2409,7 +2404,7 @@ header {
 .modal {
   display: none;
   position: fixed;
-  padding-top: 32px;
+  padding-top: 8rem;
   left: 0;
   top: 0;
   width: 100%;
@@ -2418,6 +2413,11 @@ header {
   background-color: rgba(0, 0, 0, 0.7490196078);
   cursor: pointer;
   z-index: 9999999;
+}
+@media (min-width: 768px) {
+  .modal {
+    padding-top: 3rem;
+  }
 }
 
 .modal__content {
@@ -2460,6 +2460,40 @@ header {
     transform: scale(1);
   }
 }
+.newsletter {
+  margin-top: 150px;
+  position: relative;
+}
+.newsletter__modal {
+  width: 95%;
+  max-width: 500px;
+  display: none;
+  position: fixed;
+  background-image: url("../images/asphalt-pattern.jpg");
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+  -webkit-animation-name: animate-opacity;
+          animation-name: animate-opacity;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+}
+.newsletter__container {
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  color: #ffffff;
+  padding: 3rem 2rem;
+}
+.newsletter__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .footer {
   background-color: #000000;
   color: #fafafa;

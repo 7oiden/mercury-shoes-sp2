@@ -4,37 +4,69 @@
 
 .newsletter__success {
   font-size: 1.125rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: getColor(newsletter);
   transition: all 0.5s;
+
+  & span::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    padding-right: 0.5rem;
+  }
 }
 
 .alert {
   margin-top: 1rem;
-  display: inline-block;
   padding: 1rem 1.5rem;
   color: black;
   font-size: 1.125rem;
   border: 1px solid getColor(border);
-  margin-bottom: 1rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.absolute-pos {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .error {
   background-color: getColor(error);
   color: white;
+
+  &::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    padding-right: 1rem;
+  }
 }
 
 .success {
   background-color: getColor(success);
   color: white;
+
+  &::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    padding-right: 1rem;
+  }
 }
 
 .warning {
   background-color: getColor(warning);
+
+  &::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f12a";
+    padding-right: 1rem;
+  }
 }
 
 .error-messages {

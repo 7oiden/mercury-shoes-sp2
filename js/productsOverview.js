@@ -26,7 +26,7 @@ mobileMenuToggler();
     filterProducts(json);
   } catch (error) {
     displayAlert(
-      "alert error",
+      "error absolute-pos",
       "An error has occurred when trying to fetch the API",
       ".products__grid"
     );

@@ -8,7 +8,7 @@ import adminLogin from "./components/forms/adminLoginForm.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import newsletterModal from "./components/modals/newsletterModal.js";
-import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
+// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 createNavLinks();
 basketCounter();
@@ -21,15 +21,13 @@ loginModal();
   try {
     const response = await fetch(heroUrl);
     const result = await response.json();
-
     // console.log(result);
-
     renderHero(result);
   } catch (error) {
     displayAlert(
-      "alert warning",
-      "Background image could not be fetched, please try to reload page in a while",
-      ".image-alert"
+      "error absolute-pos",
+      "An error has occurred when trying to fetch the API",
+      ".hero__container"
     );
   }
 })();
@@ -42,9 +40,9 @@ loginModal();
     renderFeaturedProducts(json);
   } catch (error) {
     displayAlert(
-      "alert error",
+      "error absolute-pos",
       "An error has occurred when trying to fetch the API",
-      ".featured__grid"
+      ".slider__wrapper"
     );
   }
 })();
