@@ -83,7 +83,7 @@ main {
 
 .loader-container {
   position: absolute;
-  top: 2rem;
+  margin-top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 3rem;
@@ -186,8 +186,4 @@ hr {
     align-items: center;
     justify-content: space-between;
   }
-}
-
-.test {
-  background-color: pink;
 }

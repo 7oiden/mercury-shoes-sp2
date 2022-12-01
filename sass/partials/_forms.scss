@@ -87,6 +87,8 @@ label {
     display: flex;
     flex-direction: column;
     gap: 1rem 2rem;
+    width: 350px;
+    max-width: 100%;
 
     @media (min-width: getBreakpoint(medium)) {
       flex-direction: row;
@@ -216,4 +218,12 @@ label {
   margin-top: 3rem;
   padding: 1rem 2rem;
   color: getColor(admin);
+}
+
+#sort-form, #search-form {
+  display: none;
+}
+
+.sort-icon, .search-icon {
+  margin-right: 1rem;
 }

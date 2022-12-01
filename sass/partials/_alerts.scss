@@ -2,6 +2,10 @@
   margin-top: 1rem;
 }
 
+.api-alert-container {
+  margin-top: 6rem;
+}
+
 .newsletter__success {
   font-size: 1.125rem;
   padding-top: 1rem;
@@ -15,6 +19,10 @@
     content: "\f00c";
     padding-right: 0.5rem;
   }
+}
+
+#newsletter-email-error {
+  color: rgb(254, 84, 84);
 }
 
 .alert {
@@ -35,7 +43,6 @@
 
 .absolute-pos {
   position: absolute;
-  top: 10%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -71,7 +78,7 @@
 }
 
 .error-messages {
-  color: getColor(error);
+  color: getColor(errorText);
   display: none;
   padding-top: 0.25rem;
 }

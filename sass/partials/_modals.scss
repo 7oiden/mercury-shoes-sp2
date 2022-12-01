@@ -61,6 +61,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1010;
+    border-radius: 3px;
+    // border: 2px solid #ffffff40;
     animation-name: animate-opacity;
     animation-duration: 0.3s;
     animation-timing-function: ease-out;
@@ -72,6 +74,7 @@
     background-color: #000000b3;
     color: getColor(primary);
     padding: 3rem 2rem;
+    border-radius: 3px;
   }
 
   &__wrapper {

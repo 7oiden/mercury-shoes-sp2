@@ -71,6 +71,8 @@ export function renderProducts(products) {
       </a>
       ${editProd}
       </div>`;
+
+      
   });
 
   handleFav();

@@ -26,14 +26,8 @@ export function validateNewsletterForm(event) {
   }
 }
 
-newsletterInput.onfocus = function () {
-  newsletterInput.style.border = "2px solid transparent";
-};
+// newsletterInput.onfocus = function () {
+//   newsletterInput.style.border = "2px solid green";
+// };
 
 newsletterForm.addEventListener("submit", validateNewsletterForm);
-
-// function validateEmail(newsletterInput) {
-//   const regEx = /\S+@\S+\.\S+/;
-//   const patternMatches = regEx.test(newsletterInput);
-//   return patternMatches;
-// }

@@ -43,12 +43,6 @@ header {
 }
 
 .nav {
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(255, 255, 255, 1)  0%,
-  //   rgba(250, 250, 250, 1)  50%,
-  //   rgba(230, 230, 230, 1) 100%
-  // );
   background: white;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
@@ -82,7 +76,6 @@ header {
     border-bottom: 3px solid transparent;
     transition: all 0.3s;
     color: getColor(secondary);
-    // background-color: pink;
 
     &--active {
       font-weight: bold;
@@ -92,7 +85,6 @@ header {
 
   &__link:hover {
     border-bottom: 3px solid getColor(accent);
-    // background-color: pink;
   }
 
   &__icons-wrapper {
@@ -117,11 +109,5 @@ header {
 .confirmation__head {
   padding: 1rem;
   border-radius: 5px 5px 0 0;
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(255, 255, 255, 1)  0%,
-  //   rgba(250, 250, 250, 1)  50%,
-  //   rgba(230, 230, 230, 1) 100%
-  // );
   background: getColor(primary);
 }

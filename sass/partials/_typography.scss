@@ -168,9 +168,9 @@ strong {
     font-size: 1.5rem;
     font-weight: bold;
 
-    @media (min-width: getBreakpoint(large)) {
-      color: getColor(primary);
-    }
+    // @media (min-width: getBreakpoint(large)) {
+    //   color: getColor(primary);
+    // }
 
     @media (min-width: getBreakpoint(xLarge)) {
       font-size: 1.875rem;
@@ -387,9 +387,9 @@ label {
   align-items: center;
   gap: 0.5rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.125rem;
-  color: getColor(success);
+  color: getColor(successText);
 }
 
 .nav__icon--admin {

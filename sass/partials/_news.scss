@@ -10,7 +10,7 @@
 
   &__block1 {
     display: flex;
-    background-color: white;
+    background-color: getColor(primary);
     color: black;
     order: 2;
     position: relative;
@@ -22,14 +22,14 @@
       border-radius: 3px 0 0 3px;
     }
 
-    @media (min-width: getBreakpoint(large)) {
-      background: radial-gradient(
-        circle,
-        rgba(88, 79, 79, 1) 0%,
-        rgba(0, 0, 0, 1) 100%
-      );
-      color: getColor(primary);
-    }
+    // @media (min-width: getBreakpoint(large)) {
+    //   background: radial-gradient(
+    //     circle,
+    //     rgba(88, 79, 79, 1) 0%,
+    //     rgba(0, 0, 0, 1) 100%
+    //   );
+    //   color: getColor(primary);
+    // }
   }
 
   &__block2 {

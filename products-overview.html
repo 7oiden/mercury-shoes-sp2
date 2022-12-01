@@ -50,10 +50,10 @@
             <li>
               <div class="mobile-menu__toggle">
                 <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
-                    <title>Menu</title>
-                    <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                  <title>Menu</title>
+                  <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
                 </svg>
-            </div>
+              </div>
             </li>
             <div class="nav__icons-wrapper">
               <li>
@@ -123,27 +123,38 @@
             <h1 class="main-heading">Products overview</h1>
             <div class="red-line"></div>
           </div>
-          <div class="filter__container">
-            <form class="filter__form" id="filter-form">
-              <label for="filter-select" class="search__label">Sort by</label>
-              <select class="input filter__input" id="filter-select">
-                <option value="price-asc">Price: low-to-high</option>
-                <option value="price-desc">Price: high-to-low</option>
-                <option value="date-asc">Addition: new-to-old</option>
-                <option value="date-desc">Addition: old-to-new</option>
-              </select>
-              <!-- <svg viewBox="0 0 24 24" class="filter__icon" id="sort-icon">
+          <div>
+            <div>
+              <svg viewBox="0 0 24 24" class="filter__icon sort-icon">
+                <title>Sort</title>
                 <path class="filter-icon" fill="currentColor" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
-              </svg> -->
-            </form>
-            <form class="filter__form">
-              <label for="search-input" class="search__label">Search</label>
-              <input type="text" placeholder="Start typing..." class="input filter__input" id="search-input" />
-              <svg viewBox="0 0 24 24" class="filter__icon">
-                <path fill="currentColor"
-                  d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
               </svg>
-            </form>
+              <svg viewBox="0 0 24 24" class="filter__icon search-icon">
+                <title>Search</title>
+                <path class="filter-icon" fill="currentColor"
+                  d="M9 6V8H2V6H9M9 11V13H2V11H9M18 16V18H2V16H18M19.31 11.5C19.75 10.82 20 10 20 9.11C20 6.61 18 4.61 15.5 4.61S11 6.61 11 9.11 13 13.61 15.5 13.61C16.37 13.61 17.19 13.36 17.88 12.93L21 16L22.39 14.61L19.31 11.5M15.5 11.61C14.12 11.61 13 10.5 13 9.11S14.12 6.61 15.5 6.61 18 7.73 18 9.11 16.88 11.61 15.5 11.61Z" />
+                />
+              </svg>
+            </div>
+            <div class="filter__container">
+              <form class="filter__form" id="sort-form">
+                <label for="filter-select" class="search__label">Sort by</label>
+                <select class="input filter__input" id="filter-select">
+                  <option value="price-asc">Price: low-to-high</option>
+                  <option value="price-desc">Price: high-to-low</option>
+                  <option value="date-asc">Addition: new-to-old</option>
+                  <option value="date-desc">Addition: old-to-new</option>
+                </select>
+              </form>
+              <form class="filter__form" id="search-form">
+                <label for="search-input" class="search__label">Search</label>
+                <input type="text" placeholder="Start typing..." class="input filter__input" id="search-input" />
+                <svg viewBox="0 0 24 24" class="search__icon">
+                  <path fill="currentColor"
+                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                </svg>
+              </form>
+            </div>
           </div>
         </div>
         <div class="filter__wrapper">
@@ -153,7 +164,8 @@
           <div class="loader-container">
             <div class="loader slider__loader"></div>
           </div>
-            <!-- dynamic content -->
+          <div class="api-alert-container absolute-pos"></div>
+          <!-- dynamic content -->
         </div>
         <button class="button secondary-button" id="load-button">
           Load more products

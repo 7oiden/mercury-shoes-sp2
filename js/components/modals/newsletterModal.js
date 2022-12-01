@@ -1,4 +1,5 @@
 import { getToken } from "../../utils/storage.js";
+//keep
 import { validateNewsletterForm } from ".././formValidation/validateNewsletterForm.js";
 
 const newsletter = document.querySelector(".newsletter__modal");
@@ -7,8 +8,7 @@ const fadeBackground = document.querySelector(".fade-background-nl");
 export default function newsletterModal() {
   let closeCounter = 0;
 
-  function closeNewsletterModal() {
-    // event.stopPropagation();
+  function closeNewsletterModal(event) {
     if (
       newsletter.style.display === "block" &&
       event.target.matches(".modal__close-icon")
@@ -32,7 +32,7 @@ export default function newsletterModal() {
     });
   });
 
-  //prevents triggering modal when logged in as admin
+  // prevents triggering modal when logged in as admin
   const token = getToken();
 
   if (!token) {

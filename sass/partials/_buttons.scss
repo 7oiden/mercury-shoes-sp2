@@ -21,7 +21,7 @@
 }
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
@@ -70,7 +70,8 @@
   @media (min-width: getBreakpoint(large)) {
     &:hover {
       background-position: right center;
-      background-color: getColor(accent);
+      scale: 1.05;
+      @include dropShadow(6px, 6px);
     }
   }
 }
@@ -143,6 +144,7 @@
 
 #buy-button {
   margin-top: 0.25rem;
+  width: 275px;
 }
 
 #clear-basket {
