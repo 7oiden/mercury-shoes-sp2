@@ -17,12 +17,20 @@ adminLogin();
 newsletterModal();
 mobileMenuToggler();
 loginModal();
-apiAlert();
+
+// const alertContainer = document.querySelector(".api-alert-container");
 
 (async function fetchApi() {
   try {
     const response = await fetch(heroUrl);
     const result = await response.json();
+
+    if (response.status === 200) {
+      console.log(response.status);
+      apiAlert();
+    }
+
+    console.log(response.status);
 
     // console.log(result);
     renderHero(result);

@@ -1,35 +1,22 @@
-const sortIcon = document.querySelector(".sort-icon");
-const searchIcon = document.querySelector(".search-icon");
+const sortIcon = document.querySelector("#sort-icon");
+const searchIcon = document.querySelector("#search-icon");
 const sortForm = document.querySelector("#sort-form");
 const searchForm = document.querySelector("#search-form");
 
 export function filterToggler() {
-  function toggleSort() {
-    if (sortForm.style.display === "block") {
-      sortForm.style.display = "none";
-    } else {
-      sortForm.style.display = "block";
-    }
-
-    if (searchForm.style.display === "block") {
-      searchForm.style.display = "none";
-    }
+  function toggleSortForm() {
+    sortForm.classList.toggle("show");
+    sortForm.classList.toggle("hide");
+    searchForm.classList.add("hide");
   }
 
-  sortIcon.addEventListener("click", toggleSort);
+  sortIcon.addEventListener("click", toggleSortForm);
 
-  function toggleSearch() {
-    console.log("hi");
-    if (searchForm.style.display === "block") {
-      searchForm.style.display = "none";
-    } else {
-      searchForm.style.display = "block";
-    }
-
-    if (sortForm.style.display === "block") {
-        sortForm.style.display = "none";
-      }
+  function toggleSearchForm() {
+    searchForm.classList.toggle("show");
+    searchForm.classList.toggle("hide");
+    sortForm.classList.add("hide");
   }
 
-  searchIcon.addEventListener("click", toggleSearch);
+  searchIcon.addEventListener("click", toggleSearchForm);
 }

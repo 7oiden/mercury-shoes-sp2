@@ -18,8 +18,6 @@ export function renderFeaturedProducts(products) {
     }
   });
 
-  
-
   featuredProducts.forEach((product) => {
     sliderContainer.innerHTML += `
       <a href="products-details.html?id=${product.id}" class="slide">
@@ -33,5 +31,6 @@ export function renderFeaturedProducts(products) {
         </div>
       </a>`;
   });
+  
   slider();
 }

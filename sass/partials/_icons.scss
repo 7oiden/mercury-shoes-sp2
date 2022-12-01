@@ -12,6 +12,27 @@ i {
   cursor: pointer;
 }
 
+.filter__icon-box {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 3px;
+  background-color: getColor(secondary);
+}
+
+.filter__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  path {
+    fill: getColor(primary);
+  }
+}
+
 .search__icon {
   position: absolute;
   bottom: 0;
@@ -21,10 +42,6 @@ i {
   width: 2rem;
   cursor: pointer;
 }
-
-// #sort-icon {
-//   right: 1.5rem;
-// }
 
 .nav__icon {
   margin-left: 2rem;
@@ -140,7 +157,7 @@ i {
 }
 
 #nl-modal-icon {
-  fill: getColor(primary)
+  fill: getColor(primary);
 }
 
 .fa-plus,
@@ -247,5 +264,3 @@ i {
     transform: scale(1);
   }
 }
-
-

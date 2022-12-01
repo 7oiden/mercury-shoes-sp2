@@ -1,14 +1,7 @@
-import displayAlert from "../components/alerts/displayAlert.js";
-
 const heroContainer = document.querySelector(".hero__container");
-const test = document.querySelector(".test");
-// const alertContainer = document.querySelector(".hero-alert-container");
 
 export function renderHero(hero) {
-  // loader.style.display = "none";
-  heroContainer.innerHTML = "";
-  // alertContainer.innerHTML = "test";
-
+ 
   heroContainer.innerHTML = `
   <div class="hero__transparent-wrapper">
           <hgroup class="hero__heading-group">

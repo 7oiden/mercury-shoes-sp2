@@ -187,3 +187,19 @@ hr {
     justify-content: space-between;
   }
 }
+/////////////////
+.show {
+  display: block;
+
+  @media (min-width: getBreakpoint(large)) {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+
+  @media (min-width: getBreakpoint(large)) {
+    display: block;
+  }
+}

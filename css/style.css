@@ -191,6 +191,24 @@ hr {
   }
 }
 
+.show {
+  display: block;
+}
+@media (min-width: 992px) {
+  .show {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hide {
+    display: block;
+  }
+}
+
 .alert-container {
   margin-top: 1rem;
 }
@@ -221,10 +239,15 @@ hr {
   margin: 0.5rem 0;
   padding: 1rem 1.5rem;
   color: black;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .alert {
+    font-size: 1.125rem;
+  }
 }
 .alert::before {
   font-family: "Font Awesome 5 Free";
@@ -233,7 +256,10 @@ hr {
 }
 
 .absolute-pos {
+  width: 95%;
+  max-width: 500px;
   position: absolute;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1070,6 +1096,26 @@ i {
   cursor: pointer;
 }
 
+.filter__icon-box {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 3px;
+  background-color: #323232;
+}
+
+.filter__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.filter__icon path {
+  fill: #ffffff;
+}
+
 .search__icon {
   position: absolute;
   bottom: 0;
@@ -1376,7 +1422,7 @@ header {
 }
 
 .nav {
-  background: white;
+  background: #ffffff;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   z-index: 999;
@@ -2569,7 +2615,7 @@ select {
 
 label {
   font-weight: bold;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.375rem;
 }
 
 .label-light {
@@ -2629,6 +2675,11 @@ label {
     align-items: center;
   }
 }
+.filter__icon-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
 .filter__form {
   position: relative;
   flex: 1;
@@ -2636,7 +2687,8 @@ label {
 .filter__input {
   width: 100%;
   font-size: 1.125rem;
-  padding: 0.5rem 45px 0.5rem 1rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid #d9d9d9;
@@ -2738,14 +2790,6 @@ label {
   margin-top: 3rem;
   padding: 1rem 2rem;
   color: #0e6673;
-}
-
-#sort-form, #search-form {
-  display: none;
-}
-
-.sort-icon, .search-icon {
-  margin-right: 1rem;
 }
 
 .basket__container {

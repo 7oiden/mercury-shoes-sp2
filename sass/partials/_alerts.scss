@@ -29,10 +29,14 @@
   margin: 0.5rem 0;
   padding: 1rem 1.5rem;
   color: black;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border: 1px solid getColor(border);
   border-radius: 3px;
   text-align: center;
+
+  @media (min-width: getBreakpoint(medium)) {
+    font-size: 1.125rem;
+  }
 
   &::before {
     font-family: "Font Awesome\ 5 Free";
@@ -42,7 +46,10 @@
 }
 
 .absolute-pos {
+  width: 95%;
+  max-width: 500px;
   position: absolute;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
 }
