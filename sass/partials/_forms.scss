@@ -87,33 +87,44 @@ label {
     display: flex;
     flex-direction: column;
     gap: 1rem 2rem;
-    width: 100%;
+    // background-color: pink;
 
-    @media (min-width: getBreakpoint(medium)) {
+    @media (min-width: getBreakpoint(small)) {
       flex-direction: row;
       align-items: center;
+      justify-content: flex-end;
     }
-  }
-
-  &__icon-container {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
   }
 
   &__form {
     position: relative;
-    flex: 1;
+    order: 2;
+
+    @media (min-width: getBreakpoint(small)) {
+      order: 1;
+    }
   }
 
   &__input {
-    width: 100%;
+    min-width: 300px;
     font-size: 1.125rem;
     height: 3rem;
-    padding: 0.5rem 1rem;
+    padding-right: 3rem;
     background-color: getColor(primary);
 
     @include content-border(5px);
+
+    @media (min-width: getBreakpoint(medium)) {
+      min-width: 350px;
+    }
+  }
+
+  &__icon-box {
+    order: 1;
+
+    @media (min-width: getBreakpoint(small)) {
+      order: 2;
+    }
   }
 }
 
@@ -225,6 +236,3 @@ label {
   padding: 1rem 2rem;
   color: getColor(admin);
 }
-
-
-

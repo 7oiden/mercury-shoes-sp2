@@ -191,15 +191,15 @@ hr {
 .show {
   display: block;
 
-  @media (min-width: getBreakpoint(large)) {
-    display: none;
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  //   display: none;
+  // }
 }
 
 .hide {
   display: none;
 
-  @media (min-width: getBreakpoint(large)) {
-    display: block;
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  //   display: block;
+  // }
 }

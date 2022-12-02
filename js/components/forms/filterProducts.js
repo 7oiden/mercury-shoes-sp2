@@ -18,7 +18,7 @@ export function filterProducts(products) {
   filterInput.onchange = function (event) {
     const filterValue = event.target.value;
 
-    console.log(filterValue);
+    // console.log(filterValue);
 
     let sortedProducts = [];
 

@@ -194,19 +194,9 @@ hr {
 .show {
   display: block;
 }
-@media (min-width: 992px) {
-  .show {
-    display: none;
-  }
-}
 
 .hide {
   display: none;
-}
-@media (min-width: 992px) {
-  .hide {
-    display: block;
-  }
 }
 
 .alert-container {
@@ -2667,31 +2657,44 @@ label {
   display: flex;
   flex-direction: column;
   gap: 1rem 2rem;
-  width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .filter__container {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
   }
-}
-.filter__icon-container {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
 }
 .filter__form {
   position: relative;
-  flex: 1;
+  order: 2;
+}
+@media (min-width: 576px) {
+  .filter__form {
+    order: 1;
+  }
 }
 .filter__input {
-  width: 100%;
+  min-width: 300px;
   font-size: 1.125rem;
   height: 3rem;
-  padding: 0.5rem 1rem;
+  padding-right: 3rem;
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid #d9d9d9;
+}
+@media (min-width: 768px) {
+  .filter__input {
+    min-width: 350px;
+  }
+}
+.filter__icon-box {
+  order: 1;
+}
+@media (min-width: 576px) {
+  .filter__icon-box {
+    order: 2;
+  }
 }
 
 .admin__form {
