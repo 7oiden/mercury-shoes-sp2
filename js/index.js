@@ -25,12 +25,12 @@ loginModal();
     const response = await fetch(heroUrl);
     const result = await response.json();
 
-    if (response.status === 200) {
-      console.log(response.status);
-      apiAlert();
-    }
+    // if (response.status === 200) {
+    //   console.log(response.status);
+    //   apiAlert();
+    // }
 
-    console.log(response.status);
+    // console.log(response.status);
 
     // console.log(result);
     renderHero(result);
