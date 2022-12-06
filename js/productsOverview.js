@@ -4,7 +4,6 @@ import { basketCounter } from "./components/common/basketCounter.js";
 import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
 import { loginModal } from "./components/modals/loginModal.js";
 import displayAlert from "./components/alerts/displayAlert.js";
-// import apiAlert from "./components/alerts/apiAlert.js";
 import adminLoginForm from "./components/forms/adminLoginForm.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./components/forms/searchProducts.js";
@@ -17,7 +16,6 @@ basketCounter();
 loginModal();
 adminLoginForm();
 mobileMenuToggler();
-// apiAlert();
 filterToggler();
 
 (async function fetchApi() {

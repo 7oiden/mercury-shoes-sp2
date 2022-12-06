@@ -8,11 +8,11 @@ import adminLogin from "./components/forms/adminLoginForm.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import newsletterModal from "./components/modals/newsletterModal.js";
-import apiAlert from "./components/alerts/apiAlert.js";
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
-createNavLinks();
 basketCounter();
+createNavLinks();
+
 adminLogin();
 newsletterModal();
 mobileMenuToggler();
@@ -24,13 +24,6 @@ loginModal();
   try {
     const response = await fetch(heroUrl);
     const result = await response.json();
-
-    // if (response.status === 200) {
-    //   console.log(response.status);
-    //   apiAlert();
-    // }
-
-    // console.log(response.status);
 
     // console.log(result);
     renderHero(result);
