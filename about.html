@@ -1,375 +1,303 @@
 <!DOCTYPE html>
 <html lang="en" class="about-page">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Mercury Shoes | Proud provider of quality running shoes since 1988 | About us, FAQ, Contact, Returns, Sizes and fit, Contact and Location"
-    />
-    <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Mercury Shoes | About Us | FAQ | Contact | Location</title>
-  </head>
-  <body>
-    <div class="fade-background"></div>
-    <div class="wrapper">
-      <header>
-        <div class="banner">
-          <ul class="banner__list">
-            <li class="banner__item">
-              <i class="fas fa-check"></i>
-              <span>Free returns</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mercury Shoes | Proud provider of quality running shoes since 1988 | About us, FAQ, Contact, Returns, Sizes and fit, Contact and Location" />
+  <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Mercury Shoes | About Us | FAQ | Contact | Location</title>
+</head>
+
+<body>
+  <div class="fade-background"></div>
+  <div class="wrapper">
+    <header>
+      <div class="banner">
+        <!-- dynamic created -->
+      </div>
+      <nav class="nav" aria-label="main menu">
+        <div class="nav__container">
+          <div class="nav__links-wrapper">
+            <a href="index.html" class="nav__logo"><img src="images/mercury-logo.png" alt="Mercury brand logo"
+                class="nav__logo" /></a>
+            <div>
+              <ul class="nav__links-list">
+                <!-- dynamic created -->
+              </ul>
+            </div>
+          </div>
+          <ul class="nav__icons-list">
+            <li>
+              <div class="mobile-menu__toggle">
+                <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
+                  <title>Menu</title>
+                  <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+              </div>
             </li>
-            <li class="banner__item">
-              <i class="fas fa-check"></i>
-              <span>Free shipping over $50</span>
-            </li>
-            <li class="banner__item banner__item--inactive">
-              <i class="fas fa-check"></i>
-              <span>Money back guarantee</span>
-            </li>
+            <div class="nav__icons-wrapper">
+              <li>
+                <a href="basket.html" aria-label="basket" class="nav__icon basket__icon" id="basket">
+                  <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z" />
+                  </svg>
+                  <div id="counter-container">
+                    <div id="counter-number">1</div>
+                  </div>
+                </a>
+              </li>
+              <li class="admin-login">
+                <div class="nav__icon">
+                  <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24" class="login">
+                    <title>Admin login</title>
+                    <path class="login" fill="currentColor"
+                      d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z" />
+                  </svg>
+                </div>
+                <div class="admin__dropdown">
+                  <div class="admin__container">
+                    <p class="secondary-heading">Admin login</p>
+                    <div class="red-line"></div>
+                    <form class="admin__form">
+                      <div class="admin__input-wrapper">
+                        <label for="username">Username</label>
+                        <input type="text" class="input admin__input" id="username" placeholder="Username" />
+                        <div class="error-messages" id="admin-username-error">
+                          * Must be at least 4 characters
+                        </div>
+                      </div>
+                      <div class="admin__input-wrapper">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="input admin__input" id="password"
+                          placeholder="Password" />
+                        <div class="error-messages" id="admin-password-error">
+                          * Must be at least 6 characters
+                        </div>
+                      </div>
+                      <div class="alert-container"></div>
+                      <button id="sign-in" class="button secondary-button">
+                        Sign in
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li class="admin-logout"></li>
+            </div>
           </ul>
         </div>
-        <nav class="nav" aria-label="main menu">
-          <div class="nav__container">
-            <div class="nav__links-wrapper">
-              <a href="index.html" class="nav__logo"
-                ><img
-                  src="images/mercury-logo.png"
-                  alt="Mercury brand logo"
-                  class="nav__logo"
-              /></a>
-              <div>
-                <ul class="nav__links-list">
-                  <!-- dynamic created -->
-                </ul>
-              </div>
-            </div>
-            <ul class="nav__icons-list">
-              <li>
-                <div class="mobile-menu__toggle">
-                  <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
-                      <title>Menu</title>
-                      <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-                  </svg>
-              </div>
-              </li>
-              <div class="nav__icons-wrapper">
-                <li>
-                  <a
-                    href="basket.html"
-                    aria-label="basket"
-                    class="nav__icon basket__icon"
-                    id="basket"
-                  >
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        fill="currentColor"
-                        d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
-                      />
-                    </svg>
-                    <div id="counter-container">
-                      <div id="counter-number">1</div>
-                    </div>
-                  </a>
-                </li>
-                <li class="admin-login">
-                  <div class="nav__icon">
-                    <svg viewBox="0 0 24 24" class="login">
-                      <title>Admin login</title>
-                      <path class="login" fill="currentColor"
-                        d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z" />
-                    </svg>
-                  </div>
-                  <div class="admin__dropdown">
-                    <div class="admin__container">
-                      <p class="secondary-heading">Admin login</p>
-                      <div class="red-line"></div>
-                      <form class="admin__form">
-                        <div class="admin__input-wrapper">
-                          <label for="username">Username</label>
-                          <input
-                            type="text"
-                            class="input admin__input"
-                            id="username"
-                            placeholder="Username"
-                          />
-                          <div class="error-messages" id="admin-username-error">
-                            * Must be at least 4 characters
-                          </div>
-                        </div>
-                        <div class="admin__input-wrapper">
-                          <label for="password">Password</label>
-                          <input
-                            type="password"
-                            name="password"
-                            class="input admin__input"
-                            id="password"
-                            placeholder="Password"
-                          />
-                          <div class="error-messages" id="admin-password-error">
-                            * Must be at least 6 characters
-                          </div>
-                        </div>
-                        <div class="alert-container"></div>
-                        <button id="sign-in" class="button secondary-button">
-                          Sign in
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </li>
-                <li class="admin-logout"></li>
-              </div>
-            </ul>
-          </div>
-          <div class="mobile-menu" aria-label="mobile link menu">
-            <ul class="mobile-menu__list">
-              <!-- dynamic created -->
-            </ul>
-          </div>
-        </nav>
-      </header>
+        <div class="mobile-menu" aria-label="mobile link menu">
+          <ul class="mobile-menu__list">
+            <!-- dynamic created -->
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-      <main>
-        <div class="about-page-wrapper">
-          <section class="about">
-            <hgroup>
-              <h1 class="main-heading" id="about">About Us</h1>
-              <div class="red-line"></div>
-              <h2 class="sub-heading">
-                Proud provider of high quality running shoes since 1988
-              </h2>
-            </hgroup>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-            <div class="about__card">
-              <div class="about__image">
-                <img
-                  src="images\profile-ceo.jpg"
-                  alt="Profile picture of Mercury CEO Charles Hudson."
-                  class="about__image"
-                />
-              </div>
-              <div class="about__card-body">
-                <div class="about__card-wrapper">
-                  <div class="about__card-icon">
-                    <svg
-                      aria-hidden="true"
-                      style="width: 24px; height: 24px"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
-                      />
-                    </svg>
-                  </div>
-                  <p class="about__card-quote">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Explicabo iusto necessitatibus facere cum sequi magni
-                    reprehenderit.
-                  </p>
-                  <p class="about__card-name">Charles Hudson - CEO</p>
+    <main>
+      <div class="about-page-wrapper">
+        <section class="about">
+          <hgroup>
+            <h1 class="main-heading" id="about">About Us</h1>
+            <div class="red-line"></div>
+            <h2 class="sub-heading">
+              Proud provider of high quality running shoes since 1988
+            </h2>
+          </hgroup>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+          <div class="about__card">
+            <div class="about__image">
+              <img src="images\profile-ceo.jpg" alt="Profile picture of Mercury CEO Charles Hudson."
+                class="about__image" />
+            </div>
+            <div class="about__card-body">
+              <div class="about__card-wrapper">
+                <div class="about__card-icon">
+                  <svg aria-hidden="true" style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
+                  </svg>
                 </div>
+                <p class="about__card-quote">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Explicabo iusto necessitatibus facere cum sequi magni
+                  reprehenderit.
+                </p>
+                <p class="about__card-name">Charles Hudson - CEO</p>
               </div>
             </div>
-          </section>
-          <section class="faq">
-            <h3 class="secondary-heading" id="faq">FAQ</h3>
-            <div class="red-line"></div>
-            <ul class="faq__list">
-              <li class="faq__question">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-                a dolorum, amet iste aperiam repudiandae quos optio assumenda
-                quas modi cumque ut illum, voluptatum adipisci tenetur iure
-                error cum laborum?
-                <div class="faq__answer-container">
-                  <i
-                    aria-hidden="true"
-                    class="far fa-plus-square faq__icon1"
-                    title="Show/hide answer"
-                  ></i>
-                  <span class="sr-only">Show/hide answer</span>
-                  <p class="faq__answer" id="a1">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-              </li>
-              <li class="faq__question">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-                a dolorum, amet iste aperiam repudiandae quos optio assumenda
-                quas modi cumque ut illum, voluptatum adipisci tenetur iure
-                error cum laborum?
-                <div class="faq__answer-container">
-                  <i
-                    aria-hidden="true"
-                    class="far fa-plus-square faq__icon2"
-                    title="Show/hide answer"
-                  ></i>
-                  <span class="sr-only">Show/hide answer</span>
-                  <p class="faq__answer" id="a2">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-              </li>
-              <li class="faq__question">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-                a dolorum, amet iste aperiam repudiandae quos optio assumenda
-                quas modi cumque ut illum, voluptatum adipisci tenetur iure
-                error cum laborum?
-                <div class="faq__answer-container">
-                  <i
-                    aria-hidden="true"
-                    class="far fa-plus-square faq__icon3"
-                    title="Show/hide answer"
-                  ></i>
-                  <span class="sr-only">Show/hide answer</span>
-                  <p class="faq__answer" id="a3">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-              </li>
-              <li class="faq__question">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-                a dolorum, amet iste aperiam repudiandae quos optio assumenda
-                quas modi cumque ut illum, voluptatum adipisci tenetur iure
-                error cum laborum?
-                <div class="faq__answer-container">
-                  <i
-                    aria-hidden="true"
-                    class="far fa-plus-square faq__icon4"
-                    title="Show/hide answer"
-                  ></i>
-                  <span class="sr-only">Show/hide answer</span>
-                  <p class="faq__answer" id="a4">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-              </li>
-              <li class="faq__question">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-                a dolorum, amet iste aperiam repudiandae quos optio assumenda
-                quas modi cumque ut illum, voluptatum adipisci tenetur iure
-                error cum laborum?
-                <div class="faq__answer-container">
-                  <i
-                    aria-hidden="true"
-                    class="far fa-plus-square faq__icon5"
-                    title="Show/hide answer"
-                  ></i>
-                  <span class="sr-only">Show/hide answer</span>
-                  <p class="faq__answer" id="a5">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <section class="returns">
-            <h3 class="secondary-heading" id="returns">Returns</h3>
-            <div class="red-line"></div>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Et harum quidem rerum facilis est et
-              expedita distinctio.
-            </p>
-          </section>
-          <section class="sizes">
-            <h3 class="secondary-heading" id="sizes">Sizes and fit</h3>
-            <div class="red-line"></div>
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga.
-            </p>
-          </section>
-          <div class="contact-wrapper">
-            <section class="contact">
-              <div class="contact__sub-wrapper">
-                <h3 class="secondary-heading" id="contact">Contact</h3>
-                <div class="red-line"></div>
-                <h4 class="contact__sub-heading">Email</h4>
-                <p class="contact__paragraph--bold">For support or feedback:</p>
-                <p class="contact__paragraph">support@mercuryshoes.com</p>
-              </div>
-              <div class="contact__sub-wrapper">
-                <h4 class="contact__sub-heading">Calls</h4>
-                <p class="contact__paragraph--bold">You can reach us at:</p>
-                <p class="contact__paragraph">Phone: 5555 55555</p>
-                <p class="contact__paragraph">
-                  Monday to friday 9AM - 6PM (UST)
+          </div>
+        </section>
+        <section class="faq">
+          <h3 class="secondary-heading" id="faq">FAQ</h3>
+          <div class="red-line"></div>
+          <ul class="faq__list">
+            <li class="faq__question">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              a dolorum, amet iste aperiam repudiandae quos optio assumenda
+              quas modi cumque ut illum, voluptatum adipisci tenetur iure
+              error cum laborum?
+              <div class="faq__answer-container">
+                <i aria-hidden="true" class="far fa-plus-square faq__icon1" title="Show/hide answer"></i>
+                <span class="sr-only">Show/hide answer</span>
+                <p class="faq__answer" id="a1">
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
                 </p>
               </div>
-              <div class="contact__sub-wrapper">
-                <h4 id="address" class="contact__sub-heading">Address</h4>
-                <p class="contact__paragraph--bold">Main office address:</p>
-                <p class="contact__paragraph">Mercury Shoes LTD</p>
-                <p class="contact__paragraph">5th Avenue</p>
-                <p class="contact__paragraph">NY 55555 United States</p>
+            </li>
+            <li class="faq__question">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              a dolorum, amet iste aperiam repudiandae quos optio assumenda
+              quas modi cumque ut illum, voluptatum adipisci tenetur iure
+              error cum laborum?
+              <div class="faq__answer-container">
+                <i aria-hidden="true" class="far fa-plus-square faq__icon2" title="Show/hide answer"></i>
+                <span class="sr-only">Show/hide answer</span>
+                <p class="faq__answer" id="a2">
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
               </div>
-            </section>
-            <section class="location">
-              <h3 class="secondary-heading" id="location">Location</h3>
+            </li>
+            <li class="faq__question">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              a dolorum, amet iste aperiam repudiandae quos optio assumenda
+              quas modi cumque ut illum, voluptatum adipisci tenetur iure
+              error cum laborum?
+              <div class="faq__answer-container">
+                <i aria-hidden="true" class="far fa-plus-square faq__icon3" title="Show/hide answer"></i>
+                <span class="sr-only">Show/hide answer</span>
+                <p class="faq__answer" id="a3">
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+            </li>
+            <li class="faq__question">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              a dolorum, amet iste aperiam repudiandae quos optio assumenda
+              quas modi cumque ut illum, voluptatum adipisci tenetur iure
+              error cum laborum?
+              <div class="faq__answer-container">
+                <i aria-hidden="true" class="far fa-plus-square faq__icon4" title="Show/hide answer"></i>
+                <span class="sr-only">Show/hide answer</span>
+                <p class="faq__answer" id="a4">
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+            </li>
+            <li class="faq__question">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              a dolorum, amet iste aperiam repudiandae quos optio assumenda
+              quas modi cumque ut illum, voluptatum adipisci tenetur iure
+              error cum laborum?
+              <div class="faq__answer-container">
+                <i aria-hidden="true" class="far fa-plus-square faq__icon5" title="Show/hide answer"></i>
+                <span class="sr-only">Show/hide answer</span>
+                <p class="faq__answer" id="a5">
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="returns">
+          <h3 class="secondary-heading" id="returns">Returns</h3>
+          <div class="red-line"></div>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Et harum quidem rerum facilis est et
+            expedita distinctio.
+          </p>
+        </section>
+        <section class="sizes">
+          <h3 class="secondary-heading" id="sizes">Sizes and fit</h3>
+          <div class="red-line"></div>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique sunt in culpa qui officia deserunt mollitia
+            animi, id est laborum et dolorum fuga.
+          </p>
+        </section>
+        <div class="contact-wrapper">
+          <section class="contact">
+            <div class="contact__sub-wrapper">
+              <h3 class="secondary-heading" id="contact">Contact</h3>
               <div class="red-line"></div>
-              <div class="contact__sub-wrapper">
-                <h4 class="contact__sub-heading">Main store</h4>
-                <p class="contact__paragraph">Mercury Shoes LTD</p>
-                <p class="contact__paragraph">5th Avenue</p>
-                <p class="contact__paragraph">NY 55555 United States</p>
-              </div>
-              <iframe
-                class="location__map"
-                title="address to Mercury main store"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.4364241114877!2d-73.96780638432489!3d40.77441864173092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a29d3847f5%3A0x564dfbba0141774a!2s5th%20Ave%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sno!4v1639471681284!5m2!1sen!2sno"
-                allowfullscreen=""
-                frameborder="0"
-              ></iframe>
-            </section>
-          </div>
+              <h4 class="contact__sub-heading">Email</h4>
+              <p class="contact__paragraph--bold">For support or feedback:</p>
+              <p class="contact__paragraph">support@mercuryshoes.com</p>
+            </div>
+            <div class="contact__sub-wrapper">
+              <h4 class="contact__sub-heading">Calls</h4>
+              <p class="contact__paragraph--bold">You can reach us at:</p>
+              <p class="contact__paragraph">Phone: 5555 55555</p>
+              <p class="contact__paragraph">
+                Monday to friday 9AM - 6PM (UST)
+              </p>
+            </div>
+            <div class="contact__sub-wrapper">
+              <h4 id="address" class="contact__sub-heading">Address</h4>
+              <p class="contact__paragraph--bold">Main office address:</p>
+              <p class="contact__paragraph">Mercury Shoes LTD</p>
+              <p class="contact__paragraph">5th Avenue</p>
+              <p class="contact__paragraph">NY 55555 United States</p>
+            </div>
+          </section>
+          <section class="location">
+            <h3 class="secondary-heading" id="location">Location</h3>
+            <div class="red-line"></div>
+            <div class="contact__sub-wrapper">
+              <h4 class="contact__sub-heading">Main store</h4>
+              <p class="contact__paragraph">Mercury Shoes LTD</p>
+              <p class="contact__paragraph">5th Avenue</p>
+              <p class="contact__paragraph">NY 55555 United States</p>
+            </div>
+            <iframe class="location__map" title="address to Mercury main store"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.4364241114877!2d-73.96780638432489!3d40.77441864173092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a29d3847f5%3A0x564dfbba0141774a!2s5th%20Ave%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sno!4v1639471681284!5m2!1sen!2sno"
+              allowfullscreen="" frameborder="0"></iframe>
+          </section>
         </div>
-        <!-- <section class="newsletter">
+      </div>
+      <!-- <section class="newsletter">
           <div class="newsletter__container">
             <div class="newsletter__wrapper">
               <p class="newsletter__heading">
@@ -399,82 +327,77 @@
             </div>
           </div>
         </section> -->
-      </main>
-    </div>
+    </main>
+  </div>
 
-    <footer class="footer">
-      <div class="footer__container">
-        <div>
-          <p class="footer__header">About:</p>
-          <ul class="footer__list">
-            <li>
-              <a href="about.html#about" class="footer__link">About Us</a>
-            </li>
-            <li>
-              <a href="about.html#address" class="footer__link">Address</a>
-            </li>
-            <li>
-              <a href="about.html#location" class="footer__link">Location</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__header">Support:</p>
-          <ul class="footer__list">
-            <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
-            <li>
-              <a href="about.html#returns" class="footer__link">Returns</a>
-            </li>
-            <li>
-              <a href="about.html#sizes" class="footer__link">Sizes</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__header">Contact:</p>
-          <ul class="footer__list">
-            <li>
-              <a href="about.html#contact" class="footer__link">Contact page</a>
-            </li>
-            <li>Phone: 5555 55555</li>
-            <li>Email: support@mercury.com</li>
-          </ul>
-        </div>
-        <div>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="https://twitter.com" aria-label="Twitter"
-                ><i aria-hidden="true" class="fab fa-twitter footer__icon"></i
-              ></a>
-            </li>
-            <li class="footer-item">
-              <a href="https://www.instagram.com/" aria-label="Instagram"
-                ><i aria-hidden="true" class="fab fa-instagram footer__icon"></i
-              ></a>
-            </li>
-            <li class="footer-item">
-              <a href="https://www.facebook.com/" aria-label="Facebook"
-                ><i
-                  aria-hidden="true"
-                  class="fab fa-facebook-f footer__icon"
-                ></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <ul class="footer__list footer-bottom__list">
-          <li id="copyright">&#169; 2020 - Mercury S.A.S</li>
-          <li class="footer-bottom__pipe">|</li>
-          <li>Terms and conditions</li>
-          <li class="footer-bottom__pipe">|</li>
-          <li>Privacy</li>
-          <li class="footer-bottom__pipe">|</li>
-          <li>Warranty</li>
+  <footer class="footer">
+    <div class="footer__container">
+      <div>
+        <p class="footer__header">About:</p>
+        <ul class="footer__list">
+          <li>
+            <a href="about.html#about" class="footer__link">About Us</a>
+          </li>
+          <li>
+            <a href="about.html#address" class="footer__link">Address</a>
+          </li>
+          <li>
+            <a href="about.html#location" class="footer__link">Location</a>
+          </li>
         </ul>
       </div>
-    </footer>
-    <script src="js/about.js" type="module"></script>
-  </body>
+      <div>
+        <p class="footer__header">Support:</p>
+        <ul class="footer__list">
+          <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
+          <li>
+            <a href="about.html#returns" class="footer__link">Returns</a>
+          </li>
+          <li>
+            <a href="about.html#sizes" class="footer__link">Sizes</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__header">Contact:</p>
+        <ul class="footer__list">
+          <li>
+            <a href="about.html#contact" class="footer__link">Contact page</a>
+          </li>
+          <li>Phone: 5555 55555</li>
+          <li>Email: support@mercury.com</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://twitter.com" aria-label="Twitter"><i aria-hidden="true"
+                class="fab fa-twitter footer__icon"></i></a>
+          </li>
+          <li class="footer-item">
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i aria-hidden="true"
+                class="fab fa-instagram footer__icon"></i></a>
+          </li>
+          <li class="footer-item">
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i aria-hidden="true"
+                class="fab fa-facebook-f footer__icon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer__list footer-bottom__list">
+        <li id="copyright">&#169; 2020 - Mercury S.A.S</li>
+        <li class="footer-bottom__pipe">|</li>
+        <li>Terms and conditions</li>
+        <li class="footer-bottom__pipe">|</li>
+        <li>Privacy</li>
+        <li class="footer-bottom__pipe">|</li>
+        <li>Warranty</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/about.js" type="module"></script>
+</body>
+
 </html>

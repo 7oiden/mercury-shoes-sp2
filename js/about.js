@@ -4,8 +4,9 @@ import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
 import { loginModal } from "./components/modals/loginModal.js";
 import adminLogin from "./components/forms/adminLoginForm.js";
 import faqToggler from "./components/togglers/faqToggler.js";
-// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
+import renderBanner from "./ui/renderBanner.js";
 
+renderBanner();
 createNavLinks();
 basketCounter();
 loginModal();

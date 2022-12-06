@@ -14,10 +14,11 @@ i {
 
 .filter__icon-box {
   position: relative;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 3px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
   background-color: getColor(secondary);
+  cursor: pointer;
 }
 
 .filter__icon {
@@ -37,7 +38,7 @@ i {
   position: absolute;
   bottom: 0;
   transform: translateY(-25%);
-  right: 0.5rem;
+  left: 0.5rem;
   height: 2rem;
   width: 2rem;
   cursor: pointer;

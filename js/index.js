@@ -8,11 +8,12 @@ import adminLogin from "./components/forms/adminLoginForm.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import newsletterModal from "./components/modals/newsletterModal.js";
+import renderBanner from "./ui/renderBanner.js"
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 basketCounter();
 createNavLinks();
-
+renderBanner();
 adminLogin();
 newsletterModal();
 mobileMenuToggler();

@@ -54,6 +54,7 @@ export default function adminLoginForm() {
       }
 
       if (json.error) {
+        console.log(error);
         displayAlert(
           "warning",
           "Username and/or password is invalid",
@@ -61,6 +62,7 @@ export default function adminLoginForm() {
         );
       }
     } catch (error) {
+      console.log(error);
       displayAlert("error", "Something went wrong!", ".alert-container");
     }
   }

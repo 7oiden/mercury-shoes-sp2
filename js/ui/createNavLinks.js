@@ -8,8 +8,8 @@ export default function createNavLinks() {
   const mobileLinksContainer = document.querySelector(".mobile-menu__list");
   const adminLogin = document.querySelector(".admin-login");
   const adminLogout = document.querySelector(".admin-logout");
-  const banner = document.querySelector(".banner");
-  const bannerContainer = document.querySelector(".banner__list");
+  // const banner = document.querySelector(".banner");
+  // const bannerContainer = document.querySelector(".banner__list");
 
   const username = getUsername();
 
@@ -22,9 +22,17 @@ export default function createNavLinks() {
   if (username) {
     adminLogin.style.display = "none";
 
+    // banner.classList.add("banner-admin")
+
+    // authUser = `
+    // <span>Signed in as: <em>${username}</em></span>`;
+
+    // bannerContainer.innerHTML = `
+    // <li>${authUser}</li>`;
+
     adminLogout.innerHTML = `
     <div class="nav__icon" id="logout">
-    <svg viewBox="0 0 24 24">
+    <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
     <title>Admin logout</title>
     <path fill="currentColor" d="M14.08,15.59L16.67,13H7V11H16.67L14.08,8.41L15.5,7L20.5,12L15.5,17L14.08,15.59M19,3A2,2 0 0,1 21,5V9.67L19,7.67V5H5V19H19V16.33L21,14.33V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H19Z" />
     </svg>`;
@@ -40,14 +48,6 @@ export default function createNavLinks() {
     <li>
       <a href="add-product.html" class="mobile-menu__item">Add Product</a>
     </li>`;
-
-    authUser = `
-    <span>Signed in as: <em>${username}</em></span>`;
-
-    bannerContainer.innerHTML = `
-    <li>${authUser}</li>`;
-
-    banner.style.backgroundColor = "#0E6673";
   }
 
   //   <li>

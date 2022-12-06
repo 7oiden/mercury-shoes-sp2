@@ -4,11 +4,11 @@ export function filterProducts(products) {
   const filterInput = document.querySelector("#filter-select");
   const sortIcon = document.querySelector("#sort-icon");
   const searchForm = document.querySelector("#search-form");
- 
+
   sortIcon.onclick = function () {
-    renderProducts(products.sort(
-      (a, b) => new Date(a.created_at) - new Date(b.created_at)
-    ));
+    renderProducts(
+      products.sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
+    );
     searchForm.reset();
   };
 
@@ -43,6 +43,22 @@ export function filterProducts(products) {
       sortedProducts = products.sort(
         (a, b) => new Date(b.created_at) - new Date(a.created_at)
       );
+    }
+
+    if (filterValue === "feat") {
+      sortedProducts = products.filter(function (product) {
+        if (product.featured === true) {
+          return true;
+        }
+      });
+    }
+
+    if (filterValue === "stock") {
+      sortedProducts = products.filter(function (product) {
+        if (product.stock === true) {
+          return true;
+        }
+      });
     }
 
     renderProducts(sortedProducts);

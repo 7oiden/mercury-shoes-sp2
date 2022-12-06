@@ -6,8 +6,9 @@ import { loginModal } from "./components/modals/loginModal.js";
 import displayAlert from "./components/alerts/displayAlert.js";
 import adminLogin from "./components/forms/adminLoginForm.js";
 import renderDetails from "./ui/renderDetails.js";
-// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
+import renderBanner from "./ui/renderBanner.js";
 
+renderBanner();
 createNavLinks();
 basketCounter();
 loginModal();

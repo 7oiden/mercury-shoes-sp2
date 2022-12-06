@@ -11,6 +11,9 @@ import {
   validateNumber,
 } from "./utils/validators.js";
 import { validateAddForm } from "./components/formValidation/validateAddForm.js";
+import renderBanner from "./ui/renderBanner.js";
+
+
 
 const token = getToken();
 
@@ -18,6 +21,7 @@ if (!token) {
   location.href = "/";
 }
 
+renderBanner();
 createNavLinks();
 basketCounter();
 mobileMenuToggler();

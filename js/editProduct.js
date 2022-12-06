@@ -7,6 +7,7 @@ import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
 import { getExistingBasket, saveBasket } from "./utils/storage.js";
 import { placeholderUrlShort } from "./settings/constants.js";
 import deleteButton from "./components/buttons/deleteProdButton.js";
+import renderBanner from "./ui/renderBanner.js";
 import { validateEditForm } from "./components/formValidation/validateEditForm.js";
 import {
   checkLength,
@@ -20,6 +21,7 @@ if (!token) {
   document.location.href = "/";
 }
 
+renderBanner();
 basketCounter();
 createNavLinks();
 mobileMenuToggler();

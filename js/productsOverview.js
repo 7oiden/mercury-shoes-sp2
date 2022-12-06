@@ -9,8 +9,10 @@ import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./components/forms/searchProducts.js";
 import { filterProducts } from "./components/forms/filterProducts.js";
 import { filterToggler } from "./components/togglers/filterToggler.js"
+import renderBanner from "./ui/renderBanner.js"
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
+renderBanner();
 createNavLinks();
 basketCounter();
 loginModal();
@@ -22,6 +24,8 @@ filterToggler();
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
+
+    console.log(json)
 
     renderProducts(json);
     searchProducts(json);
