@@ -54,9 +54,9 @@ label {
     width: 100%;
   }
 
-  &__input-wrapper {
-    max-width: 350px;
-  }
+  // &__input-wrapper {
+  //   max-width: 350px;
+  // }
 
   &__input {
     margin: 0;
@@ -86,7 +86,7 @@ label {
   &__container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     // background-color: pink;
 
     @media (min-width: getBreakpoint(small)) {
@@ -101,7 +101,7 @@ label {
   }
 
   &__input {
-    min-width: 300px;
+    // min-width: 300px;
     font-size: 1.125rem;
     height: 3rem;
     padding-left: 3rem;

@@ -2631,9 +2631,6 @@ label {
   flex-direction: column;
   width: 100%;
 }
-.newsletter__input-wrapper {
-  max-width: 350px;
-}
 .newsletter__input {
   margin: 0;
   width: 100%;
@@ -2661,7 +2658,7 @@ label {
 .filter__container {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (min-width: 576px) {
   .filter__container {
@@ -2673,7 +2670,6 @@ label {
   position: relative;
 }
 .filter__input {
-  min-width: 300px;
   font-size: 1.125rem;
   height: 3rem;
   padding-left: 3rem;
