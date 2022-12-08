@@ -15,6 +15,7 @@ export function filterProducts(products) {
   };
 
   filterInput.onchange = function (event) {
+    searchForm.reset();
     const filterValue = event.target.value;
 
     let sortedProducts = [];

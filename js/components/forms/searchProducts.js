@@ -5,12 +5,17 @@ export function searchProducts(products) {
   const sortForm = document.querySelector("#sort-form");
   const filterForm = document.querySelector("#filter-form");
 
+  const searchForm = document.querySelector("#search-form");
+
+  let searchValue = "";
+  let filteredProducts = [];
+
   searchInput.onkeyup = function (event) {
     sortForm.reset();
     filterForm.reset();
-    const searchValue = event.target.value.trim().toLowerCase();
+    searchValue = event.target.value.trim().toLowerCase();
 
-    const filteredProducts = products.filter(function (product) {
+    filteredProducts = products.filter(function (product) {
       if (
         product.title.toLowerCase().includes(searchValue) ||
         product.short_description.toLowerCase().includes(searchValue) ||
@@ -23,4 +28,24 @@ export function searchProducts(products) {
 
     renderProducts(filteredProducts);
   };
+
+  function submitSearchForm(event) {
+    event.preventDefault();
+
+    searchValue = searchInput;
+
+    filteredProducts = products.filter(function (product) {
+      if (
+        product.title.toLowerCase().includes(searchValue) ||
+        product.short_description.toLowerCase().includes(searchValue) ||
+        product.title.toLowerCase().startsWith(searchValue) ||
+        product.short_description.toLowerCase().startsWith(searchValue)
+      ) {
+        return true;
+      }
+    });
+    renderProducts(filteredProducts);
+  }
+
+  searchForm.addEventListener("submit", submitSearchForm);
 }

@@ -15,6 +15,7 @@ export function sortProducts(products) {
   };
 
   sortInput.onchange = function (event) {
+    searchForm.reset();
     const sortValue = event.target.value;
 
     let sortedProducts = [];
