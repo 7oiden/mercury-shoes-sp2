@@ -1086,7 +1086,7 @@ i {
   cursor: pointer;
 }
 
-.filter__icon-box {
+.utils__icon-box {
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
@@ -1095,7 +1095,7 @@ i {
   cursor: pointer;
 }
 
-.filter__icon {
+.utils__icon {
   width: 1.75rem;
   height: 1.75rem;
   position: absolute;
@@ -1103,11 +1103,11 @@ i {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.filter__icon path {
+.utils__icon path {
   fill: #ffffff;
 }
 
-.search__icon {
+.utils__input-icon {
   position: absolute;
   bottom: 0;
   transform: translateY(-25%);
@@ -2636,40 +2636,53 @@ label {
   width: 100%;
 }
 
-.filter__wrapper {
+.utils__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 992px) {
-  .filter__wrapper {
-    margin-bottom: 2rem;
+  .utils__wrapper {
+    margin-bottom: 2.5rem;
   }
 }
-@media (min-width: 1200px) {
-  .filter__wrapper {
+@media (min-width: 1400px) {
+  .utils__wrapper {
     flex-direction: row;
     align-items: center;
   }
 }
-.filter__container {
+.utils__container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
 }
-@media (min-width: 576px) {
-  .filter__container {
+@media (min-width: 992px) {
+  .utils__container {
     flex-direction: row;
+    align-items: center;
     justify-content: flex-end;
   }
 }
-.filter__form {
+.utils__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  order: 1;
+}
+@media (min-width: 768px) {
+  .utils__input-wrapper {
+    order: 2;
+  }
+}
+.utils__form {
   position: relative;
 }
-.filter__input {
+.utils__input {
+  min-width: 250px;
   font-size: 1.125rem;
   height: 3rem;
   padding-left: 3rem;
@@ -2678,8 +2691,17 @@ label {
   border: 1px solid #d9d9d9;
 }
 @media (min-width: 768px) {
-  .filter__input {
+  .utils__input {
     min-width: 350px;
+  }
+}
+
+#search-form {
+  order: 2;
+}
+@media (min-width: 768px) {
+  #search-form {
+    order: 1;
   }
 }
 

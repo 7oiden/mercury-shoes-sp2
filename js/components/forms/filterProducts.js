@@ -4,40 +4,20 @@ export function filterProducts(products) {
   const filterInput = document.querySelector("#filter-select");
   const sortIcon = document.querySelector("#sort-icon");
   const searchForm = document.querySelector("#search-form");
+  const filterForm = document.querySelector("#filter-form");
 
   sortIcon.onclick = function () {
     renderProducts(
       products.sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
     );
     searchForm.reset();
+    filterForm.reset();
   };
 
   filterInput.onchange = function (event) {
     const filterValue = event.target.value;
 
-    // console.log(filterValue);
-
     let sortedProducts = [];
-
-    if (filterValue === "price-asc") {
-      sortedProducts = products.sort((a, b) => a.price - b.price);
-    }
-
-    if (filterValue === "price-desc") {
-      sortedProducts = products.sort((a, b) => b.price - a.price);
-    }
-
-    if (filterValue === "date-asc") {
-      sortedProducts = products.sort(
-        (a, b) => new Date(a.created_at) - new Date(b.created_at)
-      );
-    }
-
-    if (filterValue === "date-desc") {
-      sortedProducts = products.sort(
-        (a, b) => new Date(b.created_at) - new Date(a.created_at)
-      );
-    }
 
     if (filterValue === "default") {
       sortedProducts = products.sort(
@@ -53,9 +33,17 @@ export function filterProducts(products) {
       });
     }
 
-    if (filterValue === "stock") {
+    if (filterValue === "in-stock") {
       sortedProducts = products.filter(function (product) {
         if (product.stock === true) {
+          return true;
+        }
+      });
+    }
+
+    if (filterValue === "out-of-stock") {
+      sortedProducts = products.filter(function (product) {
+        if (product.stock === false) {
           return true;
         }
       });

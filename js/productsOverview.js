@@ -8,6 +8,7 @@ import adminLoginForm from "./components/forms/adminLoginForm.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./components/forms/searchProducts.js";
 import { filterProducts } from "./components/forms/filterProducts.js";
+import { sortProducts } from "./components/forms/sortProducts.js";
 import { filterToggler } from "./components/togglers/filterToggler.js"
 import renderBanner from "./ui/renderBanner.js"
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
@@ -29,8 +30,10 @@ filterToggler();
 
     renderProducts(json);
     searchProducts(json);
+    sortProducts(json);
     filterProducts(json);
   } catch (error) {
+    console.log(error)
     displayAlert(
       "error absolute-pos",
       "An error has occurred when trying to fetch the API",

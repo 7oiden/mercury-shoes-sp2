@@ -2,16 +2,12 @@ import { renderProducts } from "../../ui/renderProducts.js";
 
 export function searchProducts(products) {
   const searchInput = document.querySelector("#search-input");
-  const searchIcon = document.querySelector("#search-icon");
   const sortForm = document.querySelector("#sort-form");
-
-  searchIcon.onclick = function () {
-    renderProducts(products);
-    sortForm.reset();
-  };
+  const filterForm = document.querySelector("#filter-form");
 
   searchInput.onkeyup = function (event) {
     sortForm.reset();
+    filterForm.reset();
     const searchValue = event.target.value.trim().toLowerCase();
 
     const filteredProducts = products.filter(function (product) {

@@ -105,50 +105,64 @@
     <main class="products-overview">
       <!-- <section class="products-banner"></section> -->
       <section class="products grid-wrapper">
-        <div class="filter__wrapper">
+        <div class="utils__wrapper">
           <div>
             <h1 class="main-heading">Products overview</h1>
             <div class="red-line"></div>
           </div>
-          <div class="filter__container">
+          <div class="utils__container">
 
-            <form class="filter__form hide" id="sort-form">
-              <!-- <label for="filter-select" class="search__label">Sort by</label> -->
-              <select class="input filter__input" id="filter-select">
-                <option value="default" selected disabled>Sort by:</option>
-                <option value="price-asc">Price, low-to-high</option>
-                <option value="price-desc">Price, high-to-low</option>
-                <option value="date-desc">Date, new-to-old</option>
-                <option value="date-asc">Date, old-to-new</option>
-                <option value="feat">Featured</option>
-                <option value="stock">In stock</option>
-              </select>
-              <svg viewBox="0 0 24 24" class="search__icon">
-                <path fill="currentColor"
-                d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
-              </svg>
-            </form>
-            <form class="filter__form show" id="search-form">
-              <!-- <label for="search-input" class="search__label">Search</label> -->
-              <input type="text" placeholder="Search..." class="input filter__input" id="search-input" />
-              <svg viewBox="0 0 24 24" class="search__icon">
+            <form class="utils__form show" id="search-form">
+              <input type="text" placeholder="Search..." class="input utils__input" id="search-input" />
+              <svg viewBox="0 0 24 24" class="utils__input-icon">
                 <path fill="currentColor"
                   d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
               </svg>
             </form>
-            <div id="sort-icon" class="filter__icon-box show">
-              <svg viewBox="0 0 24 24" class="filter__icon">
-                <title>Toggle sort</title>
-                <path class="filter-icon" fill="currentColor" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
-              </svg>
-            </div>
-            <div id="search-icon" class="filter__icon-box hide">
-              <svg viewBox="0 0 24 24" class="filter__icon">
-                <title>Toggle search</title>
-                <path class="filter-icon" fill="currentColor"
-                  d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-                />
-              </svg>
+
+            <div class="utils__input-wrapper">
+              <form class="utils__form show" id="sort-form">
+                <!-- <label for="filter-select" class="search__label">Sort by</label> -->
+                <select class="input utils__input" id="sort-select">
+                  <option value="default" selected disabled>Sort by:</option>
+                  <option value="price-asc">Price, low-to-high</option>
+                  <option value="price-desc">Price, high-to-low</option>
+                  <option value="date-desc">Date, new-to-old</option>
+                  <option value="date-asc">Date, old-to-new</option>
+                </select>
+                <svg viewBox="0 0 24 24" class="utils__input-icon">
+                  <path fill="currentColor" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
+                </svg>
+              </form>
+
+
+              <form class="utils__form hide" id="filter-form">
+                <!-- <label for="filter-select" class="search__label">Sort by</label> -->
+                <select class="input utils__input" id="filter-select">
+                  <option value="default" selected disabled>Filter by:</option>
+                  <option value="feat">Featured</option>
+                  <option value="in-stock">In stock</option>
+                  <option value="out-of-stock">Out of stock</option>
+                </select>
+                <svg viewBox="0 0 24 24" class="utils__input-icon">
+                  <path fill="currentColor" d="M3,13H15V11H3M3,6V8H21V6M3,18H9V16H3V18Z" />
+                </svg>
+              </form>
+
+              <div id="sort-icon" class="utils__icon-box hide">
+                <svg viewBox="0 0 24 24" class="utils__icon">
+                  <title>Toggle sort</title>
+                  <path class="filter-icon" fill="currentColor" d="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" />
+                </svg>
+                <!-- <label class="utils__label">Sort</label> -->
+              </div>
+              <div id="filter-icon" class="utils__icon-box show">
+                <svg viewBox="0 0 24 24" class="utils__icon">
+                  <title>Toggle filter</title>
+                  <path fill="currentColor" d="M3,13H15V11H3M3,6V8H21V6M3,18H9V16H3V18Z" />
+                </svg>
+                <!-- <label class="utils__label">Filter</label> -->
+              </div>
             </div>
           </div>
         </div>

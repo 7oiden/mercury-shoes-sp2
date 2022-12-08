@@ -12,7 +12,7 @@ i {
   cursor: pointer;
 }
 
-.filter__icon-box {
+.utils__icon-box {
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
@@ -21,7 +21,7 @@ i {
   cursor: pointer;
 }
 
-.filter__icon {
+.utils__icon {
   width: 1.75rem;
   height: 1.75rem;
   position: absolute;
@@ -34,7 +34,7 @@ i {
   }
 }
 
-.search__icon {
+.utils__input-icon {
   position: absolute;
   bottom: 0;
   transform: translateY(-25%);
@@ -43,6 +43,13 @@ i {
   width: 2rem;
   cursor: pointer;
 }
+
+// .utils__label {
+//   position: absolute;
+//   bottom: -3rem;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
 .nav__icon {
   margin-left: 2rem;
