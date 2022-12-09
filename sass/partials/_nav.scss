@@ -50,14 +50,15 @@ header {
 .nav {
   background: getColor(primary);
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   z-index: 999;
   position: relative;
 
   @include dropShadow(6px, 12px);
 
   @media (min-width: getBreakpoint(large)) {
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   &__links-wrapper {
@@ -101,7 +102,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 5px;
+    // padding-top: 5px;
 
     @extend .base-list;
 

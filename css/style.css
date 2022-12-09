@@ -1118,16 +1118,24 @@ i {
 }
 
 .nav__icon {
-  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   transition: opacity 0.3s;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+@media (min-width: 992px) {
+  .nav__icon {
+    margin-right: 2rem;
+  }
 }
 .nav__icon:hover {
   opacity: 0.75;
 }
-@media (min-width: 992px) {
-  .nav__icon {
-    margin-left: 3rem;
-  }
+.nav__icon-label {
+  padding: 0;
+  cursor: pointer;
 }
 
 .basket__icon {
@@ -1418,14 +1426,15 @@ header {
 .nav {
   background: #ffffff;
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   z-index: 999;
   position: relative;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 992px) {
   .nav {
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 }
 .nav__links-wrapper {
@@ -1463,7 +1472,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 5px;
 }
 @media (min-width: 992px) {
   .nav__icons-list {
@@ -1587,7 +1595,7 @@ header {
 }
 @media (min-width: 992px) {
   .admin__dropdown {
-    top: 67px;
+    top: 60px;
   }
 }
 
@@ -1612,6 +1620,7 @@ header {
 }
 .mobile-menu__toggle {
   margin-left: 0;
+  display: flex;
 }
 @media (min-width: 992px) {
   .mobile-menu__toggle {

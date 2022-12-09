@@ -52,15 +52,24 @@ i {
 // }
 
 .nav__icon {
-  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   transition: opacity 0.3s;
+  cursor: pointer;
+  margin-right: 1.5rem;
+
+  @media (min-width: getBreakpoint(large)) {
+    margin-right: 2rem;
+  }
 
   &:hover {
     opacity: 0.75;
   }
 
-  @media (min-width: getBreakpoint(large)) {
-    margin-left: 3rem;
+  &-label {
+    padding: 0;
+    cursor: pointer;
   }
 }
 
@@ -272,3 +281,7 @@ i {
     transform: scale(1);
   }
 }
+
+// .hamburger {
+//   align-self: center;
+// }

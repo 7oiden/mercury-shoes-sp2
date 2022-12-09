@@ -1,4 +1,4 @@
-const adminLoginIcon = document.querySelector(".login");
+const adminLoginIcon = document.querySelector("#login");
 const adminDropdown = document.querySelector(".admin__dropdown");
 const fadeBackground = document.querySelector(".fade-background");
 
@@ -20,7 +20,12 @@ export function loginModal() {
   document.addEventListener("click", function (event) {
     const isClickInsideDropdown = adminDropdown.contains(event.target);
 
-    if (!isClickInsideDropdown && !event.target.matches(".login")) {
+    if (
+      !isClickInsideDropdown &&
+      !event.target.matches("#login") &&
+      !event.target.matches(".login") &&
+      !event.target.matches(".nav__icon-label")
+    ) {
       adminDropdown.style.display = "none";
       fadeBackground.style.display = "none";
     }

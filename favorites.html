@@ -1,196 +1,243 @@
 <!DOCTYPE html>
 <html lang="en" class="about-page">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Mercury Shoes | Proud provider of quality running shoes since 1988 | About us, FAQ, Contact, Returns, Sizes and fit, Contact and Location" />
+    <meta
+      name="description"
+      content="Mercury Shoes | Proud provider of quality running shoes since 1988 | About us, FAQ, Contact, Returns, Sizes and fit, Contact and Location"
+    />
     <link rel="stylesheet" href="https://use.typekit.net/eos3qyt.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Mercury Shoes | About Us | FAQ | Contact | Location</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="fade-background"></div>
     <div class="wrapper">
-        <header>
-            <div class="banner">
-                <!-- dynamic created -->
+      <header>
+        <div class="banner">
+          <!-- dynamic created -->
+        </div>
+        <nav class="nav" aria-label="main menu">
+          <div class="nav__container">
+            <div class="nav__links-wrapper">
+              <a href="index.html" class="nav__logo"
+                ><img
+                  src="images/mercury-logo.png"
+                  alt="Mercury brand logo"
+                  class="nav__logo"
+              /></a>
+              <div>
+                <ul class="nav__links-list">
+                  <!-- dynamic created -->
+                </ul>
               </div>
-            <nav class="nav" aria-label="main menu">
-                <div class="nav__container">
-                    <div class="nav__links-wrapper">
-                        <a href="index.html" class="nav__logo"><img src="images/mercury-logo.png" alt="Mercury brand logo"
-                                class="nav__logo" /></a>
-                        <div>
-                            <ul class="nav__links-list">
-                                <!-- dynamic created -->
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="nav__icons-list">
-                        <li>
-                            <div class="mobile-menu__toggle">
-                                <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
-                                    <title>Menu</title>
-                                    <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-                                </svg>
-                            </div>
-                        </li>
-                        <div class="nav__icons-wrapper">
-                            <li>
-                                <a href="basket.html" aria-label="basket" class="nav__icon basket__icon" id="basket">
-                                    <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z" />
-                                    </svg>
-                                    <div id="counter-container">
-                                        <div id="counter-number">1</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="admin-login">
-                                <div class="nav__icon">
-                                    <svg style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24" class="login">
-                                        <title>Admin login</title>
-                                        <path class="login" fill="currentColor"
-                                            d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z" />
-                                    </svg>
-                                </div>
-                                <div class="admin__dropdown">
-                                    <div class="admin__container">
-                                        <p class="secondary-heading">Admin login</p>
-                                        <div class="red-line"></div>
-                                        <form class="admin__form">
-                                            <div class="admin__input-wrapper">
-                                                <label for="username">Username</label>
-                                                <input type="text" class="input admin__input" id="username"
-                                                    placeholder="Username" />
-                                                <div class="error-messages" id="admin-username-error">
-                                                    * Must be at least 4 characters
-                                                </div>
-                                            </div>
-                                            <div class="admin__input-wrapper">
-                                                <label for="password">Password</label>
-                                                <input type="password" name="password" class="input admin__input"
-                                                    id="password" placeholder="Password" />
-                                                <div class="error-messages" id="admin-password-error">
-                                                    * Must be at least 6 characters
-                                                </div>
-                                            </div>
-                                            <div class="alert-container"></div>
-                                            <button id="sign-in" class="button secondary-button">
-                                                Sign in
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="admin-logout"></li>
-                        </div>
-                    </ul>
-                </div>
-                <div class="mobile-menu" aria-label="mobile link menu">
-                    <ul class="mobile-menu__list">
-                        <!-- dynamic created -->
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <div class="fav-page-wrapper">
-                <section class="favorites">
-                    <hgroup>
-                        <div class="fav__heading-container">
-                            <h1 class="main-heading">Favorites</h1>
-                        </div>
-                        <div class="red-line"></div>
-                    </hgroup>
-                    <ul class="favorites__list">
-                        <!-- dynamic created -->
-                    </ul>
-                    <button class="button secondary-button" id="clear-favorites">
-                        Clear favorites
-                    </button>
-                </section>
             </div>
-        </main>
+            <ul class="nav__icons-list">
+              <li>
+                <div class="mobile-menu__toggle">
+                  <svg
+                    style="width: 2.5rem; height: 2.5rem"
+                    viewBox="0 0 24 24"
+                  >
+                    <title>Menu</title>
+                    <path
+                      fill="currentColor"
+                      d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
+                    />
+                  </svg>
+                </div>
+              </li>
+              <div class="nav__icons-wrapper">
+                <li class="admin-login">
+                  <div id="login" class="nav__icon">
+                    <label class="nav__icon-label">Log in</label>
+                    <svg
+                      style="width: 2.5rem; height: 2.5rem"
+                      viewBox="0 0 24 24"
+                      class="login"
+                    >
+                      <title>Admin login</title>
+                      <path
+                        class="login"
+                        fill="currentColor"
+                        d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="admin__dropdown">
+                    <div class="admin__container">
+                      <p class="secondary-heading">Admin login</p>
+                      <div class="red-line"></div>
+                      <form class="admin__form">
+                        <div class="admin__input-wrapper">
+                          <label for="username">Username</label>
+                          <input
+                            type="text"
+                            class="input admin__input"
+                            id="username"
+                            placeholder="Username"
+                          />
+                          <div class="error-messages" id="admin-username-error">
+                            * Must be at least 4 characters
+                          </div>
+                        </div>
+                        <div class="admin__input-wrapper">
+                          <label for="password">Password</label>
+                          <input
+                            type="password"
+                            name="password"
+                            class="input admin__input"
+                            id="password"
+                            placeholder="Password"
+                          />
+                          <div class="error-messages" id="admin-password-error">
+                            * Must be at least 6 characters
+                          </div>
+                        </div>
+                        <div class="alert-container"></div>
+                        <button id="sign-in" class="button secondary-button">
+                          Sign in
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="admin-logout"></li>
+                <li>
+                  <a
+                    href="basket.html"
+                    aria-label="basket"
+                    class="nav__icon basket__icon"
+                    id="basket"
+                  >
+                    <svg
+                      style="width: 2.5rem; height: 2.5rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M5.5,21C4.72,21 4.04,20.55 3.71,19.9V19.9L1.1,10.44L1,10A1,1 0 0,1 2,9H6.58L11.18,2.43C11.36,2.17 11.66,2 12,2C12.34,2 12.65,2.17 12.83,2.44L17.42,9H22A1,1 0 0,1 23,10L22.96,10.29L20.29,19.9C19.96,20.55 19.28,21 18.5,21H5.5M12,4.74L9,9H15L12,4.74M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13Z"
+                      />
+                    </svg>
+                    <div id="counter-container">
+                      <div id="counter-number">1</div>
+                    </div>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="mobile-menu" aria-label="mobile link menu">
+            <ul class="mobile-menu__list">
+              <!-- dynamic created -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="fav-page-wrapper">
+          <section class="favorites">
+            <hgroup>
+              <div class="fav__heading-container">
+                <h1 class="main-heading">Favorites</h1>
+              </div>
+              <div class="red-line"></div>
+            </hgroup>
+            <ul class="favorites__list">
+              <!-- dynamic created -->
+            </ul>
+            <button class="button secondary-button" id="clear-favorites">
+              Clear favorites
+            </button>
+          </section>
+        </div>
+      </main>
     </div>
 
     <footer class="footer">
-        <div class="footer__container">
-            <div>
-                <p class="footer__header">About:</p>
-                <ul class="footer__list">
-                    <li>
-                        <a href="about.html#about" class="footer__link">About Us</a>
-                    </li>
-                    <li>
-                        <a href="about.html#address" class="footer__link">Address</a>
-                    </li>
-                    <li>
-                        <a href="about.html#location" class="footer__link">Location</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <p class="footer__header">Support:</p>
-                <ul class="footer__list">
-                    <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
-                    <li>
-                        <a href="about.html#returns" class="footer__link">Returns</a>
-                    </li>
-                    <li>
-                        <a href="about.html#sizes" class="footer__link">Sizes</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <p class="footer__header">Contact:</p>
-                <ul class="footer__list">
-                    <li>
-                        <a href="about.html#contact" class="footer__link">Contact page</a>
-                    </li>
-                    <li>Phone: 5555 55555</li>
-                    <li>Email: support@mercury.com</li>
-                </ul>
-            </div>
-            <div>
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a href="https://twitter.com" aria-label="Twitter"><i aria-hidden="true"
-                                class="fab fa-twitter footer__icon"></i></a>
-                    </li>
-                    <li class="footer-item">
-                        <a href="https://www.instagram.com/" aria-label="Instagram"><i aria-hidden="true"
-                                class="fab fa-instagram footer__icon"></i></a>
-                    </li>
-                    <li class="footer-item">
-                        <a href="https://www.facebook.com/" aria-label="Facebook"><i aria-hidden="true"
-                                class="fab fa-facebook-f footer__icon"></i></a>
-                    </li>
-                </ul>
-            </div>
+      <div class="footer__container">
+        <div>
+          <p class="footer__header">About:</p>
+          <ul class="footer__list">
+            <li>
+              <a href="about.html#about" class="footer__link">About Us</a>
+            </li>
+            <li>
+              <a href="about.html#address" class="footer__link">Address</a>
+            </li>
+            <li>
+              <a href="about.html#location" class="footer__link">Location</a>
+            </li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-            <ul class="footer__list footer-bottom__list">
-                <li id="copyright">&#169; 2020 - Mercury S.A.S</li>
-                <li class="footer-bottom__pipe">|</li>
-                <li>Terms and conditions</li>
-                <li class="footer-bottom__pipe">|</li>
-                <li>Privacy</li>
-                <li class="footer-bottom__pipe">|</li>
-                <li>Warranty</li>
-            </ul>
+        <div>
+          <p class="footer__header">Support:</p>
+          <ul class="footer__list">
+            <li><a href="about.html#faq" class="footer__link">FAQ</a></li>
+            <li>
+              <a href="about.html#returns" class="footer__link">Returns</a>
+            </li>
+            <li>
+              <a href="about.html#sizes" class="footer__link">Sizes</a>
+            </li>
+          </ul>
         </div>
+        <div>
+          <p class="footer__header">Contact:</p>
+          <ul class="footer__list">
+            <li>
+              <a href="about.html#contact" class="footer__link">Contact page</a>
+            </li>
+            <li>Phone: 5555 55555</li>
+            <li>Email: support@mercury.com</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="https://twitter.com" aria-label="Twitter"
+                ><i aria-hidden="true" class="fab fa-twitter footer__icon"></i
+              ></a>
+            </li>
+            <li class="footer-item">
+              <a href="https://www.instagram.com/" aria-label="Instagram"
+                ><i aria-hidden="true" class="fab fa-instagram footer__icon"></i
+              ></a>
+            </li>
+            <li class="footer-item">
+              <a href="https://www.facebook.com/" aria-label="Facebook"
+                ><i
+                  aria-hidden="true"
+                  class="fab fa-facebook-f footer__icon"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <ul class="footer__list footer-bottom__list">
+          <li id="copyright">&#169; 2020 - Mercury S.A.S</li>
+          <li class="footer-bottom__pipe">|</li>
+          <li>Terms and conditions</li>
+          <li class="footer-bottom__pipe">|</li>
+          <li>Privacy</li>
+          <li class="footer-bottom__pipe">|</li>
+          <li>Warranty</li>
+        </ul>
+      </div>
     </footer>
     <script src="js/favorites.js" type="module"></script>
-</body>
-
+  </body>
 </html>
