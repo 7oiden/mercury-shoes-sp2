@@ -6,10 +6,15 @@ header {
 .banner {
   position: relative;
   background-color: getColor(secondary);
+  height: 2.75rem;
   margin: 0;
   text-align: center;
-  padding: 0.625rem;
+
   z-index: 999;
+
+  & div {
+    padding: 0.625rem;
+  }
 
   &__list {
     display: flex;
@@ -40,11 +45,6 @@ header {
       }
     }
   }
-}
-
-
-.banner-admin {
-  background-color: getColor(admin);
 }
 
 .nav {
@@ -115,4 +115,8 @@ header {
   padding: 1rem;
   border-radius: 5px 5px 0 0;
   background: getColor(primary);
+}
+
+.highlight {
+  color: getColor(newsletter);
 }

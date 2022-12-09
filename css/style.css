@@ -1379,10 +1379,13 @@ header {
 .banner {
   position: relative;
   background-color: #323232;
+  height: 2.75rem;
   margin: 0;
   text-align: center;
-  padding: 0.625rem;
   z-index: 999;
+}
+.banner div {
+  padding: 0.625rem;
 }
 .banner__list {
   display: flex;
@@ -1410,10 +1413,6 @@ header {
   .banner__item--inactive {
     display: flex;
   }
-}
-
-.banner-admin {
-  background-color: #0e6673;
 }
 
 .nav {
@@ -1476,6 +1475,10 @@ header {
   padding: 1rem;
   border-radius: 5px 5px 0 0;
   background: #ffffff;
+}
+
+.highlight {
+  color: #00f6db;
 }
 
 .nav__logo {

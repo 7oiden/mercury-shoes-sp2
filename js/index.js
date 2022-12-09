@@ -11,9 +11,10 @@ import newsletterModal from "./components/modals/newsletterModal.js";
 import renderBanner from "./ui/renderBanner.js"
 // import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
+renderBanner();
 basketCounter();
 createNavLinks();
-renderBanner();
+
 adminLogin();
 newsletterModal();
 mobileMenuToggler();
