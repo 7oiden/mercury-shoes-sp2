@@ -54,7 +54,7 @@ export default function adminLoginForm() {
       }
 
       if (json.error) {
-        console.log(error);
+        console.log(json.error);
         displayAlert(
           "warning",
           "Username and/or password is invalid",
