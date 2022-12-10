@@ -41,13 +41,6 @@ export default function createNavLinks() {
     </li>`;
   }
 
-  //   <li>
-  //   <a href="/" class="${
-  //     pathname === "/" || pathname === "/index.html" ? "nav__link--active" : ""
-  //   }
-  //   nav__link">Home</a>
-  // </li>
-
   linksContainer.innerHTML = `
   <li>
     <a href="products-overview.html" class="${
@@ -63,10 +56,6 @@ export default function createNavLinks() {
   
   ${addLink}
   `;
-
-  //   <li class="mobile-menu__item">
-  //   <a href="/" class= mobile-menu__link">Home</a>
-  // </li>
 
   mobileLinksContainer.innerHTML = `
   <li class="mobile-menu__item">

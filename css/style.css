@@ -34,6 +34,7 @@ a {
   display: block;
   text-decoration: none;
   color: black;
+  outline: none;
 }
 
 p {
@@ -1431,12 +1432,6 @@ header {
   position: relative;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-@media (min-width: 992px) {
-  .nav {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-}
 .nav__links-wrapper {
   display: flex;
   align-items: center;
@@ -1646,6 +1641,7 @@ header {
   transition: all 0.3s;
   cursor: pointer;
   align-self: flex-start;
+  outline: none;
 }
 
 .btn-grad:hover {

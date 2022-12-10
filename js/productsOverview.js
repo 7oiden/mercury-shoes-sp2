@@ -11,7 +11,6 @@ import { filterProducts } from "./components/forms/filterProducts.js";
 import { sortProducts } from "./components/forms/sortProducts.js";
 import { filterToggler } from "./components/togglers/filterToggler.js"
 import renderBanner from "./ui/renderBanner.js"
-// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 renderBanner();
 createNavLinks();
@@ -26,7 +25,7 @@ filterToggler();
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    console.log(json)
+    // console.log(json)
 
     renderProducts(json);
     searchProducts(json);

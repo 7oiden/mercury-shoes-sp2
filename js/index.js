@@ -9,23 +9,21 @@ import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import newsletterModal from "./components/modals/newsletterModal.js";
 import renderBanner from "./ui/renderBanner.js"
-// import { validateNewsletterForm } from "./components/formValidation/validateNewsletterForm.js";
 
 renderBanner();
 basketCounter();
 createNavLinks();
-
 adminLogin();
 newsletterModal();
 mobileMenuToggler();
 loginModal();
 
-// const alertContainer = document.querySelector(".api-alert-container");
-
 (async function fetchApi() {
   try {
     const response = await fetch(heroUrl);
     const result = await response.json();
+
+    console.log("If the Heroku hosted API is sleeping, it will take a few moments to wake up.")
 
     // console.log(result);
     renderHero(result);

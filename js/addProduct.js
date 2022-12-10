@@ -13,8 +13,6 @@ import {
 import { validateAddForm } from "./components/formValidation/validateAddForm.js";
 import renderBanner from "./ui/renderBanner.js";
 
-
-
 const token = getToken();
 
 if (!token) {
@@ -66,7 +64,6 @@ function submitAddForm(event) {
     'input[name="stock"]:checked'
   ).value;
 
-  // validation
   validateAddForm();
 
   //automatically adds placeholder image if the input field has been left empty

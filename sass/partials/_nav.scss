@@ -56,10 +56,10 @@ header {
 
   @include dropShadow(6px, 12px);
 
-  @media (min-width: getBreakpoint(large)) {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  //   padding-top: 0.75rem;
+  //   padding-bottom: 0.75rem;
+  // }
 
   &__links-wrapper {
     display: flex;

@@ -137,7 +137,6 @@ function submitEditForm(event) {
     'input[name="stock"]:checked'
   ).value;
 
-  // validation
   validateEditForm();
 
   if (

@@ -32,7 +32,7 @@ export default function newsletterModal() {
     });
   });
 
-  // prevents triggering modal when logged in as admin
+  // prevents triggering newsletter modal when logged in as admin
   const token = getToken();
 
   if (!token) {
