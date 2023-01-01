@@ -12,7 +12,6 @@ export function filterToggler() {
     sortIcon.classList.toggle("hide");
     filterIcon.classList.toggle("hide");
     filterIcon.classList.toggle("show");
-    
   }
 
   sortIcon.addEventListener("click", toggleSortForm);
@@ -24,8 +23,7 @@ export function filterToggler() {
     sortIcon.classList.toggle("hide");
     sortIcon.classList.toggle("show");
     filterIcon.classList.toggle("show");
-    filterIcon.classList.toggle("hide");
-    
+    filterIcon.classList.toggle("hide"); 
   }
 
   filterIcon.addEventListener("click", toggleFilterForm);

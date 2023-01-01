@@ -2058,10 +2058,6 @@ header {
   }
 }
 
-.remove-card {
-  display: none;
-}
-
 .card__admin {
   border-bottom: none;
 }

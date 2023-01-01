@@ -1,6 +1,7 @@
 import { renderProducts } from "../../ui/renderProducts.js";
 
 export function searchProducts(products) {
+ 
   const searchInput = document.querySelector("#search-input");
   const sortForm = document.querySelector("#sort-form");
   const filterForm = document.querySelector("#filter-form");

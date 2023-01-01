@@ -1,17 +1,17 @@
 import { getToken } from "../utils/storage.js";
 import { getExistingFavs } from "../utils/storage.js";
-import loadMoreItems from "../components/buttons/loadMoreButton.js";
+// import loadMoreItems from "../components/buttons/loadMoreButton.js";
 import handleFav from "../components/common/handleFav.js";
 
 const token = getToken();
-const favorites = getExistingFavs();
 
 const productsContainer = document.querySelector(".products__grid");
-const loadButton = document.querySelector("#load-button");
+// const loadButton = document.querySelector("#load-button");
 
 export function renderProducts(products) {
+  const favorites = getExistingFavs();
   productsContainer.innerHTML = "";
-  loadButton.style.display = "block";
+  // loadButton.style.display = "block";
 
   products.forEach((product) => {
     let editProd = "";
@@ -71,10 +71,8 @@ export function renderProducts(products) {
       </a>
       ${editProd}
       </div>`;
-
-      
   });
 
   handleFav();
-  loadMoreItems(products);
+  // loadMoreItems(products);
 }
