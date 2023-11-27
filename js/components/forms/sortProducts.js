@@ -1,7 +1,7 @@
 import { renderProducts } from "../../ui/renderProducts.js";
 
 export function sortProducts(products) {
-  
+
   const sortInput = document.querySelector("#sort-select");
   const filterIcon = document.querySelector("#filter-icon");
   const searchForm = document.querySelector("#search-form");
@@ -11,7 +11,6 @@ export function sortProducts(products) {
     renderProducts(products);
     searchForm.reset();
     sortForm.reset();
-    
   };
 
   sortInput.onchange = function (event) {
