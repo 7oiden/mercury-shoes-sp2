@@ -18,10 +18,14 @@ export function searchProducts(products) {
 
     filteredProducts = products.filter(function (product) {
       if (
-        product.title.toLowerCase().includes(searchValue) ||
-        product.short_description.toLowerCase().includes(searchValue) ||
-        product.title.toLowerCase().startsWith(searchValue) ||
-        product.short_description.toLowerCase().startsWith(searchValue)
+        product.attributes.title.toLowerCase().includes(searchValue) ||
+        product.attributes.short_description
+          .toLowerCase()
+          .includes(searchValue) ||
+        product.attributes.title.toLowerCase().startsWith(searchValue) ||
+        product.attributes.short_description
+          .toLowerCase()
+          .startsWith(searchValue)
       ) {
         return true;
       }
@@ -37,10 +41,14 @@ export function searchProducts(products) {
 
     filteredProducts = products.filter(function (product) {
       if (
-        product.title.toLowerCase().includes(searchValue) ||
-        product.short_description.toLowerCase().includes(searchValue) ||
-        product.title.toLowerCase().startsWith(searchValue) ||
-        product.short_description.toLowerCase().startsWith(searchValue)
+        product.attributes.title.toLowerCase().includes(searchValue) ||
+        product.attributes.short_description
+          .toLowerCase()
+          .includes(searchValue) ||
+        product.attributes.title.toLowerCase().startsWith(searchValue) ||
+        product.attributes.short_description
+          .toLowerCase()
+          .startsWith(searchValue)
       ) {
         return true;
       }

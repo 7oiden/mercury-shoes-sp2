@@ -21,6 +21,8 @@ if (!token) {
   document.location.href = "/";
 }
 
+console.log(token);
+
 renderBanner();
 basketCounter();
 createNavLinks();
@@ -37,6 +39,8 @@ if (!id) {
 }
 
 const productUrl = baseUrl + "products/" + id;
+
+console.log(id);
 
 const editFormError = document.querySelector(".edit-form-error");
 const editForm = document.querySelector(".edit__form");
@@ -58,7 +62,11 @@ const stockYes = document.querySelector("#stock-yes");
 (async function () {
   try {
     const response = await fetch(productUrl);
-    const details = await response.json();
+    const json = await response.json();
+
+    const details = json.data.attributes;
+
+    console.log(details);
 
     if (details.featured === true) {
       featuredYes.checked = true;
@@ -85,10 +93,13 @@ const stockYes = document.querySelector("#stock-yes");
     description.value = details.description;
     productImage.value = imgUrl.substring("https://".length);
     imageAltText.value = details.image_alt_text;
-    idInput.value = details.id;
+    idInput.value = id;
+
+    console.log(id);
+    console.log(details.title);
 
     if (!details.main_product) {
-      deleteButton(details.id);
+      deleteButton(id);
     } else {
       displayAlert(
         "warning",
@@ -210,16 +221,20 @@ function submitEditForm(event) {
     }
 
     const jsonData = {
-      title: title,
-      price: price,
-      color: color,
-      short_description: short_description,
-      description: description,
-      image_url: image_url,
-      image_alt_text: image_alt_text,
-      featured: featured,
-      stock: stock,
+      data: {
+        title: title,
+        price: price,
+        color: color,
+        short_description: short_description,
+        description: description,
+        image_url: image_url,
+        image_alt_text: image_alt_text,
+        featured: featured,
+        stock: stock,
+      },
     };
+
+    console.log(jsonData);
 
     const editData = JSON.stringify(jsonData);
 
@@ -238,7 +253,7 @@ function submitEditForm(event) {
       const response = await fetch(editUrl, options);
       const json = await response.json();
 
-      if (json.updated_at) {
+      if (json.data.attributes.updatedAt) {
         displayAlert(
           "success",
           "Product successfully updated",

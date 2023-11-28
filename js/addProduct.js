@@ -113,18 +113,22 @@ function submitAddForm(event) {
     stock
   ) {
     const jsonData = {
-      title: title,
-      price: price,
-      color: color,
-      short_description: short_description,
-      description: description,
-      image_url: image_url,
-      image_alt_text: image_alt_text,
-      featured: featured,
-      stock: stock,
+      data: {
+        title: title,
+        price: price,
+        color: color,
+        short_description: short_description,
+        description: description,
+        image_url: image_url,
+        image_alt_text: image_alt_text,
+        featured: featured,
+        stock: stock,
+      },
     };
 
     const addData = JSON.stringify(jsonData);
+
+    console.log(addData);
 
     const options = {
       method: "POST",
@@ -141,7 +145,9 @@ function submitAddForm(event) {
       const response = await fetch(productsUrl, options);
       const json = await response.json();
 
-      if (json.created_at) {
+      console.log(json);
+
+      if (json.data.attributes.createdAt) {
         displayAlert(
           "success",
           "New Product successfully created",

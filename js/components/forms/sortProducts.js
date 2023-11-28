@@ -20,28 +20,38 @@ export function sortProducts(products) {
     let sortedProducts = products;
 
     if (sortValue === "price-asc") {
-      sortedProducts = products.sort((a, b) => a.price - b.price);
+      sortedProducts = products.sort(
+        (a, b) => a.attributes.price - b.attributes.price
+      );
     }
 
     if (sortValue === "price-desc") {
-      sortedProducts = products.sort((a, b) => b.price - a.price);
+      sortedProducts = products.sort(
+        (a, b) => b.attributes.price - a.attributes.price
+      );
     }
 
     if (sortValue === "date-asc") {
       sortedProducts = products.sort(
-        (a, b) => new Date(a.created_at) - new Date(b.created_at)
+        (a, b) =>
+          new Date(a.attributes.publishedAt) -
+          new Date(b.attributes.publishedAt)
       );
     }
 
     if (sortValue === "date-desc") {
       sortedProducts = products.sort(
-        (a, b) => new Date(b.created_at) - new Date(a.created_at)
+        (a, b) =>
+          new Date(b.attributes.publishedAt) -
+          new Date(a.attributes.publishedAt)
       );
     }
 
     if (sortValue === "default") {
       sortedProducts = products.sort(
-        (a, b) => new Date(b.created_at) - new Date(a.created_at)
+        (a, b) =>
+          new Date(b.attributes.publishedAt) -
+          new Date(a.attributes.publishedAt)
       );
     }
 

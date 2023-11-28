@@ -25,8 +25,8 @@ loginModal();
 
     console.log("If the Heroku hosted API is sleeping, it will take a few moments to wake up.")
 
-    // console.log(result);
-    renderHero(result);
+    console.log(result);
+    renderHero(result.data);
   } catch (error) {
     displayAlert(
       "error absolute-pos",
@@ -41,7 +41,7 @@ loginModal();
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    renderFeaturedProducts(json);
+    renderFeaturedProducts(json.data);
   } catch (error) {
     displayAlert(
       "error absolute-pos",

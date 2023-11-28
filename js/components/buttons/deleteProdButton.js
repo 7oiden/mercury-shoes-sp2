@@ -21,6 +21,8 @@ export default function deleteProdButton(id) {
 
       const token = getToken();
 
+      console.log(id)
+
       const options = {
         method: "DELETE",
         headers: {
