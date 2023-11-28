@@ -1560,7 +1560,7 @@ header {
   background-image: linear-gradient(to right, #a01313 0%, #bf1e0f 51%, #a01313 100%);
   transition: 0.5s;
   background-size: 200% auto;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 2rem;
   border: none;
   border-radius: 3px;
   font-family: "proxima-nova", verdana, sans-serif;

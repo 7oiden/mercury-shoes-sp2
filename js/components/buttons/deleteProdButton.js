@@ -2,10 +2,11 @@ import { baseUrl } from "../../settings/api.js";
 import { getToken } from "../../utils/storage.js";
 import displayAlert from "../alerts/displayAlert.js";
 import { getExistingBasket, saveBasket } from "../../utils/storage.js";
+import { basketCounter } from "../common/basketCounter.js";
 
 export default function deleteProdButton(id) {
   const deleteContainer = document.querySelector(".delete-container");
-  
+
   deleteContainer.innerHTML = `<button type="button" class="button delete-button">Delete product</button>`;
 
   const deleteButton = document.querySelector(".delete-button");
@@ -16,12 +17,11 @@ export default function deleteProdButton(id) {
     );
 
     if (performDelete) {
-
       const url = baseUrl + "products/" + id;
 
       const token = getToken();
 
-      console.log(id)
+      console.log(id);
 
       const options = {
         method: "DELETE",
@@ -40,10 +40,14 @@ export default function deleteProdButton(id) {
           const currentBasket = getExistingBasket();
 
           const newBasket = currentBasket.filter((item) => {
-            return parseInt(item.id) !== id;
+            return item.id !== id;
           });
 
           saveBasket(newBasket);
+
+          basketCounter();
+
+          // console.log(newBasket);
 
           displayAlert(
             "success",
@@ -51,9 +55,9 @@ export default function deleteProdButton(id) {
             ".edit-alert-container"
           );
 
-          setTimeout(function () {
-            document.location.href = "products-overview.html";
-          }, 2000);
+          // setTimeout(function () {
+          //   document.location.href = "products-overview.html";
+          // }, 2000);
         }
 
         if (json.error) {
