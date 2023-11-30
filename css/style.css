@@ -1052,6 +1052,19 @@ label {
   margin-bottom: 0;
 }
 
+.summary-btn-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+@media (min-width: 576px) {
+  .summary-btn-container {
+    flex-direction: row;
+  }
+}
+
 svg {
   width: 40px;
   height: 40px;
@@ -1611,19 +1624,16 @@ header {
 }
 
 .secondary-button {
-  background-image: linear-gradient(to right, #000 0%, #323232 51%, #000 100%);
+  background: transparent;
+  background-color: transparent;
+  margin-top: 2rem;
   font-size: 1.125rem;
-  background-color: #323232;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border: 3px solid #323232;
+  font-size: 1.125rem;
+  color: #323232;
+  padding: 0.375rem 1rem;
   border-radius: 3px;
-}
-@media (min-width: 992px) {
-  .secondary-button:hover {
-    background-position: right center;
-    scale: 1.05;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
-  }
 }
 
 .edit-button {
@@ -1659,6 +1669,9 @@ header {
 .add-button {
   width: 220px;
   background-color: #0e6673;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
   margin-top: 1rem;
 }
 
@@ -1671,18 +1684,18 @@ header {
   border: 3px solid #bf1e0f;
   border-radius: 3px;
   color: #bf1e0f;
-  padding: 0.5rem 1rem;
+  padding: 0.375rem 0.75rem;
 }
 @media (min-width: 992px) {
   .delete-button:hover {
     background-color: #bf1e0f;
     color: #ffffff;
+    box-shadow: none;
   }
 }
 
 .checkout-button {
-  margin-top: 2rem;
-  float: right;
+  background-image: linear-gradient(to right, #000 0%, #323232 51%, #000 100%);
 }
 
 #load-button {

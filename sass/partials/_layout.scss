@@ -409,3 +409,15 @@
     margin-bottom: 0;
   }
 }
+
+.summary-btn-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+
+  @media (min-width: getBreakpoint(small)) {
+    flex-direction: row;
+  }
+}

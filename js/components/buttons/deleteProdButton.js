@@ -1,7 +1,12 @@
 import { baseUrl } from "../../settings/api.js";
 import { getToken } from "../../utils/storage.js";
 import displayAlert from "../alerts/displayAlert.js";
-import { getExistingBasket, saveBasket } from "../../utils/storage.js";
+import {
+  getExistingBasket,
+  saveBasket,
+  getExistingFavs,
+  saveFavs,
+} from "../../utils/storage.js";
 import { basketCounter } from "../common/basketCounter.js";
 
 export default function deleteProdButton(id) {
@@ -47,7 +52,13 @@ export default function deleteProdButton(id) {
 
           basketCounter();
 
-          // console.log(newBasket);
+          //removes deleted article from favorites
+          const currentFavs = getExistingFavs();
+          const newFavs = currentFavs.filter((item) => {
+            return item.id !== id;
+          });
+
+          saveFavs(newFavs);
 
           displayAlert(
             "success",
@@ -55,9 +66,9 @@ export default function deleteProdButton(id) {
             ".edit-alert-container"
           );
 
-          // setTimeout(function () {
-          //   document.location.href = "products-overview.html";
-          // }, 2000);
+          setTimeout(function () {
+            document.location.href = "products-overview.html";
+          }, 2000);
         }
 
         if (json.error) {

@@ -111,7 +111,9 @@ export function renderSummary() {
         <td class="summary__table-data">$${orderTotal}</td>
     </tr>
   </table>
-  <div>
+  <div class="summary-btn-container">
+  <a href="products-overview.html" class="button primary-button"
+    >Shope more</a>
     <a href="confirmation.html" class="button primary-button checkout-button"
     >Checkout</a>
   </div>`;

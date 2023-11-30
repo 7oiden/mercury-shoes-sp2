@@ -4,7 +4,12 @@ import { baseUrl } from "./settings/api.js";
 import createNavLinks from "./ui/createNavLinks.js";
 import { basketCounter } from "./components/common/basketCounter.js";
 import { mobileMenuToggler } from "./components/togglers/mobileMenuToggler.js";
-import { getExistingBasket, saveBasket } from "./utils/storage.js";
+import {
+  getExistingBasket,
+  saveBasket,
+  getExistingFavs,
+  saveFavs,
+} from "./utils/storage.js";
 import { placeholderUrlShort } from "./settings/constants.js";
 import deleteButton from "./components/buttons/deleteProdButton.js";
 import renderBanner from "./ui/renderBanner.js";
@@ -201,8 +206,8 @@ function submitEditForm(event) {
     });
 
     if (itemInStorage) {
-      const basketIndex = currentBasket.findIndex((fav) => {
-        return fav.id === id;
+      const basketIndex = currentBasket.findIndex((item) => {
+        return item.id === id;
       });
 
       if (id) {
@@ -220,6 +225,32 @@ function submitEditForm(event) {
       }
     }
 
+    //updates current product in favorites list
+    const currentFavs = getExistingFavs();
+
+    const itemInFavs = currentFavs.find((fav) => {
+      return fav.id === id;
+    });
+
+    if (itemInFavs) {
+      const favIndex = currentFavs.findIndex((fav) => {
+        return fav.id === id;
+      });
+
+      if (id) {
+        currentFavs[favIndex].id = id;
+        currentFavs[favIndex].title = title;
+        currentFavs[favIndex].price = price;
+        currentFavs[favIndex].color = color;
+        currentFavs[favIndex].short_description = short_description;
+        currentFavs[favIndex].image_url = image_url;
+        currentFavs[favIndex].image_alt_text = image_alt_text;
+        currentFavs[favIndex].featured = featured;
+        currentFavs[favIndex].stock = stock;
+
+        saveFavs(currentFavs);
+      }
+    }
     const jsonData = {
       data: {
         title: title,

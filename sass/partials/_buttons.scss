@@ -7,6 +7,9 @@
     #bf1e0f 51%,
     #a01313 100%
   );
+
+  //provide similar color shades but in green
+  // background-image: linear-gradient( to right, #1ca013 0%, #27bf0f 51%, #1ca013 100%);
   transition: 0.5s;
   background-size: 200% auto;
   padding: 0.5rem 2rem;
@@ -60,21 +63,25 @@
 }
 
 .secondary-button {
-  background-image: linear-gradient(to right, #000 0%, #323232 51%, #000 100%);
+  background: transparent;
+  background-color: transparent;
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: 3px solid getColor(secondary);
   font-size: getFontSize(buttonSmall);
-  background-color: getColor(secondary);
-  color: getColor(primary);
+  color: getColor(secondary);
   // margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.375rem 1rem;
   border-radius: 3px;
 
-  @media (min-width: getBreakpoint(large)) {
-    &:hover {
-      background-position: right center;
-      scale: 1.05;
-      @include dropShadow(6px, 6px);
-    }
-  }
+  // @media (min-width: getBreakpoint(large)) {
+  //   &:hover {
+  //     background-position: right center;
+  //     scale: 1.05;
+  //     @include dropShadow(6px, 6px);
+  //   }
+  // }
 }
 
 .edit-button {
@@ -111,6 +118,9 @@
 .add-button {
   width: 220px;
   background-color: getColor(admin);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
   margin-top: 1rem;
 }
 
@@ -123,19 +133,26 @@
   border: 3px solid getColor(accent);
   border-radius: 3px;
   color: getColor(accent);
-  padding: 0.5rem 1rem;
+  padding: 0.375rem 0.75rem;
 
   @media (min-width: getBreakpoint(large)) {
     &:hover {
       background-color: getColor(accent);
       color: getColor(primary);
+      box-shadow: none;
     }
   }
+
+  // @media (min-width: getBreakpoint(large)) {
+  //   &:hover {
+  //     background-color: getColor(accent);
+  //     color: getColor(primary);
+  //   }
+  // }
 }
 
 .checkout-button {
-  margin-top: 2rem;
-  float: right;
+  background-image: linear-gradient(to right, #000 0%, #323232 51%, #000 100%);
 }
 
 #load-button {
