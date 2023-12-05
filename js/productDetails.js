@@ -30,9 +30,9 @@ const detailUrl = baseUrl + "products/" + id;
     const response = await fetch(detailUrl);
     const json = await response.json();
 
-    document.title = `Mercury Shoes | ${json.data.attributes.title}`;
+    document.title = `Mercury Shoes | ${json.title}`;
 
-    renderDetails(json.data);
+    renderDetails(json);
   } catch (error) {
     console.log(error);
     displayAlert(

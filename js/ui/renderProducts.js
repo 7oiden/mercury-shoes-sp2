@@ -32,7 +32,7 @@ export function renderProducts(products) {
 
     let featBadge = "";
 
-    if (product.attributes.featured) {
+    if (product.featured) {
       featBadge = `
       <div class="card__feat-badge">Featured</div>`;
     }
@@ -53,23 +53,23 @@ export function renderProducts(products) {
     <div class="remove-card card__container">
     <i title="${favIconTitle}" id="card-fav-icon" class="${favIconClass} fa-heart" data-id="${
       product.id
-    }" data-image="${product.attributes.image_url}" data-title="${
-      product.attributes.title
-    }" data-price="${product.attributes.price}" data-description="${
-      product.attributes.short_description
+    }" data-image="${product.image_url}" data-title="${
+      product.title
+    }" data-price="${product.price}" data-description="${
+      product.short_description
     }"></i>
       <a href="products-details.html?id=${
         product.id
       }" class="card ${adminClass}">
           <div class="card__image-container">
-            <img src="${product.attributes.image_url}" alt="${
-      product.attributes.image_alt_text
+            <img src="${product.image_url}" alt="${
+      product.image_alt_text
     }" 
             class="card__image" />
           </div>
           <div class="card__body">
-              <h2 class="card__title">${product.attributes.title}</h2>
-            <p class="card__price">$${product.attributes.price.toFixed(2)}</p>
+              <h2 class="card__title">${product.title}</h2>
+            <p class="card__price">$${product.price.toFixed(2)}</p>
             </div>
             ${featBadge}
       </a>

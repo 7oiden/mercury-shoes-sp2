@@ -19,8 +19,8 @@ export function renderHero(hero) {
   //   </div>
   // `;
 
-  const heroImage = hero.attributes.hero_url;
-  const heroImageSmall = hero.attributes.hero_small_url;
+  const heroImage = hero.hero_url;
+  const heroImageSmall = hero.hero_small_url;
 
   heroContainer.style.background = `url(${heroImage})`;
 

@@ -18,12 +18,12 @@ export function searchProducts(products) {
 
     filteredProducts = products.filter(function (product) {
       if (
-        product.attributes.title.toLowerCase().includes(searchValue) ||
-        product.attributes.short_description
+        product.title.toLowerCase().includes(searchValue) ||
+        product.short_description
           .toLowerCase()
           .includes(searchValue) ||
-        product.attributes.title.toLowerCase().startsWith(searchValue) ||
-        product.attributes.short_description
+        product.title.toLowerCase().startsWith(searchValue) ||
+        product.short_description
           .toLowerCase()
           .startsWith(searchValue)
       ) {
@@ -41,12 +41,12 @@ export function searchProducts(products) {
 
     filteredProducts = products.filter(function (product) {
       if (
-        product.attributes.title.toLowerCase().includes(searchValue) ||
-        product.attributes.short_description
+        product.title.toLowerCase().includes(searchValue) ||
+        product.short_description
           .toLowerCase()
           .includes(searchValue) ||
-        product.attributes.title.toLowerCase().startsWith(searchValue) ||
-        product.attributes.short_description
+        product.title.toLowerCase().startsWith(searchValue) ||
+        product.short_description
           .toLowerCase()
           .startsWith(searchValue)
       ) {

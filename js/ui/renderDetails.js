@@ -45,7 +45,7 @@ export default function renderDetails(details) {
 
   let stockInfo = `<div class="in-stock"></div>`;
 
-  if (!details.attributes.stock) {
+  if (!details.stock) {
     stockInfo = `<div class="out-of-stock"></div>`;
   }
 
@@ -98,35 +98,35 @@ export default function renderDetails(details) {
   <div class="details__image-container">
   <i id="details-fav-icon" class="${favIconClass} fa-heart" title="${favIconTitle}" data-id="${
     details.id
-  }" data-image="${details.attributes.image_url}" data-title="${
-    details.attributes.title
-  }" data-price="${details.attributes.price}" data-description="${
-    details.attributes.short_description
+  }" data-image="${details.image_url}" data-title="${
+    details.title
+  }" data-price="${details.price}" data-description="${
+    details.short_description
   }"></i>
     <div class="details__image">
-      <img src="${details.attributes.image_url}" alt="${
-    details.attributes.image_alt_text
+      <img src="${details.image_url}" alt="${
+    details.image_alt_text
   }" class="details__image"/>
     </div>
     <div class="details__preview-wrapper">
       <div class="details__preview">
         <img class="preview-1" src="${placeholderUrlFront}" alt="${
-    details.attributes.image_alt_text
+    details.image_alt_text
   }">
       </div>
       <div class="details__preview">
         <img class="preview-2" src="${placeholderUrlBack}" alt="${
-    details.attributes.image_alt_text
+    details.image_alt_text
   }">
       </div>
       <div class="details__preview">
         <img class="preview-3" src="${placeholderUrlSide}" alt="${
-    details.attributes.image_alt_text
+    details.image_alt_text
   }">
       </div>
       <div class="details__preview">
         <img class="preview-4" src="${placeholderUrlBottom}" alt="${
-    details.attributes.image_alt_text
+    details.image_alt_text
   }">
       </div>
     </div>
@@ -135,10 +135,10 @@ export default function renderDetails(details) {
   <div>
     <div class="details__head">
       <div class="details__title-wrapper">
-        <h1 class="details__title">${details.attributes.title}</h1>
+        <h1 class="details__title">${details.title}</h1>
         ${editButton}
       </div>
-      <p class="details__price">$${details.attributes.price.toFixed(2)}</p>
+      <p class="details__price">$${details.price.toFixed(2)}</p>
     </div>
     <hr />
     <div class="details__block-wrapper">
@@ -150,7 +150,7 @@ export default function renderDetails(details) {
           </div>
           <div class="details__line-wrapper">
             <h3 class="details__label">Color:</h3>
-            <p class="details__value">${details.attributes.color}</p>
+            <p class="details__value">${details.color}</p>
           </div>
           <div>
             <form class="quantity-container">${sizeContent}</form>
@@ -164,7 +164,7 @@ export default function renderDetails(details) {
           <i aria-hidden="true" class="fas ${showIconClass} show-icon"></i>
           <span class="sr-only">Show/hide product details</span>
         </div>
-        <p class="details__text text-hide">${details.attributes.description}</p>
+        <p class="details__text text-hide">${details.description}</p>
       </div>
     </div>
     <hr />
@@ -177,12 +177,12 @@ export default function renderDetails(details) {
         <button class="button primary-button ${buttonClass}"
           id="buy-button" 
           data-id="${details.id}"
-          data-image_url="${details.attributes.image_url}"
-          data-image_alt="${details.attributes.image_alt_text}"
-          data-color="${details.attributes.color}"
-          data-title="${details.attributes.title}"
-          data-price="${details.attributes.price}"
-          data-stock="${details.attributes.stock}"
+          data-image_url="${details.image_url}"
+          data-image_alt="${details.image_alt_text}"
+          data-color="${details.color}"
+          data-title="${details.title}"
+          data-price="${details.price}"
+          data-stock="${details.stock}"
           data-quantity="">
           ${buttonText}</button>
         </div>
@@ -196,18 +196,18 @@ export default function renderDetails(details) {
 
   messageContainer.innerHTML = "";
 
-  if (!details.attributes.stock) {
+  if (!details.stock) {
     button.classList.add("disabled");
   }
 
-  if (!details.attributes.stock && buttonText === "Remove from basket") {
+  if (!details.stock && buttonText === "Remove from basket") {
     button.classList.remove("disabled");
   }
 
   button.addEventListener("click", handleBuyButton);
 
   function handleBuyButton() {
-    if (!details.attributes.stock) {
+    if (!details.stock) {
       button.classList.add("disabled");
     }
     this.classList.toggle("add-to-basket");

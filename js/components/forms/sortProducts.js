@@ -21,37 +21,37 @@ export function sortProducts(products) {
 
     if (sortValue === "price-asc") {
       sortedProducts = products.sort(
-        (a, b) => a.attributes.price - b.attributes.price
+        (a, b) => a.price - b.price
       );
     }
 
     if (sortValue === "price-desc") {
       sortedProducts = products.sort(
-        (a, b) => b.attributes.price - a.attributes.price
+        (a, b) => b.price - a.price
       );
     }
 
     if (sortValue === "date-asc") {
       sortedProducts = products.sort(
         (a, b) =>
-          new Date(a.attributes.publishedAt) -
-          new Date(b.attributes.publishedAt)
+          new Date(a.published_at) -
+          new Date(b.published_at)
       );
     }
 
     if (sortValue === "date-desc") {
       sortedProducts = products.sort(
         (a, b) =>
-          new Date(b.attributes.publishedAt) -
-          new Date(a.attributes.publishedAt)
+          new Date(b.published_at) -
+          new Date(a.published_at)
       );
     }
 
     if (sortValue === "default") {
       sortedProducts = products.sort(
         (a, b) =>
-          new Date(b.attributes.publishedAt) -
-          new Date(a.attributes.publishedAt)
+          new Date(b.published_at) -
+          new Date(a.published_at)
       );
     }
 

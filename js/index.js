@@ -8,7 +8,7 @@ import adminLogin from "./components/forms/adminLoginForm.js";
 import { renderHero } from "./ui/renderHero.js";
 import { renderFeaturedProducts } from "./ui/renderFeaturedProducts.js";
 import newsletterModal from "./components/modals/newsletterModal.js";
-import renderBanner from "./ui/renderBanner.js"
+import renderBanner from "./ui/renderBanner.js";
 
 renderBanner();
 basketCounter();
@@ -23,10 +23,12 @@ loginModal();
     const response = await fetch(heroUrl);
     const result = await response.json();
 
-    console.log("If the Heroku hosted API is sleeping, it will take a few moments to wake up.")
+    console.log(
+      "If the Heroku hosted API is sleeping, it will take a few moments to wake up."
+    );
 
-    // console.log(result);
-    renderHero(result.data);
+    console.log(result);
+    renderHero(result);
   } catch (error) {
     displayAlert(
       "error absolute-pos",
@@ -41,7 +43,9 @@ loginModal();
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    renderFeaturedProducts(json.data);
+    console.log(json);
+
+    renderFeaturedProducts(json);
   } catch (error) {
     displayAlert(
       "error absolute-pos",

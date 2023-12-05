@@ -22,14 +22,14 @@ export function filterProducts(products) {
     if (filterValue === "default") {
       sortedProducts = products.sort(
         (a, b) =>
-          new Date(b.attributes.publishedAt) -
-          new Date(a.attributes.publishedAt)
+          new Date(b.publishedAt) -
+          new Date(a.publishedAt)
       );
     }
 
     if (filterValue === "feat") {
       sortedProducts = products.filter(function (product) {
-        if (product.attributes.featured === true) {
+        if (product.featured === true) {
           return true;
         }
       });
@@ -37,7 +37,7 @@ export function filterProducts(products) {
 
     if (filterValue === "in-stock") {
       sortedProducts = products.filter(function (product) {
-        if (product.attributes.stock === true) {
+        if (product.stock === true) {
           return true;
         }
       });
@@ -45,7 +45,7 @@ export function filterProducts(products) {
 
     if (filterValue === "out-of-stock") {
       sortedProducts = products.filter(function (product) {
-        if (product.attributes.stock === false) {
+        if (product.stock === false) {
           return true;
         }
       });

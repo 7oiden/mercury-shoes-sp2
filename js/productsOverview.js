@@ -25,11 +25,11 @@ filterToggler();
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    console.log(json.data)
-    renderProducts(json.data);
-    searchProducts(json.data);
-    sortProducts(json.data);
-    filterProducts(json.data);
+    console.log(json)
+    renderProducts(json);
+    searchProducts(json);
+    sortProducts(json);
+    filterProducts(json);
     
   } catch (error) {
     console.log(error);
