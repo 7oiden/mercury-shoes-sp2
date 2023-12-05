@@ -25,7 +25,7 @@ loginModal();
 
     console.log("If the Heroku hosted API is sleeping, it will take a few moments to wake up.")
 
-    console.log(result);
+    // console.log(result);
     renderHero(result.data);
   } catch (error) {
     displayAlert(

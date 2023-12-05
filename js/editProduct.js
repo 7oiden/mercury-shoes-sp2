@@ -26,7 +26,7 @@ if (!token) {
   document.location.href = "/";
 }
 
-console.log(token);
+// console.log(token);
 
 renderBanner();
 basketCounter();
@@ -100,8 +100,8 @@ const stockYes = document.querySelector("#stock-yes");
     imageAltText.value = details.image_alt_text;
     idInput.value = id;
 
-    console.log(id);
-    console.log(details.title);
+    // console.log(id);
+    // console.log(details.title);
 
     if (!details.main_product) {
       deleteButton(id);

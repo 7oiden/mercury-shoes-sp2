@@ -113,7 +113,7 @@ export function renderSummary() {
   </table>
   <div class="summary-btn-container">
   <a href="products-overview.html" class="button primary-button"
-    >Shope more</a>
+    >Shop more</a>
     <a href="confirmation.html" class="button primary-button checkout-button"
     >Checkout</a>
   </div>`;
