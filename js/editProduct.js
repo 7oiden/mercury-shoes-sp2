@@ -67,9 +67,7 @@ const stockYes = document.querySelector("#stock-yes");
 (async function () {
   try {
     const response = await fetch(productUrl);
-    const json = await response.json();
-
-    const details = json.data.attributes;
+    const details = await response.json();
 
     console.log(details);
 
@@ -252,7 +250,6 @@ function submitEditForm(event) {
       }
     }
     const jsonData = {
-      data: {
         title: title,
         price: price,
         color: color,
@@ -262,7 +259,6 @@ function submitEditForm(event) {
         image_alt_text: image_alt_text,
         featured: featured,
         stock: stock,
-      },
     };
 
     console.log(jsonData);
@@ -284,7 +280,7 @@ function submitEditForm(event) {
       const response = await fetch(editUrl, options);
       const json = await response.json();
 
-      if (json.data.attributes.updatedAt) {
+      if (json.updated_at) {
         displayAlert(
           "success",
           "Product successfully updated",

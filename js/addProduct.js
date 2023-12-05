@@ -113,17 +113,15 @@ function submitAddForm(event) {
     stock
   ) {
     const jsonData = {
-      data: {
-        title: title,
-        price: price,
-        color: color,
-        short_description: short_description,
-        description: description,
-        image_url: image_url,
-        image_alt_text: image_alt_text,
-        featured: featured,
-        stock: stock,
-      },
+      title: title,
+      price: price,
+      color: color,
+      short_description: short_description,
+      description: description,
+      image_url: image_url,
+      image_alt_text: image_alt_text,
+      featured: featured,
+      stock: stock,
     };
 
     const addData = JSON.stringify(jsonData);
@@ -147,7 +145,7 @@ function submitAddForm(event) {
 
       console.log(json);
 
-      if (json.data.attributes.createdAt) {
+      if (json.created_at) {
         displayAlert(
           "success",
           "New Product successfully created",
