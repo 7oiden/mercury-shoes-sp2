@@ -92,12 +92,12 @@ main {
 }
 
 .loader {
-  border: 0.4rem solid getColor(accent);
-  border-top: 0.4rem solid transparent;
+  border: 0.2rem solid getColor(accent);
+  border-top: 0.25rem solid transparent;
   margin: 0 auto;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   animation: spin 1s ease-in-out infinite;
 }
 
@@ -204,5 +204,3 @@ hr {
   //   display: block;
   // }
 }
-
-
